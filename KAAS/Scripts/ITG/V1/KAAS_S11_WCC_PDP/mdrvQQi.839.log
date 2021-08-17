@@ -1,0 +1,5 @@
+Kaas_HowTo_PDP.c(8): Error -27760: Request "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=23302709&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&topiccat=467249423806096122761263497662159&printFields=topics,topIssue,filesize,cve" failed  	[MsgId: MERR-27760]
+Warning: Iteration pacing cannot be reached (pace time = 0.90, actual time = 1.43).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 0.90, actual time = 1.69).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 0.90, actual time = 3.36).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 0.90, actual time = 2.83).	[MsgId: MWAR-15995]

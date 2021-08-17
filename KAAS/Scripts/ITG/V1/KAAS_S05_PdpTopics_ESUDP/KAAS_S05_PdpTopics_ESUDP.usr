@@ -1,0 +1,67 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=KAAS_S05_PdpTopics_ESUDP.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=61
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.61.0.971
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=
+DisableRegenerate=0
+Description=
+ScriptLocale=en-US
+Encoding=
+[Actions]
+vuser_init=vuser_init.c
+DocSearchUDPES_PDP_Topics_10=DocSearchUDPES_PDP_Topics_10.c
+DocSearchUDPES_PDP_Topics_1000=DocSearchUDPES_PDP_Topics_1000.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=1
+DocSearchUDPES_PDP_Topics_10=1
+DocSearchUDPES_PDP_Topics_1000=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+DocSearchUDPES_PDP_Topics_10=0
+DocSearchUDPES_PDP_Topics_1000=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+DocSearchUDPES_PDP_Topics_10=1
+DocSearchUDPES_PDP_Topics_1000=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+DocSearchUDPES_PDP_Topics_10=cci
+DocSearchUDPES_PDP_Topics_1000=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="KAAS_T012_DocSearchUDPES_PDP_Topics_10__*delimiter*__KAAS_T013_DocSearchUDPES_PDP_Topics_1000"
+[StateManagement]
+LastReplayStatus=1
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+KAAS_T012_DocSearchUDPES_PDP_Topics_10=
+KAAS_T013_DocSearchUDPES_PDP_Topics_1000=

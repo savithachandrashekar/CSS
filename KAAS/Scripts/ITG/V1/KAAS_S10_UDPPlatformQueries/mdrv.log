@@ -1,0 +1,894 @@
+Virtual User Script started at: 7/23/2021 7:46:59 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\CSS\FY21\KAAS\Scripts\ITG\V1\KAAS_S10_UDPPlatformQueries\\default.cfg"  	[MsgId: MMSG-27141]
+Starting to download the proxy automatic configuration script, URL="http://autocache.hpicorp.net/"  	[MsgId: MMSG-27097]
+t=398ms: 147-byte response headers for "http://autocache.hpicorp.net/" (RelFrameId=1, Internal ID=1)
+    HTTP/1.0 200 OK\r\n
+    Content-Type: application/x-ns-proxy-autoconfig\r\n
+    pragma: no-cache\r\n
+    Server: BigIP\r\n
+    Connection: Keep-Alive\r\n
+    Content-Length: 2557\r\n
+    \r\n
+t=414ms: 2557-byte response body for "http://autocache.hpicorp.net/" (RelFrameId=1, Internal ID=1)
+    //////////////////////////////////////////////////////////////////////\n
+    // DO NOT MODIFY THIS PAC - CHANGES MUST BE MADE THRU THE ADMIN SITE\n
+    //////////////////////////////////////////////////////////////////////\n
+    // AUTOCACHE HP (c) 2014 ver.2.01 Web Publish\n
+    // Debug URL: http://autocache.hpicorp.net/?debug=1\n
+    // This PAC was web generated: 2020-06-19 08:54:11 AM\n
+    //////////////////////////////////////////////////////////////////////\n
+    \n
+    var pacname = "sitedirect-hpi.pac";\n
+    var pacdate = "2020-06-19 08:54:11 AM";\n
+    \n
+    function FindProxyForURL(url, host)\n
+    \n
+    {\n
+    \n
+    HPQNETPROXY = "PROXY web-proxy.austin.hpicorp.net:8080; PROXY proxy-txn.austin.hpicorp.net
+    :8080";\n
+    \r\n
+        hostIP = dnsResolve(host);\r\n
+        if (hostIP == false)\r\n
+            var hostIP = "1.1.1.1";\r\n
+    \r\n
+        // make everything lowercase\r\n
+        // WARNING: all shExpMatch rules following MUST be lowercase!\r\n
+        url = url.toLowerCase();\r\n
+        host = host.toLowerCase();\r\n
+    \r\n
+      // work-around for destinations expecting Net 15\n
+       if (dnsDomainIs(host, "npd.com")\n
+            || dnsDomainIs(host, "id.hp.com")\n
+            || dnsDomainIs(host, "instantink.com")\n
+            || dnsDomainIs(host, "hp-instantink.com")\n
+            || dnsDomainIs(host, "hp10.us")\n
+            || dnsDomainIs(host, "hp-dataservices.com")\n
+            || dnsDomainIs(host, "cso-hp.com")\n
+            || dnsDomainIs(host, "credit-suisse.com")\n
+            || dnsDomainIs(host, "npddecisionkey.com"))\n
+            return HPQNETPROXY ;\n
+    \r\n
+        // HPI CRM, Satish Babu, 01/31/2018\r\n
+        // HPI Net15 exception, Randall Courtney, 07/28/2018\n
+        if (dnsDomainIs(host, "crm.dynamics.com")\r\n
+         || dnsDomainIs(host, "us.storedvalue.com"))\n
+            return "PROXY web-proxy.austin.hpicorp.net:8080; proxy-txn.austin.hpicorp.net:8080
+    ";\r\n
+    \r\n
+        // Extranets that need to go via a pmHP proxy\r\n
+        if (isInNet(hostIP,"192.170.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.6.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.25.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.30.92.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.32.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.52.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.53.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"128.88.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"155.208.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"156.153.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"156.152.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"209.228.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"209.228.0.0", "255.255.0.0"))\r\n
+            return HPQNETPROXY;\r\n
+    \r\n
+        return "DIRECT";\n
+    }\n
+Proxy automatic configuration script (URL="http://autocache.hpicorp.net/") downloaded and evaluated successfully  	[MsgId: MMSG-27096]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(21): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(21): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(21): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(22): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(22): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(22): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(23): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(23): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(23): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(24): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(24): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(26): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(26): The request to server https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" is done with headers:
+vuser_init.c(26):     :method = POST
+vuser_init.c(26):     :scheme = https
+vuser_init.c(26):     :path = /as/token.oauth2?grant_type=client_credentials
+vuser_init.c(26):     :authority = login-itg.external.hp.com
+vuser_init.c(26):     Authorization =  Basic V0lTRTpHZTRFSDllN1VoMVpkZzRnbjhCSmtXOHVtUVhNblBmSnJCNHFZeTJLV3oyVFJ
+vuser_init.c(26):     BTWw1eFlVVVRSaU5kNW9zbERq
+vuser_init.c(26):     Content-Type =  application/x-www-form-urlencoded
+vuser_init.c(26):     Host =  login-itg.external.hp.com
+vuser_init.c(26):     Cache-Control =  no-cache
+vuser_init.c(26):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+vuser_init.c(26):     Accept-Encoding =  gzip, deflate
+vuser_init.c(26):     Accept =  */*
+vuser_init.c(26):     content-length = 0
+vuser_init.c(26): t=681ms: 517-byte response headers for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=2)
+vuser_init.c(26):     HTTP/2.0 200\r\n
+vuser_init.c(26):     Status: 200\r\n
+vuser_init.c(26):     server: nginx/1.16.1\r\n
+vuser_init.c(26):     date: Fri, 23 Jul 2021 07:47:00 GMT\r\n
+vuser_init.c(26):     content-type: application/json;charset=utf-8\r\n
+vuser_init.c(26):     referrer-policy: origin\r\n
+vuser_init.c(26):     cache-control: no-cache, no-store\r\n
+vuser_init.c(26):     pragma: no-cache\r\n
+vuser_init.c(26):     expires: Thu, 01 Jan 1970 00:00:00 GMT\r\n
+vuser_init.c(26):     set-cookie: HPIUID=aQkt7T99PiWP8c39THgPkF;Path=/;Domain=.hp.com;Secure;HttpOnly;SameSite=N
+vuser_init.c(26):     one\r\n
+vuser_init.c(26):     strict-transport-security: max-age=15768000; preload;\r\n
+vuser_init.c(26):     x-content-type-options: nosniff\r\n
+vuser_init.c(26):     x-frame-options: SAMEORIGIN\r\n
+vuser_init.c(26):     x-xss-protection: 1; mode=block\r\n
+vuser_init.c(26):     x-robots-tag: none\r\n
+vuser_init.c(26):     \r\n
+vuser_init.c(26): t=688ms: 87-byte response body for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=2)
+vuser_init.c(26):     {"access_token":"000aA6pWDzZMOZ4mvIkNYyzSwO8J","token_type":"Bearer","expires_in":7199}
+vuser_init.c(26): Notify: Saving Parameter "cp_WISEAccessToken = 000aA6pWDzZMOZ4mvIkNYyzSwO8J".
+vuser_init.c(26): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials"  	[MsgId: MMSG-26548]
+vuser_init.c(26): web_custom_request("web_custom_request") was successful, 87 body bytes, 517 header bytes  	[MsgId: MMSG-26386]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action UDP_PlatformProductQuery.
+UDP_PlatformProductQuery.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+UDP_PlatformProductQuery.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+UDP_PlatformProductQuery.c(4): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+UDP_PlatformProductQuery.c(4): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+UDP_PlatformProductQuery.c(4): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+UDP_PlatformProductQuery.c(6): Notify: Parameter Substitution: parameter "cp_WISEAccessToken" =  "000aA6pWDzZMOZ4mvIkNYyzSwO8J"
+UDP_PlatformProductQuery.c(6): Notify: Saving Parameter "WISEAccessToken = 000aA6pWDzZMOZ4mvIkNYyzSwO8J".
+UDP_PlatformProductQuery.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+UDP_PlatformProductQuery.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aA6pWDzZMOZ4mvIkNYyzSwO8J"
+UDP_PlatformProductQuery.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+UDP_PlatformProductQuery.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+UDP_PlatformProductQuery.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+UDP_PlatformProductQuery.c(12): Notify: Transaction "KAAS_T021_UDP_PlatformProductQuery" started.
+UDP_PlatformProductQuery.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+UDP_PlatformProductQuery.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" is done with headers:
+UDP_PlatformProductQuery.c(14):     :method = GET
+UDP_PlatformProductQuery.c(14):     :scheme = https
+UDP_PlatformProductQuery.c(14):     :path = /KaaS-ITG/v2/search?q=Gamora%201.0%20OMN&languageCode=en&store=tmsstore,tmsfutures
+UDP_PlatformProductQuery.c(14):     tore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true%20AND%20contenttyp
+UDP_PlatformProductQuery.c(14):     e:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmsp
+UDP_PlatformProductQuery.c(14):     mnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;
+UDP_PlatformProductQuery.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+UDP_PlatformProductQuery.c(14):     Content-Type =  application/x-www-form-urlencoded
+UDP_PlatformProductQuery.c(14):     accessToken =  000aA6pWDzZMOZ4mvIkNYyzSwO8J
+UDP_PlatformProductQuery.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+UDP_PlatformProductQuery.c(14):     Accept-Encoding =  gzip, deflate
+UDP_PlatformProductQuery.c(14):     Accept =  */*
+UDP_PlatformProductQuery.c(14): t=2241ms: 550-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" (RelFrameId=1, Internal ID=3)
+UDP_PlatformProductQuery.c(14):     HTTP/2.0 200\r\n
+UDP_PlatformProductQuery.c(14):     Status: 200\r\n
+UDP_PlatformProductQuery.c(14):     date: Fri, 23 Jul 2021 07:47:01 GMT\r\n
+UDP_PlatformProductQuery.c(14):     content-type: application/json;charset=UTF-8\r\n
+UDP_PlatformProductQuery.c(14):     content-length: 51325\r\n
+UDP_PlatformProductQuery.c(14):     x-amzn-requestid: 51a76bc1-4992-45e0-83fe-83a3f90912e1\r\n
+UDP_PlatformProductQuery.c(14):     x-oneagent-js-injection: true\r\n
+UDP_PlatformProductQuery.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+UDP_PlatformProductQuery.c(14):     set-cookie: dtCookie=v_4_srv_1_sn_60B97B8D1297E87E2BDD5683DBF3E556_perc_100000_ol_0_mul_1_
+UDP_PlatformProductQuery.c(14):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+UDP_PlatformProductQuery.c(14):     x-amz-apigw-id: C6cOOHE2oAMFsew=\r\n
+UDP_PlatformProductQuery.c(14):     server-timing: dtRpid;desc="644673794"\r\n
+UDP_PlatformProductQuery.c(14):     x-amzn-remapped-date: Fri, 23 Jul 2021 07:47:01 GMT\r\n
+UDP_PlatformProductQuery.c(14):     \r\n
+UDP_PlatformProductQuery.c(14): t=2248ms: 8192-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" (RelFrameId=1, Internal ID=3)
+UDP_PlatformProductQuery.c(14):     {"didYouMean":null,"searchInsteadFor":null,"showingResultsFor":null,"matches":[{"terms":"G
+UDP_PlatformProductQuery.c(14):     amora 1.0 OMN","name":"Gamora 1.0 OMN","pmClass":"pf_value","score":93.80205,"productId":"
+UDP_PlatformProductQuery.c(14):     21008847","platformModels":"21008845|21869533|21910727|21910728|21910729|21910730|22185655
+UDP_PlatformProductQuery.c(14):     |22185657|22185659|22297035|22297534|22297536|22297538|22297540|22297542|22297544|22297546
+UDP_PlatformProductQuery.c(14):     |22297548|22297550|22297552|22297554|22297556|22297558|22297560|22297562|22323524|22343876
+UDP_PlatformProductQuery.c(14):     |22343879|22343882|22343894|22343897|22343900|22343903|22343906|22344218|22362403|22362406
+UDP_PlatformProductQuery.c(14):     |22362409|22362412|22362415|22362418|22362421|22362424|22362427|22362839|22362840|22362841
+UDP_PlatformProductQuery.c(14):     |22362852|22362853|22362854|22362855|22399625|22399627|22399629|22399631|22399633|22399635
+UDP_PlatformProductQuery.c(14):     |22399637|22399639|22399641|22399643|22399645|22409989|22409991|22409993|22409995|22409997
+UDP_PlatformProductQuery.c(14):     |22409999|22410001|22410003|22410005|22410007|22410009|22410011|22410013|22410015|22410017
+UDP_PlatformProductQuery.c(14):     |22410019|22424960|22424962|22424964|22424966|22424968|22424970|22425020|22425022|22425024
+UDP_PlatformProductQuery.c(14):     |22425026|22438355|22458189|22484398|22484581|22484583|22484585|22484587|22484589|22484591
+UDP_PlatformProductQuery.c(14):     |22484593|22488648|22488650|22488752|22488873|22488875|22489889|22489891|22489893|22489895
+UDP_PlatformProductQuery.c(14):     |22489897|22489899|22489901|22489903|22489905|22489907|22489909|22489911|22489913|22489915
+UDP_PlatformProductQuery.c(14):     |22489917|22489919|22489921|22489923|22489925|22489927|22489929|22489931|22489933|22489935
+UDP_PlatformProductQuery.c(14):     |22489937|22489939|22489941|22489943|22489945|22489947|22489949|22489951|22489953|22489955
+UDP_PlatformProductQuery.c(14):     |22489957|22489959|22489961|22489963|22489965|22489967|22489969|22489971|22489973|22489975
+UDP_PlatformProductQuery.c(14):     |22489977|22490036|22490038|22529183|22529185|22529622|22529624|22529626|22529628|22529630
+UDP_PlatformProductQuery.c(14):     |22529632|22529634|22529636|22529638|22529640|22529642|22607904|22607906|22607908|22607910
+UDP_PlatformProductQuery.c(14):     |22607912|22607914|22607916|22665632|22665633|22665634|22665635|22665906|22665907|22665908
+UDP_PlatformProductQuery.c(14):     |22665909|22665910|22665911|22665912|22665931|22746070|22746072|22746074|22746076|22746078
+UDP_PlatformProductQuery.c(14):     |22746080|22746082|22746257|22746289|22780118|22780120|22780122|22780290|22780292|22780294
+UDP_PlatformProductQuery.c(14):     |22780296|22780862|22780864|22780911|22780913|22782666|22782668|22782670|22782672|22782688
+UDP_PlatformProductQuery.c(14):     |22782690|22782692|22783615|22783617|22783619|22783621|22783623|22783625|22783627|22783629
+UDP_PlatformProductQuery.c(14):     |22783631|22783633|22783635|22783637|22783639|22783641|22783643|22783645|22783647|22783649
+UDP_PlatformProductQuery.c(14):     |22783651|22783653|22783655|22783657|22783659|22783661|22783663|22783665|22783817|22783819
+UDP_PlatformProductQuery.c(14):     |22783821|22783823|22783825|22783827|22783829|22783831|22783833|22783835|22810217|22810639
+UDP_PlatformProductQuery.c(14):     |22833725|22833727|22833729|22863336|22863552|22863554|22863823|22863994|22863996|22863998
+UDP_PlatformProductQuery.c(14):     |22864002|22864329|22864331|22864333|22864335|22864337|22882886|22882888|22882890|22882892
+UDP_PlatformProductQuery.c(14):     |22891861|22891863|22891865|22909893|22909933|22909935|22909937|22909939|22909975|22909977
+UDP_PlatformProductQuery.c(14):     |22909979|22910083|22910085|22910087|22910089|22910143|22910145|22910181|22910183|22910206
+UDP_PlatformProductQuery.c(14):     |22910244|22910246|22910248|22910250|22910252|22910561|22910563|22931914|22931916|22931918
+UDP_PlatformProductQuery.c(14):     |22931920|22955382|22955606|22993055|22993057|22993125|22993127|22993129|22993191|22993323
+UDP_PlatformProductQuery.c(14):     |22993325|22993415|22993417|22993419|22993499|23022879|23022881|23045195|23045197|23045199
+UDP_PlatformProductQuery.c(14):     |23045201|23045203|23085563|23086035|23086213|23086420|23114646|23114648|23114650|23115036
+UDP_PlatformProductQuery.c(14):     |23116395|23116397|23116399|23116401|23116403|23116405|23116407|23116409|23116411|23116413
+UDP_PlatformProductQuery.c(14):     |23116415|23116417|23116419|23116421|23116423|23116425|23116427|23116429|23116431|23116433
+UDP_PlatformProductQuery.c(14):     |23116435|23116437|23116439|23116441|23116443|23116445|23116447|23116449|23116451|23116453
+UDP_PlatformProductQuery.c(14):     |23116455|23116457|23116459|23128194|23128196|23128198|23128200|23128202|23128204|23128206
+UDP_PlatformProductQuery.c(14):     |23128208|23128210|23128212|23128214|23128216|23128218|23128220|23128541|23128545|23142916
+UDP_PlatformProductQuery.c(14):     |23142918|23142920|23142922|23142924|23142926|23142928|23142930|23142932|23142934|23142936
+UDP_PlatformProductQuery.c(14):     |23142938|23142940|23205971|23206359|23206361|23206363|23207012|23333530|23333532|23334770
+UDP_PlatformProductQuery.c(14):     |23334799|23334841|23334843|23334887|23334889|23334927|23335075|23335077|23335099|23335101
+UDP_PlatformProductQuery.c(14):     |23377025|23377027|23377075|23377077|23377079|23377138|23377140|23377164|23377553|23377659
+UDP_PlatformProductQuery.c(14):     |23377660|23377661|23377662|23394605|23394607|23394609|23394611|23394613|23463196|23476363
+UDP_PlatformProductQuery.c(14):     |23476435|23476437|23565543|23574374|23574376|23574420|23588831|23588834|23588843|23588844
+UDP_PlatformProductQuery.c(14):     |23588845|23588846|23588847|23588866|23815336|23883501|23883578|24005758|24005760|24005762
+UDP_PlatformProductQuery.c(14):     |24076083|24078659|24078661|24078663|24078665|24078715|24078717|24143662|24143664|24143666
+UDP_PlatformProductQuery.c(14):     |24143716|24143720|24152820|24152822|24152836|24152838|24152856|24229425|24349314|24349316
+UDP_PlatformProductQuery.c(14):     |24434367|24434538|24434570|24434694|24434696|24434698|24434700|24434702|24434704|24434706
+UDP_PlatformProductQuery.c(14):     |24513860|24514212|24514934|24514980|24514982|24521820|24521995|24521997|24521999|24522045
+UDP_PlatformProductQuery.c(14):     |24522047|24522049|24522051|24522059|24522442|24522461|24522462|24522505|24522726|24522728
+UDP_PlatformProductQuery.c(14):     |24522730|24522732|24522734|24522736|24522738|24522790|24555800|24574918|24574956|24574980
+UDP_PlatformProductQuery.c(14):     |24574982|24596287|24596289|24596291|24596451|24596453|24597051|24597053|24631586|24631590
+UDP_PlatformProductQuery.c(14):     |24631592|24771640|24772056|24772058|24772165|24772167|24772283|24800158|24808562|24808563
+UDP_PlatformProductQuery.c(14):     |24808564|24808565|24808566|24828954|24896751|24896753|24929889|24929891|24929935|24996991
+UDP_PlatformProductQuery.c(14):     |24996993|24996995|24996997|24996999|24997001|24997007|24997061|24997636|25017347|25017349
+UDP_PlatformProductQuery.c(14):     |25017351|25082373|25082375|25082832|25082834|25082838|25257011|25257012|25257013|25257014
+UDP_PlatformProductQuery.c(14):     |25257015|25257583|25257621|25257623|25328110|25328289|25328291|25328293|25328347|25479496
+UDP_PlatformProductQuery.c(14):     |25479498|25506084|25506086|25575680|26058241|26058986|26058989|26059289|26084790|26084791
+UDP_PlatformProductQuery.c(14):     |26238465|26285421|26309711|26309713|26309715|26309717|26344326|26344630|26344632|26344776
+UDP_PlatformProductQuery.c(14):     |26355264|26517736|26520844|26556523|26556525|26556605|26634575|26634577|26709822|26718369
+UDP_PlatformProductQuery.c(14):     |26718371|26718373|26947558|26947561|26992134|26992136|26992138|26992140|27035831|27066626
+UDP_PlatformProductQuery.c(14):     |27066631|27066635|27066636|27066643|27090257|27103376|27103379|27103382|27103385|27131775
+UDP_PlatformProductQuery.c(14):     |27336459|27391239|27689377|27690744|27690746|27734757|27734758|27734759|27734761|27734762
+UDP_PlatformProductQuery.c(14):     |27734763|27734764|27734765|27801606|27801754|27819360|27890528|27890529|27905634|28011691
+UDP_PlatformProductQuery.c(14):     |28011693|28011695|28011697|28011699|28011701|28011703|28011705|28011707|28011709|28011711
+UDP_PlatformProductQuery.c(14):     |28011713|28011723|28026007|28026023|28026025|28046438|28046522|28046523|28087944|28087946
+UDP_PlatformProductQuery.c(14):     |28087948|28087950|28087952|28243577|28243631|28243717|28243719|28243721|28243723|28243725
+UDP_PlatformProductQuery.c(14):     |28243727|28243729|28243731|28243733|28243735|28243737|28243739|28254383|28254498|28254500
+UDP_PlatformProductQuery.c(14):     |28254502|28254504|28254506|28254508|28254510|28254512|28254595|28254597|28254599|28254601
+UDP_PlatformProductQuery.c(14):     |28254603|28254605|28254607|28263712|28308037|28308254|28308256|28341120|28341126|28341128
+UDP_PlatformProductQuery.c(14):     |28341130|28355333|28355335|28355341|28388570|28388584|28388586|28560262|28704138|28796362
+UDP_PlatformProductQuery.c(14):     |29110130|29110131|29110143|29170873|29170875|29362578|29637390|29637392|29637394|29637396
+UDP_PlatformProductQuery.c(14):     |29637398|30200996|33529572"},{"terms":"Gamora 1.1 OMN","name":"Gamora 1.1 OMN","pmClass":
+UDP_PlatformProductQuery.c(14):     "pf_value","score":73.30001,"productId":"29890198","platformModels":"26122183|26609881|266
+UDP_PlatformProductQuery.c(14):     51437|26651440|26651442|26651445|26651448|26651451|26671132|26671135|26671140|26671144|266
+UDP_PlatformProductQuery.c(14):     71147|26671149|26671153|26671155|26671158|26671176|26671179|26671194|26671197|26671200|266
+UDP_PlatformProductQuery.c(14):     71203|26671207|26671211|26671216|26671219|26671222|26671225|26671228|26671232|26671237|266
+UDP_PlatformProductQuery.c(14):     71240|26671243|26671246|26671249|26671252|26671255|26671259|26671262|26671265|26671268|266
+UDP_PlatformProductQuery.c(14):     71271|26671274|26671277|26671280|26671283|26671286|26671289|26671319|26671322|26671325|266
+UDP_PlatformProductQuery.c(14):     72948|26672951|26672954|26672957|26672960|26672963|26672966|26672969|26672972|26672975|266
+UDP_PlatformProductQuery.c(14):     72978|26672982|26672985|26672988|26672991|26683265|26683440|26683443|26683446|26683449|266
+UDP_PlatformProductQuery.c(14):     83451|26683454|26683457|26683460|26683463|26683466|26683469|26683472|26700589|26709846|267
+UDP_PlatformProductQuery.c(14):     09851|26709854|26709857|26709860|26947837|26947842|26991967|26992087|26992090|26992093|269
+UDP_PlatformProductQuery.c(14):     92096|26992099|26992102|26992105|26992108|27015996|27016000|27016005|27016009|27016013|270
+UDP_PlatformProductQuery.c(14):     66530|27067504|27090261|27103265|27103268|27103275|27103278|27103281|27103283|27103285|271
+UDP_PlatformProductQuery.c(14):     03288|27103291|27103318|27103321|27103324|27103327|27103330|27103333|27103336|27131676|271
+UDP_PlatformProductQuery.c(14):     78131|27178239|27178322|27178325|27178328|27178398|27178401|27178404|27178452|27178455|271
+UDP_PlatformProductQuery.c(14):     78458|27178461|27210802|27236205|27275740|27275743|27275746|27275749|27275752|27315492|273
+UDP_PlatformProductQuery.c(14):     15495|27315498|27316016|27316679|27316682|27316752|27316765|27316768|27336444|27336447|273
+UDP_PlatformProductQuery.c(14):     36
+UDP_PlatformProductQuery.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;"  	[MsgId: MMSG-26548]
+UDP_PlatformProductQuery.c(14): t=2256ms: 7799-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" (RelFrameId=1, Internal ID=3)
+UDP_PlatformProductQuery.c(14):     452|27336454|27336457|27336572|27336574|27690719|27690722|27690724|27690727|27690730|27690
+UDP_PlatformProductQuery.c(14):     797|27690801|27691016|27734047|27734768|27734774|27734775|27734782|27734790|27734791|27734
+UDP_PlatformProductQuery.c(14):     792|27734793|27734794|27767047|27767049|27767179|27788761|27801741|27801743|27801746|27801
+UDP_PlatformProductQuery.c(14):     748|27801750|27801752|27819489|27819491|27819493|27872424|27872426|27872564|27872566|27872
+UDP_PlatformProductQuery.c(14):     568|27872570|27872572|27872574|27890531|27890532|27890537|27890567|27890568|27905658|27905
+UDP_PlatformProductQuery.c(14):     660|27905672|27905674|27905682|27905684|27913510|27913512|27924513|27924514|27924515|27924
+UDP_PlatformProductQuery.c(14):     516|27939848|27997757|27997759|27997761|28011761|28026044|28026051|28046458|28046459|28046
+UDP_PlatformProductQuery.c(14):     528|28046529|28046530|28046531|28046532|28046533|28046534|28047013|28047014|28047042|28243
+UDP_PlatformProductQuery.c(14):     751|28243753|28243808|28243810|28243812|28243814|28243816|28243818|28243820|28254524|28254
+UDP_PlatformProductQuery.c(14):     526|28263737|28263738|28263990|28263991|28341160|28341162|28388588|28388590|28388592|28388
+UDP_PlatformProductQuery.c(14):     594|28388708|28493192|28493320|28493322|28493324|28493330|28493332|28493334|28493336|28493
+UDP_PlatformProductQuery.c(14):     338|28493340|28493980|28494064|28519483|28519485|28519487|28519489|28520722|28520790|28560
+UDP_PlatformProductQuery.c(14):     268|28560270|28614561|28614564|28721713|28721734|28721760|28721769|28721771|28721773|28721
+UDP_PlatformProductQuery.c(14):     776|28721778|28796370|28867348|28867435|28891608|28891610|28891612|28891614|29014226|29014
+UDP_PlatformProductQuery.c(14):     228|29014798|29014905|29014906|29089026|29089028|29089030|29099921|29099923|29099925|29099
+UDP_PlatformProductQuery.c(14):     927|29099929|29099931|29099933|29099935|29099937|29099939|29099941|29099943|29100017|29100
+UDP_PlatformProductQuery.c(14):     019|29100021|29100025|29100027|29100029|29100031|29100033|29100039|29100041|29100043|29100
+UDP_PlatformProductQuery.c(14):     045|29100047|29100049|29100051|29100062|29100064|29100066|29100166|29110175|29110176|29110
+UDP_PlatformProductQuery.c(14):     177|29110178|29110179|29110180|29110181|29110182|29110183|29110184|29110185|29110186|29124
+UDP_PlatformProductQuery.c(14):     479|29124480|29124481|29132393|29133091|29133238|29170895|29170987|29171023|29171025|29171
+UDP_PlatformProductQuery.c(14):     047|29171049|29181006|29181008|29181010|29181012|29191303|29204976|29205006|29205065|29205
+UDP_PlatformProductQuery.c(14):     089|29205091|29205093|29205096|29205615|29217144|29256508|29256510|29256531|29269779|29269
+UDP_PlatformProductQuery.c(14):     781|29269783|29346639|29346870|29346872|29346967|29362625|29377890|29378164|29378237|29378
+UDP_PlatformProductQuery.c(14):     239|29378250|29378268|29378270|29378272|29378274|29378294|29378296|29378299|29378301|29378
+UDP_PlatformProductQuery.c(14):     798|29378800|29378802|29378804|29378806|29378808|29378810|29378812|29378814|29378816|29378
+UDP_PlatformProductQuery.c(14):     818|29378820|29378822|29378824|29378826|29378828|29448130|29448132|29449447|29449463|29449
+UDP_PlatformProductQuery.c(14):     465|29482533|29482535|29494298|29494299|29494300|29494301|29494302|29494303|29494304|29494
+UDP_PlatformProductQuery.c(14):     305|29494306|29494307|29494308|29494309|29494310|29494311|29494312|29494376|29494379|29494
+UDP_PlatformProductQuery.c(14):     382|29562510|29562511|29562546|29562547|29562957|29562959|29563045|29563047|29563049|29563
+UDP_PlatformProductQuery.c(14):     051|29563053|29563724|29563726|29563960|29563962|29592627|29592629|29592631|29605212|29605
+UDP_PlatformProductQuery.c(14):     214|29605248|29605264|29605266|29625658|29625660|29636658|29662090|29678326|29678328|29678
+UDP_PlatformProductQuery.c(14):     331|29678333|29678335|29678360|29678362|29678490|29678492|29691044|29691045|29691046|29715
+UDP_PlatformProductQuery.c(14):     778|29734626|29734648|29734817|29770670|29770687|29770688|29770689|29770690|29770691|29770
+UDP_PlatformProductQuery.c(14):     692|29770693|29770694|29770695|29770696|29770893|29770895|29771014|29771016|29889133|29889
+UDP_PlatformProductQuery.c(14):     134|29889170|29889171|29889289|29890033|29906051|29906052|29906053|29906054|29906055|29906
+UDP_PlatformProductQuery.c(14):     056|29906057|29906058|29906059|29906060|29906061|29938489|29964398|29964400|29964402|29964
+UDP_PlatformProductQuery.c(14):     404|29964406|29964408|29964410|29964412|29964595|29964597|29964633|29964635|29964637|29964
+UDP_PlatformProductQuery.c(14):     639|29964641|29964643|29964645|29964647|29997165|29997167|29997214|29997216|29997218|29997
+UDP_PlatformProductQuery.c(14):     473|29997485|29997489|29997523|29997525|29997527|29997529|29998123|29998124|29998125|29998
+UDP_PlatformProductQuery.c(14):     126|29998127|29998128|29998129|29998130|29998131|29998132|29998133|29998134|29998135|29998
+UDP_PlatformProductQuery.c(14):     136|29998137|29998265|29998460|29998773|29998777|29998778|30013234|30046744|30046746|30046
+UDP_PlatformProductQuery.c(14):     748|30046750|30046752|30046754|30046756|30092991|30093000|30138422|30153289|30153327|30153
+UDP_PlatformProductQuery.c(14):     329|30168511|30168513|30188774|30188775|30188776|30188777|30206090|30206180|30206182|30206
+UDP_PlatformProductQuery.c(14):     210|30268495|30268497|30334550|30334552|30734339|30734341|30734343|30734452|30794270|30794
+UDP_PlatformProductQuery.c(14):     286|30836802|30836804|30836806|30927369|30950023|30950025|30950039|30950041|30950043|30950
+UDP_PlatformProductQuery.c(14):     045|30973049|30973051|30990266|30990268|31016387|31016641|31016643|31046517|31057592|31093
+UDP_PlatformProductQuery.c(14):     568|31093570|31127770|31129362|31129363|31129364|31129365|31129366|31129681|31129683|31129
+UDP_PlatformProductQuery.c(14):     685|31129687|31129689|31129691|31331269|31331271|31331273|31331275|31331277|31331279|31331
+UDP_PlatformProductQuery.c(14):     893|31344372|31353464|31353466|31448713|31448715|31448717|31448719|31448721|31535937|31549
+UDP_PlatformProductQuery.c(14):     659|31549661|31549679|31549701|31569801|31569815|31569817|31569849|31570966|31587160|31587
+UDP_PlatformProductQuery.c(14):     162|31587164|31588894|31588896|31588898|31592979|31595650|31595652|31595654|31595656|31596
+UDP_PlatformProductQuery.c(14):     393|31598492|31598494|31598496|31598498|31896978|31896980|31896982|31896984|31971781|31971
+UDP_PlatformProductQuery.c(14):     783|31971785|31971787|31971789|31971791|31971793|31971795|31971797|31971799|31971801|31971
+UDP_PlatformProductQuery.c(14):     803|31971805|31971807|31971809|31971811|32001276|32001278|32001280|32112574|32112576|32125
+UDP_PlatformProductQuery.c(14):     213|32125215|32125217|32125960|32125962|32125964|32125966|32125968|32125970|32125972|32125
+UDP_PlatformProductQuery.c(14):     974|32156992|32183594|32183596|32183598|32183600|32183602|32183604|32183606|32183608|32183
+UDP_PlatformProductQuery.c(14):     610|32183612|32183614|32183616|32183618|32183620|32183622|32235314|32235316|32378958|32378
+UDP_PlatformProductQuery.c(14):     959|32437643|32437645|32437647|32480857|32480859|32480861|32480864|32480866|32516125|32568
+UDP_PlatformProductQuery.c(14):     585|32568587|32568589|32591032|32591034|32591036|32591038|32693544|32708467|32764307|32764
+UDP_PlatformProductQuery.c(14):     309|32849794|32863832|32896877|32896878|32896879|33000038|33165044|33165046|33165048|33165
+UDP_PlatformProductQuery.c(14):     050|33165052|33165054|33192736|33192738|33192740|33192742|33192744|33192746|33192748|33192
+UDP_PlatformProductQuery.c(14):     750|33192752|33192754|33192756|33192758|33192760|33192762|33192764|33192766|33192768|33192
+UDP_PlatformProductQuery.c(14):     770|33192772|33192774|33192776|33192778|33270477|33270479|33297942|33344809|33386538|33386
+UDP_PlatformProductQuery.c(14):     540|33492360|33508867|33508919|33508921|33547408|33646455|33646457|33646658|33646661|33679
+UDP_PlatformProductQuery.c(14):     781|33679783|33679785|33679787|33679789|33691241|33691243|33691245|33691247|33730540|33757
+UDP_PlatformProductQuery.c(14):     336|33757338|33757340|33757342|33781264|33781266|33835746|33848683|33990742|33990744|33990
+UDP_PlatformProductQuery.c(14):     746|33990748|33990750|33990752|33990754|34110987|34110988|34165482|34183072|34183074|34369
+UDP_PlatformProductQuery.c(14):     743|34369745|34384844|34384846|34459317|34487020|34513394|34666477|34666479|34666481|34666
+UDP_PlatformProductQuery.c(14):     483|34666485|34722833|34766771|34766773|34766775|34766777|34766779|34766781|34766783|34794
+UDP_PlatformProductQuery.c(14):     876|34794878|34794880|34794882|34899306|34899308|34899310|34899312|34899314|34899316|34913
+UDP_PlatformProductQuery.c(14):     663|34926825|34926827|34953891|34953892|34953893|34953894|35334367|35391159|35832065|35879
+UDP_PlatformProductQuery.c(14):     042|35879043|37692714|37692716|37692718|37692720|37692722|37692724|37692726|37692728|37718
+UDP_PlatformProductQuery.c(14):     511|37718513|37718515|37718517|37718519|37756729|37919608|37933024|38029797"},{"terms":"DR
+UDP_PlatformProductQuery.c(14):     X 1.0 OMN","name":"DRX 1.0 OMN","pmClass":"pf_value","score":56.075478,"productId":"291244
+UDP_PlatformProductQuery.c(14):     46","platformModels":"26122187|29124494|29124495|29124502|29126518|29126519|29132755|29132
+UDP_PlatformProductQuery.c(14):     757|29132759|29171039|29171051|29171053|29204978|29204980|29205079|29205098|29205100|29205
+UDP_PlatformProductQuery.c(14):     128|29205130|29217292|29217294|29217296|29256513|29256515|29346641|29346969|29377848|29377
+UDP_PlatformProductQuery.c(14):     850|29448134|29448136|29448138|29449467|29482477|29482505|29482517|29482519|29494355|29494
+UDP_PlatformProductQuery.c(14):     358|29562512|29562985|29562987|29563633|29592658|29592660|29592734|29592736|29592738|29592
+UDP_PlatformProductQuery.c(14):     740|29592742|29605089|29605274|29605276|29605278|29605280|29625590|29625592|29625654|29625
+UDP_PlatformProductQuery.c(14):     656|29625662|29625664|29636536|29636538|29637406|29637408|29637410|29637432|29662010|29678
+UDP_PlatformProductQuery.c(14):     227|29678322|29678324|29678337|29678339|29691048|29735232|29735233|29735234|29735235|29735
+UDP_PlatformProductQuery.c(14):     259|29735271|29735277|29735278|29770698|29770700|29771004|29888340|29888398|29889252|29889
+UDP_PlatformProductQuery.c(14):     254|29889291|29889293|29889295|29889798|29906042|29906043|29964649|29964651|29964653|29964
+UDP_PlatformProductQuery.c(14):     655|29964657|29964659|29964661|29964663|29997503|30013240|30013241|30013242|30013243|30013
+UDP_PlatformProductQuery.c(14):     244|30046738|30046742|30092973|30092974|30138375|30138377|30153335|30178534|30334886|30734
+UDP_PlatformProductQuery.c(14):     283|30734285|30794246|30794254|30835936|30835938|30927242|3
+UDP_PlatformProductQuery.c(14): t=2261ms: 393-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" (RelFrameId=1, Internal ID=3)
+UDP_PlatformProductQuery.c(14):     0927244|30927246|30927248|30927250|30927313|30962394|30973043|30990240|31016385|31081298|3
+UDP_PlatformProductQuery.c(14):     1093556|31129707|31291391|31331295|31331297|31331299|31331301|31353446|31353448|31448599|3
+UDP_PlatformProductQuery.c(14):     1448601|31448603|31569843|31570363|31570365|31570367|31570369|31570371|31570373|31570375|3
+UDP_PlatformProductQuery.c(14):     1570377|31570379|31570978|31587126|31587128|31588948|31588950|31588952|31588954|31595612|3
+UDP_PlatformProductQuery.c(14):     1595614|31598456|31598458|3189694
+UDP_PlatformProductQuery.c(14): t=2262ms: 8192-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" (RelFrameId=1, Internal ID=3)
+UDP_PlatformProductQuery.c(14):     8|31896950|31896952|31896954|31896956|31896958|31896960|31971749|31971751|31972447|3200126
+UDP_PlatformProductQuery.c(14):     0|32001262|32001264|32125776|32125778|32125780|32125782|32125784|32125786|32125788|3220680
+UDP_PlatformProductQuery.c(14):     7|32437617|32437619|32480845|32480848|32516109|32516111|32552158|32568553|32568555|3256855
+UDP_PlatformProductQuery.c(14):     7|33529554|33529556|33744528|33744530|33835736|34110976|34406965|34406967|34443188|3539114
+UDP_PlatformProductQuery.c(14):     3|35391145"},{"terms":"Gamora 1.0","name":"Gamora 1.0","pmClass":"pf_value","score":55.242
+UDP_PlatformProductQuery.c(14):     523,"productId":"26059144","platformModels":"26059142|27066536|27066538|27066628|27066642|
+UDP_PlatformProductQuery.c(14):     27168277|27168280"},{"terms":"Dragons 1.0 OMN","name":"Dragons 1.0 OMN","pmClass":"pf_valu
+UDP_PlatformProductQuery.c(14):     e","score":54.220043,"productId":"16895980","platformModels":"16895978|18161343|18161345|1
+UDP_PlatformProductQuery.c(14):     8162279|18162508|18162541|18162543|18162545|18164705|18164842|18165049|18165100|18165102|1
+UDP_PlatformProductQuery.c(14):     8165191|18165203|18205280|18205282|18205388|18255657|18255767|18255856|18255874|18255876|1
+UDP_PlatformProductQuery.c(14):     8269399|18269578|18269692|18457955|18458084|18458086|18458088|18458131|18458133|18477372|1
+UDP_PlatformProductQuery.c(14):     8477374|18477376|18477378|18477380|18477408|18477535|18477795|18477797|18477930|18477932|1
+UDP_PlatformProductQuery.c(14):     8477934|18477936|18527649|18527651|18567289|18567318|18567320|18567322|18575622|18575624|1
+UDP_PlatformProductQuery.c(14):     8677248|18677250|18840634|18840636|18840638|18840786|18840788|18894898|18960696|19005973|1
+UDP_PlatformProductQuery.c(14):     9005974|19146911|19146913|19146915|19146917|19146919|19146921|19146923|19146925|19146927|1
+UDP_PlatformProductQuery.c(14):     9146929|19146931|19146933|19146935|19146937|19146939|19146941|19146943|19146945|19146947|1
+UDP_PlatformProductQuery.c(14):     9146949|19146951|19146953|19146955|19146957|19147123|19496703|20062293|20202890|20202902|2
+UDP_PlatformProductQuery.c(14):     0202904|20283621|20283623|20283730|20283732|20351626|20481906|20482184|20482185|20482186|2
+UDP_PlatformProductQuery.c(14):     0482187|20482188|20482189|20482190|20482191|20482192|20902399|21299100|21299101|21299102|2
+UDP_PlatformProductQuery.c(14):     1306212|21306214|21306216|21306218|21531740|21910227|22362393|22529970|22529972|22780226|2
+UDP_PlatformProductQuery.c(14):     2863304|22864277|23085487|23127887|23377134|23377136|23815411|23815412|23815413|24078655|2
+UDP_PlatformProductQuery.c(14):     4522067|24771808|24771810|25052249|25257599|26184848|26309669|27275755|27925282"},{"terms"
+UDP_PlatformProductQuery.c(14):     :"Marlins 1.0 OMN","name":"Marlins 1.0 OMN","pmClass":"pf_value","score":54.220043,"produc
+UDP_PlatformProductQuery.c(14):     tId":"16748390","platformModels":"16748388|16777413|17033213|17033215|17033217|17033219|17
+UDP_PlatformProductQuery.c(14):     033221|17033223|17033247|17033249|17033353|17033355|17033397|17033399|17033405|17033407|17
+UDP_PlatformProductQuery.c(14):     046880|17046882|17046884|17046886|17046888|17047009|17047011|17047013|17047015|17047017|17
+UDP_PlatformProductQuery.c(14):     047019|17047021|17047023|17047025|17047027|17047029|17047031|17047033|17047035|17047037|17
+UDP_PlatformProductQuery.c(14):     053254|17053256|17062309|17062311|17062313|17062315|17062317|17062321|17062323|17062325|17
+UDP_PlatformProductQuery.c(14):     062327|17062434|17062436|17062438|17062440|17062442|17062444|17062477|17062479|17062481|17
+UDP_PlatformProductQuery.c(14):     072905|17072927|17072929|17072931|17072933|17072935|17072937|17072939|17072967|17072969|17
+UDP_PlatformProductQuery.c(14):     072977|17072979|17072981|17072983|17072985|17104431|17104433|17104513|17104515|17104517|17
+UDP_PlatformProductQuery.c(14):     106301|17106303|17106304|17106306|17106343|17106345|17106347|17106349|17106431|17106433|17
+UDP_PlatformProductQuery.c(14):     106435|17106437|17106817|17106914|17106916|17107091|17107151|17107153|17107155|17107157|17
+UDP_PlatformProductQuery.c(14):     107159|17107161|17121894|17121896|17122050|17122052|17122058|17133014|17133043|17133046|17
+UDP_PlatformProductQuery.c(14):     133081|17141978|17142254|17192944|17193247|17193420|17193422|17193424|17193426|17199961|17
+UDP_PlatformProductQuery.c(14):     199963|17200146|17200148|17200197|17210444|17210446|17210448|17218098|17218187|17218189|17
+UDP_PlatformProductQuery.c(14):     218454|17218455|17218456|17218457|17218481|17218491|17218531|17218533|17230478|17230551|17
+UDP_PlatformProductQuery.c(14):     230554|17252079|17252081|17252083|17252148|17252150|17252281|17252312|17252533|17252585|17
+UDP_PlatformProductQuery.c(14):     252587|17252600|17252720|17274884|17274977|17274978|17274979|17274980|17274981|17275106|17
+UDP_PlatformProductQuery.c(14):     275327|17275329|17275331|17275333|17275361|17275373|17275397|17284326|17284328|17284342|17
+UDP_PlatformProductQuery.c(14):     307421|17307423|17307425|17307427|17307429|17307431|17307487|17307489|17307491|17307493|17
+UDP_PlatformProductQuery.c(14):     307495|17307497|17307499|17307501|17307503|17307505|17307507|17307509|17307511|17307513|17
+UDP_PlatformProductQuery.c(14):     307515|17307517|17307519|17307521|17307523|17307525|17307527|17307529|17307531|17307533|17
+UDP_PlatformProductQuery.c(14):     307535|17307537|17307539|17307541|17307543|17307545|17307547|17310418|17310420|17310462|17
+UDP_PlatformProductQuery.c(14):     319989|17403707|17403757|17471036|17471038|17471040|17471042|17471044|17471046|17471048|17
+UDP_PlatformProductQuery.c(14):     471050|17471052|17471054|17471056|17471213|17471235|17471237|17482630|17482632|17482634|17
+UDP_PlatformProductQuery.c(14):     505182|17505184|17505186|17505302|17505657|17531722|17531845|17534309|17534319|17534321|17
+UDP_PlatformProductQuery.c(14):     534331|17534512|17571794|17571796|17571798|17572145|17572147|17572149|17572151|17572153|17
+UDP_PlatformProductQuery.c(14):     625930|17625932|17626204|17626206|17626230|17648904|17683411|17683413|17688257|17688261|17
+UDP_PlatformProductQuery.c(14):     731087|17731109|17731111|17731113|17731115|17731117|17850852|17872917|17872919|17961758|17
+UDP_PlatformProductQuery.c(14):     984378|17984380|17984388|17996632|18007278|18042663|18042785|18131439|18161321|18162488|18
+UDP_PlatformProductQuery.c(14):     162490|18162492|18162494|18162496|18162498|18163730|18163732|18163734|18164150|18164151|18
+UDP_PlatformProductQuery.c(14):     164423|18164907|18164909|18164911|18164913|18165042|18269720|18269722|18329866|18329884|18
+UDP_PlatformProductQuery.c(14):     457947|18457949|18457951|18457953|18477494|18477508|18491400|18564960|18564962|18567285|18
+UDP_PlatformProductQuery.c(14):     575572|18575936|18602075|18640049|18819766|18820186|18820200|18820254|18820256|18840738|18
+UDP_PlatformProductQuery.c(14):     863232|18863234|18863236|18895075|18918904|19005699|19005703|19005729|19005732|19100961|19
+UDP_PlatformProductQuery.c(14):     101207|19101209|19101213|19202318|19390199|19390210|19390634|19451110|19451112|19451114|19
+UDP_PlatformProductQuery.c(14):     451116|19451118|19451124|19451172|19460589|19496693|19496695|19531041|19531053|19531055|19
+UDP_PlatformProductQuery.c(14):     531057|19531059|19531061|19767926|19876936|19887638|19905784|19905786|19905788|19955297|19
+UDP_PlatformProductQuery.c(14):     955299|19968668|19988318|20013855|20013857|20017645|20017647|20017655|20017694|20036365|20
+UDP_PlatformProductQuery.c(14):     036367|20062252|20062254|20075960|20270469|20270471|20283261|20283611|20283613|20351445|20
+UDP_PlatformProductQuery.c(14):     395988|20395990|20481607|20481609|20481709|20481711|20481713|20481715|20552076|20552088|20
+UDP_PlatformProductQuery.c(14):     655845|20945985|21006736|21006738|21006740|21006792|21006794|21085819|21085821|21138225|21
+UDP_PlatformProductQuery.c(14):     138227|21138231|21138233|21158602|21159028|21238924|21316687|21316689|21354122|21441752|21
+UDP_PlatformProductQuery.c(14):     470942|21470946|21501729|21531752|21531759|21531760|21531761|21760358|21777773|21793961|21
+UDP_PlatformProductQuery.c(14):     833793|21833795|21833797|21833799|21858444|21858818|21858820|21858822|21858824|21858826|21
+UDP_PlatformProductQuery.c(14):     869557|21869559|21949382|22192048|22424860"},{"terms":"Reacher 1.0 OMN","name":"Reacher 1.
+UDP_PlatformProductQuery.c(14):     0 OMN","pmClass":"pf_value","score":54.220043,"productId":"7468072","platformModels":"7468
+UDP_PlatformProductQuery.c(14):     071|7523584|7523587|7523590|7523593|7523596|7523599|7523602|7523605|7527447|7527450|752745
+UDP_PlatformProductQuery.c(14):     3|7527456|7527459|7527462|7527465|7531178|7531925|7531928|7531931|7538549|7538555|7538561|
+UDP_PlatformProductQuery.c(14):     7538566|7538571|7538576|7538580|7538583|7541637|7547415|7547418|7547421|7547424|7547748|75
+UDP_PlatformProductQuery.c(14):     53415|7567911|7567914|7567917|7577149|7577152|7577155|7577158|7584160|7592495|7597901|7597
+UDP_PlatformProductQuery.c(14):     904|7602485|7602488|7606459|7606462|7610752|7639767|7685386|7688214|7688217|7709359|770936
+UDP_PlatformProductQuery.c(14):     2|7748112|7781655|7791782|7835587|7851584|7907446|7907447|7907448|7907449|8073853|8073855|
+UDP_PlatformProductQuery.c(14):     8154042"},{"terms":"Beluga 1.0 OMN","name":"Beluga 1.0 OMN","pmClass":"pf_value","score":5
+UDP_PlatformProductQuery.c(14):     3.700436,"productId":"32796899","platformModels":"32796777|32796779"},{"terms":"Milos 1.0 
+UDP_PlatformProductQuery.c(14):     OMN","name":"Milos 1.0 OMN","pmClass":"pf_value","score":53.700436,"productId":"29132765",
+UDP_PlatformProductQuery.c(14):     "platformModels":"26122168|29110348|29110355|29110366|29110374|29110377|29110380|29110385|
+UDP_PlatformProductQuery.c(14):     29132454|29132456|29132458|29132460|29132462|29132464|29132466|29132468|29132470|29132472|
+UDP_PlatformProductQuery.c(14):     29205037|29205771|29205773|29205775|29205853|29205856|29269777|29269787|29269789|29269791|
+UDP_PlatformProductQuery.c(14):     29269793|29269795|29269797|29269821|29269823|29269825|29269827|29269829|29269831|29270200|
+UDP_PlatformProductQuery.c(14):     29270202|29270204|29346848|29346850|29362705|29362711|29362716|29362722|29362725|29362731|
+UDP_PlatformProductQuery.c(14):     29377745|29377749|29377751|29377753|29377755|29377757|29377759|29377761|29377763|29377765|
+UDP_PlatformProductQuery.c(14):     29377767|29377769|29377771|29377773|29377775|29377777|29377800|29377802|29377804|29377806|
+UDP_PlatformProductQuery.c(14):     29377820|29377822|29377824|29377826|29377828|29377830|29377868|29377870|29377872|29377874|
+UDP_PlatformProductQuery.c(14):     29377884|29377886|29377888|29378166|29378241|29378243|29378264|29378303|29378306|29378308|
+UDP_PlatformProductQuery.c(14):     29378310|29448140|29448142|29448144|29448146|29448148|29448150|29448162|29448938|29482479|
+UDP_PlatformProductQuery.c(14):     29494660|29494661|29494662|29494663|29494664|29494665|29494666|29494667|29494668|29494669|
+UDP_PlatformProductQuery.c(14):     29494670|29494671|29494672|29494673|29494674|29562845|29562847|29562849|29562865|29562867|
+UDP_PlatformProductQuery.c(14):     29562869|29562906|29562910|29562912|29562914|29562916|29562918|29562920|29562922|29562924|
+UDP_PlatformProductQuery.c(14):     29562926|29562928|29562930|29562932|29562997|29562999|29563001|29563003|29563055|29563057|
+UDP_PlatformProductQuery.c(14):     29
+UDP_PlatformProductQuery.c(14): t=2270ms: 7665-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" (RelFrameId=1, Internal ID=3)
+UDP_PlatformProductQuery.c(14):     563059|29563061|29563179|29563181|29563183|29563185|29563187|29563189|29563191|29563193|29
+UDP_PlatformProductQuery.c(14):     563195|29563197|29563199|29563201|29563203|29563205|29563207|29563225|29563227|29563229|29
+UDP_PlatformProductQuery.c(14):     563231|29563233|29563235|29563314|29563316|29563318|29563320|29563322|29563324|29563326|29
+UDP_PlatformProductQuery.c(14):     563328|29563330|29563332|29563334|29563336|29563338|29563340|29563342|29563344|29563346|29
+UDP_PlatformProductQuery.c(14):     563348|29563350|29563352|29563354|29563356|29563358|29563360|29563362|29563364|29563366|29
+UDP_PlatformProductQuery.c(14):     563368|29563370|29563372|29563374|29563376|29563378|29563380|29563382|29563384|29563629|29
+UDP_PlatformProductQuery.c(14):     563631|29563728|29592662|29592664|29592666|29592668|29592670|29592672|29592674|29605148|29
+UDP_PlatformProductQuery.c(14):     605150|29605292|29625594|29625596|29625598|29625600|29625666|29636660|29636662|29636664|29
+UDP_PlatformProductQuery.c(14):     636666|29636668|29637412|29637414|29678093|29678095|29678181|29678183|29678350|29678358|29
+UDP_PlatformProductQuery.c(14):     678482|29678484|29678486|29678488|29678536|29678538|29678544|29678546|29678548|29678550|29
+UDP_PlatformProductQuery.c(14):     678556|29678558|29678560|29678562|29678564|29691049|29691050|29691051|29691052|29691053|29
+UDP_PlatformProductQuery.c(14):     715908|29716013|29716015|29716017|29716019|29716021|29716023|29716025|29716027|29716029|29
+UDP_PlatformProductQuery.c(14):     716031|29716033|29734650|29735199|29735218|29735219|29735220|29735221|29735222|29735223|29
+UDP_PlatformProductQuery.c(14):     735224|29735237|29735263|29735264|29735272|29735273|29735274|29735275|29735276|29770671|29
+UDP_PlatformProductQuery.c(14):     770701|29770702|29770703|29770704|29770724|29770725|29888342|29888344|29888346|29888428|29
+UDP_PlatformProductQuery.c(14):     888430|29888432|29888434|29889255|29889802|29889824|29906093|29906094|29906095|29906096|29
+UDP_PlatformProductQuery.c(14):     906097|29964519|29964521|29964523|29964599|29997221|29997243|29997246|29997248|29997250|29
+UDP_PlatformProductQuery.c(14):     997252|29997254|29997256|29997258|29997260|29997262|29997264|29997297|29997299|29997301|29
+UDP_PlatformProductQuery.c(14):     998440|29998765|29998774|29998775|29998817|29998819|30013289|30013290|30092966|30092975|30
+UDP_PlatformProductQuery.c(14):     092976|30092992|30138367|30138369|30138371|30138373|30153337|30153339|30153341|30153359|30
+UDP_PlatformProductQuery.c(14):     178498|30178500|30188778|30188801|30734295|30734297|30734299|30794280|30836808|30836810|30
+UDP_PlatformProductQuery.c(14):     836812|30836814|30836816|30836818|30836820|30904270|30927315|30927317|30927319|30927321|30
+UDP_PlatformProductQuery.c(14):     927655|31003093|31016645|31016647|31057594|31081322|31081324|31093616|31127839|31128111|31
+UDP_PlatformProductQuery.c(14):     129693|31129695|31331281|31331283|31449802|31450451|31450454|31535969|31569827|31569829|31
+UDP_PlatformProductQuery.c(14):     570972|31570980|31570982|31587186|31587188|31587190|31587192|31587194|31587196|31588900|31
+UDP_PlatformProductQuery.c(14):     588902|31588904|31588906|31588908|31592973|31595722|31595724|31595726|31595728|31595730|31
+UDP_PlatformProductQuery.c(14):     595732|31595734|31596905|31596906|31596907|31596908|31596909|31596910|31596911|31596912|31
+UDP_PlatformProductQuery.c(14):     596913|31596914|31596915|31596951|31598758|31598760|31598762|31598764|31598766|31598768|31
+UDP_PlatformProductQuery.c(14):     598770|31598772|31598774|31897016|31897018|31897020|31897022|31971909|31971911|31971913|31
+UDP_PlatformProductQuery.c(14):     971915|31971917|31971919|31971921|31971923|31971925|31971927|31971929|31971931|32001298|32
+UDP_PlatformProductQuery.c(14):     001300|32112578|32112580|32112582|32125395|32183844|32183846|32183848|32183850|32183852|32
+UDP_PlatformProductQuery.c(14):     183854|32183856|32183858|32183860|32183862|32183864|32183866|32183868|32183870|32183872|32
+UDP_PlatformProductQuery.c(14):     183874|32206338|32206340|32206342|32206344|32235368|32379262|32379264|32379266|32379268|32
+UDP_PlatformProductQuery.c(14):     437679|32437681|32437683|32437685|32437687|32437689|32480877|32480879|32552200|32568691|32
+UDP_PlatformProductQuery.c(14):     568693|32568695|32568697|32568699|32568701|32568703|32568705|32568707|32568709|32568711|32
+UDP_PlatformProductQuery.c(14):     591050|32591052|32647528|32647530|32647532|32693546|32708479|32708481|32708483|32708485|32
+UDP_PlatformProductQuery.c(14):     708487|32708489|32708491|32708493|32708495|32708497|32748486|32748488|32748490|32748492|32
+UDP_PlatformProductQuery.c(14):     748494|32764327|32796867|32796869|32796871|32849812|32896892|33192788|33270497|33297948|33
+UDP_PlatformProductQuery.c(14):     298563|33337125|33386608|33386610|33386612|33386614|33386616|33386618|33437128|33529864|33
+UDP_PlatformProductQuery.c(14):     646656|33646659|33646662|33690949|33690951|33690953|33691751|33691753|33691755|33730556|33
+UDP_PlatformProductQuery.c(14):     744546|33744548|33744550|33744552|33744554|33781502|33801081|33990850|33990852|33990854|33
+UDP_PlatformProductQuery.c(14):     990856|34089860|34089861|34110999|34183092|34183094|34183096|34246093|34246095|34246097|34
+UDP_PlatformProductQuery.c(14):     246099|34362751|34369825|34369827|34369829|34369831|34407021|34407023|34407025|34407027|34
+UDP_PlatformProductQuery.c(14):     459343|34513488|34667313|34667315|34667317|34667319|34667321|34667323|34667325|34667327|34
+UDP_PlatformProductQuery.c(14):     667329|34667331|34667333|34667335|34667337|34701366|34701368|34701370|34701372|34701374|34
+UDP_PlatformProductQuery.c(14):     723425|34748042|34748043|34748044|34748391|34766855|34861890|34913731|34913733|35334676|35
+UDP_PlatformProductQuery.c(14):     718646|35718647|35718648|35718649|35832096|37919704"},{"terms":"SANTORINI 1.0 OMN","name":
+UDP_PlatformProductQuery.c(14):     "SANTORINI 1.0 OMN","pmClass":"pf_value","score":53.700436,"productId":"31057352","platfor
+UDP_PlatformProductQuery.c(14):     mModels":"26122177"},{"terms":"Griffin 1.0 OMN","name":"Griffin 1.0 OMN","pmClass":"pf_val
+UDP_PlatformProductQuery.c(14):     ue","score":51.842075,"productId":"11792447","platformModels":"11792445|11830362|11830442|
+UDP_PlatformProductQuery.c(14):     11861011|11861014|11861017|11875165|11896278|11896280|11896282|11896284|11896490|11896492|
+UDP_PlatformProductQuery.c(14):     11896494|11896502|11915445|11915446|11926638|11954996|11975515|11975517|11991799|11991801|
+UDP_PlatformProductQuery.c(14):     11991803|11991805|11991807|11991809|11991811|11991949|11991951|11991953|11992083|12028991|
+UDP_PlatformProductQuery.c(14):     12079591|12079592|12089087|12089089|12089091|12089093|12100285|12100287|12100289|12100291|
+UDP_PlatformProductQuery.c(14):     12116443|12152421|12152423|12189199|12198050|12198052|12198054|12206113|12206115|12206117|
+UDP_PlatformProductQuery.c(14):     12206119|12221911|12237474|12237475|12237476|12237477|12244326|12261507|12261509|12293618|
+UDP_PlatformProductQuery.c(14):     12319413|12319415|12344112|12344114|12344116|12344238|12344240|12344242|12378299|12378301|
+UDP_PlatformProductQuery.c(14):     12378303|12378305|12378307|12378392|12458877|12458930|12458932|12458934|12458936|12498954|
+UDP_PlatformProductQuery.c(14):     12498956|12498958|12516800|12569132|12589405|12614204|12614206|12635419|12635421|12635423|
+UDP_PlatformProductQuery.c(14):     12658735|12681308|12709859|12732800|12740526|12779693|12779800|12780592|12780593|12780594|
+UDP_PlatformProductQuery.c(14):     12780595|12780596|13222018|13222020|13222022|13429201|13443033|13443034|13475451|13556525|
+UDP_PlatformProductQuery.c(14):     13556539|13810041|13810043|13810086|13916572|13916752|13958395|13958397|13958399|13958401|
+UDP_PlatformProductQuery.c(14):     14057385|14057937|14057939|14431374|14431424|14485857|14495392|14689046|14731779|14731781|
+UDP_PlatformProductQuery.c(14):     14757321|14757335|15612325|15820826|16186441|16450106|16450107|16522774|16748214|16778339|
+UDP_PlatformProductQuery.c(14):     16840196|16840198|16840200|17121585|17142272|17626200|17660771|18269998|18270000"},{"terms
+UDP_PlatformProductQuery.c(14):     ":"Pirates 1.0 OMN","name":"Pirates 1.0 OMN","pmClass":"pf_value","score":51.842075,"produ
+UDP_PlatformProductQuery.c(14):     ctId":"16777426","platformModels":"16777424|16842311|16842313|16851239|16851241|16851243|1
+UDP_PlatformProductQuery.c(14):     6851245|16851247|16851249|16851251|16851253|16851255|16851285|16851287|16851289|16851293|1
+UDP_PlatformProductQuery.c(14):     6861914|16861916|16861918|16861920|16871569|16871571|16871619|16871621|16871623|16871625|1
+UDP_PlatformProductQuery.c(14):     6871627|16895836|16900634|16900636|16900638|16900640|16900642|16901072|16901074|16901076|1
+UDP_PlatformProductQuery.c(14):     6901078|16901080|16901082|16901084|16901146|16901148|16901845|16902342|16916953|16916955|1
+UDP_PlatformProductQuery.c(14):     6916957|16916959|16916961|16916965|16917577|16917578|16930611|16930661|17032902|17032904|1
+UDP_PlatformProductQuery.c(14):     7033209|17033211|17033235|17033237|17033239|17033241|17033243|17033245|17033877|17033919|1
+UDP_PlatformProductQuery.c(14):     7034057|17034059|17046858|17046860|17046862|17046864|17053451|17062227|17062307|17062319|1
+UDP_PlatformProductQuery.c(14):     7062473|17062475|17072913|17072915|17072965|17072975|17104499|17104501|17104503|17104505|1
+UDP_PlatformProductQuery.c(14):     7104507|17106293|17106339|17106341|17106425|17106427|17106429|17106900|17106902|17106904|1
+UDP_PlatformProductQuery.c(14):     7106906|17107087|17107137|17107139|17121479|17121503|17121567|17121569|17121875|17121877|1
+UDP_PlatformProductQuery.c(14):     7121879|17121881|17121883|17122076|17133013|17133037|17133038|17133039|17133040|17133041|1
+UDP_PlatformProductQuery.c(14):     7133045|17141972|17142022|17142246|17142248|17142250|17192942|17193079|17193081|17193083|1
+UDP_PlatformProductQuery.c(14):     7193085|17193087|17193089|17193091|17193093|17193095|17193097|17193099|17193101|17193103|1
+UDP_PlatformProductQuery.c(14):     7193105|17193107|17193109|17193111|17193113|17193115|17193117|17193119|17193121|17193123|1
+UDP_PlatformProductQuery.c(14):     7193125|17193127|17193129|17193131|17193133|17193135|17193137|17193139|17193141|17193241|1
+UDP_PlatformProductQuery.c(14):     7193410|17193412|17193414|17193658|17193660|17199929|17199953|17199955|17200098|17200142|1
+UDP_PlatformProductQuery.c(14):     7200144|17200164|17210345|17210442|17218181|17218183|17218185|17218250|17218252|17218451|1
+UDP_PlatformProductQuery.c(14):     7218452|17218453|17218475|17218477|17218479|17218525|17218620|17218622|17218624|17218626|1
+UDP_PlatformProductQuery.c(14):     7230476|1723054
+UDP_PlatformProductQuery.c(14): t=2276ms: 8192-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" (RelFrameId=1, Internal ID=3)
+UDP_PlatformProductQuery.c(14):     1|17230543|17252075|17252077|17252085|17252092|17252094|17252096|17252098|17252100|1725214
+UDP_PlatformProductQuery.c(14):     0|17252142|17252144|17252146|17252525|17252539|17252541|17252581|17252583|17252718|1725272
+UDP_PlatformProductQuery.c(14):     8|17252730|17274879|17274880|17274881|17274882|17274883|17274976|17275006|17275007|1727500
+UDP_PlatformProductQuery.c(14):     8|17275335|17275391|17275393|17275395|17284340|17296738|17296740|17307409|17307411|1730741
+UDP_PlatformProductQuery.c(14):     3|17307415|17307417|17307419|17307433|17307435|17307457|17307672|17310409|17310411|1731048
+UDP_PlatformProductQuery.c(14):     8|17310490|17319985|17320148|17403731|17403733|17403906|17471018|17471020|17471022|1747102
+UDP_PlatformProductQuery.c(14):     4|17471026|17471028|17471205|17471207|17482620|17482622|17504945|17505166|17505168|1750517
+UDP_PlatformProductQuery.c(14):     0|17505172|17505174|17505176|17505178|17505300|17505649|17505651|17505653|17531823|1753182
+UDP_PlatformProductQuery.c(14):     5|17534305|17534315|17534317|17534329|17563804|17563806|17563808|17571790|17571822|1757182
+UDP_PlatformProductQuery.c(14):     4|17572139|17572189|17623189|17623191|17625940|17626105|17626113|17626226|17648912|1766080
+UDP_PlatformProductQuery.c(14):     3|17683305|17683307|17683409|17688251|17688253|17731083|17731101|17731103|17731105|1773110
+UDP_PlatformProductQuery.c(14):     7|17850627|17850834|17850842|17872371|17872373|17872911|17872913|17872915|18042783|1813143
+UDP_PlatformProductQuery.c(14):     5|18131437|18131990|18163660|18163666|18163668|18163670|18163672|18163728|18163779|1816443
+UDP_PlatformProductQuery.c(14):     7|18164439|18164901|18255815|18255841|18269698|18269700|18269702|18329858|18329878|1832988
+UDP_PlatformProductQuery.c(14):     0|18463741|18477490|18477492|18477506|18491481|18491483|18527498|18527502|18564950|1856495
+UDP_PlatformProductQuery.c(14):     6|18564958|18567281|18567283|18575568|18575588|18575590|18576056|18602063|18602065|1860206
+UDP_PlatformProductQuery.c(14):     7|18602069|18602228|18640053|18640055|18640057|18686370|18686374|18686375|18695589|1869559
+UDP_PlatformProductQuery.c(14):     1|18806570|18819758|18819760|18819762|18820094|18820106|18820180|18820198|18820214|1882025
+UDP_PlatformProductQuery.c(14):     0|18820252|18832023|18840734|18863138|18863228|18863230|18894856|18894858|18894860|1896099
+UDP_PlatformProductQuery.c(14):     9|18966955|18966957|18967114|18967118|19005700|19101201|19101203|19101205|19101211|1913387
+UDP_PlatformProductQuery.c(14):     6|19147225|19147227|19202455|19390208|19390374|19390375|19390376|19390628|19390630|1939063
+UDP_PlatformProductQuery.c(14):     2|19451094|19460090|19460092|19460094|19460225|19460407|19460585|19496689|19496691|1953103
+UDP_PlatformProductQuery.c(14):     7|19531039|19531045|19531047|19531049|19531051|19546784|19555567|19555569|19555571|1955557
+UDP_PlatformProductQuery.c(14):     3|19555575|19768490|19768491|19768492|19876934|19887636|19905780|19905855|19905857|1990585
+UDP_PlatformProductQuery.c(14):     9|19905861|19905863|19955405|19955407|19955409|19955412|19955414|19955427|19968666|1998831
+UDP_PlatformProductQuery.c(14):     6|20008323|20013847|20013849|20013851|20013853|20017643|20017692|20017698|20017700|2001770
+UDP_PlatformProductQuery.c(14):     2|20036361|20036363|20061595|20062139|20062246|20062248|20062250|20062268|20062289|2006239
+UDP_PlatformProductQuery.c(14):     1|20062393|20062395|20063269|20075958|20075962|20216791|20216793|20216795|20229943|2027022
+UDP_PlatformProductQuery.c(14):     4|20270447|20270449|20270451|20270453|20270467|20283255|20283257|20283579|20283581|2028358
+UDP_PlatformProductQuery.c(14):     3|20283585|20283650|20351678|20351680|20351682|20351684|20351686|20351688|20351690|2035169
+UDP_PlatformProductQuery.c(14):     2|20381282|20381283|20395986|20481932|20481933|20481934|20481935|20481936|20481937|2048193
+UDP_PlatformProductQuery.c(14):     8|20486589|20486591|20486593|20486649|20492492|20492494|20492498|20492654|20552084|2055208
+UDP_PlatformProductQuery.c(14):     6|20945983|21006726|21006734|21085815|21085817|21138153|21138223|21138239|21159026|2118352
+UDP_PlatformProductQuery.c(14):     0|21183522|21183538|21238920|21238922|21388258|21388442|21470938|21470940|21501622|2150365
+UDP_PlatformProductQuery.c(14):     9|21503675|21503677|21531548|21531765|21625497|21760356|21769021|21777771|21833785|2183378
+UDP_PlatformProductQuery.c(14):     7|21833789|21833791|21858440|21858814|21858816|21858828|21869555|21910218|21949419|2198416
+UDP_PlatformProductQuery.c(14):     4|22424856|22424858|22457945|22665628|22665629|22863292|22864271|22931631|22931633|2304527
+UDP_PlatformProductQuery.c(14):     8|23045280|23128092|23206036|23206038|23206040|23334859|23394499|23394501|23394503|2339450
+UDP_PlatformProductQuery.c(14):     5|23394507|23405039|23405040|23428021|23476679|23815084|23815085|23815086|23815087|2381508
+UDP_PlatformProductQuery.c(14):     8"},{"terms":"Kirin 1.0 OMN","name":"Kirin 1.0 OMN","pmClass":"pf_value","score":51.842075
+UDP_PlatformProductQuery.c(14):     ,"productId":"11612695","platformModels":"11612693|11612697|11612700|11612703|11612706|116
+UDP_PlatformProductQuery.c(14):     12709|11612712|11612715|11612718|11612721|11612829|11771146|11771149|11771152|11792502|118
+UDP_PlatformProductQuery.c(14):     04431|11804434|11804437|11804440|11804443|11804446|11830356|11830359|11830439|11860993|118
+UDP_PlatformProductQuery.c(14):     60996|11860999|11861002|11861005|11861008|11875012|11896379|11896381|11896480|11896482|119
+UDP_PlatformProductQuery.c(14):     06074|11915318|11915319|11915320|11915321|11926582|11954968|11954970|11991547|11991569|119
+UDP_PlatformProductQuery.c(14):     91571|11991765|11991767|11991769|11991771|11991869|11991871|12010641|12010643|12011030|120
+UDP_PlatformProductQuery.c(14):     11032|12079342|12088883|12088885|12088887|12088889|12088891|12100130|12100132|12100239|121
+UDP_PlatformProductQuery.c(14):     00241|12152465|12152467|12189078|12189080|12189082|12221440|12237045|12237047|12237049|122
+UDP_PlatformProductQuery.c(14):     37051|12237053|12244310|12261323|12261325|12261327|12261329|12261331|12293456|12293458|122
+UDP_PlatformProductQuery.c(14):     93460|12293462|12293464|12293466|12293468|12312500|12319375|12319377|12319379|12319381|123
+UDP_PlatformProductQuery.c(14):     33991|12334381|12344098|12344100|12344102|12378189|12378191|12378193|12378995|12498793|124
+UDP_PlatformProductQuery.c(14):     98794|12498795|12498796|12499540|12499542|12499544|12499546|12499548|12499550|12499552|125
+UDP_PlatformProductQuery.c(14):     16750|12516752|12530871|12569104|12569270|12569272|12589014|12589373|12604016|12604018|126
+UDP_PlatformProductQuery.c(14):     16645|12635385|12635387|12635389|12635391|12635393|12681306|12681419|12725310|12732710|127
+UDP_PlatformProductQuery.c(14):     32712|12732714|12732802|12779687|12780436|12780585|13152730|13152756|13152758|13152874|131
+UDP_PlatformProductQuery.c(14):     52876|13184079|13218223|13221988|13222048|13222198|13222200|13279670|13316295|13316299|133
+UDP_PlatformProductQuery.c(14):     16301|13386480|13386482|13386484|13386486|13386488|13402623|13402625|13402627|13443030|134
+UDP_PlatformProductQuery.c(14):     98301|13498302|13555707|13624604|13673773|13673786|13809988|13809990|13810051|13810057|139
+UDP_PlatformProductQuery.c(14):     16566|13916568|13958371|13958373|13958375|13958517|13978208|13978210|14019156|14019466|140
+UDP_PlatformProductQuery.c(14):     57378|14057380|14057934|14095481|14095482|14105043|14105045|14121371|14167582|14183423|143
+UDP_PlatformProductQuery.c(14):     08927|14444122|14495390|14605644|14646164|14646172|14646174|14731771|14757319|14757331|147
+UDP_PlatformProductQuery.c(14):     57333|15129283|15178256|15178258|15209749|15209759|15304417|15403475|15403477|15403491|155
+UDP_PlatformProductQuery.c(14):     22331|16197841|16209275|16242474|16257568|16447934|16450096|16450192|16522770|16748210|168
+UDP_PlatformProductQuery.c(14):     40194|16851297|16871635|16917619|17121581|17121583|17534357|17563726|17626198|26122183"},{
+UDP_PlatformProductQuery.c(14):     "terms":"Santorini 1.0 OMN","name":"Santorini 1.0 OMN","pmClass":"pf_value","score":51.842
+UDP_PlatformProductQuery.c(14):     075,"productId":"29124437","platformModels":"26122177|29124475|29124506|29124507|29124508|
+UDP_PlatformProductQuery.c(14):     29124509|29124510|29124511|29124512|29124513|29124514|29124515|29124516|29124517|29124518|
+UDP_PlatformProductQuery.c(14):     29126514|29126523|29126524|29132482|29171041|29171059|29171061|29171063|29191319|29191321|
+UDP_PlatformProductQuery.c(14):     29205071|29205116|29205118|29205120|29205132|29217134|29346615|29346617|29346619|29346621|
+UDP_PlatformProductQuery.c(14):     29346623|29346625|29346651|29346653|29346890|29346892|29346923|29362615|29377733|29377735|
+UDP_PlatformProductQuery.c(14):     29377747|29377808|29377810|29377812|29377814|29377816|29377818|29377858|29377860|29377862|
+UDP_PlatformProductQuery.c(14):     29377864|29377866|29377876|29377892|29377894|29377896|29378117|29378194|29378196|29378198|
+UDP_PlatformProductQuery.c(14):     29378410|29378412|29378414|29378442|29378444|29378446|29448093|29448095|29448097|29448099|
+UDP_PlatformProductQuery.c(14):     29448101|29448103|29448105|29448158|29448254|29482487|29482545|29494692|29494693|29494694|
+UDP_PlatformProductQuery.c(14):     29494695|29494696|29494697|29494749|29494750|29494751|29494752|29494753|29494754|29494755|
+UDP_PlatformProductQuery.c(14):     29562519|29562520|29562521|29562851|29562853|29562855|29562857|29562859|29562861|29562863|
+UDP_PlatformProductQuery.c(14):     29562871|29562873|29562875|29562877|29562879|29562934|29562936|29562939|29562941|29562943|
+UDP_PlatformProductQuery.c(14):     29562945|29563386|29563388|29563390|29563392|29563394|29563396|29563398|29563400|29563402|
+UDP_PlatformProductQuery.c(14):     29563404|29563406|29563408|29563410|29563412|29563414|29563416|29563418|29563420|29563422|
+UDP_PlatformProductQuery.c(14):     29563424|29563426|29563428|29563430|29563432|29563607|29592652|29605099|29605252|29625584|
+UDP_PlatformProductQuery.c(14):     29625612|29625614|29625616|29625618|29625620|29625622|29625624|29625626|29625628|29625630|
+UDP_PlatformProductQuery.c(14):     29625668|29625670|29636546|29636584|29636586|29637416|29637418|29637420|29637422|29662008|
+UDP_PlatformProductQuery.c(14):     29678117|29678119|29678215|29678217|29678472|29678474|29678476|29678478|29678480|29690969|
+UDP_PlatformProductQuery.c(14):     29690970|29690971|29690972|29716073|29716075|29716077|29716079|29734537|29735200|29735225|
+UDP_PlatformProductQuery.c(14):     29735226|29735227|29735228|29735229|29735230|29735231|29735265|29735266|29770675|29770676|
+UDP_PlatformProductQuery.c(14):     29770677|29770678|29770680|29770713|29770714|29770715|29770716|29770717|29770718|29771010|
+UDP_PlatformProductQuery.c(14):     29771035|29771037|29771039|29771041|29888386|29888388|29888390|29889260|29906321|29906323|
+UDP_PlatformProductQuery.c(14):     29906325|29906327|29906329|29906331|29906333|29906335|29938498|29964500|29964502|29964543|
+UDP_PlatformProductQuery.c(14):     29964545|29964547|29964549|29964551|29964553|29964555|29964557|29964559|29964613|29964855|
+UDP_PlatformProductQuery.c(14):     29982322|29982489|29982491|29997276|29997337|29998253|29998255|29998257|29998358|29998360|
+UDP_PlatformProductQuery.c(14):     29998444|29998470|30029587|30029593|30046848|30046850|30046852|30046854|30093001|30138379|
+UDP_PlatformProductQuery.c(14):     30
+UDP_PlatformProductQuery.c(14): t=2281ms: 8174-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" (RelFrameId=1, Internal ID=3)
+UDP_PlatformProductQuery.c(14):     138381|30138383|30138385|30153293|30153295|30153297|30153343|30153351|30153353|30188787|30
+UDP_PlatformProductQuery.c(14):     188788|30188789|30334555|30334557|30734201|30794252|30794256|30794258|30794272|30836836|30
+UDP_PlatformProductQuery.c(14):     836838|30836840|30836842|30904254|30904256|31003101|31016381|31016383|31016621|31057580|31
+UDP_PlatformProductQuery.c(14):     057582|31057584|31057586|31057588|31057602|31057604|31057606|31057608|31093626|31093628|31
+UDP_PlatformProductQuery.c(14):     093630|31093632|31093634|31093636|31129367|31129369|31129489|31129491|31129493|31129697|31
+UDP_PlatformProductQuery.c(14):     129699|31129705|31331285|31331287|31331289|31331291|31331293|31331757|31331760|31449826|31
+UDP_PlatformProductQuery.c(14):     449827|31449828|31449829|31449830|31536001|31536003|31536005|31536007|31536009|31549667|31
+UDP_PlatformProductQuery.c(14):     570473|31570984|31570986|31570988|31588818|31588820|31588822|31588824|31588922|31588924|31
+UDP_PlatformProductQuery.c(14):     588926|31588928|31588930|31588932|31588934|31588936|31588938|31592505|31592507|31592509|31
+UDP_PlatformProductQuery.c(14):     592981|31595889|31595891|31595893|31595895|31595897|31596952|31598887|31598889|31598891|31
+UDP_PlatformProductQuery.c(14):     598893|31598895|31598897|31598899|31598901|31598903|31598905|31897050|31897052|31897054|31
+UDP_PlatformProductQuery.c(14):     897056|31897058|31897060|31897062|31897064|31971963|31971965|31971967|31971969|31971971|31
+UDP_PlatformProductQuery.c(14):     971973|31971975|31971977|32001320|32001322|32001324|32001326|32001328|32112592|32125403|32
+UDP_PlatformProductQuery.c(14):     125405|32157016|32184130|32184132|32184134|32184136|32184138|32184140|32184142|32184144|32
+UDP_PlatformProductQuery.c(14):     184146|32184148|32184150|32184152|32184154|32184156|32184158|32184160|32184162|32184164|32
+UDP_PlatformProductQuery.c(14):     184166|32206380|32206382|32206384|32235418|32235420|32235422|32379163|32379164|32437847|32
+UDP_PlatformProductQuery.c(14):     437849|32437851|32437853|32437855|32480905|32480907|32480909|32480911|32480913|32516169|32
+UDP_PlatformProductQuery.c(14):     516171|32516173|32568771|32568773|32568775|32568777|32568779|32647578|32708519|32708521|32
+UDP_PlatformProductQuery.c(14):     708523|32708525|32708527|32708529|32708531|32708533|32708535|32708537|32764311|32764313|32
+UDP_PlatformProductQuery.c(14):     764315|32764317|32827370|32849842|32885485|32896919|33165255|33192810|33192812|33192814|33
+UDP_PlatformProductQuery.c(14):     192816|33192818|33192820|33192822|33192824|33192826|33192828|33192830|33192832|33192834|33
+UDP_PlatformProductQuery.c(14):     192836|33192838|33192840|33192842|33192844|33192846|33192848|33192850|33192852|33192854|33
+UDP_PlatformProductQuery.c(14):     192856|33192858|33297984|33337143|33344817|33344819|33386638|33437212|33529894|33530030|33
+UDP_PlatformProductQuery.c(14):     530032|33680095|33680097|33680099|33680101|33680103|33680105|33680107|33691779|33757382|33
+UDP_PlatformProductQuery.c(14):     780960|33991014|33991016|33991018|33991020|33991022|33991024|34088867|34088868|34127168|34
+UDP_PlatformProductQuery.c(14):     369851|34443288|34667647|34667649|34667651|34667653|34667655|34667657|34667659|34667661|34
+UDP_PlatformProductQuery.c(14):     861892|34913759|34913761|34913763|34954703|35334868|35334870|35718964|35718965|35718966|35
+UDP_PlatformProductQuery.c(14):     718967|35718968|35718969|35904694|37484604|37693336|37693338|37693340|37693342|37693344|37
+UDP_PlatformProductQuery.c(14):     693346|37719168|37919846"},{"terms":"Gamora_20C1","name":"Gamora_20C1","pmClass":"pf_value
+UDP_PlatformProductQuery.c(14):     ","score":39.69022,"productId":"32797182","platformModels":"32827275|34900047|35610520|356
+UDP_PlatformProductQuery.c(14):     10521"},{"terms":"Griffin 1.1 OMN","name":"Griffin 1.1 OMN","pmClass":"pf_value","score":3
+UDP_PlatformProductQuery.c(14):     9.5709,"productId":"12725322","platformModels":"12725316|12725318|12780602|12780603|127806
+UDP_PlatformProductQuery.c(14):     04|12780605|12930250|12930278|12930280|13110194|13110433|13152878|13152880|13152882|131529
+UDP_PlatformProductQuery.c(14):     10|13152912|13153745|13184163|13184165|13191000|13191002|13201244|13222204|13222206|132222
+UDP_PlatformProductQuery.c(14):     08|13222210|13222212|13222214|13222216|13222218|13222236|13222246|13222248|13316311|133163
+UDP_PlatformProductQuery.c(14):     13|13316339|13316353|13316400|13378626|13378628|13386257|13386446|13386448|13386495|134024
+UDP_PlatformProductQuery.c(14):     39|13402441|13402462|13402464|13402474|13402476|13402478|13402480|13402482|13402484|134024
+UDP_PlatformProductQuery.c(14):     86|13402488|13402490|13402492|13402494|13402496|13429185|13442778|13443021|13498289|134982
+UDP_PlatformProductQuery.c(14):     90|13555650|13555683|13555685|13556158|13556160|13556162|13657510|13657512|13657514|136575
+UDP_PlatformProductQuery.c(14):     56|13657622|13657624|13673646|13673998|13674000|13674187|13674250|13751562|13809986|138237
+UDP_PlatformProductQuery.c(14):     70|13823771|13823772|13916548|13958403|13958405|13958407|13958629|13958631|13958633|139781
+UDP_PlatformProductQuery.c(14):     13|13978182|13978184|14019299|14057944|14057946|14092782|14095266|14095269|14095944|141050
+UDP_PlatformProductQuery.c(14):     23|14134965|14183135|14183250|14183251|14183252|14495366|14495376|14495378|14509517|146015
+UDP_PlatformProductQuery.c(14):     94|14601596|14601699|14620192|14646186|14840119|15209681"},{"terms":"Reacher 1.2 OMN","nam
+UDP_PlatformProductQuery.c(14):     e":"Reacher 1.2 OMN","pmClass":"pf_value","score":38.570133,"productId":"8764576","platfor
+UDP_PlatformProductQuery.c(14):     mModels":"10098435|10098437|10734631|11122597|8788080|8888473|8888475|8902780|8902782|8902
+UDP_PlatformProductQuery.c(14):     784|8902786|8902788|8902790|8942433|8942435|8949610|8959825|8959827|8959829|8959831|895983
+UDP_PlatformProductQuery.c(14):     3|8959835|8959837|9014988|9054446|9054448|9093321|9111994|9157906|9157908|9192832|9216223|
+UDP_PlatformProductQuery.c(14):     9243052|9719957|9753781|9953240|9953242"},{"terms":"Griffin 1.2 OMN","name":"Griffin 1.2 O
+UDP_PlatformProductQuery.c(14):     MN","pmClass":"pf_value","score":38.570133,"productId":"14605702","platformModels":"138235
+UDP_PlatformProductQuery.c(14):     02|13977867|14731683|14731685|14785565|14785567|14822874|14960681|14960683|14973608|149736
+UDP_PlatformProductQuery.c(14):     10|14989385|15002985|15002987|15002989|15002991|15003049|15129172|15177998|15178000|151780
+UDP_PlatformProductQuery.c(14):     02|15178004|15178006|15178008|15178010|15178012|15178014|15178016|15178018|15178020|151780
+UDP_PlatformProductQuery.c(14):     22|15178024|15178026|15178028|15178030|15178226|15178228|15193957|15209604|15209606|152097
+UDP_PlatformProductQuery.c(14):     11|15209713|15209715|15209717|15209719|15209721|15209897|15217717|15217719|15217721|152177
+UDP_PlatformProductQuery.c(14):     23|15217725|15217727|15217729|15230111|15230113|15230141|15231968|15231970|15231972|152319
+UDP_PlatformProductQuery.c(14):     74|15231976|15231978|15231980|15231982|15231984|15231986|15231988|15231990|15231992|152554
+UDP_PlatformProductQuery.c(14):     85|15255487|15255503|15255505|15255507|15257381|15287442|15287444|15304377|15304389|153043
+UDP_PlatformProductQuery.c(14):     91|15304411|15304413|15326783|15390227|15390229|15390231|15390233|15390255|15403105|154031
+UDP_PlatformProductQuery.c(14):     07|15403448|15403462|15435175|15435177|15441198|15441200|15441220|15441234|15441246|154412
+UDP_PlatformProductQuery.c(14):     48|15496884|15496886|15496888|15497799|15497801|15509869|15509871|15509873|15509875|155098
+UDP_PlatformProductQuery.c(14):     85|15509887|15510084|15510086|15510088|15510102|15510104|15522294|15522296|15522298|155223
+UDP_PlatformProductQuery.c(14):     00|15522302|15522310|15522416|15522434|15522436|15522438|15522446|15576982|15576984|155782
+UDP_PlatformProductQuery.c(14):     75|15586166|15586184|15586433|15586445|15586447|15594343|15594345|15594347|15594349|155943
+UDP_PlatformProductQuery.c(14):     51|15594353|15594355|15612229|15612245|15612247|15612271|15612273|15612275|15612277|156122
+UDP_PlatformProductQuery.c(14):     79|15612281|15612283|15612285|15612287|15612289|15612291|15612293|15612295|15747289|157473
+UDP_PlatformProductQuery.c(14):     14|15747318|15747456|15747492|15747618|15747620|15747622|15747624|15747642|15747644|157892
+UDP_PlatformProductQuery.c(14):     56|15810910|15810912|15820802|15820804|15820806|15820816|15830258|15830293|15830303|158303
+UDP_PlatformProductQuery.c(14):     05|15830477|15830479|15831477|15832478|15932904|15932912|15932914|15932916|15988096|159893
+UDP_PlatformProductQuery.c(14):     91|15989393|16005202|16005212|16108823|16122464|16122617|16129911|16129917|16130066|161300
+UDP_PlatformProductQuery.c(14):     68|16130070|16130072|16139149|16139151|16180512|16180514|16186385|16208695|16208697|162086
+UDP_PlatformProductQuery.c(14):     99|16208701|16208703|16208723|16208725|16208727|16208729|16208731|16208733|16208751|162092
+UDP_PlatformProductQuery.c(14):     57|16242234|16242270|16242462|16257711|16313896|16313898|16313900|16313914|16313916|163139
+UDP_PlatformProductQuery.c(14):     32|16313934|16337775|16337777|16449817|16449970|16449974|16450038|16450040|16450042|164500
+UDP_PlatformProductQuery.c(14):     44|16471626|16483569|16522768|16634627|16664891|16748202|16778719|16778721|16840192|169306
+UDP_PlatformProductQuery.c(14):     93|17047055|17047057|17104523|17200207|17252508|17310507|17460588|17571840|17571842|179596
+UDP_PlatformProductQuery.c(14):     29|18477650|18477652|18477654|18477656|18477658|18477732|18477904|18706743|18865782|200624
+UDP_PlatformProductQuery.c(14):     09|20283658|20486699|20486701|20492502|20511433|21501610|21531756|21531757"},{"terms":"Mar
+UDP_PlatformProductQuery.c(14):     lins 1.1 OMN","name":"Marlins 1.1 OMN","pmClass":"pf_value","score":38.570133,"productId":
+UDP_PlatformProductQuery.c(14):     "21858986","platformModels":"21833545|21833547|21858961|21858963|21910146|21910731|2191073
+UDP_PlatformProductQuery.c(14):     2|21925679|21984176|22297036|22297037|22343885|22343888|22343891|22343910|22343913|2234391
+UDP_PlatformProductQuery.c(14):     6|22344234|22344237|22344238|22344241|22344244|22344247|22362520|22362842|22362843|2236285
+UDP_PlatformProductQuery.c(14):     6|22362857|22362858|22395799|22399535|22399537|22399539|22399541|22399647|22409657|2240965
+UDP_PlatformProductQuery.c(14):     9|22409661|22409663|22409665|22409667|22409669|22409671|22409927|22409929|22409931|2240993
+UDP_PlatformProductQuery.c(14):     3|22409935|22409937|22409939|22409941|22409943|22409945|22409947|22409949|22409951|2240995
+UDP_PlatformProductQuery.c(14):     3|22409955|22409957|22409959|22409961|22410087|22410089|22424972|22424974|22424976|2242497
+UDP_PlatformProductQuery.c(14):     8|22424980|22424982|22424984|22424986|22424988|22425028|22425030|22438713|22484402|2248440
+UDP_PlatformProductQuery.c(14):     4|22484406|22488712|22488714|22488754|22488756|22488758|22488760|22488762|22488877|2249004
+UDP_PlatformProductQuery.c(14):     0|22490042|22529195|22529197|22529199|22529201|22529203|22529205|22529207|22529209|2252939
+UDP_PlatformProductQuery.c(14):     6|22529644|22529646|22529648|22529650|22529652|22529654|22529656|22529658|22529660|2260789
+UDP_PlatformProductQuery.c(14):     8|22607928|22607930|22607932|22607934|22607936|22607938|22665932|22665933|
+UDP_PlatformProductQuery.c(14): t=2286ms: 18-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" (RelFrameId=1, Internal ID=3)
+UDP_PlatformProductQuery.c(14):     22665934|22746088|
+UDP_PlatformProductQuery.c(14): t=2286ms: 2700-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Gamora 1.0 OMN&languageCode=en&store=tmsstore,tmsfuturestore,tmsplatformstore&minScore=1&filters=shallincludeinautosuggest:true AND contenttype:Product&resultLimit=20&printFields=body,title,class,tmspmseriesvalue,tmspmnamevalue,tmspmnumbervalue,score,productid,childnodes,tmsnodedepth,platformmodels;" (RelFrameId=1, Internal ID=3)
+UDP_PlatformProductQuery.c(14):     22746090|22746094|22746259|22757629|22757631|22757633|22757635|22757637|22780126|22780220|
+UDP_PlatformProductQuery.c(14):     22780222|22780224|22780300|22780302|22780304|22780306|22782674|22782694|22782696|22782698|
+UDP_PlatformProductQuery.c(14):     22783837|22783839|22783841|22783843|22783845|22783867|22783869|22863338|22863502|22863556|
+UDP_PlatformProductQuery.c(14):     22863825|22863827|22864341|22864343|22864357|22864359|22864361|22864363|22864365|22864367|
+UDP_PlatformProductQuery.c(14):     22864369|22864371|22882894|22882896|22882898|22891508|22891769|22891771|22891773|22891775|
+UDP_PlatformProductQuery.c(14):     22891777|22891779|22891781|22891783|22909985|22910185|22910187|22910254|22910256|22910258|
+UDP_PlatformProductQuery.c(14):     22931922|22931924|22955327|22955329|22993151|22993153|22993155|22993157|22993159|22993161|
+UDP_PlatformProductQuery.c(14):     22993163|22993165|22993167|22993193|22993195|22993197|22993425|22993427|23022887|23022889|
+UDP_PlatformProductQuery.c(14):     23045210|23045212|23045214|23045216|23045400|23045402|23085539|23085541|23085543|23085545|
+UDP_PlatformProductQuery.c(14):     23085832|23085834|23085836|23085838|23085840|23085842|23085868|23085870|23085872|23085894|
+UDP_PlatformProductQuery.c(14):     23086215|23086217|23086390|23086422|23116465|23116467|23116469|23116471|23116473|23116475|
+UDP_PlatformProductQuery.c(14):     23116477|23127883|23127885|23128222|23128224|23128226|23128228|23128230|23128232|23128234|
+UDP_PlatformProductQuery.c(14):     23128236|23128238|23128543|23142942|23142944|23142946|23142948|23142950|23142952|23142954|
+UDP_PlatformProductQuery.c(14):     23142956|23142958|23205955|23206373|23206375|23206377|23206379|23206381|23207070|23334774|
+UDP_PlatformProductQuery.c(14):     23334776|23334891|23334929|23334931|23377142|23377166|23377192|23377663|23377664|23377665|
+UDP_PlatformProductQuery.c(14):     23377666|23377667|23377668|23377669|23377670|23394617|23394619|23394621|23394623|23394625|
+UDP_PlatformProductQuery.c(14):     23394627|23394629|23394631|23476443|23476445|23476447|23476467|23476473|23476487|23476675|
+UDP_PlatformProductQuery.c(14):     23476685|23565533|23574378|23588848|23588849|23588850|23588851|23746988|23746992|23815312|
+UDP_PlatformProductQuery.c(14):     23815313|23815314|23883580|23978751|24077877|24077885|24078673|24113108|24113142|24143668|
+UDP_PlatformProductQuery.c(14):     24349320|24434373|24462279|24521812|24521826|24521832|24521890|24521987|24522216|24522217|
+UDP_PlatformProductQuery.c(14):     24522218|24522443|24522444|24522445|24522446|24522451|24522452|24522453|24522740|24522742|
+UDP_PlatformProductQuery.c(14):     24522744|24522746|24574920|24574958|24574960|24597055|24597057|24772181|24861955|24861967|
+UDP_PlatformProductQuery.c(14):     24861969|24929901|24929903|24996900|24996902|25017357|25017359|25017361|25082804|25082814|
+UDP_PlatformProductQuery.c(14):     25083031|25479380|25479382|25544762|25605931|26084059|26084792|26285423|26285830|26309687|
+UDP_PlatformProductQuery.c(14):     26309721|26309723|26309725|26309727|26309774|26309780|26344634|26344636|26367760|26367762|
+UDP_PlatformProductQuery.c(14):     26517782|26556529|26634579|26651406|27103388|27103391|27103394|27103397|27103400|27734766|
+UDP_PlatformProductQuery.c(14):     27734767|27872060|27905642|27925304|28026014|28026028|28026030|28046524|28046525|28087637|
+UDP_PlatformProductQuery.c(14):     28087639|28087641|28263713|28341122|29051575|29678055|29906086|29906087|29906088|31291280"
+UDP_PlatformProductQuery.c(14):     },{"terms":"Pirates 1.1 OMN","name":"Pirates 1.1 OMN","pmClass":"pf_value","score":38.3185
+UDP_PlatformProductQuery.c(14):     3,"productId":"21837043","platformModels":"21837041|21910143|22399669"}],"totalCount":980}
+UDP_PlatformProductQuery.c(14): Registered web_reg_find successful for "Text=matches":[{"terms":" (count=1)  	[MsgId: MMSG-26364]
+UDP_PlatformProductQuery.c(14): Notify: Saving Parameter "Text_count = 1".
+UDP_PlatformProductQuery.c(14): web_custom_request("web_custom_request") was successful, 51325 body bytes, 550 header bytes  	[MsgId: MMSG-26386]
+UDP_PlatformProductQuery.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+UDP_PlatformProductQuery.c(30): Notify: Transaction "KAAS_T021_UDP_PlatformProductQuery" ended with a "Pass" status (Duration: 1.4844 Wasted Time: 0.0075).
+Ending action UDP_PlatformProductQuery.
+Starting action UDP_PlatformContentQueries.
+UDP_PlatformContentQueries.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+UDP_PlatformContentQueries.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+UDP_PlatformContentQueries.c(5): Notify: Parameter Substitution: parameter "cp_WISEAccessToken" =  "000aA6pWDzZMOZ4mvIkNYyzSwO8J"
+UDP_PlatformContentQueries.c(5): Notify: Saving Parameter "WISEAccessToken = 000aA6pWDzZMOZ4mvIkNYyzSwO8J".
+UDP_PlatformContentQueries.c(6): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+UDP_PlatformContentQueries.c(6): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aA6pWDzZMOZ4mvIkNYyzSwO8J"
+UDP_PlatformContentQueries.c(6): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+UDP_PlatformContentQueries.c(9): web_reg_find started  	[MsgId: MMSG-26355]
+UDP_PlatformContentQueries.c(9): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+UDP_PlatformContentQueries.c(11): Notify: Transaction "KAAS_T022_UDP_PlatformContentQuery" started.
+UDP_PlatformContentQueries.c(14): web_submit_data("web_submit_data") started  	[MsgId: MMSG-26355]
+UDP_PlatformContentQueries.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search??q=*&resultLimit=10&resultStart=0&filters=%28audience%3Acommercial+OR+%28%21_exists_%3Aaudience%29%29+AND+%28processagentlevel%3A%28LVL1+OR+LVL0+OR+_ALL%29+OR+%28%21_exists_%3Aprocessagentlevel%29%29&regionCode=145557537553804145623571%2C145969036451726883647975%2C212299498967880112552079&languageCode=en&fromDate=1900-01-01&toDate=2020-09-08&disclosureLevel=696531864679532034919979251200881%2C47406819852170807613486806879990%2C218620138892645155286800249901443%2C287477763180518087286275037723076%2C887243771386204747508092376253257&startTag=%3Cstrong%3E&endTag=%3C%2Fstrong%3E&printFields=documentID%2Ctitle%2Cdocumenttype%2Ccontentupdatedate%2Clanguagecode%2Cdisclosurelevel%2Cstore%2Cfilename&store=docstore%2Csupportagentstore%2Cudp-content-default%2Cmanualagentstore%2Cmanualstore%2Csdlmanualstore%2Cvideostore%2Cprocessagentstore&platform=4168912-80-100&aggregations=esstores&excludeContentTypes=error+message&searchable=true" is done with headers:
+UDP_PlatformContentQueries.c(14):     :method = GET
+UDP_PlatformContentQueries.c(14):     :scheme = https
+UDP_PlatformContentQueries.c(14):     :path = /KaaS-ITG/v2/search??q=*&resultLimit=10&resultStart=0&filters=%28audience%3Acommer
+UDP_PlatformContentQueries.c(14):     cial+OR+%28%21_exists_%3Aaudience%29%29+AND+%28processagentlevel%3A%28LVL1+OR+LVL0+OR+_ALL
+UDP_PlatformContentQueries.c(14):     %29+OR+%28%21_exists_%3Aprocessagentlevel%29%29&regionCode=145557537553804145623571%2C1459
+UDP_PlatformContentQueries.c(14):     69036451726883647975%2C212299498967880112552079&languageCode=en&fromDate=1900-01-01&toDate
+UDP_PlatformContentQueries.c(14):     =2020-09-08&disclosureLevel=696531864679532034919979251200881%2C47406819852170807613486806
+UDP_PlatformContentQueries.c(14):     879990%2C218620138892645155286800249901443%2C287477763180518087286275037723076%2C887243771
+UDP_PlatformContentQueries.c(14):     386204747508092376253257&startTag=%3Cstrong%3E&endTag=%3C%2Fstrong%3E&printFields=document
+UDP_PlatformContentQueries.c(14):     ID%2Ctitle%2Cdocumenttype%2Ccontentupdatedate%2Clanguagecode%2Cdisclosurelevel%2Cstore%2Cf
+UDP_PlatformContentQueries.c(14):     ilename&store=docstore%2Csupportagentstore%2Cudp-content-default%2Cmanualagentstore%2Cmanu
+UDP_PlatformContentQueries.c(14):     alstore%2Csdlmanualstore%2Cvideostore%2Cprocessagentstore&platform=4168912-80-100&aggregat
+UDP_PlatformContentQueries.c(14):     ions=esstores&excludeContentTypes=error+message&searchable=true
+UDP_PlatformContentQueries.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+UDP_PlatformContentQueries.c(14):     accessToken =  000aA6pWDzZMOZ4mvIkNYyzSwO8J
+UDP_PlatformContentQueries.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+UDP_PlatformContentQueries.c(14):     Accept-Encoding =  gzip, deflate
+UDP_PlatformContentQueries.c(14):     Accept =  */*
+UDP_PlatformContentQueries.c(14): t=2969ms: 550-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search??q=*&resultLimit=10&resultStart=0&filters=%28audience%3Acommercial+OR+%28%21_exists_%3Aaudience%29%29+AND+%28processagentlevel%3A%28LVL1+OR+LVL0+OR+_ALL%29+OR+%28%21_exists_%3Aprocessagentlevel%29%29&regionCode=145557537553804145623571%2C145969036451726883647975%2C212299498967880112552079&languageCode=en&fromDate=1900-01-01&toDate=2020-09-08&disclosureLevel=696531864679532034919979251200881%2C47406819852170807613486806879990%2C218620138892645155286800249901443%2C287477763180518087286275037723076%2C887243771386204747508092376253257&startTag=%3Cstrong%3E&endTag=%3C%2Fstrong%3E&printFields=documentID%2Ctitle%2Cdocumenttype%2Ccontentupdatedate%2Clanguagecode%2Cdisclosurelevel%2Cstore%2Cfilename&store=docstore%2Csupportagentstore%2Cudp-content-default%2Cmanualagentstore%2Cmanualstore%2Csdlmanualstore%2Cvideostore%2Cprocessagentstore&platform=4168912-80-100&aggregations=esstores&excludeContentTypes=error+message&searchable=true" (RelFrameId=1, Internal ID=4)
+UDP_PlatformContentQueries.c(14):     HTTP/2.0 200\r\n
+UDP_PlatformContentQueries.c(14):     Status: 200\r\n
+UDP_PlatformContentQueries.c(14):     date: Fri, 23 Jul 2021 07:47:02 GMT\r\n
+UDP_PlatformContentQueries.c(14):     content-type: application/json;charset=UTF-8\r\n
+UDP_PlatformContentQueries.c(14):     content-length: 5688\r\n
+UDP_PlatformContentQueries.c(14):     x-amzn-requestid: c1e01cff-28b7-45f7-b9f6-0b1d7de9ceed\r\n
+UDP_PlatformContentQueries.c(14):     x-oneagent-js-injection: true\r\n
+UDP_PlatformContentQueries.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+UDP_PlatformContentQueries.c(14):     set-cookie: dtCookie=v_4_srv_1_sn_97EDCE8AB6D57C99D2795F2F12073C4A_perc_100000_ol_0_mul_1_
+UDP_PlatformContentQueries.c(14):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+UDP_PlatformContentQueries.c(14):     x-amz-apigw-id: C6cObEv4IAMFmoQ=\r\n
+UDP_PlatformContentQueries.c(14):     server-timing: dtRpid;desc="-556841902"\r\n
+UDP_PlatformContentQueries.c(14):     x-amzn-remapped-date: Fri, 23 Jul 2021 07:47:02 GMT\r\n
+UDP_PlatformContentQueries.c(14):     \r\n
+UDP_PlatformContentQueries.c(14): t=2977ms: 5688-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search??q=*&resultLimit=10&resultStart=0&filters=%28audience%3Acommercial+OR+%28%21_exists_%3Aaudience%29%29+AND+%28processagentlevel%3A%28LVL1+OR+LVL0+OR+_ALL%29+OR+%28%21_exists_%3Aprocessagentlevel%29%29&regionCode=145557537553804145623571%2C145969036451726883647975%2C212299498967880112552079&languageCode=en&fromDate=1900-01-01&toDate=2020-09-08&disclosureLevel=696531864679532034919979251200881%2C47406819852170807613486806879990%2C218620138892645155286800249901443%2C287477763180518087286275037723076%2C887243771386204747508092376253257&startTag=%3Cstrong%3E&endTag=%3C%2Fstrong%3E&printFields=documentID%2Ctitle%2Cdocumenttype%2Ccontentupdatedate%2Clanguagecode%2Cdisclosurelevel%2Cstore%2Cfilename&store=docstore%2Csupportagentstore%2Cudp-content-default%2Cmanualagentstore%2Cmanualstore%2Csdlmanualstore%2Cvideostore%2Cprocessagentstore&platform=4168912-80-100&aggregations=esstores&excludeContentTypes=error+message&searchable=true" (RelFrameId=1, Internal ID=4)
+UDP_PlatformContentQueries.c(14):     {"matches":[{"documentID":"c00814451","title":"HP Compaq Notebooks - Dialect Applications 
+UDP_PlatformContentQueries.c(14):     do not Display Text Box Correctly","contentTypeHeader":"Product Support","renderLink":"htt
+UDP_PlatformContentQueries.c(14):     ps://uat.support.hp.com/wps/hp-skp-portlets/render/000aA6pWDzZMOZ4mvIkNYyzSwO8J/c00814451"
+UDP_PlatformContentQueries.c(14):     ,"matchScore":10270.4795,"filename":"c00814451.xml","description":"","contentUpdateDate":"
+UDP_PlatformContentQueries.c(14):     2006-12-05 10:13:38","language":"EN","disclosureLevel":"287477763180518087286275037723076"
+UDP_PlatformContentQueries.c(14):     ,"contentType":"Troubleshooting","store":"Product Documents","docSource":"Concentra"},{"do
+UDP_PlatformContentQueries.c(14):     cumentID":"c02856779","title":"HP Notebook PCs - Reducing Fan Noise","contentTypeHeader":"
+UDP_PlatformContentQueries.c(14):     Product Support","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/000aA
+UDP_PlatformContentQueries.c(14):     6pWDzZMOZ4mvIkNYyzSwO8J/c02856779","matchScore":10270.4795,"filename":"c02856779.xml","des
+UDP_PlatformContentQueries.c(14):     cription":"","contentUpdateDate":"2011-06-01 03:54:35","language":"EN","disclosureLevel":"
+UDP_PlatformContentQueries.c(14):     287477763180518087286275037723076","contentType":"Support Information","store":"Product Do
+UDP_PlatformContentQueries.c(14):     cuments","docSource":"Concentra"},{"documentID":"c05367453","title":"HP PCs - Error Messag
+UDP_PlatformContentQueries.c(14):     es Display on a Blue Screen (Agent Use)","contentTypeHeader":"Product Support","renderLink
+UDP_PlatformContentQueries.c(14):     ":"https://uat.support.hp.com/wps/hp-skp-portlets/render/000aA6pWDzZMOZ4mvIkNYyzSwO8J/c053
+UDP_PlatformContentQueries.c(14):     67453","matchScore":10269.42,"filename":"c05367453.xml","description":"","contentUpdateDat
+UDP_PlatformContentQueries.c(14):     e":"2017-01-23 19:30:02","language":"EN","disclosureLevel":"218620138892645155286800249901
+UDP_PlatformContentQueries.c(14):     443","contentType":"Support Information","store":"Product Documents","docSource":"Concentr
+UDP_PlatformContentQueries.c(14):     a"},{"documentID":"c01868346","title":"HP PCs - Troubleshooting HP System Recovery Problem
+UDP_PlatformContentQueries.c(14):     s (Windows 7)","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.
+UDP_PlatformContentQueries.c(14):     com/wps/hp-skp-portlets/render/000aA6pWDzZMOZ4mvIkNYyzSwO8J/c01868346","matchScore":10269.
+UDP_PlatformContentQueries.c(14):     42,"filename":"c01868346.xml","description":"If you are having problems using the HP Recov
+UDP_PlatformContentQueries.c(14):     ery process on your Windows\xC2\xA07 computer, this document will probably help.","content
+UDP_PlatformContentQueries.c(14):     UpdateDate":"2018-06-20 15:31:49","language":"EN","disclosureLevel":"218620138892645155286
+UDP_PlatformContentQueries.c(14):     800249901443","contentType":"Troubleshooting","store":"Product Documents","docSource":"Con
+UDP_PlatformContentQueries.c(14):     centra"},{"documentID":"c03904182","title":"HP PCs - Computer Overheats or Shuts Down Unex
+UDP_PlatformContentQueries.c(14):     pectedly","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.com/w
+UDP_PlatformContentQueries.c(14):     ps/hp-skp-portlets/render/000aA6pWDzZMOZ4mvIkNYyzSwO8J/c03904182","matchScore":10269.42,"f
+UDP_PlatformContentQueries.c(14):     ilename":"c03904182.xml","description":"","contentUpdateDate":"2015-07-23 18:03:35","langu
+UDP_PlatformContentQueries.c(14):     age":"EN","disclosureLevel":"218620138892645155286800249901443","contentType":"Troubleshoo
+UDP_PlatformContentQueries.c(14):     ting","store":"Product Documents","docSource":"Concentra"},{"documentID":"c02266796","titl
+UDP_PlatformContentQueries.c(14):     e":"HP Compaq Notebook PCs - Windows Vista: How to Block or Allow Programs with Parental C
+UDP_PlatformContentQueries.c(14):     ontrols","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.com/wp
+UDP_PlatformContentQueries.c(14):     s/hp-skp-portlets/render/000aA6pWDzZMOZ4mvIkNYyzSwO8J/c02266796","matchScore":10269.42,"fi
+UDP_PlatformContentQueries.c(14):     lename":"c02266796.xml","description":"","contentUpdateDate":"2010-06-29 13:46:12","langua
+UDP_PlatformContentQueries.c(14):     ge":"EN","disclosureLevel":"218620138892645155286800249901443","contentType":"How To","sto
+UDP_PlatformContentQueries.c(14):     re":"Product Documents","docSource":"Concentra"},{"documentID":"c05814601","title":"Samsun
+UDP_PlatformContentQueries.c(14):     g Printing Service Partners","contentTypeHeader":"Product Information","renderLink":"https
+UDP_PlatformContentQueries.c(14):     ://uat.support.hp.com/wps/hp-skp-portlets/render/000aA6pWDzZMOZ4mvIkNYyzSwO8J/c05814601","
+UDP_PlatformContentQueries.c(14):     matchScore":10269.368,"filename":"c05814601.xml","description":"Get HP Service Center info
+UDP_PlatformContentQueries.c(14):     rmation for countries in Africa.","contentUpdateDate":"2017-10-27 17:36:48","language":"EN
+UDP_PlatformContentQueries.c(14):     ","disclosureLevel":"887243771386204747508092376253257","contentType":"Warranty or Legal S
+UDP_PlatformContentQueries.c(14):     tatement","store":"Product Documents","docSource":"Concentra"},{"documentID":"c06207630","
+UDP_PlatformContentQueries.c(14):     title":"Advisory: HP PCs - Important Out of Band (OOB) Security Release for Internet Explo
+UDP_PlatformContentQueries.c(14):     rer","contentTypeHeader":"Advisory","renderLink":"https://uat.support.hp.com/wps/hp-skp-po
+UDP_PlatformContentQueries.c(14):     rtlets/render/000aA6pWDzZMOZ4mvIkNYyzSwO8J/c06207630","matchScore":10269.314,"filename":"c
+UDP_PlatformContentQueries.c(14):     06207630.xml","description":"Important Out of Band (OOB) Security Release for Internet Exp
+UDP_PlatformContentQueries.c(14):     lorer.","contentUpdateDate":"2018-12-20 15:10:48","language":"EN","disclosureLevel":"88724
+UDP_PlatformContentQueries.c(14):     3771386204747508092376253257","contentType":"Engineering Advisory","store":"Product Docume
+UDP_PlatformContentQueries.c(14):     nts","docSource":"Concentra"},{"documentID":"c01120749","title":"HP Worldwide Limited Warr
+UDP_PlatformContentQueries.c(14):     anty and Technical Support - North America","contentTypeHeader":"Product Support","renderL
+UDP_PlatformContentQueries.c(14):     ink":"https://uat.support.hp.com/wps/hp-skp-portlets/document/manuals/attachments/149/c011
+UDP_PlatformContentQueries.c(14):     20749.pdf/EN","matchScore":10269.314,"filename":"c01120749.pdf","description":"","contentU
+UDP_PlatformContentQueries.c(14):     pdateDate":"2007-07-26 15:20:02","language":"EN","disclosureLevel":"8872437713862047475080
+UDP_PlatformContentQueries.c(14):     92376253257","contentType":"Service and Maintenance","store":"Manuals","docSource":"Concen
+UDP_PlatformContentQueries.c(14):     tra"},{"documentID":"c01120755","title":"Compaq Limited Warranty and Technical Support - N
+UDP_PlatformContentQueries.c(14):     orth America","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.c
+UDP_PlatformContentQueries.c(14):     om/wps/hp-skp-portlets/document/manuals/attachments/816/c01120755.pdf/EN","matchScore":102
+UDP_PlatformContentQueries.c(14):     69.314,"filename":"c01120755.pdf","description":"","contentUpdateDate":"2007-07-26 15:49:0
+UDP_PlatformContentQueries.c(14):     4","language":"EN","disclosureLevel":"887243771386204747508092376253257","contentType":"Se
+UDP_PlatformContentQueries.c(14):     rvice and Maintenance","store":"Manuals","docSource":"Concentra"}],"range":{"start":"0","e
+UDP_PlatformContentQueries.c(14):     nd":"10"},"totalCount":297,"showingResultsFor":null,"searchInsteadFor":null,"aggregationsB
+UDP_PlatformContentQueries.c(14):     ucket":{},"highlight":null,"didYouMean":null,"totalCssCount":null,"cssContext":null,"essto
+UDP_PlatformContentQueries.c(14):     res":[{"ESAll":297},{"Manuals":36},{"ProcessDocuments":0},{"ProductDocuments":261},{"Video
+UDP_PlatformContentQueries.c(14):     s":0}],"esmanuals":null}
+UDP_PlatformContentQueries.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search??q=*&resultLimit=10&resultStart=0&filters=%28audience%3Acommercial+OR+%28%21_exists_%3Aaudience%29%29+AND+%28processagentlevel%3A%28LVL1+OR+LVL0+OR+_ALL%29+OR+%28%21_exists_%3Aprocessagentlevel%29%29&regionCode=145557537553804145623571%2C145969036451726883647975%2C212299498967880112552079&languageCode=en&fromDate=1900-01-01&toDate=2020-09-08&disclosureLevel=696531864679532034919979251200881%2C47406819852170807613486806879990%2C218620138892645155286800249901443%2C287477763180518087286275037723076%2C887243771386204747508092376253257&startTag=%3Cstrong%3E&endTag=%3C%2Fstrong%3E&printFields=documentID%2Ctitle%2Cdocumenttype%2Ccontentupdatedate%2Clanguagecode%2Cdisclosurelevel%2Cstore%2Cfilename&store=docstore%2Csupportagentstore%2Cudp-content-default%2Cmanualagentstore%2Cmanualstore%2Csdlmanualstore%2Cvideostore%2Cprocessagentstore&platform=4168912-80-100&aggregations=esstores&excludeContentTypes=error+message&searchable=true"  	[MsgId: MMSG-26548]
+UDP_PlatformContentQueries.c(14): Registered web_reg_find successful for "Text="matches":[{"documentID"" (count=1)  	[MsgId: MMSG-26364]
+UDP_PlatformContentQueries.c(14): Notify: Saving Parameter "Text_count = 1".
+UDP_PlatformContentQueries.c(14): web_submit_data("web_submit_data") was successful, 5688 body bytes, 550 header bytes  	[MsgId: MMSG-26386]
+UDP_PlatformContentQueries.c(40): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+UDP_PlatformContentQueries.c(47): Notify: Transaction "KAAS_T022_UDP_PlatformContentQuery" ended with a "Pass" status (Duration: 0.6091 Wasted Time: 0.0067).
+Ending action UDP_PlatformContentQueries.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+Vuser 0 (thread 22684), ended OK."

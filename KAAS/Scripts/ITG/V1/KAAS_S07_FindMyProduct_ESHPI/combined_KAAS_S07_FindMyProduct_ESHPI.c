@@ -1,0 +1,7 @@
+#include "lrun.h"
+#include "SharedParameter.h"
+#include "globals.h"
+#include "vuser_init.c"
+#include "DocSearchHPES_FindMyProduct.c"
+#include "DocSearchHPES_FindMyProduct_200.c"
+#include "vuser_end.c"

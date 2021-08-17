@@ -1,0 +1,73 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=KAAS_S06_DocSearch_ESHPI.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=61
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.61.0.971
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=
+DisableRegenerate=0
+Encoding=
+Description=
+ScriptLocale=en-US
+[Actions]
+vuser_init=vuser_init.c
+kaas_DocSearchHPES_Doc_with_Products=kaas_DocSearchHPES_Doc_with_Products.c
+kaas_DocSearchHPES_Doc_Categories=kaas_DocSearchHPES_Doc_Categories.c
+kaas_DocSearchHPES_Doc_without_Products=kaas_DocSearchHPES_Doc_without_Products.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=1
+kaas_DocSearchHPES_Doc_with_Products=1
+kaas_DocSearchHPES_Doc_Categories=1
+kaas_DocSearchHPES_Doc_without_Products=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+kaas_DocSearchHPES_Doc_with_Products=0
+kaas_DocSearchHPES_Doc_Categories=0
+kaas_DocSearchHPES_Doc_without_Products=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+kaas_DocSearchHPES_Doc_with_Products=1
+kaas_DocSearchHPES_Doc_Categories=1
+kaas_DocSearchHPES_Doc_without_Products=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+kaas_DocSearchHPES_Doc_with_Products=cci
+kaas_DocSearchHPES_Doc_Categories=cci
+kaas_DocSearchHPES_Doc_without_Products=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="KAAS_T014_HPES_Doc_with_Products__*delimiter*__KAAS_T015_DocSearchHPES_Doc_Categories__*delimiter*__KAAS_T016_DocSearchHPES_Doc_without_Products"
+[StateManagement]
+LastReplayStatus=1
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+KAAS_T014_HPES_Doc_with_Products=
+KAAS_T015_DocSearchHPES_Doc_Categories=
+KAAS_T016_DocSearchHPES_Doc_without_Products=

@@ -1,0 +1,319 @@
+Virtual User Script started at: 6/25/2021 6:25:35 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\GCC\Kaas\FY20_Release\Script\V1\KAAS_ServicePin\\default.cfg"  	[MsgId: MMSG-27141]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(21): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(21): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(21): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(22): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(22): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(22): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(23): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(23): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(23): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(24): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(24): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(26): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(26): The request to server https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" is done with headers:
+vuser_init.c(26):     :method = POST
+vuser_init.c(26):     :scheme = https
+vuser_init.c(26):     :path = /as/token.oauth2?grant_type=client_credentials
+vuser_init.c(26):     :authority = login-itg.external.hp.com
+vuser_init.c(26):     Authorization =  Basic V0lTRTpHZTRFSDllN1VoMVpkZzRnbjhCSmtXOHVtUVhNblBmSnJCNHFZeTJLV3oyVFJ
+vuser_init.c(26):     BTWw1eFlVVVRSaU5kNW9zbERq
+vuser_init.c(26):     Content-Type =  application/x-www-form-urlencoded
+vuser_init.c(26):     Host =  login-itg.external.hp.com
+vuser_init.c(26):     Cache-Control =  no-cache
+vuser_init.c(26):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+vuser_init.c(26):     Accept-Encoding =  gzip, deflate
+vuser_init.c(26):     Accept =  */*
+vuser_init.c(26):     content-length = 0
+vuser_init.c(26): t=566ms: 517-byte response headers for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=1)
+vuser_init.c(26):     HTTP/2.0 200\r\n
+vuser_init.c(26):     Status: 200\r\n
+vuser_init.c(26):     server: nginx/1.16.1\r\n
+vuser_init.c(26):     date: Fri, 25 Jun 2021 06:25:36 GMT\r\n
+vuser_init.c(26):     content-type: application/json;charset=utf-8\r\n
+vuser_init.c(26):     referrer-policy: origin\r\n
+vuser_init.c(26):     cache-control: no-cache, no-store\r\n
+vuser_init.c(26):     pragma: no-cache\r\n
+vuser_init.c(26):     expires: Thu, 01 Jan 1970 00:00:00 GMT\r\n
+vuser_init.c(26):     set-cookie: HPIUID=RIr3E8bGa75Sl1DvXQ12KT;Path=/;Domain=.hp.com;Secure;HttpOnly;SameSite=N
+vuser_init.c(26):     one\r\n
+vuser_init.c(26):     strict-transport-security: max-age=15768000; preload;\r\n
+vuser_init.c(26):     x-content-type-options: nosniff\r\n
+vuser_init.c(26):     x-frame-options: SAMEORIGIN\r\n
+vuser_init.c(26):     x-xss-protection: 1; mode=block\r\n
+vuser_init.c(26):     x-robots-tag: none\r\n
+vuser_init.c(26):     \r\n
+vuser_init.c(26): t=577ms: 87-byte response body for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=1)
+vuser_init.c(26):     {"access_token":"000aXCt1lprocEDktli4JWHbmKqk","token_type":"Bearer","expires_in":7199}
+vuser_init.c(26): Notify: Saving Parameter "c_WISEAccessToken = 000aXCt1lprocEDktli4JWHbmKqk".
+vuser_init.c(26): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials"  	[MsgId: MMSG-26548]
+vuser_init.c(26): web_custom_request("web_custom_request") was successful, 87 body bytes, 517 header bytes  	[MsgId: MMSG-26386]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action ServicePin.
+ServicePin.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+ServicePin.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+ServicePin.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000aXCt1lprocEDktli4JWHbmKqk"
+ServicePin.c(6): Notify: Saving Parameter "WISEAccessToken = 000aXCt1lprocEDktli4JWHbmKqk".
+ServicePin.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+ServicePin.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+ServicePin.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+ServicePin.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+ServicePin.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+ServicePin.c(13): Notify: Transaction "kaas_ServicePin" started.
+ServicePin.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+ServicePin.c(14): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aXCt1lprocEDktli4JWHbmKqk"
+ServicePin.c(14): Notify: Parameter Substitution: parameter "p_servicePIN" =  "B5L26V"
+ServicePin.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/B5L26V" is done with headers:
+ServicePin.c(14):     :method = GET
+ServicePin.c(14):     :scheme = https
+ServicePin.c(14):     :path = /KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/B5L26V
+ServicePin.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+ServicePin.c(14):     Content-Type =  application/x-www-form-urlencoded
+ServicePin.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+ServicePin.c(14):     Accept-Encoding =  gzip, deflate
+ServicePin.c(14):     Accept =  */*
+ServicePin.c(14): t=2106ms: 614-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/B5L26V" (RelFrameId=1, Internal ID=2)
+ServicePin.c(14):     HTTP/2.0 200\r\n
+ServicePin.c(14):     Status: 200\r\n
+ServicePin.c(14):     date: Fri, 25 Jun 2021 06:25:37 GMT\r\n
+ServicePin.c(14):     content-type: application/json;charset=UTF-8\r\n
+ServicePin.c(14):     content-length: 25\r\n
+ServicePin.c(14):     x-amzn-requestid: 49905db5-7cfb-4cf0-9220-49d5ccc2a652\r\n
+ServicePin.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+ServicePin.c(14):     set-cookie: JSESSIONID=9DBA1D300F9315F21210A21811FD62F2; Path=/; HttpOnly\r\n
+ServicePin.c(14):     set-cookie: mySessionCookie=tridion_0ebde92e-9226-4c00-8f97-e3a9bf59c6cf; path=/; HttpOnly
+ServicePin.c(14):     \r\n
+ServicePin.c(14):     set-cookie: myTrackingCookie=tridion_d4b2b28d-4d34-41fa-af15-658449739355; Expires=Fri, 01
+ServicePin.c(14):     -Jan-2100 00:00:00 GMT; path=/; HttpOnly\r\n
+ServicePin.c(14):     x-amz-apigw-id: Bd-DHGE0IAMFjlw=\r\n
+ServicePin.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:25:37 GMT\r\n
+ServicePin.c(14):     \r\n
+ServicePin.c(14): t=2114ms: 25-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/B5L26V" (RelFrameId=1, Internal ID=2)
+ServicePin.c(14):     {"servicePin":"04055315"}
+ServicePin.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/B5L26V"  	[MsgId: MMSG-26548]
+ServicePin.c(14): Registered web_reg_find successful for "Text={"servicePin" (count=1)  	[MsgId: MMSG-26364]
+ServicePin.c(14): Notify: Saving Parameter "Text_count = 1".
+ServicePin.c(14): web_custom_request("web_custom_request") was successful, 25 body bytes, 614 header bytes  	[MsgId: MMSG-26386]
+ServicePin.c(24): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+ServicePin.c(31): Notify: Transaction "kaas_ServicePin" ended with a "Pass" status (Duration: 1.3932 Wasted Time: 0.0094).
+Ending action ServicePin.
+Ending iteration 1.
+Starting iteration 2.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_servicePIN = 2 [table  = p_servicePIN].
+Notify: Getting new value for parameter 'p_servicePIN': table = 'p_servicePIN.dat' column = '0' row = '2'.
+Starting action ServicePin.
+ServicePin.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+ServicePin.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+ServicePin.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000aXCt1lprocEDktli4JWHbmKqk"
+ServicePin.c(6): Notify: Saving Parameter "WISEAccessToken = 000aXCt1lprocEDktli4JWHbmKqk".
+ServicePin.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+ServicePin.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+ServicePin.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+ServicePin.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+ServicePin.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+ServicePin.c(13): Notify: Transaction "kaas_ServicePin" started.
+ServicePin.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+ServicePin.c(14): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aXCt1lprocEDktli4JWHbmKqk"
+ServicePin.c(14): Notify: Parameter Substitution: parameter "p_servicePIN" =  "J8A10A"
+ServicePin.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/J8A10A" is done with headers:
+ServicePin.c(14):     :method = GET
+ServicePin.c(14):     :scheme = https
+ServicePin.c(14):     :path = /KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/J8A10A
+ServicePin.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+ServicePin.c(14):     Content-Type =  application/x-www-form-urlencoded
+ServicePin.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+ServicePin.c(14):     Accept-Encoding =  gzip, deflate
+ServicePin.c(14):     Accept =  */*
+ServicePin.c(14):     cookie = JSESSIONID=9DBA1D300F9315F21210A21811FD62F2; mySessionCookie=tridion_0ebde92e-922
+ServicePin.c(14):     6-4c00-8f97-e3a9bf59c6cf; myTrackingCookie=tridion_d4b2b28d-4d34-41fa-af15-658449739355
+ServicePin.c(14): t=2317ms: 390-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/J8A10A" (RelFrameId=1, Internal ID=3)
+ServicePin.c(14):     HTTP/2.0 200\r\n
+ServicePin.c(14):     Status: 200\r\n
+ServicePin.c(14):     date: Fri, 25 Jun 2021 06:25:37 GMT\r\n
+ServicePin.c(14):     content-type: application/json;charset=UTF-8\r\n
+ServicePin.c(14):     content-length: 25\r\n
+ServicePin.c(14):     x-amzn-requestid: 17cdaa02-6947-44a5-9828-3c8ae6f22799\r\n
+ServicePin.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+ServicePin.c(14):     set-cookie: JSESSIONID=6FB5EAEAB31C416BC45AF9EB95032913; Path=/; HttpOnly\r\n
+ServicePin.c(14):     x-amz-apigw-id: Bd-DTHurIAMFsGQ=\r\n
+ServicePin.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:25:37 GMT\r\n
+ServicePin.c(14):     \r\n
+ServicePin.c(14): t=2324ms: 25-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/J8A10A" (RelFrameId=1, Internal ID=3)
+ServicePin.c(14):     {"servicePin":"05068117"}
+ServicePin.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/J8A10A"  	[MsgId: MMSG-26548]
+ServicePin.c(14): Registered web_reg_find successful for "Text={"servicePin" (count=1)  	[MsgId: MMSG-26364]
+ServicePin.c(14): Notify: Saving Parameter "Text_count = 1".
+ServicePin.c(14): web_custom_request("web_custom_request") was successful, 25 body bytes, 390 header bytes  	[MsgId: MMSG-26386]
+ServicePin.c(24): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+ServicePin.c(31): Notify: Transaction "kaas_ServicePin" ended with a "Pass" status (Duration: 0.1889 Wasted Time: 0.0137).
+Ending action ServicePin.
+Ending iteration 2.
+Starting iteration 3.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_servicePIN = 19 [table  = p_servicePIN].
+Notify: Getting new value for parameter 'p_servicePIN': table = 'p_servicePIN.dat' column = '0' row = '19'.
+Starting action ServicePin.
+ServicePin.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+ServicePin.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+ServicePin.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000aXCt1lprocEDktli4JWHbmKqk"
+ServicePin.c(6): Notify: Saving Parameter "WISEAccessToken = 000aXCt1lprocEDktli4JWHbmKqk".
+ServicePin.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+ServicePin.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+ServicePin.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+ServicePin.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+ServicePin.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+ServicePin.c(13): Notify: Transaction "kaas_ServicePin" started.
+ServicePin.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+ServicePin.c(14): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aXCt1lprocEDktli4JWHbmKqk"
+ServicePin.c(14): Notify: Parameter Substitution: parameter "p_servicePIN" =  "B5L46V"
+ServicePin.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/B5L46V" is done with headers:
+ServicePin.c(14):     :method = GET
+ServicePin.c(14):     :scheme = https
+ServicePin.c(14):     :path = /KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/B5L46V
+ServicePin.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+ServicePin.c(14):     Content-Type =  application/x-www-form-urlencoded
+ServicePin.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+ServicePin.c(14):     Accept-Encoding =  gzip, deflate
+ServicePin.c(14):     Accept =  */*
+ServicePin.c(14):     cookie = JSESSIONID=6FB5EAEAB31C416BC45AF9EB95032913; mySessionCookie=tridion_0ebde92e-922
+ServicePin.c(14):     6-4c00-8f97-e3a9bf59c6cf; myTrackingCookie=tridion_d4b2b28d-4d34-41fa-af15-658449739355
+ServicePin.c(14): t=2475ms: 390-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/B5L46V" (RelFrameId=1, Internal ID=4)
+ServicePin.c(14):     HTTP/2.0 200\r\n
+ServicePin.c(14):     Status: 200\r\n
+ServicePin.c(14):     date: Fri, 25 Jun 2021 06:25:38 GMT\r\n
+ServicePin.c(14):     content-type: application/json;charset=UTF-8\r\n
+ServicePin.c(14):     content-length: 25\r\n
+ServicePin.c(14):     x-amzn-requestid: 751cacdf-8c5f-4d2c-a805-c720d1f8a8e0\r\n
+ServicePin.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+ServicePin.c(14):     set-cookie: JSESSIONID=5DADFD9C5557D3DF692B20277BA3EB5F; Path=/; HttpOnly\r\n
+ServicePin.c(14):     x-amz-apigw-id: Bd-DVEmvIAMFXIA=\r\n
+ServicePin.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:25:37 GMT\r\n
+ServicePin.c(14):     \r\n
+ServicePin.c(14): t=2481ms: 25-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/B5L46V" (RelFrameId=1, Internal ID=4)
+ServicePin.c(14):     {"servicePin":"11057715"}
+ServicePin.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/B5L46V"  	[MsgId: MMSG-26548]
+ServicePin.c(14): Registered web_reg_find successful for "Text={"servicePin" (count=1)  	[MsgId: MMSG-26364]
+ServicePin.c(14): Notify: Saving Parameter "Text_count = 1".
+ServicePin.c(14): web_custom_request("web_custom_request") was successful, 25 body bytes, 390 header bytes  	[MsgId: MMSG-26386]
+ServicePin.c(24): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+ServicePin.c(31): Notify: Transaction "kaas_ServicePin" ended with a "Pass" status (Duration: 0.1430 Wasted Time: 0.0242).
+Ending action ServicePin.
+Ending iteration 3.
+Starting iteration 4.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_servicePIN = 24 [table  = p_servicePIN].
+Notify: Getting new value for parameter 'p_servicePIN': table = 'p_servicePIN.dat' column = '0' row = '24'.
+Starting action ServicePin.
+ServicePin.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+ServicePin.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+ServicePin.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000aXCt1lprocEDktli4JWHbmKqk"
+ServicePin.c(6): Notify: Saving Parameter "WISEAccessToken = 000aXCt1lprocEDktli4JWHbmKqk".
+ServicePin.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+ServicePin.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+ServicePin.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+ServicePin.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+ServicePin.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+ServicePin.c(13): Notify: Transaction "kaas_ServicePin" started.
+ServicePin.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+ServicePin.c(14): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aXCt1lprocEDktli4JWHbmKqk"
+ServicePin.c(14): Notify: Parameter Substitution: parameter "p_servicePIN" =  "CF081A"
+ServicePin.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/CF081A" is done with headers:
+ServicePin.c(14):     :method = GET
+ServicePin.c(14):     :scheme = https
+ServicePin.c(14):     :path = /KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/CF081A
+ServicePin.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+ServicePin.c(14):     Content-Type =  application/x-www-form-urlencoded
+ServicePin.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+ServicePin.c(14):     Accept-Encoding =  gzip, deflate
+ServicePin.c(14):     Accept =  */*
+ServicePin.c(14):     cookie = JSESSIONID=5DADFD9C5557D3DF692B20277BA3EB5F; mySessionCookie=tridion_0ebde92e-922
+ServicePin.c(14):     6-4c00-8f97-e3a9bf59c6cf; myTrackingCookie=tridion_d4b2b28d-4d34-41fa-af15-658449739355
+ServicePin.c(14): t=2654ms: 315-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/CF081A" (RelFrameId=1, Internal ID=5)
+ServicePin.c(14):     HTTP/2.0 200\r\n
+ServicePin.c(14):     Status: 200\r\n
+ServicePin.c(14):     date: Fri, 25 Jun 2021 06:25:38 GMT\r\n
+ServicePin.c(14):     content-type: application/json;charset=UTF-8\r\n
+ServicePin.c(14):     content-length: 25\r\n
+ServicePin.c(14):     x-amzn-requestid: 1ee81208-3ba8-4443-8a74-b5924c86e01c\r\n
+ServicePin.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+ServicePin.c(14):     x-amz-apigw-id: Bd-DXHt9oAMF_QA=\r\n
+ServicePin.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:25:37 GMT\r\n
+ServicePin.c(14):     \r\n
+ServicePin.c(14): t=2669ms: 25-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/CF081A" (RelFrameId=1, Internal ID=5)
+ServicePin.c(14):     {"servicePin":"09055111"}
+ServicePin.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/CF081A"  	[MsgId: MMSG-26548]
+ServicePin.c(14): Registered web_reg_find successful for "Text={"servicePin" (count=1)  	[MsgId: MMSG-26364]
+ServicePin.c(14): Notify: Saving Parameter "Text_count = 1".
+ServicePin.c(14): web_custom_request("web_custom_request") was successful, 25 body bytes, 315 header bytes  	[MsgId: MMSG-26386]
+ServicePin.c(24): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+ServicePin.c(31): Notify: Transaction "kaas_ServicePin" ended with a "Pass" status (Duration: 0.1540 Wasted Time: 0.0150).
+Ending action ServicePin.
+Ending iteration 4.
+Starting iteration 5.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_servicePIN = 4 [table  = p_servicePIN].
+Notify: Getting new value for parameter 'p_servicePIN': table = 'p_servicePIN.dat' column = '0' row = '4'.
+Starting action ServicePin.
+ServicePin.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+ServicePin.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+ServicePin.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000aXCt1lprocEDktli4JWHbmKqk"
+ServicePin.c(6): Notify: Saving Parameter "WISEAccessToken = 000aXCt1lprocEDktli4JWHbmKqk".
+ServicePin.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+ServicePin.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+ServicePin.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+ServicePin.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+ServicePin.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+ServicePin.c(13): Notify: Transaction "kaas_ServicePin" started.
+ServicePin.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+ServicePin.c(14): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aXCt1lprocEDktli4JWHbmKqk"
+ServicePin.c(14): Notify: Parameter Substitution: parameter "p_servicePIN" =  "G1W47V"
+ServicePin.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/G1W47V" is done with headers:
+ServicePin.c(14):     :method = GET
+ServicePin.c(14):     :scheme = https
+ServicePin.c(14):     :path = /KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/G1W47V
+ServicePin.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+ServicePin.c(14):     Content-Type =  application/x-www-form-urlencoded
+ServicePin.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+ServicePin.c(14):     Accept-Encoding =  gzip, deflate
+ServicePin.c(14):     Accept =  */*
+ServicePin.c(14):     cookie = JSESSIONID=5DADFD9C5557D3DF692B20277BA3EB5F; mySessionCookie=tridion_0ebde92e-922
+ServicePin.c(14):     6-4c00-8f97-e3a9bf59c6cf; myTrackingCookie=tridion_d4b2b28d-4d34-41fa-af15-658449739355
+ServicePin.c(14): t=2826ms: 315-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/G1W47V" (RelFrameId=1, Internal ID=6)
+ServicePin.c(14):     HTTP/2.0 200\r\n
+ServicePin.c(14):     Status: 200\r\n
+ServicePin.c(14):     date: Fri, 25 Jun 2021 06:25:38 GMT\r\n
+ServicePin.c(14):     content-type: application/json;charset=UTF-8\r\n
+ServicePin.c(14):     content-length: 25\r\n
+ServicePin.c(14):     x-amzn-requestid: aaa9d59e-e4bc-40e7-bbec-4afce064b0b9\r\n
+ServicePin.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+ServicePin.c(14):     x-amz-apigw-id: Bd-DZHr3oAMFkjg=\r\n
+ServicePin.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:25:37 GMT\r\n
+ServicePin.c(14):     \r\n
+ServicePin.c(14): t=2832ms: 25-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/G1W47V" (RelFrameId=1, Internal ID=6)
+ServicePin.c(14):     {"servicePin":"05055616"}
+ServicePin.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aXCt1lprocEDktli4JWHbmKqk/G1W47V"  	[MsgId: MMSG-26548]
+ServicePin.c(14): Registered web_reg_find successful for "Text={"servicePin" (count=1)  	[MsgId: MMSG-26364]
+ServicePin.c(14): Notify: Saving Parameter "Text_count = 1".
+ServicePin.c(14): web_custom_request("web_custom_request") was successful, 25 body bytes, 315 header bytes  	[MsgId: MMSG-26386]
+ServicePin.c(24): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+ServicePin.c(31): Notify: Transaction "kaas_ServicePin" ended with a "Pass" status (Duration: 0.1419 Wasted Time: 0.0219).
+Ending action ServicePin.
+Ending iteration 5.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

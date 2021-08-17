@@ -1,0 +1,1228 @@
+Virtual User Script started at: 6/25/2021 6:26:33 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\GCC\Kaas\FY20_Release\Script\V1\KAAS_ESUDP_QuickReference\\default.cfg"  	[MsgId: MMSG-27141]
+Starting to download the proxy automatic configuration script, URL="http://autocache.hpicorp.net/"  	[MsgId: MMSG-27097]
+t=465ms: 147-byte response headers for "http://autocache.hpicorp.net/" (RelFrameId=1, Internal ID=1)
+    HTTP/1.0 200 OK\r\n
+    Content-Type: application/x-ns-proxy-autoconfig\r\n
+    pragma: no-cache\r\n
+    Server: BigIP\r\n
+    Connection: Keep-Alive\r\n
+    Content-Length: 2557\r\n
+    \r\n
+t=476ms: 2557-byte response body for "http://autocache.hpicorp.net/" (RelFrameId=1, Internal ID=1)
+    //////////////////////////////////////////////////////////////////////\n
+    // DO NOT MODIFY THIS PAC - CHANGES MUST BE MADE THRU THE ADMIN SITE\n
+    //////////////////////////////////////////////////////////////////////\n
+    // AUTOCACHE HP (c) 2014 ver.2.01 Web Publish\n
+    // Debug URL: http://autocache.hpicorp.net/?debug=1\n
+    // This PAC was web generated: 2020-06-19 08:54:11 AM\n
+    //////////////////////////////////////////////////////////////////////\n
+    \n
+    var pacname = "sitedirect-hpi.pac";\n
+    var pacdate = "2020-06-19 08:54:11 AM";\n
+    \n
+    function FindProxyForURL(url, host)\n
+    \n
+    {\n
+    \n
+    HPQNETPROXY = "PROXY web-proxy.austin.hpicorp.net:8080; PROXY proxy-txn.austin.hpicorp.net
+    :8080";\n
+    \r\n
+        hostIP = dnsResolve(host);\r\n
+        if (hostIP == false)\r\n
+            var hostIP = "1.1.1.1";\r\n
+    \r\n
+        // make everything lowercase\r\n
+        // WARNING: all shExpMatch rules following MUST be lowercase!\r\n
+        url = url.toLowerCase();\r\n
+        host = host.toLowerCase();\r\n
+    \r\n
+      // work-around for destinations expecting Net 15\n
+       if (dnsDomainIs(host, "npd.com")\n
+            || dnsDomainIs(host, "id.hp.com")\n
+            || dnsDomainIs(host, "instantink.com")\n
+            || dnsDomainIs(host, "hp-instantink.com")\n
+            || dnsDomainIs(host, "hp10.us")\n
+            || dnsDomainIs(host, "hp-dataservices.com")\n
+            || dnsDomainIs(host, "cso-hp.com")\n
+            || dnsDomainIs(host, "credit-suisse.com")\n
+            || dnsDomainIs(host, "npddecisionkey.com"))\n
+            return HPQNETPROXY ;\n
+    \r\n
+        // HPI CRM, Satish Babu, 01/31/2018\r\n
+        // HPI Net15 exception, Randall Courtney, 07/28/2018\n
+        if (dnsDomainIs(host, "crm.dynamics.com")\r\n
+         || dnsDomainIs(host, "us.storedvalue.com"))\n
+            return "PROXY web-proxy.austin.hpicorp.net:8080; proxy-txn.austin.hpicorp.net:8080
+    ";\r\n
+    \r\n
+        // Extranets that need to go via a pmHP proxy\r\n
+        if (isInNet(hostIP,"192.170.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.6.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.25.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.30.92.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.32.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.52.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.53.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"128.88.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"155.208.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"156.153.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"156.152.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"209.228.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"209.228.0.0", "255.255.0.0"))\r\n
+            return HPQNETPROXY;\r\n
+    \r\n
+        return "DIRECT";\n
+    }\n
+Proxy automatic configuration script (URL="http://autocache.hpicorp.net/") downloaded and evaluated successfully  	[MsgId: MMSG-27096]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(21): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(21): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(21): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(22): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(22): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(22): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(23): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(23): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(23): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(24): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(24): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(26): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(26): The request to server https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" is done with headers:
+vuser_init.c(26):     :method = POST
+vuser_init.c(26):     :scheme = https
+vuser_init.c(26):     :path = /as/token.oauth2?grant_type=client_credentials
+vuser_init.c(26):     :authority = login-itg.external.hp.com
+vuser_init.c(26):     Authorization =  Basic V0lTRTpHZTRFSDllN1VoMVpkZzRnbjhCSmtXOHVtUVhNblBmSnJCNHFZeTJLV3oyVFJ
+vuser_init.c(26):     BTWw1eFlVVVRSaU5kNW9zbERq
+vuser_init.c(26):     Content-Type =  application/x-www-form-urlencoded
+vuser_init.c(26):     Host =  login-itg.external.hp.com
+vuser_init.c(26):     Cache-Control =  no-cache
+vuser_init.c(26):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+vuser_init.c(26):     Accept-Encoding =  gzip, deflate
+vuser_init.c(26):     Accept =  */*
+vuser_init.c(26):     content-length = 0
+vuser_init.c(26): t=649ms: 517-byte response headers for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=2)
+vuser_init.c(26):     HTTP/2.0 200\r\n
+vuser_init.c(26):     Status: 200\r\n
+vuser_init.c(26):     server: nginx/1.16.1\r\n
+vuser_init.c(26):     date: Fri, 25 Jun 2021 06:26:33 GMT\r\n
+vuser_init.c(26):     content-type: application/json;charset=utf-8\r\n
+vuser_init.c(26):     referrer-policy: origin\r\n
+vuser_init.c(26):     cache-control: no-cache, no-store\r\n
+vuser_init.c(26):     pragma: no-cache\r\n
+vuser_init.c(26):     expires: Thu, 01 Jan 1970 00:00:00 GMT\r\n
+vuser_init.c(26):     set-cookie: HPIUID=rZpmEC4D8I4SiS08MTcRZg;Path=/;Domain=.hp.com;Secure;HttpOnly;SameSite=N
+vuser_init.c(26):     one\r\n
+vuser_init.c(26):     strict-transport-security: max-age=15768000; preload;\r\n
+vuser_init.c(26):     x-content-type-options: nosniff\r\n
+vuser_init.c(26):     x-frame-options: SAMEORIGIN\r\n
+vuser_init.c(26):     x-xss-protection: 1; mode=block\r\n
+vuser_init.c(26):     x-robots-tag: none\r\n
+vuser_init.c(26):     \r\n
+vuser_init.c(26): t=657ms: 87-byte response body for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=2)
+vuser_init.c(26):     {"access_token":"000azsxp4RBltmeXmEz13eM1rkPv","token_type":"Bearer","expires_in":7199}
+vuser_init.c(26): Notify: Saving Parameter "c_WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+vuser_init.c(26): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials"  	[MsgId: MMSG-26548]
+vuser_init.c(26): web_custom_request("web_custom_request") was successful, 87 body bytes, 517 header bytes  	[MsgId: MMSG-26386]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Warning -27077: The "vuser_init" section contains web function(s) when the "Simulate a new user on each iteration" Runtime Setting is ON.  This may produce unpredictable results with multiple iterations  	[MsgId: MWAR-27077]
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action kaas_DocSearchUDPES_ProductContext.
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Saving Parameter "WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(8): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_ProductContext.c(13): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" started.
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Parameter Substitution: parameter "QuickRef_productnumbers" =  "6944198"
+kaas_DocSearchUDPES_ProductContext.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" is done with headers:
+kaas_DocSearchUDPES_ProductContext.c(14):     :method = GET
+kaas_DocSearchUDPES_ProductContext.c(14):     :scheme = https
+kaas_DocSearchUDPES_ProductContext.c(14):     :path = /KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=e
+kaas_DocSearchUDPES_ProductContext.c(14):     n&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,21862
+kaas_DocSearchUDPES_ProductContext.c(14):     0138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376
+kaas_DocSearchUDPES_ProductContext.c(14):     253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,content
+kaas_DocSearchUDPES_ProductContext.c(14):     updatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions&store=docstore,supportagentstore,udp-content-default&product=6944198&categorizationId
+kaas_DocSearchUDPES_ProductContext.c(14):     s=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835
+kaas_DocSearchUDPES_ProductContext.c(14):     559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20
+kaas_DocSearchUDPES_ProductContext.c(14):     Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support
+kaas_DocSearchUDPES_ProductContext.c(14):     %20Information&clientId=WCC
+kaas_DocSearchUDPES_ProductContext.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchUDPES_ProductContext.c(14):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchUDPES_ProductContext.c(14):     accessToken =  000azsxp4RBltmeXmEz13eM1rkPv
+kaas_DocSearchUDPES_ProductContext.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept =  */*
+kaas_DocSearchUDPES_ProductContext.c(14): t=1342ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=3)
+kaas_DocSearchUDPES_ProductContext.c(14):     HTTP/2.0 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     Status: 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     date: Fri, 25 Jun 2021 06:26:34 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-length: 6092\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-requestid: 45e8a376-8f01-4d95-b4f5-2468d18100e5\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amz-apigw-id: Bd-MEH1foAMFs8w=\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:26:34 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     \r\n
+kaas_DocSearchUDPES_ProductContext.c(14): t=1351ms: 6092-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=3)
+kaas_DocSearchUDPES_ProductContext.c(14):     {"matches":[{"documentID":"c05640567","title":"HP Notebook PCs - Swelling or Deformation o
+kaas_DocSearchUDPES_ProductContext.c(14):     f Notebook Battery","contentTypeHeader":"Product Information","renderLink":"https://uat.su
+kaas_DocSearchUDPES_ProductContext.c(14):     pport.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c05640567","matchScor
+kaas_DocSearchUDPES_ProductContext.c(14):     e":5.3048415,"description":"If your battery is deformed or is swelling, please read this."
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"contentUpdateDate":"2021-06-09 18:46:59","language":"EN","disclosureLevel":"696531864679
+kaas_DocSearchUDPES_ProductContext.c(14):     532034919979251200881","contentType":"Product Specifications","store":"Product Documents",
+kaas_DocSearchUDPES_ProductContext.c(14):     "docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|264094802425566
+kaas_DocSearchUDPES_ProductContext.c(14):     809196194979176827|444654627654234391237614041520684","name":"Troubleshooting|Power|Batter
+kaas_DocSearchUDPES_ProductContext.c(14):     y"}],"categorizations":["29175471122742644821080","895940033717088901186198481388081"],"ma
+kaas_DocSearchUDPES_ProductContext.c(14):     tchedCategorizations":["29175471122742644821080"]},{"documentID":"c04371813","title":"HP S
+kaas_DocSearchUDPES_ProductContext.c(14):     lateBook 14-p091nr PC Product Specifications","contentTypeHeader":"Product Information","r
+kaas_DocSearchUDPES_ProductContext.c(14):     enderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1
+kaas_DocSearchUDPES_ProductContext.c(14):     rkPv/c04371813","matchScore":5.301559,"description":"","contentUpdateDate":"2014-07-14 15:
+kaas_DocSearchUDPES_ProductContext.c(14):     37:24","language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType"
+kaas_DocSearchUDPES_ProductContext.c(14):     :"Product Specifications","store":"Product Documents","docSource":"Concentra","topics":[{"
+kaas_DocSearchUDPES_ProductContext.c(14):     id":"727118134876361637267272859691104|738308751582545683183321646412788","name":"Product 
+kaas_DocSearchUDPES_ProductContext.c(14):     Information|Product Specifications"}],"categorizations":["29175471122742644821080"],"match
+kaas_DocSearchUDPES_ProductContext.c(14):     edCategorizations":["29175471122742644821080"]},{"documentID":"c04356578","title":"HP Slat
+kaas_DocSearchUDPES_ProductContext.c(14):     eBook 14-p000no PC Product Specifications","contentTypeHeader":"Product Information","rend
+kaas_DocSearchUDPES_ProductContext.c(14):     erLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkP
+kaas_DocSearchUDPES_ProductContext.c(14):     v/c04356578","matchScore":5.301559,"description":"Looking for upgrade or update informatio
+kaas_DocSearchUDPES_ProductContext.c(14):     n? Trying to find the names of hardware components or software programs? This document con
+kaas_DocSearchUDPES_ProductContext.c(14):     tains the technical details for this notebook.","contentUpdateDate":"2014-06-24 00:00:00",
+kaas_DocSearchUDPES_ProductContext.c(14):     "language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Produ
+kaas_DocSearchUDPES_ProductContext.c(14):     ct Specifications","store":"Product Documents","docSource":"Concentra","topics":[{"id":"72
+kaas_DocSearchUDPES_ProductContext.c(14):     7118134876361637267272859691104|738308751582545683183321646412788","name":"Product Informa
+kaas_DocSearchUDPES_ProductContext.c(14):     tion|Product Specifications"}],"categorizations":["29175471122742644821080"],"matchedCateg
+kaas_DocSearchUDPES_ProductContext.c(14):     orizations":["29175471122742644821080"]},{"documentID":"c04403288","title":"HP SlateBook 1
+kaas_DocSearchUDPES_ProductContext.c(14):     4-p000nb PC Product Specifications","contentTypeHeader":"Product Information","renderLink"
+kaas_DocSearchUDPES_ProductContext.c(14):     :"https://uat.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c0440
+kaas_DocSearchUDPES_ProductContext.c(14):     3288","matchScore":5.2997437,"description":"Looking for upgrade or update information? Try
+kaas_DocSearchUDPES_ProductContext.c(14):     ing to find the names of hardware components or software programs? This document contains 
+kaas_DocSearchUDPES_ProductContext.c(14):     the technical details for this notebook.","contentUpdateDate":"2014-07-30 00:00:00","langu
+kaas_DocSearchUDPES_ProductContext.c(14):     age":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Product Spe
+kaas_DocSearchUDPES_ProductContext.c(14):     cifications","store":"Product Documents","docSource":"Concentra","topics":[{"id":"72711813
+kaas_DocSearchUDPES_ProductContext.c(14):     4876361637267272859691104|738308751582545683183321646412788","name":"Product Information|P
+kaas_DocSearchUDPES_ProductContext.c(14):     roduct Specifications"}],"categorizations":["29175471122742644821080"],"matchedCategorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions":["29175471122742644821080"]},{"documentID":"c04356687","title":"HP SlateBook 14-p000
+kaas_DocSearchUDPES_ProductContext.c(14):     na PC Product Specifications","contentTypeHeader":"Product Information","renderLink":"http
+kaas_DocSearchUDPES_ProductContext.c(14):     s://uat.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04356687",
+kaas_DocSearchUDPES_ProductContext.c(14):     "matchScore":5.2958055,"description":"Looking for upgrade or update information? Trying to
+kaas_DocSearchUDPES_ProductContext.c(14):      find the names of hardware components or software programs? This document contains the te
+kaas_DocSearchUDPES_ProductContext.c(14):     chnical details for this notebook.","contentUpdateDate":"2014-06-24 00:00:00","language":"
+kaas_DocSearchUDPES_ProductContext.c(14):     EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Product Specifica
+kaas_DocSearchUDPES_ProductContext.c(14):     tions","store":"Product Documents","docSource":"Concentra","topics":[{"id":"72711813487636
+kaas_DocSearchUDPES_ProductContext.c(14):     1637267272859691104|738308751582545683183321646412788","name":"Product Information|Product
+kaas_DocSearchUDPES_ProductContext.c(14):      Specifications"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":
+kaas_DocSearchUDPES_ProductContext.c(14):     ["29175471122742644821080"]},{"documentID":"c04485640","title":"HP SlateBook 14-p080no PC 
+kaas_DocSearchUDPES_ProductContext.c(14):     Product Specifications","contentTypeHeader":"Product Support","renderLink":"https://uat.su
+kaas_DocSearchUDPES_ProductContext.c(14):     pport.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04485640","matchScor
+kaas_DocSearchUDPES_ProductContext.c(14):     e":5.2958055,"description":"Looking for upgrade or update information? Trying to find the 
+kaas_DocSearchUDPES_ProductContext.c(14):     names of hardware components or software programs? This document contains the technical de
+kaas_DocSearchUDPES_ProductContext.c(14):     tails for this notebook.","contentUpdateDate":"2014-10-08 00:00:00","language":"EN","discl
+kaas_DocSearchUDPES_ProductContext.c(14):     osureLevel":"696531864679532034919979251200881","contentType":"Support Information","store
+kaas_DocSearchUDPES_ProductContext.c(14):     ":"Product Documents","docSource":"Concentra","topics":[{"id":"727118134876361637267272859
+kaas_DocSearchUDPES_ProductContext.c(14):     691104|738308751582545683183321646412788","name":"Product Information|Product Specificatio
+kaas_DocSearchUDPES_ProductContext.c(14):     ns"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["29175471122
+kaas_DocSearchUDPES_ProductContext.c(14):     742644821080"]},{"documentID":"c04336066","title":"HP SlateBook 14-p010nr Product Specific
+kaas_DocSearchUDPES_ProductContext.c(14):     ations","contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com
+kaas_DocSearchUDPES_ProductContext.c(14):     /wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04336066","matchScore":5.2958055
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"description":"","contentUpdateDate":"2014-06-10 14:59:59","language":"EN","disclosureLev
+kaas_DocSearchUDPES_ProductContext.c(14):     el":"696531864679532034919979251200881","contentType":"Product Specifications","store":"Pr
+kaas_DocSearchUDPES_ProductContext.c(14):     oduct Documents","docSource":"Concentra","topics":[{"id":"72711813487636163726727285969110
+kaas_DocSearchUDPES_ProductContext.c(14):     4|738308751582545683183321646412788","name":"Product Information|Product Specifications"}]
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"categorizations":["29175471122742644821080"],"matchedCategorizations":["2917547112274264
+kaas_DocSearchUDPES_ProductContext.c(14):     4821080"]}],"range":{"start":"0","end":"10"},"totalCount":7,"showingResultsFor":null,"sear
+kaas_DocSearchUDPES_ProductContext.c(14):     chInsteadFor":null,"aggregationsBucket":null,"highlight":null,"didYouMean":null,"totalCssC
+kaas_DocSearchUDPES_ProductContext.c(14):     ount":null,"cssContext":null,"esmanuals":null,"esstores":null}
+kaas_DocSearchUDPES_ProductContext.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_ProductContext.c(14): Registered web_reg_find successful for "Text={"matches":[{"documentID" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") was successful, 6092 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_ProductContext.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_ProductContext.c(30): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" ended with a "Pass" status (Duration: 0.6265 Wasted Time: 0.0083).
+Ending action kaas_DocSearchUDPES_ProductContext.
+Ending iteration 1.
+Starting iteration 2.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter QuickRef_productnumbers = 2 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '2'.
+Starting action kaas_DocSearchUDPES_ProductContext.
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Saving Parameter "WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(8): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_ProductContext.c(13): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" started.
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Parameter Substitution: parameter "QuickRef_productnumbers" =  "8485409"
+kaas_DocSearchUDPES_ProductContext.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" is done with headers:
+kaas_DocSearchUDPES_ProductContext.c(14):     :method = GET
+kaas_DocSearchUDPES_ProductContext.c(14):     :scheme = https
+kaas_DocSearchUDPES_ProductContext.c(14):     :path = /KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=e
+kaas_DocSearchUDPES_ProductContext.c(14):     n&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,21862
+kaas_DocSearchUDPES_ProductContext.c(14):     0138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376
+kaas_DocSearchUDPES_ProductContext.c(14):     253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,content
+kaas_DocSearchUDPES_ProductContext.c(14):     updatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions&store=docstore,supportagentstore,udp-content-default&product=8485409&categorizationId
+kaas_DocSearchUDPES_ProductContext.c(14):     s=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835
+kaas_DocSearchUDPES_ProductContext.c(14):     559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20
+kaas_DocSearchUDPES_ProductContext.c(14):     Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support
+kaas_DocSearchUDPES_ProductContext.c(14):     %20Information&clientId=WCC
+kaas_DocSearchUDPES_ProductContext.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchUDPES_ProductContext.c(14):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchUDPES_ProductContext.c(14):     accessToken =  000azsxp4RBltmeXmEz13eM1rkPv
+kaas_DocSearchUDPES_ProductContext.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept =  */*
+kaas_DocSearchUDPES_ProductContext.c(14): t=1807ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=4)
+kaas_DocSearchUDPES_ProductContext.c(14):     HTTP/2.0 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     Status: 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     date: Fri, 25 Jun 2021 06:26:34 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-length: 1996\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-requestid: 2cf9b38d-a914-4578-a578-168987268ad9\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amz-apigw-id: Bd-MLHc0oAMF8VA=\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:26:34 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     \r\n
+kaas_DocSearchUDPES_ProductContext.c(14): t=1810ms: 1996-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=4)
+kaas_DocSearchUDPES_ProductContext.c(14):     {"matches":[{"documentID":"c04700771","title":"HP Notebook PCs - Testing and Calibrating t
+kaas_DocSearchUDPES_ProductContext.c(14):     he Battery (Windows)","contentTypeHeader":"Product Support","renderLink":"https://uat.supp
+kaas_DocSearchUDPES_ProductContext.c(14):     ort.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04700771","matchScore"
+kaas_DocSearchUDPES_ProductContext.c(14):     :5.3048415,"description":"Test and troubleshoot laptop battery and charging issues.","cont
+kaas_DocSearchUDPES_ProductContext.c(14):     entUpdateDate":"2021-03-09 03:56:33","language":"EN","disclosureLevel":"696531864679532034
+kaas_DocSearchUDPES_ProductContext.c(14):     919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"
+kaas_DocSearchUDPES_ProductContext.c(14):     Concentra","topics":[{"id":"175513598973950797922021312691457|2640948024255668091961949791
+kaas_DocSearchUDPES_ProductContext.c(14):     76827|444654627654234391237614041520684","name":"Troubleshooting|Power|Battery"}],"categor
+kaas_DocSearchUDPES_ProductContext.c(14):     izations":["29175471122742644821080","184651403277425843090532942361795","1527244498712804
+kaas_DocSearchUDPES_ProductContext.c(14):     50976118"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":"c04712189"
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"title":"HP Notebook 15-ac006ne Product Specifications","contentTypeHeader":"Product Info
+kaas_DocSearchUDPES_ProductContext.c(14):     rmation","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBlt
+kaas_DocSearchUDPES_ProductContext.c(14):     meXmEz13eM1rkPv/c04712189","matchScore":5.301559,"description":"Looking for upgrade or upd
+kaas_DocSearchUDPES_ProductContext.c(14):     ate information? Trying to find the names of hardware components or software programs? Thi
+kaas_DocSearchUDPES_ProductContext.c(14):     s document contains the technical details for this Notebook.","contentUpdateDate":"2015-06
+kaas_DocSearchUDPES_ProductContext.c(14):     -04 00:00:00","language":"EN","disclosureLevel":"696531864679532034919979251200881","conte
+kaas_DocSearchUDPES_ProductContext.c(14):     ntType":"Product Specifications","store":"Product Documents","docSource":"Concentra","topi
+kaas_DocSearchUDPES_ProductContext.c(14):     cs":[{"id":"727118134876361637267272859691104|738308751582545683183321646412788","name":"P
+kaas_DocSearchUDPES_ProductContext.c(14):     roduct Information|Product Specifications"}],"categorizations":["29175471122742644821080"]
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"matchedCategorizations":["29175471122742644821080"]}],"range":{"start":"0","end":"10"},"
+kaas_DocSearchUDPES_ProductContext.c(14):     totalCount":2,"showingResultsFor":null,"searchInsteadFor":null,"aggregationsBucket":null,"
+kaas_DocSearchUDPES_ProductContext.c(14):     highlight":null,"didYouMean":null,"totalCssCount":null,"cssContext":null,"esstores":null,"
+kaas_DocSearchUDPES_ProductContext.c(14):     esmanuals":null}
+kaas_DocSearchUDPES_ProductContext.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_ProductContext.c(14): Registered web_reg_find successful for "Text={"matches":[{"documentID" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") was successful, 1996 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_ProductContext.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_ProductContext.c(30): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" ended with a "Pass" status (Duration: 0.3571 Wasted Time: 0.0107).
+Ending action kaas_DocSearchUDPES_ProductContext.
+Ending iteration 2.
+Starting iteration 3.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter QuickRef_productnumbers = 3 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '3'.
+Starting action kaas_DocSearchUDPES_ProductContext.
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Saving Parameter "WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(8): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_ProductContext.c(13): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" started.
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Parameter Substitution: parameter "QuickRef_productnumbers" =  "4217179"
+kaas_DocSearchUDPES_ProductContext.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" is done with headers:
+kaas_DocSearchUDPES_ProductContext.c(14):     :method = GET
+kaas_DocSearchUDPES_ProductContext.c(14):     :scheme = https
+kaas_DocSearchUDPES_ProductContext.c(14):     :path = /KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=e
+kaas_DocSearchUDPES_ProductContext.c(14):     n&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,21862
+kaas_DocSearchUDPES_ProductContext.c(14):     0138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376
+kaas_DocSearchUDPES_ProductContext.c(14):     253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,content
+kaas_DocSearchUDPES_ProductContext.c(14):     updatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions&store=docstore,supportagentstore,udp-content-default&product=4217179&categorizationId
+kaas_DocSearchUDPES_ProductContext.c(14):     s=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835
+kaas_DocSearchUDPES_ProductContext.c(14):     559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20
+kaas_DocSearchUDPES_ProductContext.c(14):     Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support
+kaas_DocSearchUDPES_ProductContext.c(14):     %20Information&clientId=WCC
+kaas_DocSearchUDPES_ProductContext.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchUDPES_ProductContext.c(14):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchUDPES_ProductContext.c(14):     accessToken =  000azsxp4RBltmeXmEz13eM1rkPv
+kaas_DocSearchUDPES_ProductContext.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept =  */*
+kaas_DocSearchUDPES_ProductContext.c(14): t=2190ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=5)
+kaas_DocSearchUDPES_ProductContext.c(14):     HTTP/2.0 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     Status: 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     date: Fri, 25 Jun 2021 06:26:35 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-length: 1106\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-requestid: 612fae80-681a-48f2-b5b5-167fdd9913b5\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amz-apigw-id: Bd-MPEahIAMFWsw=\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:26:35 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     \r\n
+kaas_DocSearchUDPES_ProductContext.c(14): t=2196ms: 1106-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=5)
+kaas_DocSearchUDPES_ProductContext.c(14):     {"matches":[{"documentID":"c04700771","title":"HP Notebook PCs - Testing and Calibrating t
+kaas_DocSearchUDPES_ProductContext.c(14):     he Battery (Windows)","contentTypeHeader":"Product Support","renderLink":"https://uat.supp
+kaas_DocSearchUDPES_ProductContext.c(14):     ort.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04700771","matchScore"
+kaas_DocSearchUDPES_ProductContext.c(14):     :5.3048415,"description":"Test and troubleshoot laptop battery and charging issues.","cont
+kaas_DocSearchUDPES_ProductContext.c(14):     entUpdateDate":"2021-03-09 03:56:33","language":"EN","disclosureLevel":"696531864679532034
+kaas_DocSearchUDPES_ProductContext.c(14):     919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"
+kaas_DocSearchUDPES_ProductContext.c(14):     Concentra","topics":[{"id":"175513598973950797922021312691457|2640948024255668091961949791
+kaas_DocSearchUDPES_ProductContext.c(14):     76827|444654627654234391237614041520684","name":"Troubleshooting|Power|Battery"}],"categor
+kaas_DocSearchUDPES_ProductContext.c(14):     izations":["29175471122742644821080","184651403277425843090532942361795","1527244498712804
+kaas_DocSearchUDPES_ProductContext.c(14):     50976118"],"matchedCategorizations":["29175471122742644821080"]}],"range":{"start":"0","en
+kaas_DocSearchUDPES_ProductContext.c(14):     d":"10"},"totalCount":1,"showingResultsFor":null,"searchInsteadFor":null,"aggregationsBuck
+kaas_DocSearchUDPES_ProductContext.c(14):     et":null,"highlight":null,"didYouMean":null,"totalCssCount":null,"cssContext":null,"esstor
+kaas_DocSearchUDPES_ProductContext.c(14):     es":null,"esmanuals":null}
+kaas_DocSearchUDPES_ProductContext.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_ProductContext.c(14): Registered web_reg_find successful for "Text={"matches":[{"documentID" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") was successful, 1106 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_ProductContext.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_ProductContext.c(30): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" ended with a "Pass" status (Duration: 0.3722 Wasted Time: 0.0228).
+Ending action kaas_DocSearchUDPES_ProductContext.
+Ending iteration 3.
+Starting iteration 4.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter QuickRef_productnumbers = 4 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '4'.
+Starting action kaas_DocSearchUDPES_ProductContext.
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Saving Parameter "WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(8): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_ProductContext.c(13): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" started.
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Parameter Substitution: parameter "QuickRef_productnumbers" =  "8485409"
+kaas_DocSearchUDPES_ProductContext.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" is done with headers:
+kaas_DocSearchUDPES_ProductContext.c(14):     :method = GET
+kaas_DocSearchUDPES_ProductContext.c(14):     :scheme = https
+kaas_DocSearchUDPES_ProductContext.c(14):     :path = /KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=e
+kaas_DocSearchUDPES_ProductContext.c(14):     n&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,21862
+kaas_DocSearchUDPES_ProductContext.c(14):     0138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376
+kaas_DocSearchUDPES_ProductContext.c(14):     253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,content
+kaas_DocSearchUDPES_ProductContext.c(14):     updatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions&store=docstore,supportagentstore,udp-content-default&product=8485409&categorizationId
+kaas_DocSearchUDPES_ProductContext.c(14):     s=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835
+kaas_DocSearchUDPES_ProductContext.c(14):     559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20
+kaas_DocSearchUDPES_ProductContext.c(14):     Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support
+kaas_DocSearchUDPES_ProductContext.c(14):     %20Information&clientId=WCC
+kaas_DocSearchUDPES_ProductContext.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchUDPES_ProductContext.c(14):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchUDPES_ProductContext.c(14):     accessToken =  000azsxp4RBltmeXmEz13eM1rkPv
+kaas_DocSearchUDPES_ProductContext.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept =  */*
+kaas_DocSearchUDPES_ProductContext.c(14): t=2591ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=6)
+kaas_DocSearchUDPES_ProductContext.c(14):     HTTP/2.0 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     Status: 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     date: Fri, 25 Jun 2021 06:26:35 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-length: 1996\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-requestid: bb940f8e-3376-456c-a6b5-806291b00145\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amz-apigw-id: Bd-MTEQDIAMFyVQ=\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:26:34 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     \r\n
+kaas_DocSearchUDPES_ProductContext.c(14): t=2598ms: 1996-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=6)
+kaas_DocSearchUDPES_ProductContext.c(14):     {"matches":[{"documentID":"c04700771","title":"HP Notebook PCs - Testing and Calibrating t
+kaas_DocSearchUDPES_ProductContext.c(14):     he Battery (Windows)","contentTypeHeader":"Product Support","renderLink":"https://uat.supp
+kaas_DocSearchUDPES_ProductContext.c(14):     ort.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04700771","matchScore"
+kaas_DocSearchUDPES_ProductContext.c(14):     :5.3048415,"description":"Test and troubleshoot laptop battery and charging issues.","cont
+kaas_DocSearchUDPES_ProductContext.c(14):     entUpdateDate":"2021-03-09 03:56:33","language":"EN","disclosureLevel":"696531864679532034
+kaas_DocSearchUDPES_ProductContext.c(14):     919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"
+kaas_DocSearchUDPES_ProductContext.c(14):     Concentra","topics":[{"id":"175513598973950797922021312691457|2640948024255668091961949791
+kaas_DocSearchUDPES_ProductContext.c(14):     76827|444654627654234391237614041520684","name":"Troubleshooting|Power|Battery"}],"categor
+kaas_DocSearchUDPES_ProductContext.c(14):     izations":["29175471122742644821080","184651403277425843090532942361795","1527244498712804
+kaas_DocSearchUDPES_ProductContext.c(14):     50976118"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":"c04712189"
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"title":"HP Notebook 15-ac006ne Product Specifications","contentTypeHeader":"Product Info
+kaas_DocSearchUDPES_ProductContext.c(14):     rmation","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBlt
+kaas_DocSearchUDPES_ProductContext.c(14):     meXmEz13eM1rkPv/c04712189","matchScore":5.301559,"description":"Looking for upgrade or upd
+kaas_DocSearchUDPES_ProductContext.c(14):     ate information? Trying to find the names of hardware components or software programs? Thi
+kaas_DocSearchUDPES_ProductContext.c(14):     s document contains the technical details for this Notebook.","contentUpdateDate":"2015-06
+kaas_DocSearchUDPES_ProductContext.c(14):     -04 00:00:00","language":"EN","disclosureLevel":"696531864679532034919979251200881","conte
+kaas_DocSearchUDPES_ProductContext.c(14):     ntType":"Product Specifications","store":"Product Documents","docSource":"Concentra","topi
+kaas_DocSearchUDPES_ProductContext.c(14):     cs":[{"id":"727118134876361637267272859691104|738308751582545683183321646412788","name":"P
+kaas_DocSearchUDPES_ProductContext.c(14):     roduct Information|Product Specifications"}],"categorizations":["29175471122742644821080"]
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"matchedCategorizations":["29175471122742644821080"]}],"range":{"start":"0","end":"10"},"
+kaas_DocSearchUDPES_ProductContext.c(14):     totalCount":2,"showingResultsFor":null,"searchInsteadFor":null,"aggregationsBucket":null,"
+kaas_DocSearchUDPES_ProductContext.c(14):     highlight":null,"didYouMean":null,"totalCssCount":null,"cssContext":null,"esstores":null,"
+kaas_DocSearchUDPES_ProductContext.c(14):     esmanuals":null}
+kaas_DocSearchUDPES_ProductContext.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_ProductContext.c(14): Registered web_reg_find successful for "Text={"matches":[{"documentID" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") was successful, 1996 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_ProductContext.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_ProductContext.c(30): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" ended with a "Pass" status (Duration: 0.3712 Wasted Time: 0.0183).
+Ending action kaas_DocSearchUDPES_ProductContext.
+Ending iteration 4.
+Starting iteration 5.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter QuickRef_productnumbers = 5 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '5'.
+Starting action kaas_DocSearchUDPES_ProductContext.
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Saving Parameter "WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(8): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_ProductContext.c(13): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" started.
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Parameter Substitution: parameter "QuickRef_productnumbers" =  "5223305"
+kaas_DocSearchUDPES_ProductContext.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" is done with headers:
+kaas_DocSearchUDPES_ProductContext.c(14):     :method = GET
+kaas_DocSearchUDPES_ProductContext.c(14):     :scheme = https
+kaas_DocSearchUDPES_ProductContext.c(14):     :path = /KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=e
+kaas_DocSearchUDPES_ProductContext.c(14):     n&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,21862
+kaas_DocSearchUDPES_ProductContext.c(14):     0138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376
+kaas_DocSearchUDPES_ProductContext.c(14):     253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,content
+kaas_DocSearchUDPES_ProductContext.c(14):     updatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions&store=docstore,supportagentstore,udp-content-default&product=5223305&categorizationId
+kaas_DocSearchUDPES_ProductContext.c(14):     s=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835
+kaas_DocSearchUDPES_ProductContext.c(14):     559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20
+kaas_DocSearchUDPES_ProductContext.c(14):     Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support
+kaas_DocSearchUDPES_ProductContext.c(14):     %20Information&clientId=WCC
+kaas_DocSearchUDPES_ProductContext.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchUDPES_ProductContext.c(14):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchUDPES_ProductContext.c(14):     accessToken =  000azsxp4RBltmeXmEz13eM1rkPv
+kaas_DocSearchUDPES_ProductContext.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept =  */*
+kaas_DocSearchUDPES_ProductContext.c(14): t=2990ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=7)
+kaas_DocSearchUDPES_ProductContext.c(14):     HTTP/2.0 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     Status: 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     date: Fri, 25 Jun 2021 06:26:35 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-length: 1828\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-requestid: a8450791-9c16-4077-afa2-05630d47a7e3\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amz-apigw-id: Bd-MXH65oAMFwiQ=\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:26:35 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     \r\n
+kaas_DocSearchUDPES_ProductContext.c(14): t=2997ms: 1828-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=7)
+kaas_DocSearchUDPES_ProductContext.c(14):     {"matches":[{"documentID":"c04700771","title":"HP Notebook PCs - Testing and Calibrating t
+kaas_DocSearchUDPES_ProductContext.c(14):     he Battery (Windows)","contentTypeHeader":"Product Support","renderLink":"https://uat.supp
+kaas_DocSearchUDPES_ProductContext.c(14):     ort.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04700771","matchScore"
+kaas_DocSearchUDPES_ProductContext.c(14):     :5.3048415,"description":"Test and troubleshoot laptop battery and charging issues.","cont
+kaas_DocSearchUDPES_ProductContext.c(14):     entUpdateDate":"2021-03-09 03:56:33","language":"EN","disclosureLevel":"696531864679532034
+kaas_DocSearchUDPES_ProductContext.c(14):     919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"
+kaas_DocSearchUDPES_ProductContext.c(14):     Concentra","topics":[{"id":"175513598973950797922021312691457|2640948024255668091961949791
+kaas_DocSearchUDPES_ProductContext.c(14):     76827|444654627654234391237614041520684","name":"Troubleshooting|Power|Battery"}],"categor
+kaas_DocSearchUDPES_ProductContext.c(14):     izations":["29175471122742644821080","184651403277425843090532942361795","1527244498712804
+kaas_DocSearchUDPES_ProductContext.c(14):     50976118"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":"c03151875"
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"title":"HP ENVY 15-3033CL Notebook PC Product Specifications","contentTypeHeader":"Produ
+kaas_DocSearchUDPES_ProductContext.c(14):     ct Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/000azs
+kaas_DocSearchUDPES_ProductContext.c(14):     xp4RBltmeXmEz13eM1rkPv/c03151875","matchScore":5.2958055,"description":"","contentUpdateDa
+kaas_DocSearchUDPES_ProductContext.c(14):     te":"2012-01-12 20:55:52","language":"EN","disclosureLevel":"69653186467953203491997925120
+kaas_DocSearchUDPES_ProductContext.c(14):     0881","contentType":"Product Specifications","store":"Product Documents","docSource":"Conc
+kaas_DocSearchUDPES_ProductContext.c(14):     entra","topics":[{"id":"727118134876361637267272859691104|73830875158254568318332164641278
+kaas_DocSearchUDPES_ProductContext.c(14):     8","name":"Product Information|Product Specifications"}],"categorizations":["2917547112274
+kaas_DocSearchUDPES_ProductContext.c(14):     2644821080"],"matchedCategorizations":["29175471122742644821080"]}],"range":{"start":"0","
+kaas_DocSearchUDPES_ProductContext.c(14):     end":"10"},"totalCount":2,"showingResultsFor":null,"searchInsteadFor":null,"aggregationsBu
+kaas_DocSearchUDPES_ProductContext.c(14):     cket":null,"highlight":null,"didYouMean":null,"totalCssCount":null,"cssContext":null,"esst
+kaas_DocSearchUDPES_ProductContext.c(14):     ores":null,"esmanuals":null}
+kaas_DocSearchUDPES_ProductContext.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_ProductContext.c(14): Registered web_reg_find successful for "Text={"matches":[{"documentID" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") was successful, 1828 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_ProductContext.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_ProductContext.c(30): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" ended with a "Pass" status (Duration: 0.3777 Wasted Time: 0.0252).
+Ending action kaas_DocSearchUDPES_ProductContext.
+Ending iteration 5.
+Starting iteration 6.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter QuickRef_productnumbers = 6 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '6'.
+Starting action kaas_DocSearchUDPES_ProductContext.
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Saving Parameter "WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(8): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_ProductContext.c(13): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" started.
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Parameter Substitution: parameter "QuickRef_productnumbers" =  "7234912"
+kaas_DocSearchUDPES_ProductContext.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" is done with headers:
+kaas_DocSearchUDPES_ProductContext.c(14):     :method = GET
+kaas_DocSearchUDPES_ProductContext.c(14):     :scheme = https
+kaas_DocSearchUDPES_ProductContext.c(14):     :path = /KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=e
+kaas_DocSearchUDPES_ProductContext.c(14):     n&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,21862
+kaas_DocSearchUDPES_ProductContext.c(14):     0138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376
+kaas_DocSearchUDPES_ProductContext.c(14):     253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,content
+kaas_DocSearchUDPES_ProductContext.c(14):     updatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions&store=docstore,supportagentstore,udp-content-default&product=7234912&categorizationId
+kaas_DocSearchUDPES_ProductContext.c(14):     s=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835
+kaas_DocSearchUDPES_ProductContext.c(14):     559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20
+kaas_DocSearchUDPES_ProductContext.c(14):     Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support
+kaas_DocSearchUDPES_ProductContext.c(14):     %20Information&clientId=WCC
+kaas_DocSearchUDPES_ProductContext.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchUDPES_ProductContext.c(14):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchUDPES_ProductContext.c(14):     accessToken =  000azsxp4RBltmeXmEz13eM1rkPv
+kaas_DocSearchUDPES_ProductContext.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept =  */*
+kaas_DocSearchUDPES_ProductContext.c(14): t=3416ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=8)
+kaas_DocSearchUDPES_ProductContext.c(14):     HTTP/2.0 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     Status: 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     date: Fri, 25 Jun 2021 06:26:36 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-length: 7639\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-requestid: 0a8cf445-a4ae-48ea-a249-15cff8f8f49a\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amz-apigw-id: Bd-MbH1gIAMFXNQ=\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:26:36 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     \r\n
+kaas_DocSearchUDPES_ProductContext.c(14): t=3422ms: 7639-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=8)
+kaas_DocSearchUDPES_ProductContext.c(14):     {"matches":[{"documentID":"c04700771","title":"HP Notebook PCs - Testing and Calibrating t
+kaas_DocSearchUDPES_ProductContext.c(14):     he Battery (Windows)","contentTypeHeader":"Product Support","renderLink":"https://uat.supp
+kaas_DocSearchUDPES_ProductContext.c(14):     ort.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04700771","matchScore"
+kaas_DocSearchUDPES_ProductContext.c(14):     :5.3048415,"description":"Test and troubleshoot laptop battery and charging issues.","cont
+kaas_DocSearchUDPES_ProductContext.c(14):     entUpdateDate":"2021-03-09 03:56:33","language":"EN","disclosureLevel":"696531864679532034
+kaas_DocSearchUDPES_ProductContext.c(14):     919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"
+kaas_DocSearchUDPES_ProductContext.c(14):     Concentra","topics":[{"id":"175513598973950797922021312691457|2640948024255668091961949791
+kaas_DocSearchUDPES_ProductContext.c(14):     76827|444654627654234391237614041520684","name":"Troubleshooting|Power|Battery"}],"categor
+kaas_DocSearchUDPES_ProductContext.c(14):     izations":["29175471122742644821080","184651403277425843090532942361795","1527244498712804
+kaas_DocSearchUDPES_ProductContext.c(14):     50976118"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":"c04460405"
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"title":"HP Pavilion 14-v148ca Notebook PC Product Specifications","contentTypeHeader":"P
+kaas_DocSearchUDPES_ProductContext.c(14):     roduct Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/00
+kaas_DocSearchUDPES_ProductContext.c(14):     0azsxp4RBltmeXmEz13eM1rkPv/c04460405","matchScore":5.3048415,"description":"","contentUpda
+kaas_DocSearchUDPES_ProductContext.c(14):     teDate":"2014-09-24 16:32:37","language":"EN","disclosureLevel":"6965318646795320349199792
+kaas_DocSearchUDPES_ProductContext.c(14):     51200881","contentType":"Product Specifications","store":"Product Documents","docSource":"
+kaas_DocSearchUDPES_ProductContext.c(14):     Concentra","topics":[{"id":"727118134876361637267272859691104|7383087515825456831833216464
+kaas_DocSearchUDPES_ProductContext.c(14):     12788","name":"Product Information|Product Specifications"}],"categorizations":["291754711
+kaas_DocSearchUDPES_ProductContext.c(14):     22742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":"c045
+kaas_DocSearchUDPES_ProductContext.c(14):     20749","title":"HP Pavilion 14-v106TX Notebook PC Product Specifications","contentTypeHead
+kaas_DocSearchUDPES_ProductContext.c(14):     er":"Product Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/ren
+kaas_DocSearchUDPES_ProductContext.c(14):     der/000azsxp4RBltmeXmEz13eM1rkPv/c04520749","matchScore":5.301559,"description":"","conten
+kaas_DocSearchUDPES_ProductContext.c(14):     tUpdateDate":"2014-12-05 17:38:09","language":"EN","disclosureLevel":"69653186467953203491
+kaas_DocSearchUDPES_ProductContext.c(14):     9979251200881","contentType":"Product Specifications","store":"Product Documents","docSour
+kaas_DocSearchUDPES_ProductContext.c(14):     ce":"Concentra","topics":[{"id":"727118134876361637267272859691104|73830875158254568318332
+kaas_DocSearchUDPES_ProductContext.c(14):     1646412788","name":"Product Information|Product Specifications"}],"categorizations":["2917
+kaas_DocSearchUDPES_ProductContext.c(14):     5471122742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":
+kaas_DocSearchUDPES_ProductContext.c(14):     "c04458385","title":"HP Pavilion 14-v150la Notebook PC Product Specifications","contentTyp
+kaas_DocSearchUDPES_ProductContext.c(14):     eHeader":"Product Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlet
+kaas_DocSearchUDPES_ProductContext.c(14):     s/render/000azsxp4RBltmeXmEz13eM1rkPv/c04458385","matchScore":5.301559,"description":"","c
+kaas_DocSearchUDPES_ProductContext.c(14):     ontentUpdateDate":"2016-05-26 16:59:06","language":"EN","disclosureLevel":"696531864679532
+kaas_DocSearchUDPES_ProductContext.c(14):     034919979251200881","contentType":"Product Specifications","store":"Product Documents","do
+kaas_DocSearchUDPES_ProductContext.c(14):     cSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|738308751582545683
+kaas_DocSearchUDPES_ProductContext.c(14):     183321646412788","name":"Product Information|Product Specifications"}],"categorizations":[
+kaas_DocSearchUDPES_ProductContext.c(14):     "29175471122742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"documen
+kaas_DocSearchUDPES_ProductContext.c(14):     tID":"c04408457","title":"HP Pavilion 14-v140la Notebook PC Product Specifications","conte
+kaas_DocSearchUDPES_ProductContext.c(14):     ntTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-po
+kaas_DocSearchUDPES_ProductContext.c(14):     rtlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04408457","matchScore":5.2997437,"description"
+kaas_DocSearchUDPES_ProductContext.c(14):     :"","contentUpdateDate":"2016-05-26 16:58:49","language":"EN","disclosureLevel":"696531864
+kaas_DocSearchUDPES_ProductContext.c(14):     679532034919979251200881","contentType":"Product Specifications","store":"Product Document
+kaas_DocSearchUDPES_ProductContext.c(14):     s","docSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|738308751582
+kaas_DocSearchUDPES_ProductContext.c(14):     545683183321646412788","name":"Product Information|Product Specifications"}],"categorizati
+kaas_DocSearchUDPES_ProductContext.c(14):     ons":["29175471122742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"d
+kaas_DocSearchUDPES_ProductContext.c(14):     ocumentID":"c04567946","title":"HP Pavilion 14-v112la Notebook PC Product Specifications",
+kaas_DocSearchUDPES_ProductContext.c(14):     "contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com/wps/hp-
+kaas_DocSearchUDPES_ProductContext.c(14):     skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04567946","matchScore":5.2997437,"descri
+kaas_DocSearchUDPES_ProductContext.c(14):     ption":"","contentUpdateDate":"2015-09-29 20:47:29","language":"EN","disclosureLevel":"696
+kaas_DocSearchUDPES_ProductContext.c(14):     531864679532034919979251200881","contentType":"Product Specifications","store":"Product Do
+kaas_DocSearchUDPES_ProductContext.c(14):     cuments","docSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|738308
+kaas_DocSearchUDPES_ProductContext.c(14):     751582545683183321646412788","name":"Product Information|Product Specifications"}],"catego
+kaas_DocSearchUDPES_ProductContext.c(14):     rizations":["29175471122742644821080"],"matchedCategorizations":["29175471122742644821080"
+kaas_DocSearchUDPES_ProductContext.c(14):     ]},{"documentID":"c04467273","title":"HP Pavilion 14-v134ca Notebook PC Product Specificat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions","contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com/w
+kaas_DocSearchUDPES_ProductContext.c(14):     ps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04467273","matchScore":5.2958055,"
+kaas_DocSearchUDPES_ProductContext.c(14):     description":"","contentUpdateDate":"2014-09-30 14:33:42","language":"EN","disclosureLevel
+kaas_DocSearchUDPES_ProductContext.c(14):     ":"696531864679532034919979251200881","contentType":"Product Specifications","store":"Prod
+kaas_DocSearchUDPES_ProductContext.c(14):     uct Documents","docSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|
+kaas_DocSearchUDPES_ProductContext.c(14):     738308751582545683183321646412788","name":"Product Information|Product Specifications"}],"
+kaas_DocSearchUDPES_ProductContext.c(14):     categorizations":["29175471122742644821080"],"matchedCategorizations":["291754711227426448
+kaas_DocSearchUDPES_ProductContext.c(14):     21080"]},{"documentID":"c04446922","title":"HP Pavilion 14-v121la Notebook PC Product Spec
+kaas_DocSearchUDPES_ProductContext.c(14):     ifications","contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp
+kaas_DocSearchUDPES_ProductContext.c(14):     .com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04446922","matchScore":5.295
+kaas_DocSearchUDPES_ProductContext.c(14):     8055,"description":"","contentUpdateDate":"2014-09-15 14:46:34","language":"EN","disclosur
+kaas_DocSearchUDPES_ProductContext.c(14):     eLevel":"696531864679532034919979251200881","contentType":"Product Specifications","store"
+kaas_DocSearchUDPES_ProductContext.c(14):     :"Product Documents","docSource":"Concentra","topics":[{"id":"7271181348763616372672728596
+kaas_DocSearchUDPES_ProductContext.c(14):     91104|738308751582545683183321646412788","name":"Product Information|Product Specification
+kaas_DocSearchUDPES_ProductContext.c(14):     s"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["291754711227
+kaas_DocSearchUDPES_ProductContext.c(14):     42644821080"]},{"documentID":"c04458388","title":"HP Pavilion 14-v124ca Notebook PC Produc
+kaas_DocSearchUDPES_ProductContext.c(14):     t Specifications","contentTypeHeader":"Product Information","renderLink":"https://uat.supp
+kaas_DocSearchUDPES_ProductContext.c(14):     ort.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04458388","matchScore"
+kaas_DocSearchUDPES_ProductContext.c(14):     :5.2958055,"description":"","contentUpdateDate":"2014-09-23 17:23:24","language":"EN","dis
+kaas_DocSearchUDPES_ProductContext.c(14):     closureLevel":"696531864679532034919979251200881","contentType":"Product Specifications","
+kaas_DocSearchUDPES_ProductContext.c(14):     store":"Product Documents","docSource":"Concentra","topics":[{"id":"7271181348763616372672
+kaas_DocSearchUDPES_ProductContext.c(14):     72859691104|738308751582545683183321646412788","name":"Product Information|Product Specifi
+kaas_DocSearchUDPES_ProductContext.c(14):     cations"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["291754
+kaas_DocSearchUDPES_ProductContext.c(14):     71122742644821080"]},{"documentID":"c04475823","title":"HP Pavilion 14-v138ca Notebook PC 
+kaas_DocSearchUDPES_ProductContext.c(14):     Product Specifications","contentTypeHeader":"Product Information","renderLink":"https://ua
+kaas_DocSearchUDPES_ProductContext.c(14):     t.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04475823","match
+kaas_DocSearchUDPES_ProductContext.c(14):     Score":5.2958055,"description":"","contentUpdateDate":"2014-10-09 17:08:54","language":"EN
+kaas_DocSearchUDPES_ProductContext.c(14):     ","disclosureLevel":"696531864679532034919979251200881","contentType":"Product Specificati
+kaas_DocSearchUDPES_ProductContext.c(14):     ons","store":"Product Documents","docSource":"Concentra","topics":[{"id":"7271181348763616
+kaas_DocSearchUDPES_ProductContext.c(14):     37267272859691104|738308751582545683183321646412788","name":"Product Information|Product S
+kaas_DocSearchUDPES_ProductContext.c(14):     pecifications"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["
+kaas_DocSearchUDPES_ProductContext.c(14):     29175471122742644821080"]}],"range":{"start":"0","end":"10"},"totalCount":11,"showingResul
+kaas_DocSearchUDPES_ProductContext.c(14):     tsFor":null,"searchInsteadFor":null,"aggregationsBucket":null,"highlight":null,"didYouMean
+kaas_DocSearchUDPES_ProductContext.c(14):     ":null,"totalCssCount":null,"cssContext":null,"esstores":null,"esmanuals":null}
+kaas_DocSearchUDPES_ProductContext.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_ProductContext.c(14): Registered web_reg_find successful for "Text={"matches":[{"documentID" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") was successful, 7639 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_ProductContext.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_ProductContext.c(30): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" ended with a "Pass" status (Duration: 0.3986 Wasted Time: 0.0237).
+Ending action kaas_DocSearchUDPES_ProductContext.
+Ending iteration 6.
+Starting iteration 7.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter QuickRef_productnumbers = 7 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '7'.
+Starting action kaas_DocSearchUDPES_ProductContext.
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Saving Parameter "WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(8): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_ProductContext.c(13): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" started.
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Parameter Substitution: parameter "QuickRef_productnumbers" =  "6627588"
+kaas_DocSearchUDPES_ProductContext.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" is done with headers:
+kaas_DocSearchUDPES_ProductContext.c(14):     :method = GET
+kaas_DocSearchUDPES_ProductContext.c(14):     :scheme = https
+kaas_DocSearchUDPES_ProductContext.c(14):     :path = /KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=e
+kaas_DocSearchUDPES_ProductContext.c(14):     n&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,21862
+kaas_DocSearchUDPES_ProductContext.c(14):     0138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376
+kaas_DocSearchUDPES_ProductContext.c(14):     253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,content
+kaas_DocSearchUDPES_ProductContext.c(14):     updatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions&store=docstore,supportagentstore,udp-content-default&product=6627588&categorizationId
+kaas_DocSearchUDPES_ProductContext.c(14):     s=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835
+kaas_DocSearchUDPES_ProductContext.c(14):     559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20
+kaas_DocSearchUDPES_ProductContext.c(14):     Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support
+kaas_DocSearchUDPES_ProductContext.c(14):     %20Information&clientId=WCC
+kaas_DocSearchUDPES_ProductContext.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchUDPES_ProductContext.c(14):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchUDPES_ProductContext.c(14):     accessToken =  000azsxp4RBltmeXmEz13eM1rkPv
+kaas_DocSearchUDPES_ProductContext.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept =  */*
+kaas_DocSearchUDPES_ProductContext.c(14): t=3860ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=9)
+kaas_DocSearchUDPES_ProductContext.c(14):     HTTP/2.0 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     Status: 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     date: Fri, 25 Jun 2021 06:26:36 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-length: 7636\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-requestid: 41b4f0be-0230-4466-8444-7294630d3264\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amz-apigw-id: Bd-MgFcZoAMFc-g=\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:26:36 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     \r\n
+kaas_DocSearchUDPES_ProductContext.c(14): t=3867ms: 7636-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=9)
+kaas_DocSearchUDPES_ProductContext.c(14):     {"matches":[{"documentID":"c04700771","title":"HP Notebook PCs - Testing and Calibrating t
+kaas_DocSearchUDPES_ProductContext.c(14):     he Battery (Windows)","contentTypeHeader":"Product Support","renderLink":"https://uat.supp
+kaas_DocSearchUDPES_ProductContext.c(14):     ort.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04700771","matchScore"
+kaas_DocSearchUDPES_ProductContext.c(14):     :5.3048415,"description":"Test and troubleshoot laptop battery and charging issues.","cont
+kaas_DocSearchUDPES_ProductContext.c(14):     entUpdateDate":"2021-03-09 03:56:33","language":"EN","disclosureLevel":"696531864679532034
+kaas_DocSearchUDPES_ProductContext.c(14):     919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"
+kaas_DocSearchUDPES_ProductContext.c(14):     Concentra","topics":[{"id":"175513598973950797922021312691457|2640948024255668091961949791
+kaas_DocSearchUDPES_ProductContext.c(14):     76827|444654627654234391237614041520684","name":"Troubleshooting|Power|Battery"}],"categor
+kaas_DocSearchUDPES_ProductContext.c(14):     izations":["29175471122742644821080","184651403277425843090532942361795","1527244498712804
+kaas_DocSearchUDPES_ProductContext.c(14):     50976118"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":"c04123995"
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"title":"HP 15-d079wm TouchSmart Notebook PC Product Specifications","contentTypeHeader":
+kaas_DocSearchUDPES_ProductContext.c(14):     "Product Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/
+kaas_DocSearchUDPES_ProductContext.c(14):     000azsxp4RBltmeXmEz13eM1rkPv/c04123995","matchScore":5.3048415,"description":"","contentUp
+kaas_DocSearchUDPES_ProductContext.c(14):     dateDate":"2014-02-12 16:05:35","language":"EN","disclosureLevel":"69653186467953203491997
+kaas_DocSearchUDPES_ProductContext.c(14):     9251200881","contentType":"Product Specifications","store":"Product Documents","docSource"
+kaas_DocSearchUDPES_ProductContext.c(14):     :"Concentra","topics":[{"id":"727118134876361637267272859691104|73830875158254568318332164
+kaas_DocSearchUDPES_ProductContext.c(14):     6412788","name":"Product Information|Product Specifications"}],"categorizations":["2917547
+kaas_DocSearchUDPES_ProductContext.c(14):     1122742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":"c0
+kaas_DocSearchUDPES_ProductContext.c(14):     4087030","title":"HP 15-d045nr TouchSmart Notebook PC Product Specifications","contentType
+kaas_DocSearchUDPES_ProductContext.c(14):     Header":"Product Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlets
+kaas_DocSearchUDPES_ProductContext.c(14):     /render/000azsxp4RBltmeXmEz13eM1rkPv/c04087030","matchScore":5.3048415,"description":"","c
+kaas_DocSearchUDPES_ProductContext.c(14):     ontentUpdateDate":"2014-01-16 21:57:32","language":"EN","disclosureLevel":"696531864679532
+kaas_DocSearchUDPES_ProductContext.c(14):     034919979251200881","contentType":"Product Specifications","store":"Product Documents","do
+kaas_DocSearchUDPES_ProductContext.c(14):     cSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|738308751582545683
+kaas_DocSearchUDPES_ProductContext.c(14):     183321646412788","name":"Product Information|Product Specifications"}],"categorizations":[
+kaas_DocSearchUDPES_ProductContext.c(14):     "29175471122742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"documen
+kaas_DocSearchUDPES_ProductContext.c(14):     tID":"c04204349","title":"HP 15-d037dx TouchSmart Notebook PC Product Specifications","con
+kaas_DocSearchUDPES_ProductContext.c(14):     tentTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-
+kaas_DocSearchUDPES_ProductContext.c(14):     portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04204349","matchScore":5.301559,"description
+kaas_DocSearchUDPES_ProductContext.c(14):     ":"","contentUpdateDate":"2014-03-18 14:19:52","language":"EN","disclosureLevel":"69653186
+kaas_DocSearchUDPES_ProductContext.c(14):     4679532034919979251200881","contentType":"Product Specifications","store":"Product Documen
+kaas_DocSearchUDPES_ProductContext.c(14):     ts","docSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|73830875158
+kaas_DocSearchUDPES_ProductContext.c(14):     2545683183321646412788","name":"Product Information|Product Specifications"}],"categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions":["29175471122742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"
+kaas_DocSearchUDPES_ProductContext.c(14):     documentID":"c04229900","title":"HP 15-d098nr TouchSmart Notebook PC Product Specification
+kaas_DocSearchUDPES_ProductContext.c(14):     s","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.com/wps/hp-s
+kaas_DocSearchUDPES_ProductContext.c(14):     kp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04229900","matchScore":5.301559,"descript
+kaas_DocSearchUDPES_ProductContext.c(14):     ion":"","contentUpdateDate":"2014-04-07 15:51:26","language":"EN","disclosureLevel":"69653
+kaas_DocSearchUDPES_ProductContext.c(14):     1864679532034919979251200881","contentType":"Support Information","store":"Product Documen
+kaas_DocSearchUDPES_ProductContext.c(14):     ts","docSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|73830875158
+kaas_DocSearchUDPES_ProductContext.c(14):     2545683183321646412788","name":"Product Information|Product Specifications"}],"categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions":["29175471122742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"
+kaas_DocSearchUDPES_ProductContext.c(14):     documentID":"c04123878","title":"HP 15-d020ca TouchSmart Notebook PC Product Specification
+kaas_DocSearchUDPES_ProductContext.c(14):     s","contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com/wps/
+kaas_DocSearchUDPES_ProductContext.c(14):     hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04123878","matchScore":5.301559,"desc
+kaas_DocSearchUDPES_ProductContext.c(14):     ription":"","contentUpdateDate":"2014-02-12 14:50:08","language":"EN","disclosureLevel":"6
+kaas_DocSearchUDPES_ProductContext.c(14):     96531864679532034919979251200881","contentType":"Product Specifications","store":"Product 
+kaas_DocSearchUDPES_ProductContext.c(14):     Documents","docSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|7383
+kaas_DocSearchUDPES_ProductContext.c(14):     08751582545683183321646412788","name":"Product Information|Product Specifications"}],"cate
+kaas_DocSearchUDPES_ProductContext.c(14):     gorizations":["29175471122742644821080"],"matchedCategorizations":["2917547112274264482108
+kaas_DocSearchUDPES_ProductContext.c(14):     0"]},{"documentID":"c04229737","title":"HP 15-d096nr TouchSmart Notebook PC Product Specif
+kaas_DocSearchUDPES_ProductContext.c(14):     ications","contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp.c
+kaas_DocSearchUDPES_ProductContext.c(14):     om/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04229737","matchScore":5.30155
+kaas_DocSearchUDPES_ProductContext.c(14):     9,"description":"","contentUpdateDate":"2014-04-07 14:32:31","language":"EN","disclosureLe
+kaas_DocSearchUDPES_ProductContext.c(14):     vel":"696531864679532034919979251200881","contentType":"Product Specifications","store":"P
+kaas_DocSearchUDPES_ProductContext.c(14):     roduct Documents","docSource":"Concentra","topics":[{"id":"7271181348763616372672728596911
+kaas_DocSearchUDPES_ProductContext.c(14):     04|738308751582545683183321646412788","name":"Product Information|Product Specifications"}
+kaas_DocSearchUDPES_ProductContext.c(14):     ],"categorizations":["29175471122742644821080"],"matchedCategorizations":["291754711227426
+kaas_DocSearchUDPES_ProductContext.c(14):     44821080"]},{"documentID":"c04104135","title":"HP 15-d068ca TouchSmart PC Product Specific
+kaas_DocSearchUDPES_ProductContext.c(14):     ations","contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com
+kaas_DocSearchUDPES_ProductContext.c(14):     /wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04104135","matchScore":5.301559,
+kaas_DocSearchUDPES_ProductContext.c(14):     "description":"","contentUpdateDate":"2014-01-28 19:42:51","language":"EN","disclosureLeve
+kaas_DocSearchUDPES_ProductContext.c(14):     l":"696531864679532034919979251200881","contentType":"Product Specifications","store":"Pro
+kaas_DocSearchUDPES_ProductContext.c(14):     duct Documents","docSource":"Concentra","topics":[{"id":"727118134876361637267272859691104
+kaas_DocSearchUDPES_ProductContext.c(14):     |738308751582545683183321646412788","name":"Product Information|Product Specifications"}],
+kaas_DocSearchUDPES_ProductContext.c(14):     "categorizations":["29175471122742644821080"],"matchedCategorizations":["29175471122742644
+kaas_DocSearchUDPES_ProductContext.c(14):     821080"]},{"documentID":"c04229843","title":"HP 15-d097nr TouchSmart Notebook PC Product S
+kaas_DocSearchUDPES_ProductContext.c(14):     pecifications","contentTypeHeader":"Product Information","renderLink":"https://uat.support
+kaas_DocSearchUDPES_ProductContext.c(14):     .hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04229843","matchScore":5.
+kaas_DocSearchUDPES_ProductContext.c(14):     301559,"description":"","contentUpdateDate":"2014-04-07 15:44:05","language":"EN","disclos
+kaas_DocSearchUDPES_ProductContext.c(14):     ureLevel":"696531864679532034919979251200881","contentType":"Product Specifications","stor
+kaas_DocSearchUDPES_ProductContext.c(14):     e":"Product Documents","docSource":"Concentra","topics":[{"id":"72711813487636163726727285
+kaas_DocSearchUDPES_ProductContext.c(14):     9691104|738308751582545683183321646412788","name":"Product Information|Product Specificati
+kaas_DocSearchUDPES_ProductContext.c(14):     ons"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["2917547112
+kaas_DocSearchUDPES_ProductContext.c(14):     2742644821080"]},{"documentID":"c04064209","title":"HP 15-d040nr TouchSmart Notebook PC Pr
+kaas_DocSearchUDPES_ProductContext.c(14):     oduct Specifications","contentTypeHeader":"Product Information","renderLink":"https://uat.
+kaas_DocSearchUDPES_ProductContext.c(14):     support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04064209","matchSc
+kaas_DocSearchUDPES_ProductContext.c(14):     ore":5.301559,"description":"","contentUpdateDate":"2014-01-02 20:21:58","language":"EN","
+kaas_DocSearchUDPES_ProductContext.c(14):     disclosureLevel":"696531864679532034919979251200881","contentType":"Product Specifications
+kaas_DocSearchUDPES_ProductContext.c(14):     ","store":"Product Documents","docSource":"Concentra","topics":[{"id":"7271181348763616372
+kaas_DocSearchUDPES_ProductContext.c(14):     67272859691104|738308751582545683183321646412788","name":"Product Information|Product Spec
+kaas_DocSearchUDPES_ProductContext.c(14):     ifications"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["291
+kaas_DocSearchUDPES_ProductContext.c(14):     75471122742644821080"]}],"range":{"start":"0","end":"10"},"totalCount":24,"showingResultsF
+kaas_DocSearchUDPES_ProductContext.c(14):     or":null,"searchInsteadFor":null,"aggregationsBucket":null,"highlight":null,"didYouMean":n
+kaas_DocSearchUDPES_ProductContext.c(14):     ull,"totalCssCount":null,"cssContext":null,"esmanuals":null,"esstores":null}
+kaas_DocSearchUDPES_ProductContext.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_ProductContext.c(14): Registered web_reg_find successful for "Text={"matches":[{"documentID" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") was successful, 7636 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_ProductContext.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_ProductContext.c(30): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" ended with a "Pass" status (Duration: 0.4100 Wasted Time: 0.0277).
+Ending action kaas_DocSearchUDPES_ProductContext.
+Ending iteration 7.
+Starting iteration 8.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter QuickRef_productnumbers = 8 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '8'.
+Starting action kaas_DocSearchUDPES_ProductContext.
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Saving Parameter "WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(8): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_ProductContext.c(13): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" started.
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Parameter Substitution: parameter "QuickRef_productnumbers" =  "5223305"
+kaas_DocSearchUDPES_ProductContext.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" is done with headers:
+kaas_DocSearchUDPES_ProductContext.c(14):     :method = GET
+kaas_DocSearchUDPES_ProductContext.c(14):     :scheme = https
+kaas_DocSearchUDPES_ProductContext.c(14):     :path = /KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=e
+kaas_DocSearchUDPES_ProductContext.c(14):     n&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,21862
+kaas_DocSearchUDPES_ProductContext.c(14):     0138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376
+kaas_DocSearchUDPES_ProductContext.c(14):     253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,content
+kaas_DocSearchUDPES_ProductContext.c(14):     updatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions&store=docstore,supportagentstore,udp-content-default&product=5223305&categorizationId
+kaas_DocSearchUDPES_ProductContext.c(14):     s=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835
+kaas_DocSearchUDPES_ProductContext.c(14):     559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20
+kaas_DocSearchUDPES_ProductContext.c(14):     Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support
+kaas_DocSearchUDPES_ProductContext.c(14):     %20Information&clientId=WCC
+kaas_DocSearchUDPES_ProductContext.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchUDPES_ProductContext.c(14):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchUDPES_ProductContext.c(14):     accessToken =  000azsxp4RBltmeXmEz13eM1rkPv
+kaas_DocSearchUDPES_ProductContext.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept =  */*
+kaas_DocSearchUDPES_ProductContext.c(14): t=4291ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=10)
+kaas_DocSearchUDPES_ProductContext.c(14):     HTTP/2.0 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     Status: 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     date: Fri, 25 Jun 2021 06:26:37 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-length: 1828\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-requestid: bbd3665f-f45c-4164-aaf3-965f3576b669\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amz-apigw-id: Bd-MkHKLIAMFZJg=\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:26:37 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     \r\n
+kaas_DocSearchUDPES_ProductContext.c(14): t=4298ms: 1828-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=10)
+kaas_DocSearchUDPES_ProductContext.c(14):     {"matches":[{"documentID":"c04700771","title":"HP Notebook PCs - Testing and Calibrating t
+kaas_DocSearchUDPES_ProductContext.c(14):     he Battery (Windows)","contentTypeHeader":"Product Support","renderLink":"https://uat.supp
+kaas_DocSearchUDPES_ProductContext.c(14):     ort.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04700771","matchScore"
+kaas_DocSearchUDPES_ProductContext.c(14):     :5.3048415,"description":"Test and troubleshoot laptop battery and charging issues.","cont
+kaas_DocSearchUDPES_ProductContext.c(14):     entUpdateDate":"2021-03-09 03:56:33","language":"EN","disclosureLevel":"696531864679532034
+kaas_DocSearchUDPES_ProductContext.c(14):     919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"
+kaas_DocSearchUDPES_ProductContext.c(14):     Concentra","topics":[{"id":"175513598973950797922021312691457|2640948024255668091961949791
+kaas_DocSearchUDPES_ProductContext.c(14):     76827|444654627654234391237614041520684","name":"Troubleshooting|Power|Battery"}],"categor
+kaas_DocSearchUDPES_ProductContext.c(14):     izations":["29175471122742644821080","184651403277425843090532942361795","1527244498712804
+kaas_DocSearchUDPES_ProductContext.c(14):     50976118"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":"c03151875"
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"title":"HP ENVY 15-3033CL Notebook PC Product Specifications","contentTypeHeader":"Produ
+kaas_DocSearchUDPES_ProductContext.c(14):     ct Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/000azs
+kaas_DocSearchUDPES_ProductContext.c(14):     xp4RBltmeXmEz13eM1rkPv/c03151875","matchScore":5.2958055,"description":"","contentUpdateDa
+kaas_DocSearchUDPES_ProductContext.c(14):     te":"2012-01-12 20:55:52","language":"EN","disclosureLevel":"69653186467953203491997925120
+kaas_DocSearchUDPES_ProductContext.c(14):     0881","contentType":"Product Specifications","store":"Product Documents","docSource":"Conc
+kaas_DocSearchUDPES_ProductContext.c(14):     entra","topics":[{"id":"727118134876361637267272859691104|73830875158254568318332164641278
+kaas_DocSearchUDPES_ProductContext.c(14):     8","name":"Product Information|Product Specifications"}],"categorizations":["2917547112274
+kaas_DocSearchUDPES_ProductContext.c(14):     2644821080"],"matchedCategorizations":["29175471122742644821080"]}],"range":{"start":"0","
+kaas_DocSearchUDPES_ProductContext.c(14):     end":"10"},"totalCount":2,"showingResultsFor":null,"searchInsteadFor":null,"aggregationsBu
+kaas_DocSearchUDPES_ProductContext.c(14):     cket":null,"highlight":null,"didYouMean":null,"totalCssCount":null,"cssContext":null,"esst
+kaas_DocSearchUDPES_ProductContext.c(14):     ores":null,"esmanuals":null}
+kaas_DocSearchUDPES_ProductContext.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_ProductContext.c(14): Registered web_reg_find successful for "Text={"matches":[{"documentID" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") was successful, 1828 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_ProductContext.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_ProductContext.c(30): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" ended with a "Pass" status (Duration: 0.3930 Wasted Time: 0.0197).
+Ending action kaas_DocSearchUDPES_ProductContext.
+Ending iteration 8.
+Starting iteration 9.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter QuickRef_productnumbers = 9 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '9'.
+Starting action kaas_DocSearchUDPES_ProductContext.
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Saving Parameter "WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(8): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_ProductContext.c(13): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" started.
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Parameter Substitution: parameter "QuickRef_productnumbers" =  "7234912"
+kaas_DocSearchUDPES_ProductContext.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" is done with headers:
+kaas_DocSearchUDPES_ProductContext.c(14):     :method = GET
+kaas_DocSearchUDPES_ProductContext.c(14):     :scheme = https
+kaas_DocSearchUDPES_ProductContext.c(14):     :path = /KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=e
+kaas_DocSearchUDPES_ProductContext.c(14):     n&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,21862
+kaas_DocSearchUDPES_ProductContext.c(14):     0138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376
+kaas_DocSearchUDPES_ProductContext.c(14):     253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,content
+kaas_DocSearchUDPES_ProductContext.c(14):     updatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions&store=docstore,supportagentstore,udp-content-default&product=7234912&categorizationId
+kaas_DocSearchUDPES_ProductContext.c(14):     s=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835
+kaas_DocSearchUDPES_ProductContext.c(14):     559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20
+kaas_DocSearchUDPES_ProductContext.c(14):     Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support
+kaas_DocSearchUDPES_ProductContext.c(14):     %20Information&clientId=WCC
+kaas_DocSearchUDPES_ProductContext.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchUDPES_ProductContext.c(14):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchUDPES_ProductContext.c(14):     accessToken =  000azsxp4RBltmeXmEz13eM1rkPv
+kaas_DocSearchUDPES_ProductContext.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept =  */*
+kaas_DocSearchUDPES_ProductContext.c(14): t=4705ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=11)
+kaas_DocSearchUDPES_ProductContext.c(14):     HTTP/2.0 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     Status: 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     date: Fri, 25 Jun 2021 06:26:37 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-length: 7639\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-requestid: b6ef431f-83ac-46bb-b639-ba70a4baea75\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amz-apigw-id: Bd-MoFKBIAMF6SA=\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:26:37 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     \r\n
+kaas_DocSearchUDPES_ProductContext.c(14): t=4712ms: 7639-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=11)
+kaas_DocSearchUDPES_ProductContext.c(14):     {"matches":[{"documentID":"c04460405","title":"HP Pavilion 14-v148ca Notebook PC Product S
+kaas_DocSearchUDPES_ProductContext.c(14):     pecifications","contentTypeHeader":"Product Information","renderLink":"https://uat.support
+kaas_DocSearchUDPES_ProductContext.c(14):     .hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04460405","matchScore":5.
+kaas_DocSearchUDPES_ProductContext.c(14):     3048415,"description":"","contentUpdateDate":"2014-09-24 16:32:37","language":"EN","disclo
+kaas_DocSearchUDPES_ProductContext.c(14):     sureLevel":"696531864679532034919979251200881","contentType":"Product Specifications","sto
+kaas_DocSearchUDPES_ProductContext.c(14):     re":"Product Documents","docSource":"Concentra","topics":[{"id":"7271181348763616372672728
+kaas_DocSearchUDPES_ProductContext.c(14):     59691104|738308751582545683183321646412788","name":"Product Information|Product Specificat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["291754711
+kaas_DocSearchUDPES_ProductContext.c(14):     22742644821080"]},{"documentID":"c04700771","title":"HP Notebook PCs - Testing and Calibra
+kaas_DocSearchUDPES_ProductContext.c(14):     ting the Battery (Windows)","contentTypeHeader":"Product Support","renderLink":"https://ua
+kaas_DocSearchUDPES_ProductContext.c(14):     t.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04700771","match
+kaas_DocSearchUDPES_ProductContext.c(14):     Score":5.3048415,"description":"Test and troubleshoot laptop battery and charging issues."
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"contentUpdateDate":"2021-03-09 03:56:33","language":"EN","disclosureLevel":"696531864679
+kaas_DocSearchUDPES_ProductContext.c(14):     532034919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSou
+kaas_DocSearchUDPES_ProductContext.c(14):     rce":"Concentra","topics":[{"id":"175513598973950797922021312691457|2640948024255668091961
+kaas_DocSearchUDPES_ProductContext.c(14):     94979176827|444654627654234391237614041520684","name":"Troubleshooting|Power|Battery"}],"c
+kaas_DocSearchUDPES_ProductContext.c(14):     ategorizations":["29175471122742644821080","184651403277425843090532942361795","1527244498
+kaas_DocSearchUDPES_ProductContext.c(14):     71280450976118"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":"c045
+kaas_DocSearchUDPES_ProductContext.c(14):     20749","title":"HP Pavilion 14-v106TX Notebook PC Product Specifications","contentTypeHead
+kaas_DocSearchUDPES_ProductContext.c(14):     er":"Product Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/ren
+kaas_DocSearchUDPES_ProductContext.c(14):     der/000azsxp4RBltmeXmEz13eM1rkPv/c04520749","matchScore":5.301559,"description":"","conten
+kaas_DocSearchUDPES_ProductContext.c(14):     tUpdateDate":"2014-12-05 17:38:09","language":"EN","disclosureLevel":"69653186467953203491
+kaas_DocSearchUDPES_ProductContext.c(14):     9979251200881","contentType":"Product Specifications","store":"Product Documents","docSour
+kaas_DocSearchUDPES_ProductContext.c(14):     ce":"Concentra","topics":[{"id":"727118134876361637267272859691104|73830875158254568318332
+kaas_DocSearchUDPES_ProductContext.c(14):     1646412788","name":"Product Information|Product Specifications"}],"categorizations":["2917
+kaas_DocSearchUDPES_ProductContext.c(14):     5471122742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"documentID":
+kaas_DocSearchUDPES_ProductContext.c(14):     "c04458385","title":"HP Pavilion 14-v150la Notebook PC Product Specifications","contentTyp
+kaas_DocSearchUDPES_ProductContext.c(14):     eHeader":"Product Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-portlet
+kaas_DocSearchUDPES_ProductContext.c(14):     s/render/000azsxp4RBltmeXmEz13eM1rkPv/c04458385","matchScore":5.301559,"description":"","c
+kaas_DocSearchUDPES_ProductContext.c(14):     ontentUpdateDate":"2016-05-26 16:59:06","language":"EN","disclosureLevel":"696531864679532
+kaas_DocSearchUDPES_ProductContext.c(14):     034919979251200881","contentType":"Product Specifications","store":"Product Documents","do
+kaas_DocSearchUDPES_ProductContext.c(14):     cSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|738308751582545683
+kaas_DocSearchUDPES_ProductContext.c(14):     183321646412788","name":"Product Information|Product Specifications"}],"categorizations":[
+kaas_DocSearchUDPES_ProductContext.c(14):     "29175471122742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"documen
+kaas_DocSearchUDPES_ProductContext.c(14):     tID":"c04408457","title":"HP Pavilion 14-v140la Notebook PC Product Specifications","conte
+kaas_DocSearchUDPES_ProductContext.c(14):     ntTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com/wps/hp-skp-po
+kaas_DocSearchUDPES_ProductContext.c(14):     rtlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04408457","matchScore":5.2997437,"description"
+kaas_DocSearchUDPES_ProductContext.c(14):     :"","contentUpdateDate":"2016-05-26 16:58:49","language":"EN","disclosureLevel":"696531864
+kaas_DocSearchUDPES_ProductContext.c(14):     679532034919979251200881","contentType":"Product Specifications","store":"Product Document
+kaas_DocSearchUDPES_ProductContext.c(14):     s","docSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|738308751582
+kaas_DocSearchUDPES_ProductContext.c(14):     545683183321646412788","name":"Product Information|Product Specifications"}],"categorizati
+kaas_DocSearchUDPES_ProductContext.c(14):     ons":["29175471122742644821080"],"matchedCategorizations":["29175471122742644821080"]},{"d
+kaas_DocSearchUDPES_ProductContext.c(14):     ocumentID":"c04567946","title":"HP Pavilion 14-v112la Notebook PC Product Specifications",
+kaas_DocSearchUDPES_ProductContext.c(14):     "contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com/wps/hp-
+kaas_DocSearchUDPES_ProductContext.c(14):     skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04567946","matchScore":5.2997437,"descri
+kaas_DocSearchUDPES_ProductContext.c(14):     ption":"","contentUpdateDate":"2015-09-29 20:47:29","language":"EN","disclosureLevel":"696
+kaas_DocSearchUDPES_ProductContext.c(14):     531864679532034919979251200881","contentType":"Product Specifications","store":"Product Do
+kaas_DocSearchUDPES_ProductContext.c(14):     cuments","docSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|738308
+kaas_DocSearchUDPES_ProductContext.c(14):     751582545683183321646412788","name":"Product Information|Product Specifications"}],"catego
+kaas_DocSearchUDPES_ProductContext.c(14):     rizations":["29175471122742644821080"],"matchedCategorizations":["29175471122742644821080"
+kaas_DocSearchUDPES_ProductContext.c(14):     ]},{"documentID":"c04467273","title":"HP Pavilion 14-v134ca Notebook PC Product Specificat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions","contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com/w
+kaas_DocSearchUDPES_ProductContext.c(14):     ps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04467273","matchScore":5.2958055,"
+kaas_DocSearchUDPES_ProductContext.c(14):     description":"","contentUpdateDate":"2014-09-30 14:33:42","language":"EN","disclosureLevel
+kaas_DocSearchUDPES_ProductContext.c(14):     ":"696531864679532034919979251200881","contentType":"Product Specifications","store":"Prod
+kaas_DocSearchUDPES_ProductContext.c(14):     uct Documents","docSource":"Concentra","topics":[{"id":"727118134876361637267272859691104|
+kaas_DocSearchUDPES_ProductContext.c(14):     738308751582545683183321646412788","name":"Product Information|Product Specifications"}],"
+kaas_DocSearchUDPES_ProductContext.c(14):     categorizations":["29175471122742644821080"],"matchedCategorizations":["291754711227426448
+kaas_DocSearchUDPES_ProductContext.c(14):     21080"]},{"documentID":"c04446922","title":"HP Pavilion 14-v121la Notebook PC Product Spec
+kaas_DocSearchUDPES_ProductContext.c(14):     ifications","contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp
+kaas_DocSearchUDPES_ProductContext.c(14):     .com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04446922","matchScore":5.295
+kaas_DocSearchUDPES_ProductContext.c(14):     8055,"description":"","contentUpdateDate":"2014-09-15 14:46:34","language":"EN","disclosur
+kaas_DocSearchUDPES_ProductContext.c(14):     eLevel":"696531864679532034919979251200881","contentType":"Product Specifications","store"
+kaas_DocSearchUDPES_ProductContext.c(14):     :"Product Documents","docSource":"Concentra","topics":[{"id":"7271181348763616372672728596
+kaas_DocSearchUDPES_ProductContext.c(14):     91104|738308751582545683183321646412788","name":"Product Information|Product Specification
+kaas_DocSearchUDPES_ProductContext.c(14):     s"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["291754711227
+kaas_DocSearchUDPES_ProductContext.c(14):     42644821080"]},{"documentID":"c04458388","title":"HP Pavilion 14-v124ca Notebook PC Produc
+kaas_DocSearchUDPES_ProductContext.c(14):     t Specifications","contentTypeHeader":"Product Information","renderLink":"https://uat.supp
+kaas_DocSearchUDPES_ProductContext.c(14):     ort.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04458388","matchScore"
+kaas_DocSearchUDPES_ProductContext.c(14):     :5.2958055,"description":"","contentUpdateDate":"2014-09-23 17:23:24","language":"EN","dis
+kaas_DocSearchUDPES_ProductContext.c(14):     closureLevel":"696531864679532034919979251200881","contentType":"Product Specifications","
+kaas_DocSearchUDPES_ProductContext.c(14):     store":"Product Documents","docSource":"Concentra","topics":[{"id":"7271181348763616372672
+kaas_DocSearchUDPES_ProductContext.c(14):     72859691104|738308751582545683183321646412788","name":"Product Information|Product Specifi
+kaas_DocSearchUDPES_ProductContext.c(14):     cations"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["291754
+kaas_DocSearchUDPES_ProductContext.c(14):     71122742644821080"]},{"documentID":"c04475823","title":"HP Pavilion 14-v138ca Notebook PC 
+kaas_DocSearchUDPES_ProductContext.c(14):     Product Specifications","contentTypeHeader":"Product Information","renderLink":"https://ua
+kaas_DocSearchUDPES_ProductContext.c(14):     t.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04475823","match
+kaas_DocSearchUDPES_ProductContext.c(14):     Score":5.2958055,"description":"","contentUpdateDate":"2014-10-09 17:08:54","language":"EN
+kaas_DocSearchUDPES_ProductContext.c(14):     ","disclosureLevel":"696531864679532034919979251200881","contentType":"Product Specificati
+kaas_DocSearchUDPES_ProductContext.c(14):     ons","store":"Product Documents","docSource":"Concentra","topics":[{"id":"7271181348763616
+kaas_DocSearchUDPES_ProductContext.c(14):     37267272859691104|738308751582545683183321646412788","name":"Product Information|Product S
+kaas_DocSearchUDPES_ProductContext.c(14):     pecifications"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["
+kaas_DocSearchUDPES_ProductContext.c(14):     29175471122742644821080"]}],"range":{"start":"0","end":"10"},"totalCount":11,"showingResul
+kaas_DocSearchUDPES_ProductContext.c(14):     tsFor":null,"searchInsteadFor":null,"aggregationsBucket":null,"highlight":null,"didYouMean
+kaas_DocSearchUDPES_ProductContext.c(14):     ":null,"totalCssCount":null,"cssContext":null,"esstores":null,"esmanuals":null}
+kaas_DocSearchUDPES_ProductContext.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_ProductContext.c(14): Registered web_reg_find successful for "Text={"matches":[{"documentID" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") was successful, 7639 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_ProductContext.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_ProductContext.c(30): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" ended with a "Pass" status (Duration: 0.4132 Wasted Time: 0.0447).
+Ending action kaas_DocSearchUDPES_ProductContext.
+Ending iteration 9.
+Starting iteration 10.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter QuickRef_productnumbers = 10 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '10'.
+Starting action kaas_DocSearchUDPES_ProductContext.
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(5): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(6): Notify: Saving Parameter "WISEAccessToken = 000azsxp4RBltmeXmEz13eM1rkPv".
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(8): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000azsxp4RBltmeXmEz13eM1rkPv"
+kaas_DocSearchUDPES_ProductContext.c(8): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(11): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(11): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_ProductContext.c(13): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" started.
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Parameter Substitution: parameter "QuickRef_productnumbers" =  "6944198"
+kaas_DocSearchUDPES_ProductContext.c(14): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" is done with headers:
+kaas_DocSearchUDPES_ProductContext.c(14):     :method = GET
+kaas_DocSearchUDPES_ProductContext.c(14):     :scheme = https
+kaas_DocSearchUDPES_ProductContext.c(14):     :path = /KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=e
+kaas_DocSearchUDPES_ProductContext.c(14):     n&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,21862
+kaas_DocSearchUDPES_ProductContext.c(14):     0138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376
+kaas_DocSearchUDPES_ProductContext.c(14):     253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,content
+kaas_DocSearchUDPES_ProductContext.c(14):     updatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions&store=docstore,supportagentstore,udp-content-default&product=6944198&categorizationId
+kaas_DocSearchUDPES_ProductContext.c(14):     s=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835
+kaas_DocSearchUDPES_ProductContext.c(14):     559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20
+kaas_DocSearchUDPES_ProductContext.c(14):     Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support
+kaas_DocSearchUDPES_ProductContext.c(14):     %20Information&clientId=WCC
+kaas_DocSearchUDPES_ProductContext.c(14):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchUDPES_ProductContext.c(14):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchUDPES_ProductContext.c(14):     accessToken =  000azsxp4RBltmeXmEz13eM1rkPv
+kaas_DocSearchUDPES_ProductContext.c(14):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchUDPES_ProductContext.c(14):     Accept =  */*
+kaas_DocSearchUDPES_ProductContext.c(14): t=5121ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=12)
+kaas_DocSearchUDPES_ProductContext.c(14):     HTTP/2.0 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     Status: 200\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     date: Fri, 25 Jun 2021 06:26:37 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     content-length: 6092\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-requestid: bdf94785-0a6a-4ffa-85b4-2fb5859d2dcc\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amz-apigw-id: Bd-MtH0moAMFhqw=\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:26:37 GMT\r\n
+kaas_DocSearchUDPES_ProductContext.c(14):     \r\n
+kaas_DocSearchUDPES_ProductContext.c(14): t=5128ms: 6092-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC" (RelFrameId=1, Internal ID=12)
+kaas_DocSearchUDPES_ProductContext.c(14):     {"matches":[{"documentID":"c05640567","title":"HP Notebook PCs - Swelling or Deformation o
+kaas_DocSearchUDPES_ProductContext.c(14):     f Notebook Battery","contentTypeHeader":"Product Information","renderLink":"https://uat.su
+kaas_DocSearchUDPES_ProductContext.c(14):     pport.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c05640567","matchScor
+kaas_DocSearchUDPES_ProductContext.c(14):     e":5.3048415,"description":"If your battery is deformed or is swelling, please read this."
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"contentUpdateDate":"2021-06-09 18:46:59","language":"EN","disclosureLevel":"696531864679
+kaas_DocSearchUDPES_ProductContext.c(14):     532034919979251200881","contentType":"Product Specifications","store":"Product Documents",
+kaas_DocSearchUDPES_ProductContext.c(14):     "docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|264094802425566
+kaas_DocSearchUDPES_ProductContext.c(14):     809196194979176827|444654627654234391237614041520684","name":"Troubleshooting|Power|Batter
+kaas_DocSearchUDPES_ProductContext.c(14):     y"}],"categorizations":["29175471122742644821080","895940033717088901186198481388081"],"ma
+kaas_DocSearchUDPES_ProductContext.c(14):     tchedCategorizations":["29175471122742644821080"]},{"documentID":"c04371813","title":"HP S
+kaas_DocSearchUDPES_ProductContext.c(14):     lateBook 14-p091nr PC Product Specifications","contentTypeHeader":"Product Information","r
+kaas_DocSearchUDPES_ProductContext.c(14):     enderLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1
+kaas_DocSearchUDPES_ProductContext.c(14):     rkPv/c04371813","matchScore":5.301559,"description":"","contentUpdateDate":"2014-07-14 15:
+kaas_DocSearchUDPES_ProductContext.c(14):     37:24","language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType"
+kaas_DocSearchUDPES_ProductContext.c(14):     :"Product Specifications","store":"Product Documents","docSource":"Concentra","topics":[{"
+kaas_DocSearchUDPES_ProductContext.c(14):     id":"727118134876361637267272859691104|738308751582545683183321646412788","name":"Product 
+kaas_DocSearchUDPES_ProductContext.c(14):     Information|Product Specifications"}],"categorizations":["29175471122742644821080"],"match
+kaas_DocSearchUDPES_ProductContext.c(14):     edCategorizations":["29175471122742644821080"]},{"documentID":"c04356578","title":"HP Slat
+kaas_DocSearchUDPES_ProductContext.c(14):     eBook 14-p000no PC Product Specifications","contentTypeHeader":"Product Information","rend
+kaas_DocSearchUDPES_ProductContext.c(14):     erLink":"https://uat.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkP
+kaas_DocSearchUDPES_ProductContext.c(14):     v/c04356578","matchScore":5.301559,"description":"Looking for upgrade or update informatio
+kaas_DocSearchUDPES_ProductContext.c(14):     n? Trying to find the names of hardware components or software programs? This document con
+kaas_DocSearchUDPES_ProductContext.c(14):     tains the technical details for this notebook.","contentUpdateDate":"2014-06-24 00:00:00",
+kaas_DocSearchUDPES_ProductContext.c(14):     "language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Produ
+kaas_DocSearchUDPES_ProductContext.c(14):     ct Specifications","store":"Product Documents","docSource":"Concentra","topics":[{"id":"72
+kaas_DocSearchUDPES_ProductContext.c(14):     7118134876361637267272859691104|738308751582545683183321646412788","name":"Product Informa
+kaas_DocSearchUDPES_ProductContext.c(14):     tion|Product Specifications"}],"categorizations":["29175471122742644821080"],"matchedCateg
+kaas_DocSearchUDPES_ProductContext.c(14):     orizations":["29175471122742644821080"]},{"documentID":"c04403288","title":"HP SlateBook 1
+kaas_DocSearchUDPES_ProductContext.c(14):     4-p000nb PC Product Specifications","contentTypeHeader":"Product Information","renderLink"
+kaas_DocSearchUDPES_ProductContext.c(14):     :"https://uat.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c0440
+kaas_DocSearchUDPES_ProductContext.c(14):     3288","matchScore":5.2997437,"description":"Looking for upgrade or update information? Try
+kaas_DocSearchUDPES_ProductContext.c(14):     ing to find the names of hardware components or software programs? This document contains 
+kaas_DocSearchUDPES_ProductContext.c(14):     the technical details for this notebook.","contentUpdateDate":"2014-07-30 00:00:00","langu
+kaas_DocSearchUDPES_ProductContext.c(14):     age":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Product Spe
+kaas_DocSearchUDPES_ProductContext.c(14):     cifications","store":"Product Documents","docSource":"Concentra","topics":[{"id":"72711813
+kaas_DocSearchUDPES_ProductContext.c(14):     4876361637267272859691104|738308751582545683183321646412788","name":"Product Information|P
+kaas_DocSearchUDPES_ProductContext.c(14):     roduct Specifications"}],"categorizations":["29175471122742644821080"],"matchedCategorizat
+kaas_DocSearchUDPES_ProductContext.c(14):     ions":["29175471122742644821080"]},{"documentID":"c04356687","title":"HP SlateBook 14-p000
+kaas_DocSearchUDPES_ProductContext.c(14):     na PC Product Specifications","contentTypeHeader":"Product Information","renderLink":"http
+kaas_DocSearchUDPES_ProductContext.c(14):     s://uat.support.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04356687",
+kaas_DocSearchUDPES_ProductContext.c(14):     "matchScore":5.2958055,"description":"Looking for upgrade or update information? Trying to
+kaas_DocSearchUDPES_ProductContext.c(14):      find the names of hardware components or software programs? This document contains the te
+kaas_DocSearchUDPES_ProductContext.c(14):     chnical details for this notebook.","contentUpdateDate":"2014-06-24 00:00:00","language":"
+kaas_DocSearchUDPES_ProductContext.c(14):     EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Product Specifica
+kaas_DocSearchUDPES_ProductContext.c(14):     tions","store":"Product Documents","docSource":"Concentra","topics":[{"id":"72711813487636
+kaas_DocSearchUDPES_ProductContext.c(14):     1637267272859691104|738308751582545683183321646412788","name":"Product Information|Product
+kaas_DocSearchUDPES_ProductContext.c(14):      Specifications"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":
+kaas_DocSearchUDPES_ProductContext.c(14):     ["29175471122742644821080"]},{"documentID":"c04485640","title":"HP SlateBook 14-p080no PC 
+kaas_DocSearchUDPES_ProductContext.c(14):     Product Specifications","contentTypeHeader":"Product Support","renderLink":"https://uat.su
+kaas_DocSearchUDPES_ProductContext.c(14):     pport.hp.com/wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04485640","matchScor
+kaas_DocSearchUDPES_ProductContext.c(14):     e":5.2958055,"description":"Looking for upgrade or update information? Trying to find the 
+kaas_DocSearchUDPES_ProductContext.c(14):     names of hardware components or software programs? This document contains the technical de
+kaas_DocSearchUDPES_ProductContext.c(14):     tails for this notebook.","contentUpdateDate":"2014-10-08 00:00:00","language":"EN","discl
+kaas_DocSearchUDPES_ProductContext.c(14):     osureLevel":"696531864679532034919979251200881","contentType":"Support Information","store
+kaas_DocSearchUDPES_ProductContext.c(14):     ":"Product Documents","docSource":"Concentra","topics":[{"id":"727118134876361637267272859
+kaas_DocSearchUDPES_ProductContext.c(14):     691104|738308751582545683183321646412788","name":"Product Information|Product Specificatio
+kaas_DocSearchUDPES_ProductContext.c(14):     ns"}],"categorizations":["29175471122742644821080"],"matchedCategorizations":["29175471122
+kaas_DocSearchUDPES_ProductContext.c(14):     742644821080"]},{"documentID":"c04336066","title":"HP SlateBook 14-p010nr Product Specific
+kaas_DocSearchUDPES_ProductContext.c(14):     ations","contentTypeHeader":"Product Information","renderLink":"https://uat.support.hp.com
+kaas_DocSearchUDPES_ProductContext.c(14):     /wps/hp-skp-portlets/render/000azsxp4RBltmeXmEz13eM1rkPv/c04336066","matchScore":5.2958055
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"description":"","contentUpdateDate":"2014-06-10 14:59:59","language":"EN","disclosureLev
+kaas_DocSearchUDPES_ProductContext.c(14):     el":"696531864679532034919979251200881","contentType":"Product Specifications","store":"Pr
+kaas_DocSearchUDPES_ProductContext.c(14):     oduct Documents","docSource":"Concentra","topics":[{"id":"72711813487636163726727285969110
+kaas_DocSearchUDPES_ProductContext.c(14):     4|738308751582545683183321646412788","name":"Product Information|Product Specifications"}]
+kaas_DocSearchUDPES_ProductContext.c(14):     ,"categorizations":["29175471122742644821080"],"matchedCategorizations":["2917547112274264
+kaas_DocSearchUDPES_ProductContext.c(14):     4821080"]}],"range":{"start":"0","end":"10"},"totalCount":7,"showingResultsFor":null,"sear
+kaas_DocSearchUDPES_ProductContext.c(14):     chInsteadFor":null,"aggregationsBucket":null,"highlight":null,"didYouMean":null,"totalCssC
+kaas_DocSearchUDPES_ProductContext.c(14):     ount":null,"cssContext":null,"esstores":null,"esmanuals":null}
+kaas_DocSearchUDPES_ProductContext.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_ProductContext.c(14): Registered web_reg_find successful for "Text={"matches":[{"documentID" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_ProductContext.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_ProductContext.c(14): web_custom_request("web_custom_request") was successful, 6092 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_ProductContext.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_ProductContext.c(30): Notify: Transaction "kaas_DocSearchUDPES_Quick_reference" ended with a "Pass" status (Duration: 0.3948 Wasted Time: 0.0481).
+Ending action kaas_DocSearchUDPES_ProductContext.
+Ending iteration 10.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

@@ -1,0 +1,6 @@
+ServicePin.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000akyaqsHMQ5vDL1j6yqp7pkbfS/1PV86A"  	[MsgId: MERR-26608]
+Warning: Iteration pacing cannot be reached (pace time = 3.54, actual time = 29.04).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 3.18, actual time = 4.58).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 3.35, actual time = 15.27).	[MsgId: MWAR-15995]
+ServicePin.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000akyaqsHMQ5vDL1j6yqp7pkbfS/CZ256A"  	[MsgId: MERR-26608]
+Warning: Iteration pacing cannot be reached (pace time = 3.46, actual time = 29.04).	[MsgId: MWAR-15995]

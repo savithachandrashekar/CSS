@@ -1,0 +1,7 @@
+Warning: Iteration pacing cannot be reached (pace time = 4.00, actual time = 4.59).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 4.00, actual time = 4.01).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 4.00, actual time = 5.64).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 4.00, actual time = 4.15).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 4.00, actual time = 4.78).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 4.00, actual time = 4.40).	[MsgId: MWAR-15995]
+TroubleshootingAggregationQuery.c(8): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=27066682&contentTypes=How To,Product Specifications,Compatibility,Recycle,Parts,Warranty or Legal Statement,Safety and Regulatory,Product Change Notification,FAQ&aggregations=producttopics"  	[MsgId: MERR-26627]

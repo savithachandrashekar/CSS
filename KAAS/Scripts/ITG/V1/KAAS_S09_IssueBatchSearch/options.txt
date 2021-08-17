@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\PERFORMANCE\CSS\FY21\KAAS\Scripts\ITG\V1\KAAS_S09_IssueBatchSearch
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ee:\performance\css\fy21\kaas\scripts\itg\v1\kaas_s09_issuebatchsearch\\logfile.log
+e:\performance\css\fy21\kaas\scripts\itg\v1\kaas_s09_issuebatchsearch\\combined_KAAS_S09_IssueBatchSearch.c
+e:\performance\css\fy21\kaas\scripts\itg\v1\kaas_s09_issuebatchsearch\\pre_cci.c

@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\PERFORMANCE\CSS\FY21\KAAS\Scripts\ITG\V1\KAAS_S12_SecurityBulletinArchive
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ee:\performance\css\fy21\kaas\scripts\itg\v1\kaas_s12_securitybulletinarchive\\logfile.log
+e:\performance\css\fy21\kaas\scripts\itg\v1\kaas_s12_securitybulletinarchive\\combined_KAAS_S12_SecurityBulletinArchive.c
+e:\performance\css\fy21\kaas\scripts\itg\v1\kaas_s12_securitybulletinarchive\\pre_cci.c

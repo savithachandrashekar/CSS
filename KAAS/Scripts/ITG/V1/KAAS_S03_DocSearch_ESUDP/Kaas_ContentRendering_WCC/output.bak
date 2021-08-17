@@ -1,0 +1,165 @@
+Virtual User Script started at: 12/7/2020 10:36:06 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\GCC\Kaas\FY20_Release\Script\V1\Kaas_ContentRendering\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Action.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Action.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(9): Notify: Transaction "KAAS_Content_Rendering" started.
+Action.c(10): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(10): Notify: Parameter Substitution: parameter "p_ContentRendering" =  "ish_2337129-747074-16"
+Action.c(10): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_2337129-747074-16" is done with headers:
+Action.c(10):     :method = GET
+Action.c(10):     :scheme = https
+Action.c(10):     :path = /KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_2337129-747074-16
+Action.c(10):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+Action.c(10):     Content-Type =  application/x-www-form-urlencoded
+Action.c(10):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Action.c(10):     Accept-Encoding =  gzip, deflate
+Action.c(10):     Accept =  */*
+Action.c(10): t=3800ms: 774-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_2337129-747074-16" (RelFrameId=1, Internal ID=1)
+Action.c(10):     HTTP/2.0 200\r\n
+Action.c(10):     Status: 200\r\n
+Action.c(10):     date: Mon, 07 Dec 2020 10:36:07 GMT\r\n
+Action.c(10):     content-type: text/html;charset=UTF-8\r\n
+Action.c(10):     content-length: 23\r\n
+Action.c(10):     x-amzn-requestid: 64dbcd67-eada-4841-9fcb-106cb1c833f0\r\n
+Action.c(10):     x-oneagent-js-injection: true\r\n
+Action.c(10):     x-amzn-remapped-connection: keep-alive\r\n
+Action.c(10):     set-cookie: dtCookie=v_4_srv_1_sn_3DAA8F888C1C8C89ED215B31D04919EC_perc_100000_ol_0_mul_1;
+Action.c(10):      Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+Action.c(10):     set-cookie: JSESSIONID=F0F3F6D272B5A68B34C8BE8870767014; Path=/; HttpOnly\r\n
+Action.c(10):     set-cookie: mySessionCookie=tridion_9e567066-9222-4403-8754-1c4d3a498ac3; path=/; HttpOnly
+Action.c(10):     \r\n
+Action.c(10):     set-cookie: myTrackingCookie=tridion_40edca45-4716-47ed-919d-2dd64db5ca0c; Expires=Fri, 01
+Action.c(10):     -Jan-2100 00:00:00 GMT; path=/; HttpOnly\r\n
+Action.c(10):     x-amz-apigw-id: XLXPtGT2oAMFkng=\r\n
+Action.c(10):     x-amzn-remapped-date: Mon, 07 Dec 2020 10:36:07 GMT\r\n
+Action.c(10):     \r\n
+Action.c(10): t=3813ms: 23-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_2337129-747074-16" (RelFrameId=1, Internal ID=1)
+Action.c(10):     Access Token is expired
+Action.c(10): web_custom_request("web_custom_request") was successful, 23 body bytes, 774 header bytes  	[MsgId: MMSG-26386]
+Action.c(19): Notify: Transaction "KAAS_Content_Rendering" ended with a "Pass" status (Duration: 1.3134 Wasted Time: 0.1183).
+Ending action Action.
+Ending iteration 1.
+Starting iteration 2.
+Notify: Next row for parameter p_DocID = 1 [table  = p_DocID].
+Notify: Getting new value for parameter 'p_DocID': table = 'p_DocID.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_productID = 3 [table  = p_productID].
+Notify: Getting new value for parameter 'p_productID': table = 'p_productID.dat' column = '0' row = '3'.
+Notify: Next row for parameter p_AccessToken = 1 [table  = p_AccessToken].
+Notify: Getting new value for parameter 'p_AccessToken': table = 'p_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_ContentRendering = 2 [table  = p_ContentRendering].
+Notify: Getting new value for parameter 'p_ContentRendering': table = 'p_ContentRendering.dat' column = '0' row = '2'.
+Notify: Next row for parameter p_CR_MetaData = 5 [table  = p_CR_MetaData].
+Notify: Getting new value for parameter 'p_CR_MetaData': table = 'p_CR_MetaData.dat' column = '0' row = '5'.
+Starting action Action.
+Action.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Action.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Action.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(9): Notify: Transaction "KAAS_Content_Rendering" started.
+Action.c(10): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(10): Notify: Parameter Substitution: parameter "p_ContentRendering" =  "ish_1689804-855141-16"
+Action.c(10): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_1689804-855141-16" is done with headers:
+Action.c(10):     :method = GET
+Action.c(10):     :scheme = https
+Action.c(10):     :path = /KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_1689804-855141-16
+Action.c(10):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+Action.c(10):     Content-Type =  application/x-www-form-urlencoded
+Action.c(10):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Action.c(10):     Accept-Encoding =  gzip, deflate
+Action.c(10):     Accept =  */*
+Action.c(10): t=4867ms: 774-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_1689804-855141-16" (RelFrameId=1, Internal ID=2)
+Action.c(10):     HTTP/2.0 200\r\n
+Action.c(10):     Status: 200\r\n
+Action.c(10):     date: Mon, 07 Dec 2020 10:36:09 GMT\r\n
+Action.c(10):     content-type: text/html;charset=UTF-8\r\n
+Action.c(10):     content-length: 23\r\n
+Action.c(10):     x-amzn-requestid: bc2e894a-30a7-4f01-a560-9a8a8c895b95\r\n
+Action.c(10):     x-oneagent-js-injection: true\r\n
+Action.c(10):     x-amzn-remapped-connection: keep-alive\r\n
+Action.c(10):     set-cookie: dtCookie=v_4_srv_1_sn_947B7C9C39CFE24952A6B61F823DB9CB_perc_100000_ol_0_mul_1;
+Action.c(10):      Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+Action.c(10):     set-cookie: JSESSIONID=E78DC8984539D5B383DA2F2B4DEE1498; Path=/; HttpOnly\r\n
+Action.c(10):     set-cookie: mySessionCookie=tridion_4efd0fef-6d72-4f59-8272-a2f6813ad95c; path=/; HttpOnly
+Action.c(10):     \r\n
+Action.c(10):     set-cookie: myTrackingCookie=tridion_febca18b-0ff5-4dd1-8829-22085f131b2d; Expires=Fri, 01
+Action.c(10):     -Jan-2100 00:00:00 GMT; path=/; HttpOnly\r\n
+Action.c(10):     x-amz-apigw-id: XLXP7H1foAMFRZA=\r\n
+Action.c(10):     x-amzn-remapped-date: Mon, 07 Dec 2020 10:36:09 GMT\r\n
+Action.c(10):     \r\n
+Action.c(10): t=4873ms: 23-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_1689804-855141-16" (RelFrameId=1, Internal ID=2)
+Action.c(10):     Access Token is expired
+Action.c(10): web_custom_request("web_custom_request") was successful, 23 body bytes, 774 header bytes  	[MsgId: MMSG-26386]
+Action.c(19): Notify: Transaction "KAAS_Content_Rendering" ended with a "Pass" status (Duration: 0.8141 Wasted Time: 0.0138).
+Ending action Action.
+Ending iteration 2.
+Starting iteration 3.
+Notify: Next row for parameter p_DocID = 1 [table  = p_DocID].
+Notify: Getting new value for parameter 'p_DocID': table = 'p_DocID.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_productID = 3 [table  = p_productID].
+Notify: Getting new value for parameter 'p_productID': table = 'p_productID.dat' column = '0' row = '3'.
+Notify: Next row for parameter p_AccessToken = 1 [table  = p_AccessToken].
+Notify: Getting new value for parameter 'p_AccessToken': table = 'p_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_ContentRendering = 3 [table  = p_ContentRendering].
+Notify: Getting new value for parameter 'p_ContentRendering': table = 'p_ContentRendering.dat' column = '0' row = '3'.
+Notify: Next row for parameter p_CR_MetaData = 9 [table  = p_CR_MetaData].
+Notify: Getting new value for parameter 'p_CR_MetaData': table = 'p_CR_MetaData.dat' column = '0' row = '9'.
+Starting action Action.
+Action.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Action.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Action.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(9): Notify: Transaction "KAAS_Content_Rendering" started.
+Action.c(10): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(10): Notify: Parameter Substitution: parameter "p_ContentRendering" =  "ish_1692853-68553-16"
+Action.c(10): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_1692853-68553-16" is done with headers:
+Action.c(10):     :method = GET
+Action.c(10):     :scheme = https
+Action.c(10):     :path = /KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_1692853-68553-16
+Action.c(10):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+Action.c(10):     Content-Type =  application/x-www-form-urlencoded
+Action.c(10):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Action.c(10):     Accept-Encoding =  gzip, deflate
+Action.c(10):     Accept =  */*
+Action.c(10): t=5773ms: 774-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_1692853-68553-16" (RelFrameId=1, Internal ID=3)
+Action.c(10):     HTTP/2.0 200\r\n
+Action.c(10):     Status: 200\r\n
+Action.c(10):     date: Mon, 07 Dec 2020 10:36:09 GMT\r\n
+Action.c(10):     content-type: text/html;charset=UTF-8\r\n
+Action.c(10):     content-length: 23\r\n
+Action.c(10):     x-amzn-requestid: 82902403-85e5-4820-8e66-8f7e08636948\r\n
+Action.c(10):     x-oneagent-js-injection: true\r\n
+Action.c(10):     x-amzn-remapped-connection: keep-alive\r\n
+Action.c(10):     set-cookie: dtCookie=v_4_srv_1_sn_EDE3970C9AD41592030A378F2B13E499_perc_100000_ol_0_mul_1;
+Action.c(10):      Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+Action.c(10):     set-cookie: JSESSIONID=CEBC4203B4CEC083B35B7B441A452150; Path=/; HttpOnly\r\n
+Action.c(10):     set-cookie: mySessionCookie=tridion_329a0904-1c65-422f-b94d-4484f964b9b8; path=/; HttpOnly
+Action.c(10):     \r\n
+Action.c(10):     set-cookie: myTrackingCookie=tridion_c3a49998-4793-4dd5-88c4-8ad1134b374a; Expires=Fri, 01
+Action.c(10):     -Jan-2100 00:00:00 GMT; path=/; HttpOnly\r\n
+Action.c(10):     x-amz-apigw-id: XLXQDGMPoAMFq1g=\r\n
+Action.c(10):     x-amzn-remapped-date: Mon, 07 Dec 2020 10:36:09 GMT\r\n
+Action.c(10):     \r\n
+Action.c(10): t=5779ms: 23-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000aFpsMlv5NjihCJy4hrosKkjbn/ish_1692853-68553-16" (RelFrameId=1, Internal ID=3)
+Action.c(10):     Access Token is expired
+Action.c(10): web_custom_request("web_custom_request") was successful, 23 body bytes, 774 header bytes  	[MsgId: MMSG-26386]
+Action.c(19): Notify: Transaction "KAAS_Content_Rendering" ended with a "Pass" status (Duration: 0.8362 Wasted Time: 0.0172).
+Ending action Action.
+Ending iteration 3.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

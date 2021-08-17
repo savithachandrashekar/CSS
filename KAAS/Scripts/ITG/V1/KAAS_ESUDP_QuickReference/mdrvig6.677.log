@@ -1,0 +1,970 @@
+Start auto log messages stack - Iteration 174.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 145.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 177.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 62 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6627588 OR 501585 OR 6944198 OR 5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 171.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 182.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3884606 OR 4217179 OR 7234912 OR 5058852&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 158.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 63 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 192.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 197.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 184.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3884606 OR 4217179 OR 7234912 OR 5058852&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 166.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 189.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3370383 OR 8485409 OR 6627588 OR 501585&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 266.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 300.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 293.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 501585 OR 6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 263.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6627588 OR 501585 OR 6944198 OR 5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 308.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 305.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 63 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 295.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 272.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 293.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 297.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 65 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305 OR 3962828 OR 3884606 OR 4217179&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 275.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 62 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3884606 OR 4217179 OR 7234912 OR 5058852&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 308.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912 OR 5058852 OR 3370383 OR 8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 272.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3884606 OR 4217179 OR 7234912 OR 5058852&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 273.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 268.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3370383 OR 8485409 OR 6627588 OR 501585&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 266.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3884606 OR 4217179 OR 7234912 OR 5058852&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 271.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3884606 OR 4217179 OR 7234912 OR 5058852&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 282.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305 OR 3962828 OR 3884606 OR 4217179&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 271.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3884606 OR 4217179 OR 7234912 OR 5058852&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 269.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 285.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 63 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3370383 OR 8485409 OR 6627588 OR 501585&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 286.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 286.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 267.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 86 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 293.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 293.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 306.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 284.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3370383 OR 8485409 OR 6627588 OR 501585&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 287.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 272.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3370383 OR 8485409 OR 6627588 OR 501585&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 296.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 298.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 296.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912 OR 5058852 OR 3370383 OR 8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 307.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 265.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3370383 OR 8485409 OR 6627588 OR 501585&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 400.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912 OR 5058852 OR 3370383 OR 8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 372.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 370.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 385.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 63 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 396.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 63 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 371.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 413.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305 OR 3962828 OR 3884606 OR 4217179&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 419.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 415.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 397.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 391.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 410.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 421.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 387.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 501585 OR 6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 394.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3884606 OR 4217179 OR 7234912 OR 5058852&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 398.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 501585 OR 6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 385.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 383.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 62 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 411.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305 OR 3962828 OR 3884606 OR 4217179&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 380.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 433.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 444.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 476.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 456.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 456.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 63 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6627588 OR 501585 OR 6944198 OR 5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 475.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 487.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912 OR 5058852 OR 3370383 OR 8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 455.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=4217179 OR 7234912 OR 5058852 OR 3370383&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 469.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6627588 OR 501585 OR 6944198 OR 5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 454.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 461.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305 OR 3962828 OR 3884606 OR 4217179&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 469.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 459.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3884606 OR 4217179 OR 7234912 OR 5058852&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 450.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 472.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 477.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 453.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 451.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 477.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 501585 OR 6944198&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 470.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 62 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 465.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6627588 OR 501585 OR 6944198 OR 5223305&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 491.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5058852 OR 3370383 OR 8485409 OR 6627588&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 472.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3884606 OR 4217179 OR 7234912 OR 5058852&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 490.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 479.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 484.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3370383 OR 8485409 OR 6627588 OR 501585&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 480.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=8485409 OR 6627588 OR 6944198 OR 5223305 OR 3962828 OR 3884606 OR 4217179 OR 7234912&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 487.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 60 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=7234912 OR 5058852 OR 3370383 OR 8485409&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 480.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 63 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6944198 OR 5223305 OR 3962828 OR 3884606&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 461.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 62 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=5223305 OR 3962828 OR 3884606 OR 4217179&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 527.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=6771913,12004,9364937,9364939,10304235,9364972,18972,238445&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26608]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

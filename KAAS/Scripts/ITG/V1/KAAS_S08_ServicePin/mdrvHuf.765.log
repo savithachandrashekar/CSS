@@ -1,0 +1,1 @@
+ServicePin.c(8): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aEQxkMAH1fstVgFoYNBBKVSAP/1PU51A"  	[MsgId: MERR-26608]

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VugenScriptMetadata>
+  <ScriptName>Kaas_TypeAhead</ScriptName>
+  <Protocol>Web - HTTP/HTML</Protocol>
+  <ActionFiles>
+    <FileEntry Name="vuser_init.c" Filter="2" />
+    <FileEntry Name="Kaas_TypeAhead.c" Filter="2" />
+    <FileEntry Name="Kaas_TypeAhed_PrintFields.c" Filter="2" />
+    <FileEntry Name="Kaas_TypeAhead_Categories.c" Filter="2" />
+    <FileEntry Name="Kaas_TypeAhead_Printers.c" Filter="2" />
+    <FileEntry Name="Kaas_TypeAhead_Printers_Multiple.c" Filter="2" />
+    <FileEntry Name="vuser_end.c" Filter="2" />
+  </ActionFiles>
+  <GeneralFiles>
+    <FileEntry Name="Kaas_TypeAhead.usr" Filter="4" />
+    <FileEntry Name="default.cfg" Filter="4" />
+    <FileEntry Name="default.usp" Filter="4" />
+    <FileEntry Name="Kaas_TypeAhead.prm" Filter="2" />
+    <FileEntry Name="globals.h" Filter="2" />
+    <FileEntry Name="p_TypeAhead.dat" Filter="2" />
+    <FileEntry Name="p_TypeAheadPrintFields.dat" Filter="2" />
+    <FileEntry Name="p_TypeAhead_Cat_Param2.dat" Filter="2" />
+    <FileEntry Name="p_TypeAhead_Categories.dat" Filter="2" />
+    <FileEntry Name="p_hostname.dat" Filter="2" />
+    <FileEntry Name="combined_Kaas_TypeAhead.c" Filter="2" />
+    <FileEntry Name="pre_cci.c" Filter="2" />
+    <FileEntry Name="134328631440.idx" Filter="1" />
+    <FileEntry Name="193326113440.idx" Filter="1" />
+    <FileEntry Name="224145482440.idx" Filter="1" />
+    <FileEntry Name="28469571440.idx" Filter="1" />
+    <FileEntry Name="412624440.idx" Filter="1" />
+    <FileEntry Name="83154237440.idx" Filter="1" />
+    <FileEntry Name="Bookmarks.xml" Filter="1" />
+    <FileEntry Name="Breakpoints.xml" Filter="1" />
+    <FileEntry Name="CompilerLogMetadata.xml" Filter="1" />
+    <FileEntry Name="custom_body_variables.txt" Filter="1" />
+    <FileEntry Name="Kaas_TypeAhead.c.pickle" Filter="1" />
+    <FileEntry Name="Kaas_TypeAhead.ci" Filter="1" />
+    <FileEntry Name="Kaas_TypeAhead.prm.bak" Filter="1" />
+    <FileEntry Name="Kaas_TypeAhead.sdf" Filter="1" />
+    <FileEntry Name="logfile.log" Filter="1" />
+    <FileEntry Name="lrw_custom_body.h" Filter="1" />
+    <FileEntry Name="mdrv.log" Filter="1" />
+    <FileEntry Name="mdrv1Kt.113.log" Filter="1" />
+    <FileEntry Name="mdrv6JJ.275.log" Filter="1" />
+    <FileEntry Name="mdrv7CD.453.log" Filter="1" />
+    <FileEntry Name="mdrvB3l.281.log" Filter="1" />
+    <FileEntry Name="mdrvDJw.885.log" Filter="1" />
+    <FileEntry Name="mdrvGJ5.433.log" Filter="1" />
+    <FileEntry Name="mdrvPWK.609.log" Filter="1" />
+    <FileEntry Name="mdrvR5v.77.log" Filter="1" />
+    <FileEntry Name="mdrvuxU.643.log" Filter="1" />
+    <FileEntry Name="mdrvVmv.315.log" Filter="1" />
+    <FileEntry Name="mdrvwCg.341.log" Filter="1" />
+    <FileEntry Name="mdrvxnt.95.log" Filter="1" />
+    <FileEntry Name="mdrvY33.503.log" Filter="1" />
+    <FileEntry Name="mdrvye4.137.log" Filter="1" />
+    <FileEntry Name="mdrvZ8T.827.log" Filter="1" />
+    <FileEntry Name="mdrv_cmd.txt" Filter="1" />
+    <FileEntry Name="options.txt" Filter="1" />
+    <FileEntry Name="output.bak" Filter="1" />
+    <FileEntry Name="output.txt" Filter="1" />
+    <FileEntry Name="OutputColoringDatabase.json" Filter="1" />
+    <FileEntry Name="ReplaySummaryReport.xml" Filter="1" />
+    <FileEntry Name="ScriptUploadMetadata.xml" Filter="1" />
+    <FileEntry Name="ThumbnailsCache.tmp" Filter="1" />
+    <FileEntry Name="TransactionsData.db" Filter="1" />
+    <FileEntry Name="UserTasks.xml" Filter="1" />
+    <FileEntry Name="result1\" Filter="1" />
+  </GeneralFiles>
+</VugenScriptMetadata>

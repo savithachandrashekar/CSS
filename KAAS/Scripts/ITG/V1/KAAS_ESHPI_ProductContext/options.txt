@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\PERFORMANCE\GCC\Kaas\FY20_Release\Script\V1\Kaas_ESHPI_ProductContext
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ee:\performance\gcc\kaas\fy20_release\script\v1\kaas_eshpi_productcontext\\logfile.log
+e:\performance\gcc\kaas\fy20_release\script\v1\kaas_eshpi_productcontext\\combined_Kaas_ESHPI_ProductContext.c
+e:\performance\gcc\kaas\fy20_release\script\v1\kaas_eshpi_productcontext\\pre_cci.c

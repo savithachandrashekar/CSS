@@ -1,0 +1,4 @@
+ServicePin.c(9): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000anrqeIifnFRdp0wOl6TsMQDNY/B3G86A"  	[MsgId: MERR-26627]
+Warning: Iteration pacing cannot be reached (pace time = 8.00, actual time = 16.96).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 8.00, actual time = 14.31).	[MsgId: MWAR-15995]
+ServicePin.c(9): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000anrqeIifnFRdp0wOl6TsMQDNY/G1W41A"  	[MsgId: MERR-26627]

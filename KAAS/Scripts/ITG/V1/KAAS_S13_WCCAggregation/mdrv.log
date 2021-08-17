@@ -1,0 +1,139 @@
+Virtual User Script started at: 7/23/2021 8:33:51 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\CSS\FY21\KAAS\Scripts\ITG\V1\KAAS_S13_WCCAggregation\\default.cfg"  	[MsgId: MMSG-27141]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(6): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(6): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(8): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(8): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(9): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(9): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(11): Continuing after Error -27760: Request "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" failed  	[MsgId: MERR-27760]
+vuser_init.c(11): Continuing after Error -26377: No match found for the requested parameter "cp_WCCAccessToken". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 256 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+vuser_init.c(11): Notify: Saving Parameter "cp_WCCAccessToken = ".
+vuser_init.c(11): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+vuser_init.c(11): web_custom_request("web_custom_request") highest severity level was "continue on error", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+vuser_init.c(11): Continuing after error in Vuser script.
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action HowToAggregations.
+HowToAggregations.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+HowToAggregations.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+HowToAggregations.c(5): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  ""
+HowToAggregations.c(5): Notify: Saving Parameter "WCCAccessToken = ".
+HowToAggregations.c(6): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+HowToAggregations.c(6): Notify: Parameter Substitution: parameter "WCCAccessToken" =  ""
+HowToAggregations.c(6): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+HowToAggregations.c(6): web_add_header("accessToken") highest severity level was "warning"  	[MsgId: MMSG-26391]
+HowToAggregations.c(9): web_reg_find started  	[MsgId: MMSG-26355]
+HowToAggregations.c(9): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+HowToAggregations.c(11): Notify: Transaction "KAAS_T030_HowToAggregations" started.
+HowToAggregations.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+HowToAggregations.c(13): Notify: Parameter Substitution: parameter "p_productID" =  "4142919"
+HowToAggregations.c(13): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+HowToAggregations.c(13): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=4142919&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&aggregations=producttopics"  	[MsgId: MERR-26630]
+HowToAggregations.c(13): Registered web_reg_find successful for "Text=matches"  	[MsgId: MMSG-26362]
+HowToAggregations.c(13): Notify: Saving Parameter "Text_count = 0".
+HowToAggregations.c(13): web_custom_request("web_custom_request") highest severity level was "continue on error", 53 body bytes, 507 header bytes  	[MsgId: MMSG-26388]
+HowToAggregations.c(13): Continuing after error in Vuser script.
+HowToAggregations.c(22): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+HowToAggregations.c(24): Notify: Transaction "KAAS_T030_HowToAggregations" ended with a "Fail" status (Duration: 0.3359 Wasted Time: 0.0206).
+HowToAggregations.c(24): Notify: Transaction "KAAS_T030_HowToAggregations" has 2 error message(s).
+HowToAggregations.c(24): Notify: The 1st error message associated with transaction "KAAS_T030_HowToAggregations" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+HowToAggregations.c(24): Notify: The 2nd error message associated with transaction "KAAS_T030_HowToAggregations" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=4142919&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&aggregations=producttopics""
+Ending action HowToAggregations.
+Starting action ProductInfoAggregation.
+ProductInfoAggregation.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+ProductInfoAggregation.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+ProductInfoAggregation.c(4): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  ""
+ProductInfoAggregation.c(4): Notify: Saving Parameter "WCCAccessToken = ".
+ProductInfoAggregation.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+ProductInfoAggregation.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  ""
+ProductInfoAggregation.c(5): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+ProductInfoAggregation.c(5): web_add_header("accessToken") highest severity level was "warning"  	[MsgId: MMSG-26391]
+ProductInfoAggregation.c(7): web_reg_find started  	[MsgId: MMSG-26355]
+ProductInfoAggregation.c(7): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+ProductInfoAggregation.c(8): Notify: Transaction "KAAS_T031_ProductInfoAggregation" started.
+ProductInfoAggregation.c(10): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+ProductInfoAggregation.c(10): Notify: Parameter Substitution: parameter "p_productID" =  "4142919"
+ProductInfoAggregation.c(10): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+ProductInfoAggregation.c(10): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=4142919&contentTypes=How To,Product Specifications,Compatibility,Recycle,Parts,Warranty or Legal Statement,Safety and Regulatory,Product Change Notification,FAQ&aggregations=producttopics"  	[MsgId: MERR-26630]
+ProductInfoAggregation.c(10): Registered web_reg_find successful for "Text=matches"  	[MsgId: MMSG-26362]
+ProductInfoAggregation.c(10): Notify: Saving Parameter "Text_count = 0".
+ProductInfoAggregation.c(10): web_custom_request("web_custom_request") highest severity level was "continue on error", 53 body bytes, 507 header bytes  	[MsgId: MMSG-26388]
+ProductInfoAggregation.c(10): Continuing after error in Vuser script.
+ProductInfoAggregation.c(19): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+ProductInfoAggregation.c(21): Notify: Transaction "KAAS_T031_ProductInfoAggregation" ended with a "Fail" status (Duration: 0.1247 Wasted Time: 0.0076).
+ProductInfoAggregation.c(21): Notify: Transaction "KAAS_T031_ProductInfoAggregation" has 2 error message(s).
+ProductInfoAggregation.c(21): Notify: The 1st error message associated with transaction "KAAS_T031_ProductInfoAggregation" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+ProductInfoAggregation.c(21): Notify: The 2nd error message associated with transaction "KAAS_T031_ProductInfoAggregation" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=4142919&contentTypes=How To,Product Specifications,Compatibility,Recycle,Parts,Warranty or Legal Statement,Safety and Regulatory,Product Change Notification,FAQ&aggregations=producttopics""
+Ending action ProductInfoAggregation.
+Starting action TroubleshootingAggregationQuery.
+TroubleshootingAggregationQuery.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+TroubleshootingAggregationQuery.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+TroubleshootingAggregationQuery.c(4): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  ""
+TroubleshootingAggregationQuery.c(4): Notify: Saving Parameter "WCCAccessToken = ".
+TroubleshootingAggregationQuery.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+TroubleshootingAggregationQuery.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  ""
+TroubleshootingAggregationQuery.c(5): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+TroubleshootingAggregationQuery.c(5): web_add_header("accessToken") highest severity level was "warning"  	[MsgId: MMSG-26391]
+TroubleshootingAggregationQuery.c(7): web_reg_find started  	[MsgId: MMSG-26355]
+TroubleshootingAggregationQuery.c(7): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+TroubleshootingAggregationQuery.c(9): Notify: Transaction "KAAS_T032_TroubleshootingAggregationQuery" started.
+TroubleshootingAggregationQuery.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+TroubleshootingAggregationQuery.c(11): Notify: Parameter Substitution: parameter "p_productID" =  "4142919"
+TroubleshootingAggregationQuery.c(11): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+TroubleshootingAggregationQuery.c(11): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=4142919&contentTypes=How To,Product Specifications,Compatibility,Recycle,Parts,Warranty or Legal Statement,Safety and Regulatory,Product Change Notification,FAQ&aggregations=producttopics"  	[MsgId: MERR-26630]
+TroubleshootingAggregationQuery.c(11): Registered web_reg_find successful for "Text=matches"  	[MsgId: MMSG-26362]
+TroubleshootingAggregationQuery.c(11): Notify: Saving Parameter "Text_count = 0".
+TroubleshootingAggregationQuery.c(11): web_custom_request("web_custom_request") highest severity level was "continue on error", 53 body bytes, 507 header bytes  	[MsgId: MMSG-26388]
+TroubleshootingAggregationQuery.c(11): Continuing after error in Vuser script.
+TroubleshootingAggregationQuery.c(20): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+TroubleshootingAggregationQuery.c(22): Notify: Transaction "KAAS_T032_TroubleshootingAggregationQuery" ended with a "Fail" status (Duration: 0.1248 Wasted Time: 0.0049).
+TroubleshootingAggregationQuery.c(22): Notify: Transaction "KAAS_T032_TroubleshootingAggregationQuery" has 2 error message(s).
+TroubleshootingAggregationQuery.c(22): Notify: The 1st error message associated with transaction "KAAS_T032_TroubleshootingAggregationQuery" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+TroubleshootingAggregationQuery.c(22): Notify: The 2nd error message associated with transaction "KAAS_T032_TroubleshootingAggregationQuery" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=4142919&contentTypes=How To,Product Specifications,Compatibility,Recycle,Parts,Warranty or Legal Statement,Safety and Regulatory,Product Change Notification,FAQ&aggregations=producttopics""
+Ending action TroubleshootingAggregationQuery.
+Starting action OtherTabAggregation.
+OtherTabAggregation.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+OtherTabAggregation.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+OtherTabAggregation.c(4): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  ""
+OtherTabAggregation.c(4): Notify: Saving Parameter "WCCAccessToken = ".
+OtherTabAggregation.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+OtherTabAggregation.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  ""
+OtherTabAggregation.c(5): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+OtherTabAggregation.c(5): web_add_header("accessToken") highest severity level was "warning"  	[MsgId: MMSG-26391]
+OtherTabAggregation.c(7): web_reg_find started  	[MsgId: MMSG-26355]
+OtherTabAggregation.c(7): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+OtherTabAggregation.c(8): Notify: Transaction "KAAS_T032_OtherTabAggregation" started.
+OtherTabAggregation.c(10): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+OtherTabAggregation.c(10): Notify: Parameter Substitution: parameter "p_productID" =  "4142919"
+OtherTabAggregation.c(10): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+OtherTabAggregation.c(10): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore,sdlmanualstore,manualstore&product=4142919&aggregations=esmanuals,documenttype"  	[MsgId: MERR-26630]
+OtherTabAggregation.c(10): Registered web_reg_find successful for "Text=matches"  	[MsgId: MMSG-26362]
+OtherTabAggregation.c(10): Notify: Saving Parameter "Text_count = 0".
+OtherTabAggregation.c(10): web_custom_request("web_custom_request") highest severity level was "continue on error", 53 body bytes, 507 header bytes  	[MsgId: MMSG-26388]
+OtherTabAggregation.c(10): Continuing after error in Vuser script.
+OtherTabAggregation.c(19): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+OtherTabAggregation.c(21): Notify: Transaction "KAAS_T032_OtherTabAggregation" ended with a "Fail" status (Duration: 0.1248 Wasted Time: 0.0069).
+OtherTabAggregation.c(21): Notify: Transaction "KAAS_T032_OtherTabAggregation" has 2 error message(s).
+OtherTabAggregation.c(21): Notify: The 1st error message associated with transaction "KAAS_T032_OtherTabAggregation" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+OtherTabAggregation.c(21): Notify: The 2nd error message associated with transaction "KAAS_T032_OtherTabAggregation" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore,sdlmanualstore,manualstore&product=4142919&aggregations=esmanuals,documenttype""
+Ending action OtherTabAggregation.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+Vuser 0 (thread 7040), ended OK."

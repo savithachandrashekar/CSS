@@ -1,0 +1,302 @@
+Virtual User Script started at: 7/23/2021 8:20:23 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\CSS\FY21\KAAS\Scripts\ITG\V1\KAAS_S08_WCCPDP_8\\default.cfg"  	[MsgId: MMSG-27141]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(6): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(6): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(8): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(8): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(9): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(9): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(11): The request to server https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" is done with headers:
+vuser_init.c(11):     :method = POST
+vuser_init.c(11):     :scheme = https
+vuser_init.c(11):     :path = /as/token.oauth2?grant_type=client_credentials
+vuser_init.c(11):     :authority = login-itg.external.hp.com
+vuser_init.c(11):     x-dynaTrace = SN=Kaas_WCC_PDP;VU=1;TE=;AN=localhost;PC=Custom Request: web_custom_request;
+vuser_init.c(11):     ID=1627028423103;NA=;SI=LR
+vuser_init.c(11):     Authorization =  Basic V0NDOnRvME1pN0VHR3pyRnV2VnlnR3dvbW95aWZRTU1nQlJrNUVianNHeWZHWnZkZFh
+vuser_init.c(11):     MOU5SaWE2VlVON2hzRDdicWk=
+vuser_init.c(11):     Content-Type =  application/x-www-form-urlencoded
+vuser_init.c(11):     Host =  login-itg.external.hp.com
+vuser_init.c(11):     Cache-Control =  no-cache
+vuser_init.c(11):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+vuser_init.c(11):     Accept-Encoding =  gzip, deflate
+vuser_init.c(11):     Accept =  */*
+vuser_init.c(11):     content-length = 0
+vuser_init.c(11): Continuing after Error -27760: Request "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" failed  	[MsgId: MERR-27760]
+vuser_init.c(11): Continuing after Error -26377: No match found for the requested parameter "cp_WCCAccessToken". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 256 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+vuser_init.c(11): Notify: Saving Parameter "cp_WCCAccessToken = ".
+vuser_init.c(11): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+vuser_init.c(11): web_custom_request("web_custom_request") highest severity level was "continue on error", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+vuser_init.c(11): Continuing after error in Vuser script.
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action BulletinsNotices_PDP.
+BulletinsNotices_PDP.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  ""
+BulletinsNotices_PDP.c(3): Notify: Saving Parameter "WCCAccessToken = ".
+BulletinsNotices_PDP.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+BulletinsNotices_PDP.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+BulletinsNotices_PDP.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+BulletinsNotices_PDP.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  ""
+BulletinsNotices_PDP.c(5): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+BulletinsNotices_PDP.c(5): web_add_header("accessToken") highest severity level was "warning"  	[MsgId: MMSG-26391]
+BulletinsNotices_PDP.c(7): web_reg_find started  	[MsgId: MMSG-26355]
+BulletinsNotices_PDP.c(7): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+BulletinsNotices_PDP.c(9): Notify: Transaction "KAAS_T028_BulletinsNotices_PDP" started.
+BulletinsNotices_PDP.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+BulletinsNotices_PDP.c(11): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+BulletinsNotices_PDP.c(11): t=868ms: 531-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Service Bulletin,Security Bulletin,Engineering Notice,Service Notice,Customer Notice,Customer Bulletin&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=2)
+BulletinsNotices_PDP.c(11):     HTTP/1.1 401 Unauthorized\r\n
+BulletinsNotices_PDP.c(11):     Date: Fri, 23 Jul 2021 08:20:23 GMT\r\n
+BulletinsNotices_PDP.c(11):     Content-Type: application/json;charset=UTF-8\r\n
+BulletinsNotices_PDP.c(11):     Content-Length: 53\r\n
+BulletinsNotices_PDP.c(11):     Connection: keep-alive\r\n
+BulletinsNotices_PDP.c(11):     x-amzn-RequestId: 5d5f7987-b30d-4879-bed4-718181792c08\r\n
+BulletinsNotices_PDP.c(11):     X-OneAgent-JS-Injection: true\r\n
+BulletinsNotices_PDP.c(11):     x-amzn-Remapped-Connection: keep-alive\r\n
+BulletinsNotices_PDP.c(11):     Set-Cookie: dtCookie=v_4_srv_1_sn_61258C2CA982540E51E47FD55A688895_perc_100000_ol_0_mul_1_
+BulletinsNotices_PDP.c(11):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+BulletinsNotices_PDP.c(11):     x-amz-apigw-id: C6hHMFYjoAMFxSA=\r\n
+BulletinsNotices_PDP.c(11):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:20:23 GMT\r\n
+BulletinsNotices_PDP.c(11):     \r\n
+BulletinsNotices_PDP.c(11): t=879ms: 53-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Service Bulletin,Security Bulletin,Engineering Notice,Service Notice,Customer Notice,Customer Bulletin&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=2)
+BulletinsNotices_PDP.c(11):     {"errorCode":"1001","message":"Invalid access token"}
+BulletinsNotices_PDP.c(11): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+BulletinsNotices_PDP.c(11): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Service Bulletin,Security Bulletin,Engineering Notice,Service Notice,Customer Notice,Customer Bulletin&printFields=topics,topIssue,filesize,cve"  	[MsgId: MERR-26630]
+BulletinsNotices_PDP.c(11): Registered web_reg_find successful for "Text="matches":["  	[MsgId: MMSG-26362]
+BulletinsNotices_PDP.c(11): Notify: Saving Parameter "Text_count = 0".
+BulletinsNotices_PDP.c(11): web_custom_request("web_custom_request") highest severity level was "continue on error", 53 body bytes, 531 header bytes  	[MsgId: MMSG-26388]
+BulletinsNotices_PDP.c(11): Continuing after error in Vuser script.
+BulletinsNotices_PDP.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+BulletinsNotices_PDP.c(25): Notify: Transaction "KAAS_T028_BulletinsNotices_PDP" ended with a "Fail" status (Duration: 0.2157 Wasted Time: 0.0145).
+BulletinsNotices_PDP.c(25): Notify: Transaction "KAAS_T028_BulletinsNotices_PDP" has 2 error message(s).
+BulletinsNotices_PDP.c(25): Notify: The 1st error message associated with transaction "KAAS_T028_BulletinsNotices_PDP" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+BulletinsNotices_PDP.c(25): Notify: The 2nd error message associated with transaction "KAAS_T028_BulletinsNotices_PDP" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Service Bulletin,Security Bulletin,Engineering Notice,Service Notice,Customer Notice,Customer Bulletin&printFields=topics,topIssue,filesize,cve""
+Ending action BulletinsNotices_PDP.
+Starting action Advisory_PDP.
+Advisory_PDP.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  ""
+Advisory_PDP.c(3): Notify: Saving Parameter "WCCAccessToken = ".
+Advisory_PDP.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Advisory_PDP.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Advisory_PDP.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+Advisory_PDP.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  ""
+Advisory_PDP.c(5): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+Advisory_PDP.c(5): web_add_header("accessToken") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Advisory_PDP.c(8): web_reg_find started  	[MsgId: MMSG-26355]
+Advisory_PDP.c(8): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Advisory_PDP.c(9): Notify: Transaction "KAAS_T027_Advisory_PDP" started.
+Advisory_PDP.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Advisory_PDP.c(11): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+Advisory_PDP.c(11): t=983ms: 531-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Engineering Advisory,Service Advisory,Customer Advisory,Service Action Advisory&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=3)
+Advisory_PDP.c(11):     HTTP/1.1 401 Unauthorized\r\n
+Advisory_PDP.c(11):     Date: Fri, 23 Jul 2021 08:20:23 GMT\r\n
+Advisory_PDP.c(11):     Content-Type: application/json;charset=UTF-8\r\n
+Advisory_PDP.c(11):     Content-Length: 53\r\n
+Advisory_PDP.c(11):     Connection: keep-alive\r\n
+Advisory_PDP.c(11):     x-amzn-RequestId: e9bfd782-e459-4f73-b15c-38bf3484c69d\r\n
+Advisory_PDP.c(11):     X-OneAgent-JS-Injection: true\r\n
+Advisory_PDP.c(11):     x-amzn-Remapped-Connection: keep-alive\r\n
+Advisory_PDP.c(11):     Set-Cookie: dtCookie=v_4_srv_1_sn_27F93052D0EF141352E97B089A514CF9_perc_100000_ol_0_mul_1_
+Advisory_PDP.c(11):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+Advisory_PDP.c(11):     x-amz-apigw-id: C6hHOF3PIAMFgNg=\r\n
+Advisory_PDP.c(11):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:20:23 GMT\r\n
+Advisory_PDP.c(11):     \r\n
+Advisory_PDP.c(11): t=991ms: 53-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Engineering Advisory,Service Advisory,Customer Advisory,Service Action Advisory&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=3)
+Advisory_PDP.c(11):     {"errorCode":"1001","message":"Invalid access token"}
+Advisory_PDP.c(11): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Advisory_PDP.c(11): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Engineering Advisory,Service Advisory,Customer Advisory,Service Action Advisory&printFields=topics,topIssue,filesize,cve"  	[MsgId: MERR-26630]
+Advisory_PDP.c(11): Registered web_reg_find successful for "Text="matches":["  	[MsgId: MMSG-26362]
+Advisory_PDP.c(11): Notify: Saving Parameter "Text_count = 0".
+Advisory_PDP.c(11): web_custom_request("web_custom_request") highest severity level was "continue on error", 53 body bytes, 531 header bytes  	[MsgId: MMSG-26388]
+Advisory_PDP.c(11): Continuing after error in Vuser script.
+Advisory_PDP.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+Advisory_PDP.c(25): Notify: Transaction "KAAS_T027_Advisory_PDP" ended with a "Fail" status (Duration: 0.0950 Wasted Time: 0.0125).
+Advisory_PDP.c(25): Notify: Transaction "KAAS_T027_Advisory_PDP" has 2 error message(s).
+Advisory_PDP.c(25): Notify: The 1st error message associated with transaction "KAAS_T027_Advisory_PDP" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Advisory_PDP.c(25): Notify: The 2nd error message associated with transaction "KAAS_T027_Advisory_PDP" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Engineering Advisory,Service Advisory,Customer Advisory,Service Action Advisory&printFields=topics,topIssue,filesize,cve""
+Ending action Advisory_PDP.
+Starting action PDP_Manuals.
+PDP_Manuals.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  ""
+PDP_Manuals.c(3): Notify: Saving Parameter "WCCAccessToken = ".
+PDP_Manuals.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+PDP_Manuals.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+PDP_Manuals.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+PDP_Manuals.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  ""
+PDP_Manuals.c(5): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+PDP_Manuals.c(5): web_add_header("accessToken") highest severity level was "warning"  	[MsgId: MMSG-26391]
+PDP_Manuals.c(8): web_reg_find started  	[MsgId: MMSG-26355]
+PDP_Manuals.c(8): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+PDP_Manuals.c(10): Notify: Transaction "KAAS_T026_PDP_Manuals" started.
+PDP_Manuals.c(12): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+PDP_Manuals.c(12): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+PDP_Manuals.c(12): t=1114ms: 531-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=4)
+PDP_Manuals.c(12):     HTTP/1.1 401 Unauthorized\r\n
+PDP_Manuals.c(12):     Date: Fri, 23 Jul 2021 08:20:23 GMT\r\n
+PDP_Manuals.c(12):     Content-Type: application/json;charset=UTF-8\r\n
+PDP_Manuals.c(12):     Content-Length: 53\r\n
+PDP_Manuals.c(12):     Connection: keep-alive\r\n
+PDP_Manuals.c(12):     x-amzn-RequestId: 0c75cc21-c7fe-4c51-a667-118b25e53616\r\n
+PDP_Manuals.c(12):     X-OneAgent-JS-Injection: true\r\n
+PDP_Manuals.c(12):     x-amzn-Remapped-Connection: keep-alive\r\n
+PDP_Manuals.c(12):     Set-Cookie: dtCookie=v_4_srv_1_sn_E6358451E28155600A574B2EE87086E3_perc_100000_ol_0_mul_1_
+PDP_Manuals.c(12):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+PDP_Manuals.c(12):     x-amz-apigw-id: C6hHPEHQIAMF7zA=\r\n
+PDP_Manuals.c(12):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:20:23 GMT\r\n
+PDP_Manuals.c(12):     \r\n
+PDP_Manuals.c(12): t=1121ms: 53-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=4)
+PDP_Manuals.c(12):     {"errorCode":"1001","message":"Invalid access token"}
+PDP_Manuals.c(12): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+PDP_Manuals.c(12): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve"  	[MsgId: MERR-26630]
+PDP_Manuals.c(12): Registered web_reg_find successful for "Text="matches":["  	[MsgId: MMSG-26362]
+PDP_Manuals.c(12): Notify: Saving Parameter "Text_count = 0".
+PDP_Manuals.c(12): web_custom_request("web_custom_request") highest severity level was "continue on error", 53 body bytes, 531 header bytes  	[MsgId: MMSG-26388]
+PDP_Manuals.c(12): Continuing after error in Vuser script.
+PDP_Manuals.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+PDP_Manuals.c(25): Notify: Transaction "KAAS_T026_PDP_Manuals" ended with a "Fail" status (Duration: 0.1030 Wasted Time: 0.0071).
+PDP_Manuals.c(25): Notify: Transaction "KAAS_T026_PDP_Manuals" has 2 error message(s).
+PDP_Manuals.c(25): Notify: The 1st error message associated with transaction "KAAS_T026_PDP_Manuals" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+PDP_Manuals.c(25): Notify: The 2nd error message associated with transaction "KAAS_T026_PDP_Manuals" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve""
+Ending action PDP_Manuals.
+Starting action ProductInfo_PDP.
+ProductInfo_PDP.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  ""
+ProductInfo_PDP.c(3): Notify: Saving Parameter "WCCAccessToken = ".
+ProductInfo_PDP.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+ProductInfo_PDP.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+ProductInfo_PDP.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+ProductInfo_PDP.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  ""
+ProductInfo_PDP.c(5): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+ProductInfo_PDP.c(5): web_add_header("accessToken") highest severity level was "warning"  	[MsgId: MMSG-26391]
+ProductInfo_PDP.c(9): web_reg_find started  	[MsgId: MMSG-26355]
+ProductInfo_PDP.c(9): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+ProductInfo_PDP.c(11): Notify: Transaction "KAAS_T025_ProductInfo_PDP" started.
+ProductInfo_PDP.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+ProductInfo_PDP.c(13): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+ProductInfo_PDP.c(13): t=1239ms: 531-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=5)
+ProductInfo_PDP.c(13):     HTTP/1.1 401 Unauthorized\r\n
+ProductInfo_PDP.c(13):     Date: Fri, 23 Jul 2021 08:20:23 GMT\r\n
+ProductInfo_PDP.c(13):     Content-Type: application/json;charset=UTF-8\r\n
+ProductInfo_PDP.c(13):     Content-Length: 53\r\n
+ProductInfo_PDP.c(13):     Connection: keep-alive\r\n
+ProductInfo_PDP.c(13):     x-amzn-RequestId: 33a8b958-2998-4b7f-9cb3-f09ca4de61d1\r\n
+ProductInfo_PDP.c(13):     X-OneAgent-JS-Injection: true\r\n
+ProductInfo_PDP.c(13):     x-amzn-Remapped-Connection: keep-alive\r\n
+ProductInfo_PDP.c(13):     Set-Cookie: dtCookie=v_4_srv_1_sn_19A9648DEDB78AC80D51D588C115F6E7_perc_100000_ol_0_mul_1_
+ProductInfo_PDP.c(13):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+ProductInfo_PDP.c(13):     x-amz-apigw-id: C6hHQGBKoAMFfXw=\r\n
+ProductInfo_PDP.c(13):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:20:22 GMT\r\n
+ProductInfo_PDP.c(13):     \r\n
+ProductInfo_PDP.c(13): t=1246ms: 53-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=5)
+ProductInfo_PDP.c(13):     {"errorCode":"1001","message":"Invalid access token"}
+ProductInfo_PDP.c(13): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+ProductInfo_PDP.c(13): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve"  	[MsgId: MERR-26630]
+ProductInfo_PDP.c(13): Registered web_reg_find successful for "Text="matches":["  	[MsgId: MMSG-26362]
+ProductInfo_PDP.c(13): Notify: Saving Parameter "Text_count = 0".
+ProductInfo_PDP.c(13): web_custom_request("web_custom_request") highest severity level was "continue on error", 53 body bytes, 531 header bytes  	[MsgId: MMSG-26388]
+ProductInfo_PDP.c(13): Continuing after error in Vuser script.
+ProductInfo_PDP.c(24): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+ProductInfo_PDP.c(26): Notify: Transaction "KAAS_T025_ProductInfo_PDP" ended with a "Fail" status (Duration: 0.0970 Wasted Time: 0.0059).
+ProductInfo_PDP.c(26): Notify: Transaction "KAAS_T025_ProductInfo_PDP" has 2 error message(s).
+ProductInfo_PDP.c(26): Notify: The 1st error message associated with transaction "KAAS_T025_ProductInfo_PDP" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+ProductInfo_PDP.c(26): Notify: The 2nd error message associated with transaction "KAAS_T025_ProductInfo_PDP" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve""
+Ending action ProductInfo_PDP.
+Starting action Troubleshooting_PDP.
+Troubleshooting_PDP.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  ""
+Troubleshooting_PDP.c(3): Notify: Saving Parameter "WCCAccessToken = ".
+Troubleshooting_PDP.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Troubleshooting_PDP.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Troubleshooting_PDP.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+Troubleshooting_PDP.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  ""
+Troubleshooting_PDP.c(5): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+Troubleshooting_PDP.c(5): web_add_header("accessToken") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Troubleshooting_PDP.c(8): web_reg_find started  	[MsgId: MMSG-26355]
+Troubleshooting_PDP.c(8): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Troubleshooting_PDP.c(10): Notify: Transaction "KAAS_T023_Troubleshooting_PDP" started.
+Troubleshooting_PDP.c(12): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Troubleshooting_PDP.c(12): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+Troubleshooting_PDP.c(12): t=1348ms: 531-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     HTTP/1.1 401 Unauthorized\r\n
+Troubleshooting_PDP.c(12):     Date: Fri, 23 Jul 2021 08:20:24 GMT\r\n
+Troubleshooting_PDP.c(12):     Content-Type: application/json;charset=UTF-8\r\n
+Troubleshooting_PDP.c(12):     Content-Length: 53\r\n
+Troubleshooting_PDP.c(12):     Connection: keep-alive\r\n
+Troubleshooting_PDP.c(12):     x-amzn-RequestId: c5c250a5-7012-4c5b-98fb-ea674efff20e\r\n
+Troubleshooting_PDP.c(12):     X-OneAgent-JS-Injection: true\r\n
+Troubleshooting_PDP.c(12):     x-amzn-Remapped-Connection: keep-alive\r\n
+Troubleshooting_PDP.c(12):     Set-Cookie: dtCookie=v_4_srv_1_sn_508087B619D0BAF3E88434500F9D4F32_perc_100000_ol_0_mul_1_
+Troubleshooting_PDP.c(12):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+Troubleshooting_PDP.c(12):     x-amz-apigw-id: C6hHRFWEoAMFdLw=\r\n
+Troubleshooting_PDP.c(12):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:20:24 GMT\r\n
+Troubleshooting_PDP.c(12):     \r\n
+Troubleshooting_PDP.c(12): t=1356ms: 53-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     {"errorCode":"1001","message":"Invalid access token"}
+Troubleshooting_PDP.c(12): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Troubleshooting_PDP.c(12): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve"  	[MsgId: MERR-26630]
+Troubleshooting_PDP.c(12): Registered web_reg_find successful for "Text="matches":["  	[MsgId: MMSG-26362]
+Troubleshooting_PDP.c(12): Notify: Saving Parameter "Text_count = 0".
+Troubleshooting_PDP.c(12): web_custom_request("web_custom_request") highest severity level was "continue on error", 53 body bytes, 531 header bytes  	[MsgId: MMSG-26388]
+Troubleshooting_PDP.c(12): Continuing after error in Vuser script.
+Troubleshooting_PDP.c(21): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+Troubleshooting_PDP.c(23): Notify: Transaction "KAAS_T023_Troubleshooting_PDP" ended with a "Fail" status (Duration: 0.0880 Wasted Time: 0.0053).
+Troubleshooting_PDP.c(23): Notify: Transaction "KAAS_T023_Troubleshooting_PDP" has 2 error message(s).
+Troubleshooting_PDP.c(23): Notify: The 1st error message associated with transaction "KAAS_T023_Troubleshooting_PDP" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+Troubleshooting_PDP.c(23): Notify: The 2nd error message associated with transaction "KAAS_T023_Troubleshooting_PDP" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve""
+Ending action Troubleshooting_PDP.
+Starting action How_To_PDP.
+How_To_PDP.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  ""
+How_To_PDP.c(3): Notify: Saving Parameter "WCCAccessToken = ".
+How_To_PDP.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+How_To_PDP.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+How_To_PDP.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+How_To_PDP.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  ""
+How_To_PDP.c(5): Warning -26597: Added header value is NULL, empty or contains white spaces only. It is added anyway  	[MsgId: MWAR-26597]
+How_To_PDP.c(5): web_add_header("accessToken") highest severity level was "warning"  	[MsgId: MMSG-26391]
+How_To_PDP.c(9): web_reg_find started  	[MsgId: MMSG-26355]
+How_To_PDP.c(9): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+How_To_PDP.c(11): Notify: Transaction "KAAS_T024_HowTo_PDP" started.
+How_To_PDP.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+How_To_PDP.c(13): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+How_To_PDP.c(13): t=1486ms: 531-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&topiccat=467249423806096122761263497662159&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=7)
+How_To_PDP.c(13):     HTTP/1.1 401 Unauthorized\r\n
+How_To_PDP.c(13):     Date: Fri, 23 Jul 2021 08:20:24 GMT\r\n
+How_To_PDP.c(13):     Content-Type: application/json;charset=UTF-8\r\n
+How_To_PDP.c(13):     Content-Length: 53\r\n
+How_To_PDP.c(13):     Connection: keep-alive\r\n
+How_To_PDP.c(13):     x-amzn-RequestId: d0880da8-22f9-4890-b53b-b0ddbc94ffaa\r\n
+How_To_PDP.c(13):     X-OneAgent-JS-Injection: true\r\n
+How_To_PDP.c(13):     x-amzn-Remapped-Connection: keep-alive\r\n
+How_To_PDP.c(13):     Set-Cookie: dtCookie=v_4_srv_1_sn_D793473B0AF9A8D65D357C650F8ED491_perc_100000_ol_0_mul_1_
+How_To_PDP.c(13):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+How_To_PDP.c(13):     x-amz-apigw-id: C6hHTGkToAMFfUw=\r\n
+How_To_PDP.c(13):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:20:23 GMT\r\n
+How_To_PDP.c(13):     \r\n
+How_To_PDP.c(13): t=1493ms: 53-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&topiccat=467249423806096122761263497662159&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=7)
+How_To_PDP.c(13):     {"errorCode":"1001","message":"Invalid access token"}
+How_To_PDP.c(13): Continuing after Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+How_To_PDP.c(13): Continuing after Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&topiccat=467249423806096122761263497662159&printFields=topics,topIssue,filesize,cve"  	[MsgId: MERR-26630]
+How_To_PDP.c(13): Registered web_reg_find successful for "Text="matches":["  	[MsgId: MMSG-26362]
+How_To_PDP.c(13): Notify: Saving Parameter "Text_count = 0".
+How_To_PDP.c(13): web_custom_request("web_custom_request") highest severity level was "continue on error", 53 body bytes, 531 header bytes  	[MsgId: MMSG-26388]
+How_To_PDP.c(13): Continuing after error in Vuser script.
+How_To_PDP.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+How_To_PDP.c(25): Notify: Transaction "KAAS_T024_HowTo_PDP" ended with a "Fail" status (Duration: 0.0899 Wasted Time: 0.0070).
+How_To_PDP.c(25): Notify: Transaction "KAAS_T024_HowTo_PDP" has 2 error message(s).
+How_To_PDP.c(25): Notify: The 1st error message associated with transaction "KAAS_T024_HowTo_PDP" is "Error -26547: Authentication required, please use "web_set_user", e.g. web_set_user("domain\\user", "password", "host:port");"
+How_To_PDP.c(25): Notify: The 2nd error message associated with transaction "KAAS_T024_HowTo_PDP" is "Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&topiccat=467249423806096122761263497662159&printFields=topics,topIssue,filesize,cve""
+Ending action How_To_PDP.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

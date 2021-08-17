@@ -1,0 +1,7 @@
+#include "lrun.h"
+#include "SharedParameter.h"
+#include "globals.h"
+#include "vuser_init.c"
+#include "UDP_PlatformProductQuery.c"
+#include "UDP_PlatformContentQueries.c"
+#include "vuser_end.c"

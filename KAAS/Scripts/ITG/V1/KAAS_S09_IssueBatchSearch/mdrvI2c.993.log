@@ -1,0 +1,3 @@
+Warning: Iteration pacing cannot be reached (pace time = 3.40, actual time = 3.41).	[MsgId: MWAR-15995]
+Warning: Iteration pacing cannot be reached (pace time = 3.40, actual time = 3.43).	[MsgId: MWAR-15995]
+BatchSearch_EmptyIssueSignature.c(10): Error -27760: Request "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/issueBatch/search" failed  	[MsgId: MERR-27760]

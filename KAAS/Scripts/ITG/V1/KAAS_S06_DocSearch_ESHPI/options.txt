@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\PERFORMANCE\CSS\FY21\KAAS\Scripts\ITG\V1\KAAS_S06_DocSearch_ESHPI
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ee:\performance\css\fy21\kaas\scripts\itg\v1\kaas_s06_docsearch_eshpi\\logfile.log
+e:\performance\css\fy21\kaas\scripts\itg\v1\kaas_s06_docsearch_eshpi\\combined_KAAS_S06_DocSearch_ESHPI.c
+e:\performance\css\fy21\kaas\scripts\itg\v1\kaas_s06_docsearch_eshpi\\pre_cci.c

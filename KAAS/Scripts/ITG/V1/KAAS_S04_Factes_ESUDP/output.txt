@@ -1,0 +1,56 @@
+Virtual User Script started at: 7/23/2021 9:02:07 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\CSS\FY21\KAAS\Scripts\ITG\V1\KAAS_S04_Factes_ESUDP\\default.cfg"  	[MsgId: MMSG-27141]
+Starting to download the proxy automatic configuration script, URL="http://autocache.hpicorp.net/"  	[MsgId: MMSG-27097]
+Proxy automatic configuration script (URL="http://autocache.hpicorp.net/") downloaded and evaluated successfully  	[MsgId: MMSG-27096]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(21): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(21): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(21): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(22): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(22): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(22): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(23): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(23): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(23): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(24): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(24): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(26): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(26): Notify: Saving Parameter "cp_WISEAccessToken = 000alnUc0h4CioVcZgK54fUKOwQI".
+vuser_init.c(26): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials"  	[MsgId: MMSG-26548]
+vuser_init.c(26): web_custom_request("web_custom_request") was successful, 87 body bytes, 517 header bytes  	[MsgId: MMSG-26386]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action DocSearchUDPES_Facets.
+DocSearchUDPES_Facets.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+DocSearchUDPES_Facets.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+DocSearchUDPES_Facets.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+DocSearchUDPES_Facets.c(6): Notify: Parameter Substitution: parameter "cp_WISEAccessToken" =  "000alnUc0h4CioVcZgK54fUKOwQI"
+DocSearchUDPES_Facets.c(6): Notify: Saving Parameter "WISEAccessToken = 000alnUc0h4CioVcZgK54fUKOwQI".
+DocSearchUDPES_Facets.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+DocSearchUDPES_Facets.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000alnUc0h4CioVcZgK54fUKOwQI"
+DocSearchUDPES_Facets.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+DocSearchUDPES_Facets.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+DocSearchUDPES_Facets.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+DocSearchUDPES_Facets.c(12): Notify: Transaction "KAAS_T011_DocSearchUDPES_Facets" started.
+DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+DocSearchUDPES_Facets.c(14): Notify: Parameter Substitution: parameter "p_facetSearch" =  "HP TouchSmart & Touch Notebooks "
+DocSearchUDPES_Facets.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=HP TouchSmart & Touch Notebooks &resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257,600096605536507071488362545356335&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,manualagentstore,manualstore,videostore,processagentstore,udp-content-default&aggregations=producttopics,documenttype,disclosurelevel,countrycode,topissue&spellCheck=3&compoundSearch=true"  	[MsgId: MMSG-26548]
+DocSearchUDPES_Facets.c(14): Registered web_reg_find successful for "Text="matches":[{"documentID"" (count=1)  	[MsgId: MMSG-26364]
+DocSearchUDPES_Facets.c(14): Notify: Saving Parameter "Text_count = 1".
+DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") was successful, 20106 body bytes, 550 header bytes  	[MsgId: MMSG-26386]
+DocSearchUDPES_Facets.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+DocSearchUDPES_Facets.c(30): Notify: Transaction "KAAS_T011_DocSearchUDPES_Facets" ended with a "Pass" status (Duration: 1.2160 Wasted Time: 0.0104).
+Ending action DocSearchUDPES_Facets.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

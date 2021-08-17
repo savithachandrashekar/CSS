@@ -1,0 +1,5 @@
+ServicePin.c(8): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aPc9LUSgu19R0Svw7sffjuCmj/5ZN88A"  	[MsgId: MERR-26608]
+ServicePin.c(8): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aPc9LUSgu19R0Svw7sffjuCmj/5ZN97A"  	[MsgId: MERR-26608]
+ServicePin.c(8): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aPc9LUSgu19R0Svw7sffjuCmj/CZ255AR"  	[MsgId: MERR-26608]
+ServicePin.c(8): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aPc9LUSgu19R0Svw7sffjuCmj/B5L47A"  	[MsgId: MERR-26608]
+ServicePin.c(8): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aPc9LUSgu19R0Svw7sffjuCmj/B3G84AR"  	[MsgId: MERR-26608]

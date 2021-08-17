@@ -1,0 +1,10 @@
+Start auto log messages stack - Iteration 431.	[MsgId: MMSG-10545]
+kaas_DocSearchUDPES_ProductContext.c(6): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_ProductContext.c(9): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_ProductContext.c(9): Connection to hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443 closed after being inactive for 62 seconds, exceeding the "HTTP Keep-Alive timeout" Runtime Setting (60 seconds). URL="[None]"  	[MsgId: MMSG-27648]
+kaas_DocSearchUDPES_ProductContext.c(9): Error -26612: HTTP Status-Code=500 (Internal Server Error) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,udp-content-default&product=3370383 OR 8485409 OR 6627588 OR 501585&categorizationIds=162879258009672812079598025741817,29175471122742644821080,393367071124511053150675347835559&documentTypes=Advisory,Agent%20Reference,Agent%20Resource%20Center,Bulletin,Concept%20Content,Notice,Product%20Change%20Notification,Security%20Bulletin,Service,Support,Support%20Information&clientId=WCC"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

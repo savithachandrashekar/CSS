@@ -1,0 +1,1343 @@
+Virtual User Script started at: 7/23/2021 8:23:05 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\CSS\FY21\KAAS\Scripts\ITG\V1\KAAS_S08_WCCPDP_8\\default.cfg"  	[MsgId: MMSG-27141]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(6): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(6): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(8): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(8): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(9): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(9): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(11): The request to server https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" is done with headers:
+vuser_init.c(11):     :method = POST
+vuser_init.c(11):     :scheme = https
+vuser_init.c(11):     :path = /as/token.oauth2?grant_type=client_credentials
+vuser_init.c(11):     :authority = login-itg.external.hp.com
+vuser_init.c(11):     x-dynaTrace = SN=Kaas_WCC_PDP;VU=1;TE=;AN=localhost;PC=Custom Request: web_custom_request;
+vuser_init.c(11):     ID=1627028585710;NA=;SI=LR
+vuser_init.c(11):     Authorization =  Basic V0NDOnRvME1pN0VHR3pyRnV2VnlnR3dvbW95aWZRTU1nQlJrNUVianNHeWZHWnZkZFh
+vuser_init.c(11):     MOU5SaWE2VlVON2hzRDdicWk=
+vuser_init.c(11):     Content-Type =  application/x-www-form-urlencoded
+vuser_init.c(11):     Host =  login-itg.external.hp.com
+vuser_init.c(11):     Cache-Control =  no-cache
+vuser_init.c(11):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+vuser_init.c(11):     Accept-Encoding =  gzip, deflate
+vuser_init.c(11):     Accept =  */*
+vuser_init.c(11):     content-length = 0
+vuser_init.c(11): t=583ms: 517-byte response headers for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=1)
+vuser_init.c(11):     HTTP/2.0 200\r\n
+vuser_init.c(11):     Status: 200\r\n
+vuser_init.c(11):     server: nginx/1.16.1\r\n
+vuser_init.c(11):     date: Fri, 23 Jul 2021 08:23:05 GMT\r\n
+vuser_init.c(11):     content-type: application/json;charset=utf-8\r\n
+vuser_init.c(11):     referrer-policy: origin\r\n
+vuser_init.c(11):     cache-control: no-cache, no-store\r\n
+vuser_init.c(11):     pragma: no-cache\r\n
+vuser_init.c(11):     expires: Thu, 01 Jan 1970 00:00:00 GMT\r\n
+vuser_init.c(11):     set-cookie: HPIUID=lrpMduZVoJ4WsGSUOmKaAc;Path=/;Domain=.hp.com;Secure;HttpOnly;SameSite=N
+vuser_init.c(11):     one\r\n
+vuser_init.c(11):     strict-transport-security: max-age=15768000; preload;\r\n
+vuser_init.c(11):     x-content-type-options: nosniff\r\n
+vuser_init.c(11):     x-frame-options: SAMEORIGIN\r\n
+vuser_init.c(11):     x-xss-protection: 1; mode=block\r\n
+vuser_init.c(11):     x-robots-tag: none\r\n
+vuser_init.c(11):     \r\n
+vuser_init.c(11): t=594ms: 87-byte response body for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=1)
+vuser_init.c(11):     {"access_token":"000autr0BTG27RT01WHPJBjOdj19","token_type":"Bearer","expires_in":7199}
+vuser_init.c(11): Notify: Saving Parameter "cp_WCCAccessToken = 000autr0BTG27RT01WHPJBjOdj19".
+vuser_init.c(11): web_custom_request("web_custom_request") was successful, 87 body bytes, 517 header bytes  	[MsgId: MMSG-26386]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action BulletinsNotices_PDP.
+BulletinsNotices_PDP.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+BulletinsNotices_PDP.c(3): Notify: Saving Parameter "WCCAccessToken = 000autr0BTG27RT01WHPJBjOdj19".
+BulletinsNotices_PDP.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+BulletinsNotices_PDP.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+BulletinsNotices_PDP.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+BulletinsNotices_PDP.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+BulletinsNotices_PDP.c(5): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+BulletinsNotices_PDP.c(7): web_reg_find started  	[MsgId: MMSG-26355]
+BulletinsNotices_PDP.c(7): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+BulletinsNotices_PDP.c(9): Notify: Transaction "KAAS_T028_BulletinsNotices_PDP" started.
+BulletinsNotices_PDP.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+BulletinsNotices_PDP.c(11): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+BulletinsNotices_PDP.c(11): t=1368ms: 523-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Service Bulletin,Security Bulletin,Engineering Notice,Service Notice,Customer Notice,Customer Bulletin&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=2)
+BulletinsNotices_PDP.c(11):     HTTP/1.1 200 OK\r\n
+BulletinsNotices_PDP.c(11):     Date: Fri, 23 Jul 2021 08:23:06 GMT\r\n
+BulletinsNotices_PDP.c(11):     Content-Type: application/json;charset=UTF-8\r\n
+BulletinsNotices_PDP.c(11):     Content-Length: 3224\r\n
+BulletinsNotices_PDP.c(11):     Connection: keep-alive\r\n
+BulletinsNotices_PDP.c(11):     x-amzn-RequestId: 0fe1d4a3-09c2-4438-a70f-a8e6259e11d3\r\n
+BulletinsNotices_PDP.c(11):     X-OneAgent-JS-Injection: true\r\n
+BulletinsNotices_PDP.c(11):     x-amzn-Remapped-Connection: keep-alive\r\n
+BulletinsNotices_PDP.c(11):     Set-Cookie: dtCookie=v_4_srv_1_sn_49EDE237DB544F6B1C6E04FED8D3B255_perc_100000_ol_0_mul_1_
+BulletinsNotices_PDP.c(11):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+BulletinsNotices_PDP.c(11):     x-amz-apigw-id: C6hgoE9FIAMFucQ=\r\n
+BulletinsNotices_PDP.c(11):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:23:06 GMT\r\n
+BulletinsNotices_PDP.c(11):     \r\n
+BulletinsNotices_PDP.c(11): t=1376ms: 3224-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Service Bulletin,Security Bulletin,Engineering Notice,Service Notice,Customer Notice,Customer Bulletin&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=2)
+BulletinsNotices_PDP.c(11):     {"matches":[{"documentID":"c05507350","title":"HPSBHF03557 rev. 1 - Intel Active Managemen
+BulletinsNotices_PDP.c(11):     t Technology, Intel Small Business Technology, and Intel Standard Manageability Remote Pri
+BulletinsNotices_PDP.c(11):     vilege Escalation","contentTypeHeader":"Bulletin","renderLink":"https://uat.support.hp.com
+BulletinsNotices_PDP.c(11):     /","matchScore":17.99735,"description":"","contentUpdateDate":"2017-05-06 00:57:03","langu
+BulletinsNotices_PDP.c(11):     age":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Security Bu
+BulletinsNotices_PDP.c(11):     lletin","store":"Product Documents","docSource":"Concentra","topics":[{"id":"","name":""}]
+BulletinsNotices_PDP.c(11):     ,"topIssue":"NO"},{"documentID":"c07020726","title":"HPSBHF03718 rev. 3 - Intel\xC2\xAE PR
+BulletinsNotices_PDP.c(11):     OSet/Wireless WiFi and Killer\xE2\x84\xA2 Driver February 2021 Security Update","contentTy
+BulletinsNotices_PDP.c(11):     peHeader":"Bulletin","renderLink":"https://uat.support.hp.com/","matchScore":17.99735,"des
+BulletinsNotices_PDP.c(11):     cription":"HPSBHF03718 rev. 3 - Intel\xC2\xAE PROSet/Wireless WiFi and Killer\xE2\x84\xA2 
+BulletinsNotices_PDP.c(11):     Driver February 2021 Security Update","contentUpdateDate":"2021-05-25 05:03:16","language"
+BulletinsNotices_PDP.c(11):     :"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Security Bullet
+BulletinsNotices_PDP.c(11):     in","store":"Product Documents","docSource":"Concentra","topics":[{"id":"46724942380609612
+BulletinsNotices_PDP.c(11):     2761263497662159|623691463541992970539432827653023","name":"How to|Security & Virus"}],"to
+BulletinsNotices_PDP.c(11):     pIssue":"NO"},{"documentID":"ish_3890925-3890955-16","title":"Intel\xC2\xAE PROSet/Wireles
+BulletinsNotices_PDP.c(11):     s WiFi, Intel vPro\xC2\xAE CSME WiFi and Killer\xE2\x84\xA2 WiFi May 2021 Security Updates
+BulletinsNotices_PDP.c(11):     ","contentTypeHeader":"Bulletin","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.am
+BulletinsNotices_PDP.c(11):     azonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3890925-3890955-16?entitle
+BulletinsNotices_PDP.c(11):     ment=none&isFullHTMLRequired=true","matchScore":17.950918,"description":"Intel has informe
+BulletinsNotices_PDP.c(11):     d HP of potential security vulnerabilities identified in some Intel\xC2\xAE PROSet/Wireles
+BulletinsNotices_PDP.c(11):     s WiFi and Intel vPro\xC2\xAE Converged Security and Management Engine (CSME) WiFi and Kil
+BulletinsNotices_PDP.c(11):     ler\xE2\x84\xA2 WiFi which may allow denial of service. Intel is releasing firmware and so
+BulletinsNotices_PDP.c(11):     ftware updates to mitigate these potential vulnerabilities.","contentUpdateDate":"2021-05-
+BulletinsNotices_PDP.c(11):     14 20:40:50","language":"EN","disclosureLevel":"696531864679532034919979251200881","conten
+BulletinsNotices_PDP.c(11):     tType":"Security Bulletin","store":"Product Documents","docSource":"UDP","topics":[{"id":"
+BulletinsNotices_PDP.c(11):     467249423806096122761263497662159|623691463541992970539432827653023","name":"How to|Securi
+BulletinsNotices_PDP.c(11):     ty & Virus"}],"topIssue":"NO","cve":["CVE-2020-24586","CVE-2020-24587","CVE-2020-24588"]},
+BulletinsNotices_PDP.c(11):     {"documentID":"c06999561","title":"HPSBHF03712 rev. 3 - Sound Research DCHU Software Escal
+BulletinsNotices_PDP.c(11):     ation of Privilege","contentTypeHeader":"Bulletin","renderLink":"https://uat.support.hp.co
+BulletinsNotices_PDP.c(11):     m/","matchScore":17.014524,"description":"HPSBHF03712 rev. 3 - Sound Research DCHU Softwar
+BulletinsNotices_PDP.c(11):     e Escalation of Privilege","contentUpdateDate":"2021-03-12 08:05:14","language":"EN","disc
+BulletinsNotices_PDP.c(11):     losureLevel":"696531864679532034919979251200881","contentType":"Security Bulletin","store"
+BulletinsNotices_PDP.c(11):     :"Product Documents","docSource":"Concentra","topics":[{"id":"4672494238060961227612634976
+BulletinsNotices_PDP.c(11):     62159|623691463541992970539432827653023","name":"How to|Security & Virus"}],"topIssue":"NO
+BulletinsNotices_PDP.c(11):     "}],"range":{"start":"0","end":"1000"},"totalCount":4,"showingResultsFor":null,"searchInst
+BulletinsNotices_PDP.c(11):     eadFor":null,"aggregationsBucket":null,"highlight":null,"didYouMean":null,"totalCssCount":
+BulletinsNotices_PDP.c(11):     null,"cssContext":null,"esstores":null,"esmanuals":null}
+BulletinsNotices_PDP.c(11): Registered web_reg_find successful for "Text="matches":[" (count=1)  	[MsgId: MMSG-26364]
+BulletinsNotices_PDP.c(11): Notify: Saving Parameter "Text_count = 1".
+BulletinsNotices_PDP.c(11): web_custom_request("web_custom_request") was successful, 3224 body bytes, 523 header bytes  	[MsgId: MMSG-26386]
+BulletinsNotices_PDP.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+BulletinsNotices_PDP.c(30): Notify: Transaction "KAAS_T028_BulletinsNotices_PDP" ended with a "Pass" status (Duration: 0.5935 Wasted Time: 0.0094).
+Ending action BulletinsNotices_PDP.
+Starting action Advisory_PDP.
+Advisory_PDP.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+Advisory_PDP.c(3): Notify: Saving Parameter "WCCAccessToken = 000autr0BTG27RT01WHPJBjOdj19".
+Advisory_PDP.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Advisory_PDP.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Advisory_PDP.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+Advisory_PDP.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+Advisory_PDP.c(5): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+Advisory_PDP.c(8): web_reg_find started  	[MsgId: MMSG-26355]
+Advisory_PDP.c(8): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Advisory_PDP.c(9): Notify: Transaction "KAAS_T027_Advisory_PDP" started.
+Advisory_PDP.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Advisory_PDP.c(11): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+Advisory_PDP.c(11): t=1644ms: 523-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Engineering Advisory,Service Advisory,Customer Advisory,Service Action Advisory&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=3)
+Advisory_PDP.c(11):     HTTP/1.1 200 OK\r\n
+Advisory_PDP.c(11):     Date: Fri, 23 Jul 2021 08:23:06 GMT\r\n
+Advisory_PDP.c(11):     Content-Type: application/json;charset=UTF-8\r\n
+Advisory_PDP.c(11):     Content-Length: 7513\r\n
+Advisory_PDP.c(11):     Connection: keep-alive\r\n
+Advisory_PDP.c(11):     x-amzn-RequestId: 107e7745-9b07-4d04-9d2a-dfc4ed45d321\r\n
+Advisory_PDP.c(11):     X-OneAgent-JS-Injection: true\r\n
+Advisory_PDP.c(11):     x-amzn-Remapped-Connection: keep-alive\r\n
+Advisory_PDP.c(11):     Set-Cookie: dtCookie=v_4_srv_1_sn_CB89DFCAF15DD36D577C6833EB8E1A98_perc_100000_ol_0_mul_1_
+Advisory_PDP.c(11):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+Advisory_PDP.c(11):     x-amz-apigw-id: C6hgtEAqoAMFh5g=\r\n
+Advisory_PDP.c(11):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:23:06 GMT\r\n
+Advisory_PDP.c(11):     \r\n
+Advisory_PDP.c(11): t=1651ms: 7513-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=Engineering Advisory,Service Advisory,Customer Advisory,Service Action Advisory&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=3)
+Advisory_PDP.c(11):     {"matches":[{"documentID":"c07052345","title":"HP Commercial Notebook PCs - The Speaker Ic
+Advisory_PDP.c(11):     on May Not Display In the System Tray or Sound Control Panel When External Monitors With S
+Advisory_PDP.c(11):     peakers Are Connected to the HP USB-C Dock G5","contentTypeHeader":"Advisory","renderLink"
+Advisory_PDP.c(11):     :"https://uat.support.hp.com/","matchScore":12.185757,"description":"Learn the resolution 
+Advisory_PDP.c(11):     when speaker icon is missing from system tray or sound control panel.","contentUpdateDate"
+Advisory_PDP.c(11):     :"2021-05-10 18:41:09","language":"EN","disclosureLevel":"69653186467953203491997925120088
+Advisory_PDP.c(11):     1","contentType":"Customer Advisory","store":"Product Documents","docSource":"Concentra","
+Advisory_PDP.c(11):     topics":[{"id":"175513598973950797922021312691457|498695401687558932229591876044741","name
+Advisory_PDP.c(11):     ":"Troubleshooting|Computer Settings"}],"topIssue":"NO"},{"documentID":"c07595049","title"
+Advisory_PDP.c(11):     :"HP Commercial Notebook PCs, HP ZBook Firefly 14, 15 G7 Mobile Workstations - Low volume 
+Advisory_PDP.c(11):     with external microphone during online call or audio recording using voice recorder applic
+Advisory_PDP.c(11):     ation","contentTypeHeader":"Advisory","renderLink":"https://uat.support.hp.com/","matchSco
+Advisory_PDP.c(11):     re":12.185757,"description":"Learn the resolution when the volume is low with external mic
+Advisory_PDP.c(11):     rophone during online call or audio recording using voice recorder application.","contentU
+Advisory_PDP.c(11):     pdateDate":"2021-05-24 11:28:55","language":"EN","disclosureLevel":"6965318646795320349199
+Advisory_PDP.c(11):     79251200881","contentType":"Customer Advisory","store":"Product Documents","docSource":"Co
+Advisory_PDP.c(11):     ncentra","topics":[{"id":"175513598973950797922021312691457|910105533084579221046105278412
+Advisory_PDP.c(11):     963","name":"Troubleshooting|Sound & Microphone"}],"topIssue":"NO"},{"documentID":"c069754
+Advisory_PDP.c(11):     17","title":"HP EliteBook 8x5 G7, ProBook 4x5 G7, 435, 635 Aero G7 Notebook PCs - USB 3.0 
+Advisory_PDP.c(11):     Hub, Dock, Power Delivery Monitor May Not Show in Device Manager After BIOS Firmware Updat
+Advisory_PDP.c(11):     e","contentTypeHeader":"Advisory","renderLink":"https://uat.support.hp.com/","matchScore":
+Advisory_PDP.c(11):     12.180704,"description":"Learn how to recover when USB 3.0 Hub, Dock, or Power Delivery mo
+Advisory_PDP.c(11):     nitor might not show in the Device Manager after BIOS firmware update for HP EliteBook 8x5
+Advisory_PDP.c(11):      G7, ProBook 4x5 G7, 435, and 635 Aero G7 Notebook PCs.","contentUpdateDate":"2020-12-04 0
+Advisory_PDP.c(11):     4:54:12","language":"EN","disclosureLevel":"696531864679532034919979251200881","contentTyp
+Advisory_PDP.c(11):     e":"Customer Advisory","store":"Product Documents","docSource":"Concentra","topics":[{"id"
+Advisory_PDP.c(11):     :"175513598973950797922021312691457|498695401687558932229591876044741","name":"Troubleshoo
+Advisory_PDP.c(11):     ting|Computer Settings"}],"topIssue":"NO"},{"documentID":"c07022776","title":"HP Commercia
+Advisory_PDP.c(11):     l Notebook PCs - Network Connection Drops When Using Certain HP USB-C to RJ45 Adapters","c
+Advisory_PDP.c(11):     ontentTypeHeader":"Advisory","renderLink":"https://uat.support.hp.com/","matchScore":12.18
+Advisory_PDP.c(11):     0704,"description":"Network connection drops when using certain HP USB-C to RJ45 adapters.
+Advisory_PDP.c(11):     ","contentUpdateDate":"2021-05-10 17:40:17","language":"EN","disclosureLevel":"69653186467
+Advisory_PDP.c(11):     9532034919979251200881","contentType":"Customer Advisory","store":"Product Documents","doc
+Advisory_PDP.c(11):     Source":"Concentra","topics":[{"id":"175513598973950797922021312691457|9143882063765125576
+Advisory_PDP.c(11):     43055886323241|841327428748085678467367735982155","name":"Troubleshooting|Wireless, Networ
+Advisory_PDP.c(11):     king & Internet|Wired Connections & Networking"}],"topIssue":"NO"},{"documentID":"c0717177
+Advisory_PDP.c(11):     2","title":"HP Commercial Computers - HP Client Security Manager does not display Sure Rec
+Advisory_PDP.c(11):     over and Sure Run modules","contentTypeHeader":"Advisory","renderLink":"https://uat.suppor
+Advisory_PDP.c(11):     t.hp.com/","matchScore":12.180704,"description":"Learn the resolution when HP Client Secur
+Advisory_PDP.c(11):     ity Manager does not display Sure Recover and Sure Run modules.","contentUpdateDate":"2021
+Advisory_PDP.c(11):     -04-26 04:06:59","language":"EN","disclosureLevel":"696531864679532034919979251200881","co
+Advisory_PDP.c(11):     ntentType":"Customer Advisory","store":"Product Documents","docSource":"Concentra","topics
+Advisory_PDP.c(11):     ":[{"id":"175513598973950797922021312691457|71375055315931533561469494059743","name":"Trou
+Advisory_PDP.c(11):     bleshooting|Software & Apps"}],"topIssue":"NO"},{"documentID":"c07029993","title":"HP ProB
+Advisory_PDP.c(11):     ook 8x5 G7, 4x5 G7, x360 435 G7, 635 Aero G7, ZHAN 66 Pro A 14 G3 Notebook PCs - AMD Radeo
+Advisory_PDP.c(11):     n software cannot 'Add a Game' in Japanese language OS","contentTypeHeader":"Advisory","re
+Advisory_PDP.c(11):     nderLink":"https://uat.support.hp.com/","matchScore":12.180704,"description":"AMD Radeon s
+Advisory_PDP.c(11):     oftware cannot 'Add a Game' in Japanese language OS.","contentUpdateDate":"2021-02-17 04:5
+Advisory_PDP.c(11):     3:10","language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":
+Advisory_PDP.c(11):     "Customer Advisory","store":"Product Documents","docSource":"Concentra","topics":[{"id":"1
+Advisory_PDP.c(11):     75513598973950797922021312691457|71375055315931533561469494059743","name":"Troubleshooting
+Advisory_PDP.c(11):     |Software & Apps"}],"topIssue":"NO"},{"documentID":"c05939730","title":"HP Client Manageme
+Advisory_PDP.c(11):     nt Tools - Tool Update Required Due to HP IT Infrastructure Changes","contentTypeHeader":"
+Advisory_PDP.c(11):     Advisory","renderLink":"https://uat.support.hp.com/","matchScore":12.125799,"description":
+Advisory_PDP.c(11):     "Learn how to do the necessary tool update for HP Manageability Integration Kit, SoftPaq D
+Advisory_PDP.c(11):     ownload Manager, HP Image Assistant (HPIA) to ensure user security and privacy.","contentU
+Advisory_PDP.c(11):     pdateDate":"2018-09-26 19:24:56","language":"EN","disclosureLevel":"6965318646795320349199
+Advisory_PDP.c(11):     79251200881","contentType":"Customer Advisory","store":"Product Documents","docSource":"Co
+Advisory_PDP.c(11):     ncentra","topics":[{"id":"467249423806096122761263497662159|623691463541992970539432827653
+Advisory_PDP.c(11):     023","name":"How to|Security & Virus"}],"topIssue":"NO"},{"documentID":"c04912903","title"
+Advisory_PDP.c(11):     :"Advisory: HP Computers - HP USB Optical Mouse Not Working After Microsoft Update","conte
+Advisory_PDP.c(11):     ntTypeHeader":"Advisory","renderLink":"https://uat.support.hp.com/","matchScore":12.125799
+Advisory_PDP.c(11):     ,"description":"","contentUpdateDate":"2015-12-08 13:37:12","language":"EN","disclosureLev
+Advisory_PDP.c(11):     el":"696531864679532034919979251200881","contentType":"Customer Advisory","store":"Product
+Advisory_PDP.c(11):      Documents","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|194
+Advisory_PDP.c(11):     781863556389891214758144180089|53364399436401333925432750976974","name":"Troubleshooting|K
+Advisory_PDP.c(11):     eyboard, Mouse or Touchpad|Mouse or Touchpad"}],"topIssue":"NO"},{"documentID":"c06486645"
+Advisory_PDP.c(11):     ,"title":"HP Elite Dragonfly Notebook PCs - No Button or Option Is Available to Sign Out o
+Advisory_PDP.c(11):     f Workwell","contentTypeHeader":"Advisory","renderLink":"https://uat.support.hp.com/","mat
+Advisory_PDP.c(11):     chScore":12.109418,"description":"There is no button or option available to sign out of th
+Advisory_PDP.c(11):     e HP Workwell app.","contentUpdateDate":"2019-10-29 09:36:53","language":"EN","disclosureL
+Advisory_PDP.c(11):     evel":"696531864679532034919979251200881","contentType":"Customer Advisory","store":"Produ
+Advisory_PDP.c(11):     ct Documents","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|7
+Advisory_PDP.c(11):     1375055315931533561469494059743","name":"Troubleshooting|Software & Apps"}],"topIssue":"NO
+Advisory_PDP.c(11):     "},{"documentID":"c07047841","title":"HP Commercial Notebook PCs - Webcam images may appea
+Advisory_PDP.c(11):     r grainy or noisy","contentTypeHeader":"Advisory","renderLink":"https://uat.support.hp.com
+Advisory_PDP.c(11):     /","matchScore":12.109418,"description":"Learn the resolution when webcam images are grain
+Advisory_PDP.c(11):     y.","contentUpdateDate":"2021-03-05 05:46:21","language":"EN","disclosureLevel":"696531864
+Advisory_PDP.c(11):     679532034919979251200881","contentType":"Customer Advisory","store":"Product Documents","d
+Advisory_PDP.c(11):     ocSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|22806390391470593
+Advisory_PDP.c(11):     4326054180879634","name":"Troubleshooting|Webcam or Camera"}],"topIssue":"NO"}],"range":{"
+Advisory_PDP.c(11):     start":"0","end":"1000"},"totalCount":10,"showingResultsFor":null,"searchInsteadFor":null,
+Advisory_PDP.c(11):     "aggregationsBucket":null,"highlight":null,"didYouMean":null,"totalCssCount":null,"cssCont
+Advisory_PDP.c(11):     ext":null,"esstores":null,"esmanuals":null}
+Advisory_PDP.c(11): Registered web_reg_find successful for "Text="matches":[" (count=1)  	[MsgId: MMSG-26364]
+Advisory_PDP.c(11): Notify: Saving Parameter "Text_count = 1".
+Advisory_PDP.c(11): web_custom_request("web_custom_request") was successful, 7513 body bytes, 523 header bytes  	[MsgId: MMSG-26386]
+Advisory_PDP.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+Advisory_PDP.c(30): Notify: Transaction "KAAS_T027_Advisory_PDP" ended with a "Pass" status (Duration: 0.1869 Wasted Time: 0.0053).
+Ending action Advisory_PDP.
+Starting action PDP_Manuals.
+PDP_Manuals.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+PDP_Manuals.c(3): Notify: Saving Parameter "WCCAccessToken = 000autr0BTG27RT01WHPJBjOdj19".
+PDP_Manuals.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+PDP_Manuals.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+PDP_Manuals.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+PDP_Manuals.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+PDP_Manuals.c(5): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+PDP_Manuals.c(8): web_reg_find started  	[MsgId: MMSG-26355]
+PDP_Manuals.c(8): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+PDP_Manuals.c(10): Notify: Transaction "KAAS_T026_PDP_Manuals" started.
+PDP_Manuals.c(12): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+PDP_Manuals.c(12): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+PDP_Manuals.c(12): t=2203ms: 523-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=4)
+PDP_Manuals.c(12):     HTTP/1.1 200 OK\r\n
+PDP_Manuals.c(12):     Date: Fri, 23 Jul 2021 08:23:07 GMT\r\n
+PDP_Manuals.c(12):     Content-Type: application/json;charset=UTF-8\r\n
+PDP_Manuals.c(12):     Content-Length: 1723\r\n
+PDP_Manuals.c(12):     Connection: keep-alive\r\n
+PDP_Manuals.c(12):     x-amzn-RequestId: 6579545c-b930-44fc-a48c-08b86e545964\r\n
+PDP_Manuals.c(12):     X-OneAgent-JS-Injection: true\r\n
+PDP_Manuals.c(12):     x-amzn-Remapped-Connection: keep-alive\r\n
+PDP_Manuals.c(12):     Set-Cookie: dtCookie=v_4_srv_1_sn_AFD659FA8D9CCC80CEA8623FC7983492_perc_100000_ol_0_mul_1_
+PDP_Manuals.c(12):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+PDP_Manuals.c(12):     x-amz-apigw-id: C6hgxHrtoAMFtUQ=\r\n
+PDP_Manuals.c(12):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:23:07 GMT\r\n
+PDP_Manuals.c(12):     \r\n
+PDP_Manuals.c(12): t=2211ms: 1723-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=4)
+PDP_Manuals.c(12):     {"matches":[{"documentID":"c06627510","title":"User Guide","contentTypeHeader":"Product Su
+PDP_Manuals.c(12):     pport","renderLink":"http://h10032.www1.hp.com/ctg/Manual/","matchScore":4.3215675,"descri
+PDP_Manuals.c(12):     ption":"","contentUpdateDate":"2020-04-29 11:02:20","language":"EN","disclosureLevel":"696
+PDP_Manuals.c(12):     531864679532034919979251200881","contentType":"Use and Maintain","store":"Manuals","docSou
+PDP_Manuals.c(12):     rce":"Concentra","topics":[{"id":"","name":""}],"topIssue":"NO","fileSize":"9.1 MB"},{"doc
+PDP_Manuals.c(12):     umentID":"c02876562","title":"HP Notebook Hard Drives & Solid State Drives Identifying, Pr
+PDP_Manuals.c(12):     eventing, Diagnosing and Recovering from Drive Failures Care and Maintenance Measures","co
+PDP_Manuals.c(12):     ntentTypeHeader":"Product Information","renderLink":"http://h10032.www1.hp.com/ctg/Manual/
+PDP_Manuals.c(12):     ","matchScore":4.3122973,"description":"","contentUpdateDate":"2011-11-01 19:18:38","langu
+PDP_Manuals.c(12):     age":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"White Paper
+PDP_Manuals.c(12):     ","store":"Manuals","docSource":"Concentra","topics":[{"id":"","name":""}],"topIssue":"NO"
+PDP_Manuals.c(12):     ,"fileSize":"0.21 MB"},{"documentID":"c06906247","title":"Regulatory, Safety, and Environm
+PDP_Manuals.c(12):     ental Notices","contentTypeHeader":"Product Information","renderLink":"http://h10032.www1.
+PDP_Manuals.c(12):     hp.com/ctg/Manual/","matchScore":4.291978,"description":"","contentUpdateDate":"2021-04-05
+PDP_Manuals.c(12):      10:21:57","language":"EN","disclosureLevel":"696531864679532034919979251200881","contentT
+PDP_Manuals.c(12):     ype":"Safety and Regulatory","store":"Manuals","docSource":"Concentra","topics":[{"id":"",
+PDP_Manuals.c(12):     "name":""}],"topIssue":"NO","fileSize":"1.67 MB"}],"range":{"start":"0","end":"1000"},"tot
+PDP_Manuals.c(12):     alCount":3,"showingResultsFor":null,"searchInsteadFor":null,"aggregationsBucket":null,"hig
+PDP_Manuals.c(12):     hlight":null,"didYouMean":null,"totalCssCount":null,"cssContext":null,"esstores":null,"esm
+PDP_Manuals.c(12):     anuals":null}
+PDP_Manuals.c(12): Registered web_reg_find successful for "Text="matches":[" (count=1)  	[MsgId: MMSG-26364]
+PDP_Manuals.c(12): Notify: Saving Parameter "Text_count = 1".
+PDP_Manuals.c(12): web_custom_request("web_custom_request") was successful, 1723 body bytes, 523 header bytes  	[MsgId: MMSG-26386]
+PDP_Manuals.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+PDP_Manuals.c(30): Notify: Transaction "KAAS_T026_PDP_Manuals" ended with a "Pass" status (Duration: 0.4217 Wasted Time: 0.0073).
+Ending action PDP_Manuals.
+Starting action ProductInfo_PDP.
+ProductInfo_PDP.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+ProductInfo_PDP.c(3): Notify: Saving Parameter "WCCAccessToken = 000autr0BTG27RT01WHPJBjOdj19".
+ProductInfo_PDP.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+ProductInfo_PDP.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+ProductInfo_PDP.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+ProductInfo_PDP.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+ProductInfo_PDP.c(5): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+ProductInfo_PDP.c(9): web_reg_find started  	[MsgId: MMSG-26355]
+ProductInfo_PDP.c(9): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+ProductInfo_PDP.c(11): Notify: Transaction "KAAS_T025_ProductInfo_PDP" started.
+ProductInfo_PDP.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+ProductInfo_PDP.c(13): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+ProductInfo_PDP.c(13): t=2563ms: 523-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=5)
+ProductInfo_PDP.c(13):     HTTP/1.1 200 OK\r\n
+ProductInfo_PDP.c(13):     Date: Fri, 23 Jul 2021 08:23:07 GMT\r\n
+ProductInfo_PDP.c(13):     Content-Type: application/json;charset=UTF-8\r\n
+ProductInfo_PDP.c(13):     Content-Length: 1724\r\n
+ProductInfo_PDP.c(13):     Connection: keep-alive\r\n
+ProductInfo_PDP.c(13):     x-amzn-RequestId: bc0fc324-9ac3-4d0f-b758-8ffe73b681f0\r\n
+ProductInfo_PDP.c(13):     X-OneAgent-JS-Injection: true\r\n
+ProductInfo_PDP.c(13):     x-amzn-Remapped-Connection: keep-alive\r\n
+ProductInfo_PDP.c(13):     Set-Cookie: dtCookie=v_4_srv_1_sn_58B00292708B538B9D357AB140416992_perc_100000_ol_0_mul_1_
+ProductInfo_PDP.c(13):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+ProductInfo_PDP.c(13):     x-amz-apigw-id: C6hg2GGWIAMFgDw=\r\n
+ProductInfo_PDP.c(13):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:23:07 GMT\r\n
+ProductInfo_PDP.c(13):     \r\n
+ProductInfo_PDP.c(13): t=2571ms: 1724-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&product=37506818&store=manualstore,sdlmanualstore&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=5)
+ProductInfo_PDP.c(13):     {"matches":[{"documentID":"c06627510","title":"User Guide","contentTypeHeader":"Product Su
+ProductInfo_PDP.c(13):     pport","renderLink":"http://h10032.www1.hp.com/ctg/Manual/","matchScore":4.3215675,"descri
+ProductInfo_PDP.c(13):     ption":"","contentUpdateDate":"2020-04-29 11:02:20","language":"EN","disclosureLevel":"696
+ProductInfo_PDP.c(13):     531864679532034919979251200881","contentType":"Use and Maintain","store":"Manuals","docSou
+ProductInfo_PDP.c(13):     rce":"Concentra","topics":[{"id":"","name":""}],"topIssue":"NO","fileSize":"9.1 MB"},{"doc
+ProductInfo_PDP.c(13):     umentID":"c06906247","title":"Regulatory, Safety, and Environmental Notices","contentTypeH
+ProductInfo_PDP.c(13):     eader":"Product Information","renderLink":"http://h10032.www1.hp.com/ctg/Manual/","matchSc
+ProductInfo_PDP.c(13):     ore":4.3138547,"description":"","contentUpdateDate":"2021-04-05 10:21:57","language":"EN",
+ProductInfo_PDP.c(13):     "disclosureLevel":"696531864679532034919979251200881","contentType":"Safety and Regulatory
+ProductInfo_PDP.c(13):     ","store":"Manuals","docSource":"Concentra","topics":[{"id":"","name":""}],"topIssue":"NO"
+ProductInfo_PDP.c(13):     ,"fileSize":"1.67 MB"},{"documentID":"c02876562","title":"HP Notebook Hard Drives & Solid 
+ProductInfo_PDP.c(13):     State Drives Identifying, Preventing, Diagnosing and Recovering from Drive Failures Care a
+ProductInfo_PDP.c(13):     nd Maintenance Measures","contentTypeHeader":"Product Information","renderLink":"http://h1
+ProductInfo_PDP.c(13):     0032.www1.hp.com/ctg/Manual/","matchScore":4.3122973,"description":"","contentUpdateDate":
+ProductInfo_PDP.c(13):     "2011-11-01 19:18:38","language":"EN","disclosureLevel":"696531864679532034919979251200881
+ProductInfo_PDP.c(13):     ","contentType":"White Paper","store":"Manuals","docSource":"Concentra","topics":[{"id":""
+ProductInfo_PDP.c(13):     ,"name":""}],"topIssue":"NO","fileSize":"0.21 MB"}],"range":{"start":"0","end":"1000"},"to
+ProductInfo_PDP.c(13):     talCount":3,"showingResultsFor":null,"searchInsteadFor":null,"aggregationsBucket":null,"hi
+ProductInfo_PDP.c(13):     ghlight":null,"didYouMean":null,"totalCssCount":null,"cssContext":null,"esstores":null,"es
+ProductInfo_PDP.c(13):     manuals":null}
+ProductInfo_PDP.c(13): Registered web_reg_find successful for "Text="matches":[" (count=1)  	[MsgId: MMSG-26364]
+ProductInfo_PDP.c(13): Notify: Saving Parameter "Text_count = 1".
+ProductInfo_PDP.c(13): web_custom_request("web_custom_request") was successful, 1724 body bytes, 523 header bytes  	[MsgId: MMSG-26386]
+ProductInfo_PDP.c(24): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+ProductInfo_PDP.c(31): Notify: Transaction "KAAS_T025_ProductInfo_PDP" ended with a "Pass" status (Duration: 0.2654 Wasted Time: 0.0062).
+Ending action ProductInfo_PDP.
+Starting action Troubleshooting_PDP.
+Troubleshooting_PDP.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+Troubleshooting_PDP.c(3): Notify: Saving Parameter "WCCAccessToken = 000autr0BTG27RT01WHPJBjOdj19".
+Troubleshooting_PDP.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Troubleshooting_PDP.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Troubleshooting_PDP.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+Troubleshooting_PDP.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+Troubleshooting_PDP.c(5): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+Troubleshooting_PDP.c(8): web_reg_find started  	[MsgId: MMSG-26355]
+Troubleshooting_PDP.c(8): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Troubleshooting_PDP.c(10): Notify: Transaction "KAAS_T023_Troubleshooting_PDP" started.
+Troubleshooting_PDP.c(12): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Troubleshooting_PDP.c(12): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+Troubleshooting_PDP.c(12): t=3404ms: 524-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     HTTP/1.1 200 OK\r\n
+Troubleshooting_PDP.c(12):     Date: Fri, 23 Jul 2021 08:23:08 GMT\r\n
+Troubleshooting_PDP.c(12):     Content-Type: application/json;charset=UTF-8\r\n
+Troubleshooting_PDP.c(12):     Content-Length: 49166\r\n
+Troubleshooting_PDP.c(12):     Connection: keep-alive\r\n
+Troubleshooting_PDP.c(12):     x-amzn-RequestId: b52de4de-c698-4fc2-a8a2-86f6d8d404d6\r\n
+Troubleshooting_PDP.c(12):     X-OneAgent-JS-Injection: true\r\n
+Troubleshooting_PDP.c(12):     x-amzn-Remapped-Connection: keep-alive\r\n
+Troubleshooting_PDP.c(12):     Set-Cookie: dtCookie=v_4_srv_1_sn_03A43BD30EB07EA7E465FDE80ADEB083_perc_100000_ol_0_mul_1_
+Troubleshooting_PDP.c(12):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+Troubleshooting_PDP.c(12):     x-amz-apigw-id: C6hg5EGwIAMFqJg=\r\n
+Troubleshooting_PDP.c(12):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:23:08 GMT\r\n
+Troubleshooting_PDP.c(12):     \r\n
+Troubleshooting_PDP.c(12): t=3410ms: 11763-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     {"matches":[{"documentID":"c06719329","title":"Illustrated parts catalog","contentTypeHead
+Troubleshooting_PDP.c(12):     er":"Product Support","renderLink":"https://uat.support.hp.com/","matchScore":10.644796,"d
+Troubleshooting_PDP.c(12):     escription":"","contentUpdateDate":"2020-08-08 11:10:54","language":"EN","disclosureLevel"
+Troubleshooting_PDP.c(12):     :"696531864679532034919979251200881","contentType":"How To","store":"Product Documents","d
+Troubleshooting_PDP.c(12):     ocSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|30382626511510757
+Troubleshooting_PDP.c(12):     8299484751918360","name":"Troubleshooting|Add or Remove Hardware & Customer Self Repair"}]
+Troubleshooting_PDP.c(12):     ,"topIssue":"NO"},{"documentID":"c06719330","title":"Components","contentTypeHeader":"Prod
+Troubleshooting_PDP.c(12):     uct Support","renderLink":"https://uat.support.hp.com/","matchScore":10.644796,"descriptio
+Troubleshooting_PDP.c(12):     n":"","contentUpdateDate":"2020-08-08 11:17:35","language":"EN","disclosureLevel":"6965318
+Troubleshooting_PDP.c(12):     64679532034919979251200881","contentType":"How To","store":"Product Documents","docSource"
+Troubleshooting_PDP.c(12):     :"Concentra","topics":[{"id":"175513598973950797922021312691457|30382626511510757829948475
+Troubleshooting_PDP.c(12):     1918360","name":"Troubleshooting|Add or Remove Hardware & Customer Self Repair"}],"topIssu
+Troubleshooting_PDP.c(12):     e":"NO"},{"documentID":"c06716758","title":"Statement of memory volatility","contentTypeHe
+Troubleshooting_PDP.c(12):     ader":"Product Support","renderLink":"https://uat.support.hp.com/","matchScore":10.644796,
+Troubleshooting_PDP.c(12):     "description":"","contentUpdateDate":"2020-08-08 10:15:59","language":"EN","disclosureLeve
+Troubleshooting_PDP.c(12):     l":"696531864679532034919979251200881","contentType":"How To","store":"Product Documents",
+Troubleshooting_PDP.c(12):     "docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|303826265115107
+Troubleshooting_PDP.c(12):     578299484751918360","name":"Troubleshooting|Add or Remove Hardware & Customer Self Repair"
+Troubleshooting_PDP.c(12):     }],"topIssue":"NO"},{"documentID":"c05348091","title":"HP PCs - Display and Touchscreen Tr
+Troubleshooting_PDP.c(12):     oubleshooting","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.
+Troubleshooting_PDP.c(12):     com/","matchScore":10.3329935,"description":"Troubleshoot the computer display or touchscr
+Troubleshooting_PDP.c(12):     een when it is not responding as expected after a Windows update or other issue.","content
+Troubleshooting_PDP.c(12):     UpdateDate":"2018-07-20 19:44:09","language":"EN","disclosureLevel":"696531864679532034919
+Troubleshooting_PDP.c(12):     979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"Con
+Troubleshooting_PDP.c(12):     centra","topics":[{"id":"175513598973950797922021312691457|2828572190233979576972015115283
+Troubleshooting_PDP.c(12):     94","name":"Troubleshooting|Guided Solutions"}],"topIssue":"YES"},{"documentID":"c01608578
+Troubleshooting_PDP.c(12):     ","title":"HP PCs and Monitors - Damaged Screen, LCD, or Display","contentTypeHeader":"Pro
+Troubleshooting_PDP.c(12):     duct Support","renderLink":"https://uat.support.hp.com/","matchScore":10.239883,"descripti
+Troubleshooting_PDP.c(12):     on":"Provides examples of what a cracked LCD looks like, the general repair or replacement
+Troubleshooting_PDP.c(12):      policy, and how to order a replacement display. The do-it-yourself replacement of this co
+Troubleshooting_PDP.c(12):     mponent is not recommended for most users.","contentUpdateDate":"2019-04-11 18:51:56","lan
+Troubleshooting_PDP.c(12):     guage":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Troublesh
+Troubleshooting_PDP.c(12):     ooting","store":"Product Documents","docSource":"Concentra","topics":[{"id":"1755135989739
+Troubleshooting_PDP.c(12):     50797922021312691457|107281856879144405867327250253868","name":"Troubleshooting|Monitor, D
+Troubleshooting_PDP.c(12):     isplay or Graphics"}],"topIssue":"YES"},{"documentID":"c04293851","title":"HP EliteBook an
+Troubleshooting_PDP.c(12):     d ProBook PCs - Error: DriveLock is temporarily not available for this drive","contentType
+Troubleshooting_PDP.c(12):     Header":"Product Support","renderLink":"https://uat.support.hp.com/","matchScore":10.23659
+Troubleshooting_PDP.c(12):     9,"description":"","contentUpdateDate":"2014-05-16 18:52:32","language":"EN","disclosureLe
+Troubleshooting_PDP.c(12):     vel":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Product 
+Troubleshooting_PDP.c(12):     Documents","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|2177
+Troubleshooting_PDP.c(12):     11819251082983968340964115795","name":"Troubleshooting|Memory (RAM) or BIOS"}],"topIssue":
+Troubleshooting_PDP.c(12):     "NO"},{"documentID":"c02532814","title":"HP Compaq/EliteBook/ProBook Notebook PCs - Unknow
+Troubleshooting_PDP.c(12):     n Device in Device Manager with Description \\"ACPI\\\\IFX0102\\\\4&28738126&0\\"","conten
+Troubleshooting_PDP.c(12):     tTypeHeader":"Product Support","renderLink":"https://uat.support.hp.com/","matchScore":10.
+Troubleshooting_PDP.c(12):     236599,"description":"","contentUpdateDate":"2010-12-16 07:22:19","language":"EN","disclos
+Troubleshooting_PDP.c(12):     ureLevel":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Pro
+Troubleshooting_PDP.c(12):     duct Documents","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457
+Troubleshooting_PDP.c(12):     |498695401687558932229591876044741","name":"Troubleshooting|Computer Settings"}],"topIssue
+Troubleshooting_PDP.c(12):     ":"NO"},{"documentID":"c00898606","title":"HP Notebook PCs - Sound from Notebook Speakers 
+Troubleshooting_PDP.c(12):     is Distorted, Pops, or Hisses (Windows 7 and Vista)","contentTypeHeader":"Product Support"
+Troubleshooting_PDP.c(12):     ,"renderLink":"https://uat.support.hp.com/","matchScore":10.236599,"description":"Provides
+Troubleshooting_PDP.c(12):      directions for reinstalling drivers to correct distorted sound output in some notebooks r
+Troubleshooting_PDP.c(12):     unning Windows Vista.","contentUpdateDate":"2018-06-28 19:25:08","language":"EN","disclosu
+Troubleshooting_PDP.c(12):     reLevel":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Prod
+Troubleshooting_PDP.c(12):     uct Documents","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|
+Troubleshooting_PDP.c(12):     910105533084579221046105278412963","name":"Troubleshooting|Sound & Microphone"}],"topIssue
+Troubleshooting_PDP.c(12):     ":"NO"},{"documentID":"c00294488","title":"HP Notebook PCs - Resolving Problems When Toggl
+Troubleshooting_PDP.c(12):     ing Between Display Modes Using FN+F4","contentTypeHeader":"Product Support","renderLink":
+Troubleshooting_PDP.c(12):     "https://uat.support.hp.com/","matchScore":10.203423,"description":"After disconnecting a 
+Troubleshooting_PDP.c(12):     monitor and then connecting a TV to the notebook, you may be unable to switch display mode
+Troubleshooting_PDP.c(12):     s using the Fn+F4 function keys. Pressing the Fn+F4 function keys twice in a row does swit
+Troubleshooting_PDP.c(12):     ch display modes.","contentUpdateDate":"2018-04-06 04:38:09","language":"EN","disclosureLe
+Troubleshooting_PDP.c(12):     vel":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Product 
+Troubleshooting_PDP.c(12):     Documents","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|1072
+Troubleshooting_PDP.c(12):     81856879144405867327250253868","name":"Troubleshooting|Monitor, Display or Graphics"}],"to
+Troubleshooting_PDP.c(12):     pIssue":"NO"},{"documentID":"c00285504","title":"HP Notebook PCs - Display will Turn Off w
+Troubleshooting_PDP.c(12):     hen Notebook is Docked","contentTypeHeader":"Product Support","renderLink":"https://uat.su
+Troubleshooting_PDP.c(12):     pport.hp.com/","matchScore":10.1868515,"description":"Offers two resolutions for issue of 
+Troubleshooting_PDP.c(12):     display shutting down when the notebook is connected to a docking station or port replicat
+Troubleshooting_PDP.c(12):     or.","contentUpdateDate":"2006-11-02 08:41:09","language":"EN","disclosureLevel":"69653186
+Troubleshooting_PDP.c(12):     4679532034919979251200881","contentType":"Troubleshooting","store":"Product Documents","do
+Troubleshooting_PDP.c(12):     cSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|873834321466472456
+Troubleshooting_PDP.c(12):     243075727671925","name":"Troubleshooting|Docking Station"}],"topIssue":"NO"},{"documentID"
+Troubleshooting_PDP.c(12):     :"c00471015","title":"HP Notebook PCs - Secondary Display Only Shows Desktop Background in
+Troubleshooting_PDP.c(12):      Windows XP","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.co
+Troubleshooting_PDP.c(12):     m/","matchScore":10.168344,"description":"Resolves issues involving more than a single dis
+Troubleshooting_PDP.c(12):     play by correcting extended desktop and cloned desktop settings in Windows XP.","contentUp
+Troubleshooting_PDP.c(12):     dateDate":"2008-02-14 20:05:36","language":"EN","disclosureLevel":"69653186467953203491997
+Troubleshooting_PDP.c(12):     9251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"Conce
+Troubleshooting_PDP.c(12):     ntra","topics":[{"id":"175513598973950797922021312691457|107281856879144405867327250253868
+Troubleshooting_PDP.c(12):     ","name":"Troubleshooting|Monitor, Display or Graphics"}],"topIssue":"NO"},{"documentID":"
+Troubleshooting_PDP.c(12):     ish_3113191-2943386-16","title":"HP Notebook PCs - Using HP Cool Control to reduce heat","
+Troubleshooting_PDP.c(12):     contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-
+Troubleshooting_PDP.c(12):     1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3113191-2943386-16?ent
+Troubleshooting_PDP.c(12):     itlement=none&isFullHTMLRequired=true","matchScore":10.10615,"description":"HP Cool Contro
+Troubleshooting_PDP.c(12):     l is available with certain HP Spectre notebooks. HP Cool Control allows users to adjust t
+Troubleshooting_PDP.c(12):     he performance of the notebook to lower the temperature of notebook to a more comfortable 
+Troubleshooting_PDP.c(12):     level.","contentUpdateDate":"2021-01-12 20:11:32","language":"EN","disclosureLevel":"69653
+Troubleshooting_PDP.c(12):     1864679532034919979251200881","contentType":"How To","store":"Product Documents","docSourc
+Troubleshooting_PDP.c(12):     e":"UDP","topics":[{"id":"175513598973950797922021312691457|241622439279704197424682676850
+Troubleshooting_PDP.c(12):     48|234347146984391468646361871009755","name":"Troubleshooting|Lockups & Performance|Fan, N
+Troubleshooting_PDP.c(12):     oise & Overheating"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2854458-2733239-16","ti
+Troubleshooting_PDP.c(12):     tle":"HP PCs - Testing for hardware failures in Windows 10","contentTypeHeader":"Product S
+Troubleshooting_PDP.c(12):     upport","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/r
+Troubleshooting_PDP.c(12):     ender/000autr0BTG27RT01WHPJBjOdj19/ish_2854458-2733239-16?entitlement=none&isFullHTMLRequi
+Troubleshooting_PDP.c(12):     red=true","matchScore":10.093867,"description":"HP provides diagnostic software for testin
+Troubleshooting_PDP.c(12):     g hardware components on your computer and confirm hardware failures.","contentUpdateDate"
+Troubleshooting_PDP.c(12):     :"2020-11-23 20:19:51","language":"EN","disclosureLevel":"69653186467953203491997925120088
+Troubleshooting_PDP.c(12):     1","contentType":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id":"1
+Troubleshooting_PDP.c(12):     75513598973950797922021312691457|217711819251082983968340964115795","name":"Troubleshootin
+Troubleshooting_PDP.c(12):     g|Memory (RAM) or BIOS"}],"topIssue":"NO","cve":[]},{"documentID":"c00832290","title":"HP 
+Troubleshooting_PDP.c(12):     Notebook PCs - \\"Non-System Disk Error\\" or \\"Disk Error\\" Appears on Black Screen (Wi
+Troubleshooting_PDP.c(12):     ndows 7 and Vista)","contentTypeHeader":"Product Support","renderLink":"https://uat.suppor
+Troubleshooting_PDP.c(12):     t.hp.com/","matchScore":10.071133,"description":"Explains why a system error 'Non-System D
+Troubleshooting_PDP.c(12):     isk Error or Disk Error' may appear, and suggests methods for resolving the error, from re
+Troubleshooting_PDP.c(12):     moving all CDs, DVDs, and USB devices attached, to testing the hard drive, to reinstalling
+Troubleshooting_PDP.c(12):      Windows.","contentUpdateDate":"2020-07-24 13:23:05","language":"EN","disclosureLevel":"69
+Troubleshooting_PDP.c(12):     6531864679532034919979251200881","contentType":"Troubleshooting","store":"Product Document
+Troubleshooting_PDP.c(12):     s","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|921143004712
+Troubleshooting_PDP.c(12):     032140018691599338685|580038239286028712340271159476929","name":"Troubleshooting|Startup o
+Troubleshooting_PDP.c(12):     r Shutdown|Black Screen"}],"topIssue":"NO"},{"documentID":"c00488753","title":"HP Notebook
+Troubleshooting_PDP.c(12):      PCs - \\"PXE-E61: Media Test Failure\\" Error Message Appears On Black Screen","contentTy
+Troubleshooting_PDP.c(12):     peHeader":"Product Support","renderLink":"https://uat.support.hp.com/","matchScore":10.071
+Troubleshooting_PDP.c(12):     133,"description":"Explains why a serious error PXE-E61 may appear when a notebook has bee
+Troubleshooting_PDP.c(12):     n set up to boot from a network and cannot find bootable systems on the network, and provi
+Troubleshooting_PDP.c(12):     des resolutions such as testing the hard drive in Windows.","contentUpdateDate":"2010-02-0
+Troubleshooting_PDP.c(12):     8 20:59:26","language":"EN","disclosureLevel":"696531864679532034919979251200881","content
+Troubleshooting_PDP.c(12):     Type":"Troubleshooting","store":"Product Documents","docSource":"Concentra","topics":[{"id
+Troubleshooting_PDP.c(12):     ":"175513598973950797922021312691457|921143004712032140018691599338685|5800382392860287123
+Troubleshooting_PDP.c(12):     40271159476929","name":"Troubleshooting|Startup or Shutdown|Black Screen"}],"topIssue":"NO
+Troubleshooting_PDP.c(12):     "},{"documentID":"ish_3096094-2900804-16","title":"HP PCs - Troubleshooting wired home net
+Troubleshooting_PDP.c(12):     works in Windows 10","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvb
+Troubleshooting_PDP.c(12):     i.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_
+Troubleshooting_PDP.c(12):     3096094-2900804-16?entitlement=none&isFullHTMLRequired=true","matchScore":10.070978,"descr
+Troubleshooting_PDP.c(12):     iption":"When you are troubleshooting wired home network issues in Windows 10, test the ne
+Troubleshooting_PDP.c(12):     twork connection after performing each troubleshooting step. ","contentUpdateDate":"2021-0
+Troubleshooting_PDP.c(12):     1-21 20:26:23","language":"EN","disclosureLevel":"696531864679532034919979251200881","cont
+Troubleshooting_PDP.c(12):     entType":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id":"175513598
+Troubleshooting_PDP.c(12):     973950797922021312691457|914388206376512557643055886323241|4906116047717063855969638758683
+Troubleshooting_PDP.c(12):     27","name":"Troubleshooting|Wireless, Networking & Internet|Internet & Email"}],"topIssue"
+Troubleshooting_PDP.c(12):     :"NO","cve":[]},{"documentID":"c04488064","title":"HP Elitebooks, Probooks 
+Troubleshooting_PDP.c(12): t=3418ms: 4097-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     and Zbooks - 'ME state in recovery mode' Error Displays During POST","contentTypeHeader":"
+Troubleshooting_PDP.c(12):     Product Support","renderLink":"https://uat.support.hp.com/","matchScore":10.061037,"descri
+Troubleshooting_PDP.c(12):     ption":"","contentUpdateDate":"2014-10-24 20:19:18","language":"EN","disclosureLevel":"696
+Troubleshooting_PDP.c(12):     531864679532034919979251200881","contentType":"Troubleshooting","store":"Product Documents
+Troubleshooting_PDP.c(12):     ","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|9211430047120
+Troubleshooting_PDP.c(12):     32140018691599338685|580038239286028712340271159476929","name":"Troubleshooting|Startup or
+Troubleshooting_PDP.c(12):      Shutdown|Black Screen"}],"topIssue":"NO"},{"documentID":"c00485351","title":"HP Notebook 
+Troubleshooting_PDP.c(12):     PCs - Troubleshooting Battery Power in Windows XP","contentTypeHeader":"Product Support","
+Troubleshooting_PDP.c(12):     renderLink":"https://uat.support.hp.com/","matchScore":10.025104,"description":"Provides t
+Troubleshooting_PDP.c(12):     roubleshooting tips for battery problems, such as using HP Battery Health Center, testing 
+Troubleshooting_PDP.c(12):     the battery adapter, and Windows power management in Windows XP.","contentUpdateDate":"202
+Troubleshooting_PDP.c(12):     0-11-04 10:06:53","language":"EN","disclosureLevel":"696531864679532034919979251200881","c
+Troubleshooting_PDP.c(12):     ontentType":"Troubleshooting","store":"Product Documents","docSource":"Concentra","topics"
+Troubleshooting_PDP.c(12):     :[{"id":"175513598973950797922021312691457|264094802425566809196194979176827|4446546276542
+Troubleshooting_PDP.c(12):     34391237614041520684","name":"Troubleshooting|Power|Battery"}],"topIssue":"NO"},{"document
+Troubleshooting_PDP.c(12):     ID":"c00808465","title":"HP Notebook PCs - Windows Stops Responding or Repeatedly Restarts
+Troubleshooting_PDP.c(12):      after installing a Software Application","contentTypeHeader":"Product Support","renderLin
+Troubleshooting_PDP.c(12):     k":"https://uat.support.hp.com/","matchScore":10.0160885,"description":"Recommends a varie
+Troubleshooting_PDP.c(12):     ty of methods for resolving software conflicts during startup in Vista, including disablin
+Troubleshooting_PDP.c(12):     g automatic restart, using last known good configuration, and uninstalling recently instal
+Troubleshooting_PDP.c(12):     led software.","contentUpdateDate":"2012-11-20 21:08:47","language":"EN","disclosureLevel"
+Troubleshooting_PDP.c(12):     :"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Product Docu
+Troubleshooting_PDP.c(12):     ments","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|24162243
+Troubleshooting_PDP.c(12):     927970419742468267685048|377667267988125818040614266372938","name":"Troubleshooting|Lockup
+Troubleshooting_PDP.c(12):     s & Performance|Lockups, Freezes, Hangs & Crashes"}],"topIssue":"NO"},{"documentID":"c0076
+Troubleshooting_PDP.c(12):     6911","title":"HP Notebook PCs - Hard Drive and Memory (RAM) Verification","contentTypeHea
+Troubleshooting_PDP.c(12):     der":"Product Support","renderLink":"https://uat.support.hp.com/","matchScore":9.974525,"d
+Troubleshooting_PDP.c(12):     escription":"","contentUpdateDate":"2008-04-09 18:48:28","language":"EN","disclosureLevel"
+Troubleshooting_PDP.c(12):     :"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Product Docu
+Troubleshooting_PDP.c(12):     ments","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|21771181
+Troubleshooting_PDP.c(12):     9251082983968340964115795","name":"Troubleshooting|Memory (RAM) or BIOS"}],"topIssue":"NO"
+Troubleshooting_PDP.c(12):     },{"documentID":"c01891123","title":"HP Desktop and Notebook PCs - Solving Setup and Inter
+Troubleshooting_PDP.c(12):     net Connection Issues on WLAN, Wireless, or Wi-Fi Network (Windows 7)","contentTypeHeader"
+Troubleshooting_PDP.c(12):     :"Product Support","renderLink":"https://uat.support.hp.com/","matchScore":9.901824,"descr
+Troubleshooting_PDP.c(12):     iption":"Methods for diagnosing problems when a notebook with Windows 7 cannot connect to 
+Troubleshooting_PDP.c(12):     a new wireless network.","contentUpdateDate":"2019-07-01 15:20:21","language":"EN","disclo
+Troubleshooting_PDP.c(12):     sureLevel":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Pr
+Troubleshooting_PDP.c(12):     oduct Documents","docSource":"Concentra","topics":[{"id":"17551359897395079792202131269145
+Troubleshooting_PDP.c(12):     7|914388206376512557643055886323241|499331794551172957699150808078340","name":"Troubleshoo
+Troubleshooting_PDP.c(12):     ting|Wireless, Networking & Internet|Wireless Connections & Networking"}],"topIssue":"NO"}
+Troubleshooting_PDP.c(12):     ,{"documentID":"c01471199","title":"HP Notebook PCs - Cannot Delete Emails in Windows Mail
+Troubleshooting_PDP.c(12):     ","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.com/","matchS
+Troubleshooting_PDP.c(12):     core":9.899799,"description":"This document provides a solution for not being able to dele
+Troubleshooting_PDP.c(12):     te emails from Windows Mail.","contentUpdateDate":"2008-06-05 00:33:27","language":"EN","d
+Troubleshooting_PDP.c(12):     isclosureLevel":"696531864679532034919979251200881","contentType":"Troubleshooting","store
+Troubleshooting_PDP.c(12):     ":"Product Documents","docSource":"Concentra","
+Troubleshooting_PDP.c(12): t=3439ms: 12287-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     topics":[{"id":"175513598973950797922021312691457|914388206376512557643055886323241|490611
+Troubleshooting_PDP.c(12):     604771706385596963875868327","name":"Troubleshooting|Wireless, Networking & Internet|Inter
+Troubleshooting_PDP.c(12):     net & Email"}],"topIssue":"NO"},{"documentID":"c00259897","title":"HP Notebook PCs - Batte
+Troubleshooting_PDP.c(12):     ry Does Not Power Notebook or Hold a Charge","contentTypeHeader":"Product Support","render
+Troubleshooting_PDP.c(12):     Link":"https://uat.support.hp.com/","matchScore":9.892461,"description":"This document con
+Troubleshooting_PDP.c(12):     tains information to help troubleshoot situations when the notebook battery will not power
+Troubleshooting_PDP.c(12):      a system that functions correctly when connected to the AC adapter.","contentUpdateDate":
+Troubleshooting_PDP.c(12):     "2021-02-24 04:06:15","language":"EN","disclosureLevel":"696531864679532034919979251200881
+Troubleshooting_PDP.c(12):     ","contentType":"Troubleshooting","store":"Product Documents","docSource":"Concentra","top
+Troubleshooting_PDP.c(12):     ics":[{"id":"175513598973950797922021312691457|264094802425566809196194979176827|444654627
+Troubleshooting_PDP.c(12):     654234391237614041520684","name":"Troubleshooting|Power|Battery"}],"topIssue":"YES"},{"doc
+Troubleshooting_PDP.c(12):     umentID":"c00295418","title":"HP Notebook PCs - Windows Does Not Detect the Battery Proper
+Troubleshooting_PDP.c(12):     ly or Displays an Incorrect Battery Detected Error Message","contentTypeHeader":"Product S
+Troubleshooting_PDP.c(12):     upport","renderLink":"https://uat.support.hp.com/","matchScore":9.892461,"description":"Th
+Troubleshooting_PDP.c(12):     is document contains information for when Windows failes to detect the notebooks battery p
+Troubleshooting_PDP.c(12):     roperly or displays a message indicating that an incorrect battery has been detected in Wi
+Troubleshooting_PDP.c(12):     ndows XP.","contentUpdateDate":"2013-05-06 18:02:28","language":"EN","disclosureLevel":"69
+Troubleshooting_PDP.c(12):     6531864679532034919979251200881","contentType":"Troubleshooting","store":"Product Document
+Troubleshooting_PDP.c(12):     s","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|264094802425
+Troubleshooting_PDP.c(12):     566809196194979176827|444654627654234391237614041520684","name":"Troubleshooting|Power|Bat
+Troubleshooting_PDP.c(12):     tery"}],"topIssue":"NO"},{"documentID":"c04935023","title":"HP Business Notebook PCs - Sys
+Troubleshooting_PDP.c(12):     tem Fan (90b) error message on startup","contentTypeHeader":"Product Support","renderLink"
+Troubleshooting_PDP.c(12):     :"https://uat.support.hp.com/","matchScore":9.851106,"description":"This error indicates a
+Troubleshooting_PDP.c(12):      cooling fan issue and urgent attention is required.","contentUpdateDate":"2016-01-07 20:2
+Troubleshooting_PDP.c(12):     6:43","language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":
+Troubleshooting_PDP.c(12):     "Troubleshooting","store":"Product Documents","docSource":"Concentra","topics":[{"id":"175
+Troubleshooting_PDP.c(12):     513598973950797922021312691457|24162243927970419742468267685048|23434714698439146864636187
+Troubleshooting_PDP.c(12):     1009755","name":"Troubleshooting|Lockups & Performance|Fan, Noise & Overheating"}],"topIss
+Troubleshooting_PDP.c(12):     ue":"NO"},{"documentID":"c01887303","title":"HP Notebook PCs - Troubleshoot a Lost Interne
+Troubleshooting_PDP.c(12):     t or E-mail Connection on a Wireless Network (Windows 7)","contentTypeHeader":"Product Sup
+Troubleshooting_PDP.c(12):     port","renderLink":"https://uat.support.hp.com/","matchScore":9.74784,"description":"Cover
+Troubleshooting_PDP.c(12):     s the top reasons a wireless connection that did work, suddenly cannot access web and e-ma
+Troubleshooting_PDP.c(12):     il.","contentUpdateDate":"2012-09-05 23:32:50","language":"EN","disclosureLevel":"69653186
+Troubleshooting_PDP.c(12):     4679532034919979251200881","contentType":"Troubleshooting","store":"Product Documents","do
+Troubleshooting_PDP.c(12):     cSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|914388206376512557
+Troubleshooting_PDP.c(12):     643055886323241|490611604771706385596963875868327","name":"Troubleshooting|Wireless, Netwo
+Troubleshooting_PDP.c(12):     rking & Internet|Internet & Email"}],"topIssue":"NO"},{"documentID":"c01269796","title":"H
+Troubleshooting_PDP.c(12):     P Notebook PCs - Testing a Webcam Using QuickPlay","contentTypeHeader":"Product Support","
+Troubleshooting_PDP.c(12):     renderLink":"https://uat.support.hp.com/","matchScore":9.604563,"description":"Determine i
+Troubleshooting_PDP.c(12):     f a webcam is working by using QuickPlay. HP replaced QuickPlay with the Cyberlink YouCam 
+Troubleshooting_PDP.c(12):     webcam application.","contentUpdateDate":"2020-07-24 11:32:22","language":"EN","disclosure
+Troubleshooting_PDP.c(12):     Level":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Produc
+Troubleshooting_PDP.c(12):     t Documents","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|22
+Troubleshooting_PDP.c(12):     8063903914705934326054180879634","name":"Troubleshooting|Webcam or Camera"}],"topIssue":"N
+Troubleshooting_PDP.c(12):     O"},{"documentID":"c01464156","title":"HP Notebook PCs - Using Docking Stations with Noteb
+Troubleshooting_PDP.c(12):     ooks Running Windows Vista","contentTypeHeader":"Product Support","renderLink":"https://ua
+Troubleshooting_PDP.c(12):     t.support.hp.com/","matchScore":9.604563,"description":"Explains different power states, a
+Troubleshooting_PDP.c(12):     nd how they pertain to docking and undocking notebooks running Windows Vista.","contentUpd
+Troubleshooting_PDP.c(12):     ateDate":"2009-02-11 19:26:50","language":"EN","disclosureLevel":"696531864679532034919979
+Troubleshooting_PDP.c(12):     251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"Concen
+Troubleshooting_PDP.c(12):     tra","topics":[{"id":"175513598973950797922021312691457|873834321466472456243075727671925"
+Troubleshooting_PDP.c(12):     ,"name":"Troubleshooting|Docking Station"}],"topIssue":"NO"},{"documentID":"ish_2026006-14
+Troubleshooting_PDP.c(12):     90761-16","title":"HP PCs - Reset the computer","contentTypeHeader":"Product Support","ren
+Troubleshooting_PDP.c(12):     derLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000aut
+Troubleshooting_PDP.c(12):     r0BTG27RT01WHPJBjOdj19/ish_2026006-1490761-16?entitlement=none&isFullHTMLRequired=true","m
+Troubleshooting_PDP.c(12):     atchScore":9.417102,"description":"The Windows 10 reset feature reinstalls the operating s
+Troubleshooting_PDP.c(12):     ystem without losing any of your personal data and customizations.","contentUpdateDate":"2
+Troubleshooting_PDP.c(12):     020-09-21 21:52:41","language":"EN","disclosureLevel":"696531864679532034919979251200881",
+Troubleshooting_PDP.c(12):     "contentType":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id":"1755
+Troubleshooting_PDP.c(12):     13598973950797922021312691457|433125486682119415275667451749946","name":"Troubleshooting|S
+Troubleshooting_PDP.c(12):     ystem Recovery, Backup & Restore"}],"topIssue":"NO","cve":[]},{"documentID":"ish_3046044-2
+Troubleshooting_PDP.c(12):     749139-16","title":"HP PCs - How to reset your computer to factory settings in Windows 10"
+Troubleshooting_PDP.c(12):     ,"contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-eas
+Troubleshooting_PDP.c(12):     t-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3046044-2749139-16?e
+Troubleshooting_PDP.c(12):     ntitlement=none&isFullHTMLRequired=true","matchScore":9.417102,"description":"Resetting yo
+Troubleshooting_PDP.c(12):     ur computer to factory settings might be necessary if the operating system is damaged, the
+Troubleshooting_PDP.c(12):      hard drive is corrupted, the computer is infected by a virus, or you are transferring own
+Troubleshooting_PDP.c(12):     ership of the computer. HP System Recovery removes all hard drive data and reinstalls the 
+Troubleshooting_PDP.c(12):     original operating system.","contentUpdateDate":"2021-01-21 20:05:19","language":"EN","dis
+Troubleshooting_PDP.c(12):     closureLevel":"696531864679532034919979251200881","contentType":"How To","store":"Product 
+Troubleshooting_PDP.c(12):     Documents","docSource":"UDP","topics":[{"id":"175513598973950797922021312691457|4331254866
+Troubleshooting_PDP.c(12):     82119415275667451749946","name":"Troubleshooting|System Recovery, Backup & Restore"}],"top
+Troubleshooting_PDP.c(12):     Issue":"NO","cve":[]},{"documentID":"c00363266","title":"HP Notebook PCs - Using and Testi
+Troubleshooting_PDP.c(12):     ng the AC Power Adapter","contentTypeHeader":"Product Support","renderLink":"https://uat.s
+Troubleshooting_PDP.c(12):     upport.hp.com/","matchScore":9.399343,"description":"Learn how to verify that your AC powe
+Troubleshooting_PDP.c(12):     r adapter is working properly on your notebook, including how to read the Envy AC adapter 
+Troubleshooting_PDP.c(12):     LED lights.","contentUpdateDate":"2017-09-27 17:27:15","language":"EN","disclosureLevel":"
+Troubleshooting_PDP.c(12):     696531864679532034919979251200881","contentType":"Troubleshooting","store":"Product Docume
+Troubleshooting_PDP.c(12):     nts","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691457|2640948024
+Troubleshooting_PDP.c(12):     25566809196194979176827|576094807940853499711370028893330","name":"Troubleshooting|Power|P
+Troubleshooting_PDP.c(12):     ower Adapter or Cord"}],"topIssue":"YES"},{"documentID":"ish_2040493-1382278-16","title":"
+Troubleshooting_PDP.c(12):     HP Notebook PCs - Purchasing a replacement AC power adapter","contentTypeHeader":"Product 
+Troubleshooting_PDP.c(12):     Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/
+Troubleshooting_PDP.c(12):     render/000autr0BTG27RT01WHPJBjOdj19/ish_2040493-1382278-16?entitlement=none&isFullHTMLRequ
+Troubleshooting_PDP.c(12):     ired=true","matchScore":9.381219,"description":"Purchase a replacement AC power adapter th
+Troubleshooting_PDP.c(12):     at is designed for your notebook if the original one fails. You might also want to purchas
+Troubleshooting_PDP.c(12):     e an additional power supply for travel or use in an alternate location.","contentUpdateDa
+Troubleshooting_PDP.c(12):     te":"2020-07-09 13:34:20","language":"EN","disclosureLevel":"69653186467953203491997925120
+Troubleshooting_PDP.c(12):     0881","contentType":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id"
+Troubleshooting_PDP.c(12):     :"175513598973950797922021312691457|303826265115107578299484751918360","name":"Troubleshoo
+Troubleshooting_PDP.c(12):     ting|Add or Remove Hardware & Customer Self Repair"}],"topIssue":"NO","cve":[]},{"document
+Troubleshooting_PDP.c(12):     ID":"c00469571","title":"HP Notebook PCs - Keyboard Produces Numbers Instead of Letters in
+Troubleshooting_PDP.c(12):      Windows XP","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.co
+Troubleshooting_PDP.c(12):     m/","matchScore":9.307811,"description":"Solves problem of keys on the right side of the k
+Troubleshooting_PDP.c(12):     eyboard sometimes producing numbers instead of letters by deactivating the integrated nume
+Troubleshooting_PDP.c(12):     ric keypad in Windows XP.","contentUpdateDate":"2007-02-07 14:10:09","language":"EN","disc
+Troubleshooting_PDP.c(12):     losureLevel":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"
+Troubleshooting_PDP.c(12):     Product Documents","docSource":"Concentra","topics":[{"id":"175513598973950797922021312691
+Troubleshooting_PDP.c(12):     457|194781863556389891214758144180089|704348581228779469453218323466955","name":"Troublesh
+Troubleshooting_PDP.c(12):     ooting|Keyboard, Mouse or Touchpad|Keyboard"}],"topIssue":"NO"},{"documentID":"ish_3053911
+Troubleshooting_PDP.c(12):     -2842957-16","title":"HP PCs - 3F0 boot device not found error displays on a black screen 
+Troubleshooting_PDP.c(12):     in Windows 10","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.exec
+Troubleshooting_PDP.c(12):     ute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_305391
+Troubleshooting_PDP.c(12):     1-2842957-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.634038,"description"
+Troubleshooting_PDP.c(12):     :"If the Hard Disk Error message displays when you start your computer, run the Hard Disk 
+Troubleshooting_PDP.c(12):     Test in System Diagnostics.","contentUpdateDate":"2020-11-09 16:49:18","language":"EN","di
+Troubleshooting_PDP.c(12):     sclosureLevel":"696531864679532034919979251200881","contentType":"Troubleshooting","store"
+Troubleshooting_PDP.c(12):     :"Product Documents","docSource":"UDP","topics":[{"id":"175513598973950797922021312691457|
+Troubleshooting_PDP.c(12):     921143004712032140018691599338685|580038239286028712340271159476929","name":"Troubleshooti
+Troubleshooting_PDP.c(12):     ng|Startup or Shutdown|Black Screen"}],"topIssue":"NO","cve":[]},{"documentID":"ish_304539
+Troubleshooting_PDP.c(12):     5-2854728-16","title":"HP PCs - Hard disk error displays before the computer starts in Win
+Troubleshooting_PDP.c(12):     dows 10","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-ap
+Troubleshooting_PDP.c(12):     i.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3045395-2854
+Troubleshooting_PDP.c(12):     728-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.632701,"description":"On s
+Troubleshooting_PDP.c(12):     tartup, a Hard Disk Error message displays.","contentUpdateDate":"2020-12-21 19:08:58","la
+Troubleshooting_PDP.c(12):     nguage":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Troubles
+Troubleshooting_PDP.c(12):     hooting","store":"Product Documents","docSource":"UDP","topics":[{"id":"175513598973950797
+Troubleshooting_PDP.c(12):     922021312691457|921143004712032140018691599338685|199244945628724375463585894121380","name
+Troubleshooting_PDP.c(12):     ":"Troubleshooting|Startup or Shutdown|Startup"}],"topIssue":"NO","cve":[]},{"documentID":
+Troubleshooting_PDP.c(12):     "ish_3096092-2906390-16","title":"HP PCs - Resolving low disk space issues and errors (Win
+Troubleshooting_PDP.c(12):     dows 10)","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-a
+Troubleshooting_PDP.c(12):     pi.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3096092-290
+Troubleshooting_PDP.c(12):     6390-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.627129,"description":"Whe
+Troubleshooting_PDP.c(12):     n too little free space is available on your computer hard drive, Windows updates might no
+Troubleshooting_PDP.c(12):     t install, apps and files might not download, and low disk space errors or warning message
+Troubleshooting_PDP.c(12):     s might display. The computer or tablet performance can also become unreliable. Use these 
+Troubleshooting_PDP.c(12):     procedures to resolve these issues and errors.","contentUpdateDate":"2021-01-06 16:37:32",
+Troubleshooting_PDP.c(12):     "language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Troub
+Troubleshooting_PDP.c(12):     leshooting","store":"Product Documents","docSource":"UDP","topics":[{"id":"175513598973950
+Troubleshooting_PDP.c(12):     797922021312691457|314259349993185888591520647148481","name":"Troubleshooting|Hard Drive"}
+Troubleshooting_PDP.c(12):     ],"topIssue":"NO","cve":[]},{"documentID":"ish_3913422-3266884-16","title":"HP PCs - A \\"
+Troubleshooting_PDP.c(12):     No audio device is installed\\" message displays","contentTypeHeader":"Product Support","r
+Troubleshooting_PDP.c(12):     enderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000a
+Troubleshooting_PDP.c(12):     utr0BTG27RT01WHPJBjOdj19/ish_3913422-3266884-16?entitlement=none&isFullHTMLRequired=true",
+Troubleshooting_PDP.c(12):     "matchScore":8.627129,"description":"A No audio device is installed or No audio output dev
+Troubleshooting_PDP.c(12):     ice is installed message displays and no sound plays.","contentUpdateDate":"2021-05-21 14:
+Troubleshooting_PDP.c(12):     18:08","language":"EN","disclosureLevel":"6965318
+Troubleshooting_PDP.c(12): t=3456ms: 4097-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     64679532034919979251200881","contentType":"Troubleshooting","store":"Product Documents","d
+Troubleshooting_PDP.c(12):     ocSource":"UDP","topics":[{"id":"175513598973950797922021312691457|91010553308457922104610
+Troubleshooting_PDP.c(12):     5278412963","name":"Troubleshooting|Sound & Microphone"}],"topIssue":"NO","cve":[]},{"docu
+Troubleshooting_PDP.c(12):     mentID":"ish_3046042-2787120-16","title":"HP PCs - Size of disk drive does not match speci
+Troubleshooting_PDP.c(12):     fications in Windows 10","contentTypeHeader":"Product Support","renderLink":"https://hx9ek
+Troubleshooting_PDP.c(12):     pvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/
+Troubleshooting_PDP.c(12):     ish_3046042-2787120-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.627129,"de
+Troubleshooting_PDP.c(12):     scription":"HP computers with Windows preinstalled might appear to have a hard drive small
+Troubleshooting_PDP.c(12):     er than what is stated in the product specifications, documentation, or on the box.","cont
+Troubleshooting_PDP.c(12):     entUpdateDate":"2021-01-21 19:55:28","language":"EN","disclosureLevel":"696531864679532034
+Troubleshooting_PDP.c(12):     919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"
+Troubleshooting_PDP.c(12):     UDP","topics":[{"id":"175513598973950797922021312691457|314259349993185888591520647148481"
+Troubleshooting_PDP.c(12):     ,"name":"Troubleshooting|Hard Drive"}],"topIssue":"NO","cve":[]},{"documentID":"ish_304513
+Troubleshooting_PDP.c(12):     1-2900743-16","title":"HP PCs - The computer restarts unexpectedly (Windows 10)","contentT
+Troubleshooting_PDP.c(12):     ypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazon
+Troubleshooting_PDP.c(12):     aws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3045131-2900743-16?entitlement
+Troubleshooting_PDP.c(12):     =none&isFullHTMLRequired=true","matchScore":8.626688,"description":"If Windows restarts wi
+Troubleshooting_PDP.c(12):     thout warning or when you try to shut it down, use this document to resolve the issue.","c
+Troubleshooting_PDP.c(12):     ontentUpdateDate":"2021-01-21 17:27:22","language":"EN","disclosureLevel":"696531864679532
+Troubleshooting_PDP.c(12):     034919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource
+Troubleshooting_PDP.c(12):     ":"UDP","topics":[{"id":"175513598973950797922021312691457|7211882860029087394322844003890
+Troubleshooting_PDP.c(12):     91","name":"Troubleshooting|Windows 10 Common Solutions"}],"topIssue":"NO","cve":[]},{"doc
+Troubleshooting_PDP.c(12):     umentID":"ish_3017660-2871650-16","title":"HP PCs - Resolving DVD and Blu-ray movie proble
+Troubleshooting_PDP.c(12):     ms in Windows ","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.exe
+Troubleshooting_PDP.c(12):     cute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_30176
+Troubleshooting_PDP.c(12):     60-2871650-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.626688,"description
+Troubleshooting_PDP.c(12):     ":"This document is intended to help you fix problems that can happen when playing DVD or 
+Troubleshooting_PDP.c(12):     Blu-ray movies on a computer. If you cannot find a section that fits your situation, try r
+Troubleshooting_PDP.c(12):     einstalling the DVD or Blu-ray software to resolve the problem.","contentUpdateDate":"2021
+Troubleshooting_PDP.c(12):     -01-20 18:36:49","language":"EN","disclosureLevel":"696531864679532034919979251200881","co
+Troubleshooting_PDP.c(12):     ntentType":"Troubleshooting","store":"Product Documents","docSource":"UDP","topics":[{"id"
+Troubleshooting_PDP.c(12):     :"175513598973950797922021312691457|144153254000201145989888417981026","name":"Troubleshoo
+Troubleshooting_PDP.c(12):     ting|CD, DVD or Blu-ray"}],"topIssue":"NO","cve":[]},{"documentID":"ish_3894334-3266603-16
+Troubleshooting_PDP.c(12):     ","title":"HP PCs - Computer locks up or freezes","contentTypeHeader":"Product Support","r
+Troubleshooting_PDP.c(12):     enderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000a
+Troubleshooting_PDP.c(12):     utr0BTG27RT01WHPJBjOdj19/ish_3894334-3266603-16?entitlement=none&isFullHTMLRequired=true",
+Troubleshooting_PDP.c(12):     "matchScore":8.622789,"description":"If Windows stops responding to mouse and keyboard inp
+Troubleshooting_PDP.c(12):     ut, nothing moves on the computer display, or the mouse pointer spins continuously, you mi
+Troubleshooting_PDP.c(12):     ght be able to resolve the issue.","contentUpdateDate":"2021-05-18 15:44:34","language":"E
+Troubleshooting_PDP.c(12):     N","disclosureLevel":"696531864679532034919979251200881","contentType":"Troubleshooting","
+Troubleshooting_PDP.c(12):     store":"Product Documents","docSource":"UDP","topics":[{"id":"1755135989739507979220213126
+Troubleshooting_PDP.c(12):     91457|921143004712032140018691599338685|51014541779817884390558981675421","name":"Troubles
+Troubleshooting_PDP.c(12):     hooting|Startup or Shutdown|Blue Screen"}],"topIssue":"NO","cve":[]},{"documentID":"ish_39
+Troubleshooting_PDP.c(12):     40431-3679358-16","title":"HP PCs - \\"We can't find your camera\\" error is displayed in 
+Troubleshooting_PDP.c(12):     Camera app in Windows 10","contentTypeHeader":"Product Support","renderLink":"https://hx9e
+Troubleshooting_PDP.c(12):     kpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-I
+Troubleshooting_PDP.c(12): t=3459ms: 37-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     TG/v2/render/000autr0BTG27RT01WHPJBjO
+Troubleshooting_PDP.c(12): t=3459ms: 12287-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     dj19/ish_3940431-3679358-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.62152
+Troubleshooting_PDP.c(12):     8,"description":"There are various reasons that a computer displays this error message whe
+Troubleshooting_PDP.c(12):     n opening the Camera app.","contentUpdateDate":"2021-05-28 15:10:32","language":"EN","disc
+Troubleshooting_PDP.c(12):     losureLevel":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"
+Troubleshooting_PDP.c(12):     Product Documents","docSource":"UDP","topics":[{"id":"175513598973950797922021312691457|22
+Troubleshooting_PDP.c(12):     8063903914705934326054180879634","name":"Troubleshooting|Webcam or Camera"}],"topIssue":"N
+Troubleshooting_PDP.c(12):     O","cve":[]},{"documentID":"ish_3960099-3335046-16","title":"HP PCs - Troubleshoot the web
+Troubleshooting_PDP.c(12):     cam (Windows 10)","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.e
+Troubleshooting_PDP.c(12):     xecute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_396
+Troubleshooting_PDP.c(12):     0099-3335046-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.621528,"descripti
+Troubleshooting_PDP.c(12):     on":"Use these steps to troubleshoot and repair your webcam.","contentUpdateDate":"2021-06
+Troubleshooting_PDP.c(12):     -01 20:29:17","language":"EN","disclosureLevel":"696531864679532034919979251200881","conte
+Troubleshooting_PDP.c(12):     ntType":"Troubleshooting","store":"Product Documents","docSource":"UDP","topics":[{"id":"1
+Troubleshooting_PDP.c(12):     75513598973950797922021312691457|228063903914705934326054180879634","name":"Troubleshootin
+Troubleshooting_PDP.c(12):     g|Webcam or Camera"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2190971-1693222-16","ti
+Troubleshooting_PDP.c(12):     tle":"HP Notebook PCs - Battery does not power notebook or hold a charge","contentTypeHead
+Troubleshooting_PDP.c(12):     er":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+Troubleshooting_PDP.c(12):     /KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_2190971-1693222-16?entitlement=none&i
+Troubleshooting_PDP.c(12):     sFullHTMLRequired=true","matchScore":8.621528,"description":"The removable battery of your
+Troubleshooting_PDP.c(12):      HP notebook might not hold a charge due to a faulty power supply or AC adapter and might 
+Troubleshooting_PDP.c(12):     need to be replaced after testing all components.","contentUpdateDate":"2021-05-18 17:33:1
+Troubleshooting_PDP.c(12):     2","language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Tr
+Troubleshooting_PDP.c(12):     oubleshooting","store":"Product Documents","docSource":"UDP","topics":[{"id":"175513598973
+Troubleshooting_PDP.c(12):     950797922021312691457|264094802425566809196194979176827|444654627654234391237614041520684"
+Troubleshooting_PDP.c(12):     ,"name":"Troubleshooting|Power|Battery"}],"topIssue":"NO","cve":[]},{"documentID":"ish_304
+Troubleshooting_PDP.c(12):     5059-2784109-16","title":"HP PCs - Error: Display driver stopped responding and has recove
+Troubleshooting_PDP.c(12):     red (Windows 10)","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.e
+Troubleshooting_PDP.c(12):     xecute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_304
+Troubleshooting_PDP.c(12):     5059-2784109-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.616326,"descripti
+Troubleshooting_PDP.c(12):     on":"While playing video games or using video or graphics applications (such as streaming 
+Troubleshooting_PDP.c(12):     video), the computer screen goes black for up to three seconds, and an error message displ
+Troubleshooting_PDP.c(12):     ays.","contentUpdateDate":"2021-03-15 22:12:18","language":"EN","disclosureLevel":"6965318
+Troubleshooting_PDP.c(12):     64679532034919979251200881","contentType":"Troubleshooting","store":"Product Documents","d
+Troubleshooting_PDP.c(12):     ocSource":"UDP","topics":[{"id":"175513598973950797922021312691457|10728185687914440586732
+Troubleshooting_PDP.c(12):     7250253868","name":"Troubleshooting|Monitor, Display or Graphics"}],"topIssue":"NO","cve":
+Troubleshooting_PDP.c(12):     []},{"documentID":"ish_3900569-3267310-16","title":"HP PCs - CD or DVD drive cannot burn d
+Troubleshooting_PDP.c(12):     iscs","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.u
+Troubleshooting_PDP.c(12):     s-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3900569-3267310
+Troubleshooting_PDP.c(12):     -16?entitlement=none&isFullHTMLRequired=true","matchScore":8.611483,"description":"If you 
+Troubleshooting_PDP.c(12):     cannot burn music or data to blank CDs or DVDs, follow these steps to resolve the problem.
+Troubleshooting_PDP.c(12):     ","contentUpdateDate":"2021-05-18 18:36:09","language":"EN","disclosureLevel":"69653186467
+Troubleshooting_PDP.c(12):     9532034919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSo
+Troubleshooting_PDP.c(12):     urce":"UDP","topics":[{"id":"175513598973950797922021312691457|144153254000201145989888417
+Troubleshooting_PDP.c(12):     981026","name":"Troubleshooting|CD, DVD or Blu-ray"}],"topIssue":"NO","cve":[]},{"document
+Troubleshooting_PDP.c(12):     ID":"ish_3017455-2859555-16","title":"HP PCs - Troubleshooting USB connections (Windows 10
+Troubleshooting_PDP.c(12):     )","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-e
+Troubleshooting_PDP.c(12):     ast-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3017455-2859555-16
+Troubleshooting_PDP.c(12):     ?entitlement=none&isFullHTMLRequired=true","matchScore":8.611483,"description":"This docum
+Troubleshooting_PDP.c(12):     ent describes common errors and general troubleshooting tips for Universal Serial Bus (USB
+Troubleshooting_PDP.c(12):     ) devices, such as hubs, thumb drives, printers, and cameras.","contentUpdateDate":"2021-0
+Troubleshooting_PDP.c(12):     1-20 20:03:28","language":"EN","disclosureLevel":"696531864679532034919979251200881","cont
+Troubleshooting_PDP.c(12):     entType":"Troubleshooting","store":"Product Documents","docSource":"UDP","topics":[{"id":"
+Troubleshooting_PDP.c(12):     175513598973950797922021312691457|554903546253468916714993318597491|3480998194320158843643
+Troubleshooting_PDP.c(12):     32930410194","name":"Troubleshooting|Ports or USB|USB"}],"topIssue":"NO","cve":[]},{"docum
+Troubleshooting_PDP.c(12):     entID":"ish_3940425-3521181-16","title":"HP PCs - Troubleshooting a Bluetooth connection i
+Troubleshooting_PDP.c(12):     n Windows 10","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execu
+Troubleshooting_PDP.c(12):     te-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3940425
+Troubleshooting_PDP.c(12):     -3521181-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.602735,"description":
+Troubleshooting_PDP.c(12):     "When you cannot pair your computer with a Bluetooth device, you need to troubleshoot the 
+Troubleshooting_PDP.c(12):     Bluetooth connectivity. Use Device Manager to confirm that your computer supports Bluetoot
+Troubleshooting_PDP.c(12):     h. Make sure the Bluetooth signal is on. Remove any wireless interference causing the wire
+Troubleshooting_PDP.c(12):     less signal between your computer and device to be too weak to make a good connection. Che
+Troubleshooting_PDP.c(12):     ck the wireless communication settings and for driver updates. Restart the device and comp
+Troubleshooting_PDP.c(12):     uter to resolve any connectivity error states. Also, you might need to uninstall the devic
+Troubleshooting_PDP.c(12):     e and then pair it to the computer to reinstall the device driver to resolve any errors.",
+Troubleshooting_PDP.c(12):     "contentUpdateDate":"2021-05-28 15:04:37","language":"EN","disclosureLevel":"6965318646795
+Troubleshooting_PDP.c(12):     32034919979251200881","contentType":"Troubleshooting","store":"Product Documents","docSour
+Troubleshooting_PDP.c(12):     ce":"UDP","topics":[{"id":"175513598973950797922021312691457|91438820637651255764305588632
+Troubleshooting_PDP.c(12):     3241|499331794551172957699150808078340","name":"Troubleshooting|Wireless, Networking & Int
+Troubleshooting_PDP.c(12):     ernet|Wireless Connections & Networking"}],"topIssue":"NO","cve":[]},{"documentID":"ish_19
+Troubleshooting_PDP.c(12):     97137-1439082-16","title":"HP PCs - Troubleshooting Wireless Network and Internet (Windows
+Troubleshooting_PDP.c(12):      10)","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.u
+Troubleshooting_PDP.c(12):     s-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_1997137-1439082
+Troubleshooting_PDP.c(12):     -16?entitlement=none&isFullHTMLRequired=true","matchScore":8.602735,"description":"Resolve
+Troubleshooting_PDP.c(12):      wireless connectivity or internet issues if your Wi-Fi stops working as expected.","conte
+Troubleshooting_PDP.c(12):     ntUpdateDate":"2020-09-18 17:24:06","language":"EN","disclosureLevel":"6965318646795320349
+Troubleshooting_PDP.c(12):     19979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"U
+Troubleshooting_PDP.c(12):     DP","topics":[{"id":"175513598973950797922021312691457|914388206376512557643055886323241|4
+Troubleshooting_PDP.c(12):     99331794551172957699150808078340","name":"Troubleshooting|Wireless, Networking & Internet|
+Troubleshooting_PDP.c(12):     Wireless Connections & Networking"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2268897-
+Troubleshooting_PDP.c(12):     1678984-16","title":"Connecting a Bluetooth device to an HP computer","contentTypeHeader":
+Troubleshooting_PDP.c(12):     "Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/Kaa
+Troubleshooting_PDP.c(12):     S-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_2268897-1678984-16?entitlement=none&isFul
+Troubleshooting_PDP.c(12):     lHTMLRequired=true","matchScore":8.583394,"description":"Follow these steps to connect you
+Troubleshooting_PDP.c(12):     r Bluetooth enabled device to a Windows 10 computer.","contentUpdateDate":"2021-01-20 09:5
+Troubleshooting_PDP.c(12):     3:04","language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":
+Troubleshooting_PDP.c(12):     "Troubleshooting","store":"Product Documents","docSource":"UDP","topics":[{"id":"175513598
+Troubleshooting_PDP.c(12):     973950797922021312691457|721188286002908739432284400389091","name":"Troubleshooting|Window
+Troubleshooting_PDP.c(12):     s 10 Common Solutions"}],"topIssue":"NO","cve":[]},{"documentID":"ish_3046046-2885219-16",
+Troubleshooting_PDP.c(12):     "title":"HP PCs - Sleep and Hibernate issues in Windows 10","contentTypeHeader":"Product S
+Troubleshooting_PDP.c(12):     upport","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/r
+Troubleshooting_PDP.c(12):     ender/000autr0BTG27RT01WHPJBjOdj19/ish_3046046-2885219-16?entitlement=none&isFullHTMLRequi
+Troubleshooting_PDP.c(12):     red=true","matchScore":8.336589,"description":"The computer does not go into sleep mode, d
+Troubleshooting_PDP.c(12):     oes not wake up from sleep mode, or wakes up from sleep mode unexpectedly. The issue might
+Troubleshooting_PDP.c(12):      occur after an upgrade to Windows 10.","contentUpdateDate":"2021-01-21 20:14:51","languag
+Troubleshooting_PDP.c(12):     e":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Troubleshooti
+Troubleshooting_PDP.c(12):     ng","store":"Product Documents","docSource":"UDP","topics":[{"id":"17551359897395079792202
+Troubleshooting_PDP.c(12):     1312691457|921143004712032140018691599338685|494938993590653157042195032450865","name":"Tr
+Troubleshooting_PDP.c(12):     oubleshooting|Startup or Shutdown|Hibernation"}],"topIssue":"NO","cve":[]},{"documentID":"
+Troubleshooting_PDP.c(12):     ish_2843606-2359609-16","title":"HP PCs - Setting time and date, clock losing time, time a
+Troubleshooting_PDP.c(12):     nd date incorrect (Windows 10)","contentTypeHeader":"Product Support","renderLink":"https:
+Troubleshooting_PDP.c(12):     //hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJB
+Troubleshooting_PDP.c(12):     jOdj19/ish_2843606-2359609-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.332
+Troubleshooting_PDP.c(12):     918,"description":"This document provides instructions on how to change the date and time 
+Troubleshooting_PDP.c(12):     settings on the computer, how to enable Internet Time, and how to troubleshoot common comp
+Troubleshooting_PDP.c(12):     uter clock issues.","contentUpdateDate":"2020-11-02 22:30:43","language":"EN","disclosureL
+Troubleshooting_PDP.c(12):     evel":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Product
+Troubleshooting_PDP.c(12):      Documents","docSource":"UDP","topics":[{"id":"175513598973950797922021312691457|498695401
+Troubleshooting_PDP.c(12):     687558932229591876044741","name":"Troubleshooting|Computer Settings"}],"topIssue":"NO","cv
+Troubleshooting_PDP.c(12):     e":[]},{"documentID":"ish_3888278-3226025-16","title":"HP Notebook PCs - Fingerprint reade
+Troubleshooting_PDP.c(12):     r troubleshooting (Windows 10)","contentTypeHeader":"Product Support","renderLink":"https:
+Troubleshooting_PDP.c(12):     //hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJB
+Troubleshooting_PDP.c(12):     jOdj19/ish_3888278-3226025-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.332
+Troubleshooting_PDP.c(12):     918,"description":"If your fingerprint reader is not working, there are several potential 
+Troubleshooting_PDP.c(12):     solutions depending on the setup, login, or other issue that you are experiencing.","conte
+Troubleshooting_PDP.c(12):     ntUpdateDate":"2021-05-13 22:47:07","language":"EN","disclosureLevel":"6965318646795320349
+Troubleshooting_PDP.c(12):     19979251200881","contentType":"Troubleshooting","store":"Product Documents","docSource":"U
+Troubleshooting_PDP.c(12):     DP","topics":[{"id":"175513598973950797922021312691457|371795372398302804348380008185173",
+Troubleshooting_PDP.c(12):     "name":"Troubleshooting|Security & Virus"}],"topIssue":"NO","cve":[]},{"documentID":"ish_3
+Troubleshooting_PDP.c(12):     913411-2337966-16","title":"HP Notebook PCs - System BIOS Recovery has occurred","contentT
+Troubleshooting_PDP.c(12):     ypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazon
+Troubleshooting_PDP.c(12):     aws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3913411-2337966-16?entitlement
+Troubleshooting_PDP.c(12):     =none&isFullHTMLRequired=true","matchScore":8.332465,"description":"On startup, you might 
+Troubleshooting_PDP.c(12):     see a System BIOS Recovery has occurred error message indicating that the system found and
+Troubleshooting_PDP.c(12):      corrected an error in the BIOS.","contentUpdateDate":"2021-05-21 15:45:29","language":"EN
+Troubleshooting_PDP.c(12):     ","disclosureLevel":"696531864679532034919979251200881","contentType":"Troubleshooting","s
+Troubleshooting_PDP.c(12):     tore":"Product Documents","docSource":"UDP","topics":[{"id":"17551359897395079792202131269
+Troubleshooting_PDP.c(12):     1457|921143004712032140018691599338685|199244945628724375463585894121380","name":"Troubles
+Troubleshooting_PDP.c(12):     hooting|Startup or Shutdown|Startup"}],"topIssue":"NO","cve":[]},{"documentID":"ish_389462
+Troubleshooting_PDP.c(12):     1-2907986-16","title":"HP PCs - Error Messages Display on a Blue Screen (Windows 10)","con
+Troubleshooting_PDP.c(12):     tentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.a
+Troubleshooting_PDP.c(12):     mazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3894621-2907986-16?entitl
+Troubleshooting_PDP.c(12):     ement=none&isFullHTMLRequired=true","matchScore":8.327064,"description":"There are many re
+Troubleshooting_PDP.c(12):     asons that a computer displays a blue screen when operating or when it fails to start or b
+Troubleshooting_PDP.c(12):     oot into the Windows operating system. If your computer displays a blue screen, you might 
+Troubleshooting_PDP.c(12):     see or hear symptoms to indicate the general area of the problem.","contentUpdateDate":"20
+Troubleshooting_PDP.c(12):     21-05-17 18:27:52","language":"EN","disclosureL
+Troubleshooting_PDP.c(12): t=3467ms: 4097-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     evel":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Product
+Troubleshooting_PDP.c(12):      Documents","docSource":"UDP","topics":[{"id":"175513598973950797922021312691457|921143004
+Troubleshooting_PDP.c(12):     712032140018691599338685|51014541779817884390558981675421","name":"Troubleshooting|Startup
+Troubleshooting_PDP.c(12):      or Shutdown|Blue Screen"}],"topIssue":"NO","cve":[]},{"documentID":"ish_3665957-3631853-1
+Troubleshooting_PDP.c(12):     6","title":"HP business notebook PCs - Improve webcam image quality","contentTypeHeader":"
+Troubleshooting_PDP.c(12):     Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS
+Troubleshooting_PDP.c(12):     -ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3665957-3631853-16?entitlement=none&isFull
+Troubleshooting_PDP.c(12):     HTMLRequired=true","matchScore":8.325093,"description":"You can troubleshoot the lighting,
+Troubleshooting_PDP.c(12):      color balance, and performance of The Hybrid Webcam Sensor, available on select HP commer
+Troubleshooting_PDP.c(12):     cial notebooks.","contentUpdateDate":"2021-04-08 17:38:42","language":"EN","disclosureLeve
+Troubleshooting_PDP.c(12):     l":"696531864679532034919979251200881","contentType":"Troubleshooting","store":"Product Do
+Troubleshooting_PDP.c(12):     cuments","docSource":"UDP","topics":[{"id":"175513598973950797922021312691457|228063903914
+Troubleshooting_PDP.c(12):     705934326054180879634","name":"Troubleshooting|Webcam or Camera"}],"topIssue":"NO","cve":[
+Troubleshooting_PDP.c(12):     ]},{"documentID":"ish_3940413-3174790-16","title":"HP PCs - CD/DVD drive cannot read discs
+Troubleshooting_PDP.c(12):      in Windows 10","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.exe
+Troubleshooting_PDP.c(12):     cute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_39404
+Troubleshooting_PDP.c(12):     13-3174790-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.311052,"description
+Troubleshooting_PDP.c(12):     ":"When you load a disc into the CD/DVD drive, the disc does not run or play. A dirty or s
+Troubleshooting_PDP.c(12):     cratched disc surface is the most common reason for a CD/DVD issue when inserted into a co
+Troubleshooting_PDP.c(12):     mputer. If the optical drive cannot read the files stored on any CD/DVD discs, you need to
+Troubleshooting_PDP.c(12):      troubleshoot the CD/DVD drive, rather than the discs and software. Also, you might need t
+Troubleshooting_PDP.c(12):     o reinstall the device driver to resolve any errors or enable the AutoPlay setting to auto
+Troubleshooting_PDP.c(12):     matically start discs when loaded.","contentUpdateDate":"2021-05-28 15:13:04","language":"
+Troubleshooting_PDP.c(12):     EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Troubleshooting",
+Troubleshooting_PDP.c(12):     "store":"Product Documents","docSource":"UDP","topics":[{"id":"175513598973950797922021312
+Troubleshooting_PDP.c(12):     691457|144153254000201145989888417981026","name":"Troubleshooting|CD, DVD or Blu-ray"}],"t
+Troubleshooting_PDP.c(12):     opIssue":"NO","cve":[]},{"documentID":"ish_3894569-1692683-16","title":"HP Notebook PCs - 
+Troubleshooting_PDP.c(12):     Reduce heat inside the laptop to prevent overheating in Windows","contentTypeHeader":"Prod
+Troubleshooting_PDP.c(12):     uct Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG
+Troubleshooting_PDP.c(12):     /v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3894569-1692683-16?entitlement=none&isFullHTML
+Troubleshooting_PDP.c(12):     Required=true","matchScore":8.30473,"description":"When temperatures inside the computer r
+Troubleshooting_PDP.c(12):     ise above 35\xC2\xBA C (95\xC2\xBA F), the risk of damage to important internal components
+Troubleshooting_PDP.c(12):      from overheating increases.","contentUpdateDate":"2021-05-17 17:56:15","language":"EN","d
+Troubleshooting_PDP.c(12):     isclosureLevel":"696531864679532034919979251200881","contentType":"Troubleshooting","store
+Troubleshooting_PDP.c(12):     ":"Product Documents","docSource":"UDP","topics":[{"id":"175513598973950797922021312691457
+Troubleshooting_PDP.c(12):     |24162243927970419742468267685048|234347146984391468646361871009755","name":"Troubleshooti
+Troubleshooting_PDP.c(12):     ng|Lockups & Performance|Fan, Noise & Overheating"}],"topIssue":"NO","cve":[]},{"documentI
+Troubleshooting_PDP.c(12):     D":"ish_3045299-2819686-16","title":"HP Notebook PCs - Fan is noisy and spins constantly (
+Troubleshooting_PDP.c(12):     Windows)","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-a
+Troubleshooting_PDP.c(12):     pi.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3045299-281
+Troubleshooting_PDP.c(12):     9686-16?entitlement=none&isFullHTMLRequired=true","matchScore":8.30473,"description":"When
+Troubleshooting_PDP.c(12):      a computer fan spins loudly for a long period of time, there might be an issue with a fan
+Troubleshooting_PDP.c(12):     , or the computer might be overheating. Adjust the power settings, clean the fan vents, ch
+Troubleshooting_PDP.c(12):     eck for suspicious processes, and then update the BIOS to help reduce the internal tempera
+Troubleshooting_PDP.c(12):     ture.","contentUpdateDate":"2021-02-01 22:56:18","language":"EN","disclosureLevel":"696531
+Troubleshooting_PDP.c(12):     864679532034919979251200881","contentType":"Troubleshooting
+Troubleshooting_PDP.c(12): t=3469ms: 501-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Troubleshooting,CPMD,Parts,FAQ,Repair or Replace&topiccat=175513598973950797922021312691457&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=6)
+Troubleshooting_PDP.c(12):     ","store":"Product Documents","docSource":"UDP","topics":[{"id":"1755135989739507979220213
+Troubleshooting_PDP.c(12):     12691457|24162243927970419742468267685048|234347146984391468646361871009755","name":"Troub
+Troubleshooting_PDP.c(12):     leshooting|Lockups & Performance|Fan, Noise & Overheating"}],"topIssue":"NO","cve":[]}],"r
+Troubleshooting_PDP.c(12):     ange":{"start":"0","end":"1000"},"totalCount":59,"showingResultsFor":null,"searchInsteadFo
+Troubleshooting_PDP.c(12):     r":null,"aggregationsBucket":null,"highlight":null,"didYouMean":null,"totalCssCount":null,
+Troubleshooting_PDP.c(12):     "cssContext":null,"esstores":null,"esmanuals":null}
+Troubleshooting_PDP.c(12): Registered web_reg_find successful for "Text="matches":[" (count=1)  	[MsgId: MMSG-26364]
+Troubleshooting_PDP.c(12): Notify: Saving Parameter "Text_count = 1".
+Troubleshooting_PDP.c(12): web_custom_request("web_custom_request") was successful, 49166 body bytes, 524 header bytes  	[MsgId: MMSG-26386]
+Troubleshooting_PDP.c(21): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+Troubleshooting_PDP.c(28): Notify: Transaction "KAAS_T023_Troubleshooting_PDP" ended with a "Pass" status (Duration: 0.8191 Wasted Time: 0.0072).
+Ending action Troubleshooting_PDP.
+Starting action How_To_PDP.
+How_To_PDP.c(3): Notify: Parameter Substitution: parameter "cp_WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+How_To_PDP.c(3): Notify: Saving Parameter "WCCAccessToken = 000autr0BTG27RT01WHPJBjOdj19".
+How_To_PDP.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+How_To_PDP.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+How_To_PDP.c(5): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+How_To_PDP.c(5): Notify: Parameter Substitution: parameter "WCCAccessToken" =  "000autr0BTG27RT01WHPJBjOdj19"
+How_To_PDP.c(5): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+How_To_PDP.c(9): web_reg_find started  	[MsgId: MMSG-26355]
+How_To_PDP.c(9): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+How_To_PDP.c(11): Notify: Transaction "KAAS_T024_HowTo_PDP" started.
+How_To_PDP.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+How_To_PDP.c(13): Notify: Parameter Substitution: parameter "p_productID" =  "37506818"
+How_To_PDP.c(13): t=4295ms: 524-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&topiccat=467249423806096122761263497662159&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=7)
+How_To_PDP.c(13):     HTTP/1.1 200 OK\r\n
+How_To_PDP.c(13):     Date: Fri, 23 Jul 2021 08:23:09 GMT\r\n
+How_To_PDP.c(13):     Content-Type: application/json;charset=UTF-8\r\n
+How_To_PDP.c(13):     Content-Length: 31543\r\n
+How_To_PDP.c(13):     Connection: keep-alive\r\n
+How_To_PDP.c(13):     x-amzn-RequestId: d762e55b-ffec-4a4f-9610-8bfb2052ab12\r\n
+How_To_PDP.c(13):     X-OneAgent-JS-Injection: true\r\n
+How_To_PDP.c(13):     x-amzn-Remapped-Connection: keep-alive\r\n
+How_To_PDP.c(13):     Set-Cookie: dtCookie=v_4_srv_1_sn_0243F194976163AB2E3111E06DAF2D0E_perc_100000_ol_0_mul_1_
+How_To_PDP.c(13):     app-3Aea7c4b59f27d43eb_1; Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+How_To_PDP.c(13):     x-amz-apigw-id: C6hhCE-yoAMFn2g=\r\n
+How_To_PDP.c(13):     x-amzn-Remapped-Date: Fri, 23 Jul 2021 08:23:09 GMT\r\n
+How_To_PDP.c(13):     \r\n
+How_To_PDP.c(13): t=4303ms: 11763-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&topiccat=467249423806096122761263497662159&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=7)
+How_To_PDP.c(13):     {"matches":[{"documentID":"ish_3900504-3245564-16","title":"HP PCs - Change display settin
+How_To_PDP.c(13):     gs, background image, icons, and screen saver (Windows 10)","contentTypeHeader":"Product S
+How_To_PDP.c(13):     upport","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/r
+How_To_PDP.c(13):     ender/000autr0BTG27RT01WHPJBjOdj19/ish_3900504-3245564-16?entitlement=none&isFullHTMLRequi
+How_To_PDP.c(13):     red=true","matchScore":17.168556,"description":"Learn how to change text size, desktop bac
+How_To_PDP.c(13):     kground, icon size, screen saver, and other desktop or display settings in Windows.","cont
+How_To_PDP.c(13):     entUpdateDate":"2021-05-18 17:47:32","language":"EN","disclosureLevel":"696531864679532034
+How_To_PDP.c(13):     919979251200881","contentType":"Setup and Install","store":"Product Documents","docSource"
+How_To_PDP.c(13):     :"UDP","topics":[{"id":"467249423806096122761263497662159|83787814560679575384987829276912
+How_To_PDP.c(13):     2","name":"How to|Touchscreen"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2268897-1678
+How_To_PDP.c(13):     976-16","title":"HP PCs - Connecting a Bluetooth device (Windows)","contentTypeHeader":"Pr
+How_To_PDP.c(13):     oduct Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-I
+How_To_PDP.c(13):     TG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_2268897-1678976-16?entitlement=none&isFullHT
+How_To_PDP.c(13):     MLRequired=true","matchScore":16.480959,"description":"This document is for HP and Compaq 
+How_To_PDP.c(13):     computers with Windows and Bluetooth connectivity.","contentUpdateDate":"2021-01-20 09:53:
+How_To_PDP.c(13):     04","language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"S
+How_To_PDP.c(13):     etup and Install","store":"Product Documents","docSource":"UDP","topics":[{"id":"467249423
+How_To_PDP.c(13):     806096122761263497662159|587229508428649463154506408374329|2619210311006090384680607448086
+How_To_PDP.c(13):     99","name":"How to|Wireless, Networking & Internet|Wireless Connections & Networking"}],"t
+How_To_PDP.c(13):     opIssue":"NO","cve":[]},{"documentID":"ish_3882507-3873049-16","title":"HP Thin Clients - 
+How_To_PDP.c(13):     TurboSoft Emulation software support","contentTypeHeader":"Product Support","renderLink":"
+How_To_PDP.c(13):     https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT0
+How_To_PDP.c(13):     1WHPJBjOdj19/ish_3882507-3873049-16?entitlement=none&isFullHTMLRequired=true","matchScore"
+How_To_PDP.c(13):     :16.480959,"description":"TurboSoft provides TTWin (Windows) and TTerm (Linux) Terminal Em
+How_To_PDP.c(13):     ulation software support for HP Thin Clients. The software package has over 80 emulations 
+How_To_PDP.c(13):     available in a single environment to enhance the value and function of your applications."
+How_To_PDP.c(13):     ,"contentUpdateDate":"2021-05-12 16:53:22","language":"EN","disclosureLevel":"696531864679
+How_To_PDP.c(13):     532034919979251200881","contentType":"Setup and Install","store":"Product Documents","docS
+How_To_PDP.c(13):     ource":"UDP","topics":[{"id":"467249423806096122761263497662159|44445236061761181248391018
+How_To_PDP.c(13):     9011858","name":"How to|Software & Apps"}],"topIssue":"NO","cve":[]},{"documentID":"ish_19
+How_To_PDP.c(13):     97141-1268524-16","title":"HP PCs and tablets - HP product recycling","contentTypeHeader":
+How_To_PDP.c(13):     "Product Information","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+How_To_PDP.c(13):     /KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_1997141-1268524-16?entitlement=none&i
+How_To_PDP.c(13):     sFullHTMLRequired=true","matchScore":16.054947,"description":"Since 1992, HP has focused o
+How_To_PDP.c(13):     n specific environmental issues through the Design for Environment (DfE) program. The prog
+How_To_PDP.c(13):     ram focuses on optimizing the characteristics of products, processes and facilities to rec
+How_To_PDP.c(13):     ommend environmental improvements.","contentUpdateDate":"2020-07-09 08:28:13","language":"
+How_To_PDP.c(13):     EN","disclosureLevel":"696531864679532034919979251200881","contentType":"Recycle","store":
+How_To_PDP.c(13):     "Product Documents","docSource":"UDP","topics":[{"id":"467249423806096122761263497662159|1
+How_To_PDP.c(13):     47238790689883333846512090800780","name":"How to|Recycle"}],"topIssue":"NO","cve":[]},{"do
+How_To_PDP.c(13):     cumentID":"ish_3913140-3876462-16","title":"HP products tested with Windows 10","contentTy
+How_To_PDP.c(13):     peHeader":"Product Information","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.ama
+How_To_PDP.c(13):     zonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3913140-3876462-16?entitlem
+How_To_PDP.c(13):     ent=none&isFullHTMLRequired=true","matchScore":15.919627,"description":"The information be
+How_To_PDP.c(13):     low lists HP products that have been tested with the Windows 10 May 2021 Update (version 2
+How_To_PDP.c(13):     1H1). Any PC product that is not listed in the Windows 10 May 2021 Update table was not te
+How_To_PDP.c(13):     sted by HP for this update and may not be supported by HP for Windows 10.","contentUpdateD
+How_To_PDP.c(13):     ate":"2021-05-20 19:31:24","language":"EN","disclosureLevel":"6965318646795320349199792512
+How_To_PDP.c(13):     00881","contentType":"Compatibility","store":"Product Documents","docSource":"UDP","topics
+How_To_PDP.c(13):     ":[{"id":"467249423806096122761263497662159|472730833270910075066362187242074","name":"How
+How_To_PDP.c(13):      to|Compatibility"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2856615-2728464-16","tit
+How_To_PDP.c(13):     le":"Frequently asked questions (FAQs) about Windows 10","contentTypeHeader":"Product Supp
+How_To_PDP.c(13):     ort","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/rend
+How_To_PDP.c(13):     er/000autr0BTG27RT01WHPJBjOdj19/ish_2856615-2728464-16?entitlement=none&isFullHTMLRequired
+How_To_PDP.c(13):     =true","matchScore":14.6686535,"description":"Review the frequently asked questions (FAQs)
+How_To_PDP.c(13):      to learn more about the features of Windows 10.","contentUpdateDate":"2020-11-05 19:10:04
+How_To_PDP.c(13):     ","language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"FAQ
+How_To_PDP.c(13):     ","store":"Product Documents","docSource":"UDP","topics":[{"id":"4672494238060961227612634
+How_To_PDP.c(13):     97662159|721188286002908739422292290225445","name":"How to|Windows 10 Common Solutions"}],
+How_To_PDP.c(13):     "topIssue":"NO","cve":[]},{"documentID":"ish_1997200-1415423-16","title":"HP notebook PCs 
+How_To_PDP.c(13):     - Protecting and caring for your notebook","contentTypeHeader":"Product Support","renderLi
+How_To_PDP.c(13):     nk":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG
+How_To_PDP.c(13):     27RT01WHPJBjOdj19/ish_1997200-1415423-16?entitlement=none&isFullHTMLRequired=true","matchS
+How_To_PDP.c(13):     core":12.759583,"description":"HP notebook computers are designed for portable use in loca
+How_To_PDP.c(13):     tions such as offices, schools, homes, meeting rooms, and airports. Careful use and transp
+How_To_PDP.c(13):     ort of your notebook computer ensures optimal performance and longevity.","contentUpdateDa
+How_To_PDP.c(13):     te":"2020-07-09 13:38:48","language":"EN","disclosureLevel":"69653186467953203491997925120
+How_To_PDP.c(13):     0881","contentType":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id"
+How_To_PDP.c(13):     :"467249423806096122761263497662159|132326364980966730054802593439170","name":"How to|Powe
+How_To_PDP.c(13):     r"}],"topIssue":"NO","cve":[]},{"documentID":"ish_3096274-2932573-16","title":"HP PCs - Us
+How_To_PDP.c(13):     ing Windows Security to prevent virus and spyware problems (Windows 10)","contentTypeHeade
+How_To_PDP.c(13):     r":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/
+How_To_PDP.c(13):     KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3096274-2932573-16?entitlement=none&is
+How_To_PDP.c(13):     FullHTMLRequired=true","matchScore":12.70287,"description":"Windows Security helps protect
+How_To_PDP.c(13):      your computer against pop-ups, slow performance, and security threats caused by viruses a
+How_To_PDP.c(13):     nd spyware. Malware can infect your computer without your knowledge. It might install itse
+How_To_PDP.c(13):     lf from an email message, when you connect to the internet, or when you install certain ap
+How_To_PDP.c(13):     plications using a USB flash drive or other removable media. This document explains how to
+How_To_PDP.c(13):      scan for and remove malicious software using Windows Security.","contentUpdateDate":"2021
+How_To_PDP.c(13):     -01-06 21:13:26","language":"EN","disclosureLevel":"696531864679532034919979251200881","co
+How_To_PDP.c(13):     ntentType":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id":"4672494
+How_To_PDP.c(13):     23806096122761263497662159|444452360617611812483910189011858","name":"How to|Software & Ap
+How_To_PDP.c(13):     ps"}],"topIssue":"NO","cve":[]},{"documentID":"ish_3096133-2945541-16","title":"HP Noteboo
+How_To_PDP.c(13):     k PCs - Freeing up storage space on a 32 GB hard drive in Windows 10","contentTypeHeader":
+How_To_PDP.c(13):     "Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/Kaa
+How_To_PDP.c(13):     S-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3096133-2945541-16?entitlement=none&isFul
+How_To_PDP.c(13):     lHTMLRequired=true","matchScore":12.648417,"description":"HP notebook PCs that come with a
+How_To_PDP.c(13):      32 GB hard drive are intended to be used with cloud storage. You might need to free up di
+How_To_PDP.c(13):     sk space before Windows Updates can proceed.","contentUpdateDate":"2021-01-21 20:19:34","l
+How_To_PDP.c(13):     anguage":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"How To"
+How_To_PDP.c(13):     ,"store":"Product Documents","docSource":"UDP","topics":[{"id":"46724942380609612276126349
+How_To_PDP.c(13):     7662159|142932612016193180330587457069072","name":"How to|Hard Drive"}],"topIssue":"NO","c
+How_To_PDP.c(13):     ve":[]},{"documentID":"ish_2850716-2380434-16","title":"HP PCs - Updating drivers and soft
+How_To_PDP.c(13):     ware with Windows Update (Windows 10)","contentTypeHeader":"Product Support","renderLink":
+How_To_PDP.c(13):     "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT
+How_To_PDP.c(13):     01WHPJBjOdj19/ish_2850716-2380434-16?entitlement=none&isFullHTMLRequired=true","matchScore
+How_To_PDP.c(13):     ":12.644439,"description":"Windows Update is a tool that determines which updates apply to
+How_To_PDP.c(13):      your computer and installs them.","contentUpdateDate":"2020-11-03 18:13:55","language":"E
+How_To_PDP.c(13):     N","disclosureLevel":"696531864679532034919979251200881","contentType":"How To","store":"P
+How_To_PDP.c(13):     roduct Documents","docSource":"UDP","topics":[{"id":"467249423806096122761263497662159|983
+How_To_PDP.c(13):     99375745214967303197553587582","name":"How to|PC Setup & Installation"}],"topIssue":"NO","
+How_To_PDP.c(13):     cve":[]},{"documentID":"ish_2856615-2566637-16","title":"HP PCs - Understanding and using 
+How_To_PDP.c(13):     Windows 10","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute
+How_To_PDP.c(13):     -api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_2856615-2
+How_To_PDP.c(13):     566637-16?entitlement=none&isFullHTMLRequired=true","matchScore":12.596091,"description":"
+How_To_PDP.c(13):     Discover the features of Windows 10. Learn how to navigate Windows 10 and use Windows 10 a
+How_To_PDP.c(13):     pps, such as Cortana, Microsoft Edge, and Microsoft Store.","contentUpdateDate":"2020-11-0
+How_To_PDP.c(13):     5 19:10:04","language":"EN","disclosureLevel":"696531864679532034919979251200881","content
+How_To_PDP.c(13):     Type":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id":"467249423806
+How_To_PDP.c(13):     096122761263497662159|721188286002908739422292290225445","name":"How to|Windows 10 Common 
+How_To_PDP.c(13):     Solutions"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2842993-2359187-16","title":"HP 
+How_To_PDP.c(13):     PCs - Managing power options (Windows 10)","contentTypeHeader":"Product Support","renderLi
+How_To_PDP.c(13):     nk":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG
+How_To_PDP.c(13):     27RT01WHPJBjOdj19/ish_2842993-2359187-16?entitlement=none&isFullHTMLRequired=true","matchS
+How_To_PDP.c(13):     core":12.553164,"description":"You can choose a Windows power plan to reduce the amount of
+How_To_PDP.c(13):      power your computer uses, maximize performance, or balance the two. In addition, this doc
+How_To_PDP.c(13):     ument provides methods for shutting down your computer, using various power modes, and tro
+How_To_PDP.c(13):     ubleshooting power issues.","contentUpdateDate":"2020-11-02 19:27:45","language":"EN","dis
+How_To_PDP.c(13):     closureLevel":"696531864679532034919979251200881","contentType":"How To","store":"Product 
+How_To_PDP.c(13):     Documents","docSource":"UDP","topics":[{"id":"467249423806096122761263497662159|1323263649
+How_To_PDP.c(13):     80966730054802593439170","name":"How to|Power"}],"topIssue":"NO","cve":[]},{"documentID":"
+How_To_PDP.c(13):     ish_3096229-2961872-16","title":"HP PCs - Installing and updating antivirus software to pr
+How_To_PDP.c(13):     otect your HP PC","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.e
+How_To_PDP.c(13):     xecute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_309
+How_To_PDP.c(13):     6229-2961872-16?entitlement=none&isFullHTMLRequired=true","matchScore":12.4165945,"descrip
+How_To_PDP.c(13):     tion":" There are thousands of viruses, software programs, and security threats that can h
+How_To_PDP.c(13):     arm your computer, allow private information to be accessed by others, or make the compute
+How_To_PDP.c(13):     r perform slower. It is important to protect your PC by installing antivirus software and 
+How_To_PDP.c(13):     keeping the antivirus definitions up to date.","contentUpdateDate":"2021-01-06 19:16:08","
+How_To_PDP.c(13):     language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"How To
+How_To_PDP.c(13):     ","store":"Product Documents","docSource":"UDP","topics":[{"id"
+How_To_PDP.c(13): t=4313ms: 4097-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&topiccat=467249423806096122761263497662159&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=7)
+How_To_PDP.c(13):     :"467249423806096122761263497662159|444452360617611812483910189011858","name":"How to|Soft
+How_To_PDP.c(13):     ware & Apps"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2025988-1592331-16","title":"H
+How_To_PDP.c(13):     P PCs - Using HP Support Assistant (Windows)","contentTypeHeader":"Product Support","rende
+How_To_PDP.c(13):     rLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0
+How_To_PDP.c(13):     BTG27RT01WHPJBjOdj19/ish_2025988-1592331-16?entitlement=none&isFullHTMLRequired=true","mat
+How_To_PDP.c(13):     chScore":12.368777,"description":"HP Support Assistant helps keep your HP computer in work
+How_To_PDP.c(13):     ing order by finding updates and providing troubleshooting tools.","contentUpdateDate":"20
+How_To_PDP.c(13):     20-07-09 14:18:01","language":"EN","disclosureLevel":"696531864679532034919979251200881","
+How_To_PDP.c(13):     contentType":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id":"46724
+How_To_PDP.c(13):     9423806096122761263497662159|579867877342213269589369053295480","name":"How to|Diagnostics
+How_To_PDP.c(13):      & Support Tools"}],"topIssue":"NO","cve":[]},{"documentID":"ish_3960428-3956757-16","titl
+How_To_PDP.c(13):     e":"HP PCs - Activate Microsoft Office in Windows 10","contentTypeHeader":"Product Support
+How_To_PDP.c(13):     ","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/
+How_To_PDP.c(13):     000autr0BTG27RT01WHPJBjOdj19/ish_3960428-3956757-16?entitlement=none&isFullHTMLRequired=tr
+How_To_PDP.c(13):     ue","matchScore":12.313722,"description":"Microsoft Office is a collection of applications
+How_To_PDP.c(13):      for personal and business productivity, such as Word, Excel, PowerPoint, and OneNote.","c
+How_To_PDP.c(13):     ontentUpdateDate":"2021-06-01 20:54:39","language":"EN","disclosureLevel":"696531864679532
+How_To_PDP.c(13):     034919979251200881","contentType":"How To","store":"Product Documents","docSource":"UDP","
+How_To_PDP.c(13):     topics":[{"id":"467249423806096122761263497662159|721188286002908739422292290225445","name
+How_To_PDP.c(13):     ":"How to|Windows 10 Common Solutions"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2854
+How_To_PDP.c(13):     458-2733239-16","title":"HP PCs - Testing for hardware failures in Windows 10","contentTyp
+How_To_PDP.c(13):     eHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaw
+How_To_PDP.c(13):     s.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_2854458-2733239-16?entitlement=n
+How_To_PDP.c(13):     one&isFullHTMLRequired=true","matchScore":12.297181,"description":"HP provides diagnostic 
+How_To_PDP.c(13):     software for testing hardware components on your computer and confirm hardware failures.",
+How_To_PDP.c(13):     "contentUpdateDate":"2020-11-23 20:19:51","language":"EN","disclosureLevel":"6965318646795
+How_To_PDP.c(13):     32034919979251200881","contentType":"How To","store":"Product Documents","docSource":"UDP"
+How_To_PDP.c(13):     ,"topics":[{"id":"467249423806096122761263497662159|444452360617611812483910189011858","na
+How_To_PDP.c(13):     me":"How to|Software & Apps"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2026000-149853
+How_To_PDP.c(13):     2-16","title":"HP PCs - Using Microsoft System Restore","contentTypeHeader":"Product Suppo
+How_To_PDP.c(13):     rt","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/rende
+How_To_PDP.c(13):     r/000autr0BTG27RT01WHPJBjOdj19/ish_2026000-1498532-16?entitlement=none&isFullHTMLRequired=
+How_To_PDP.c(13):     true","matchScore":12.286115,"description":"Use Microsoft System Restore to return the com
+How_To_PDP.c(13):     puter to a previous state when the computer worked normally.","contentUpdateDate":"2020-09
+How_To_PDP.c(13):     -21 21:41:18","language":"EN","disclosureLevel":"696531864679532034919979251200881","conte
+How_To_PDP.c(13):     ntType":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id":"4672494238
+How_To_PDP.c(13):     06096122761263497662159|271013352446201877248613206539137","name":"How to|System Recovery,
+How_To_PDP.c(13):      Backup & Restore"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2851707-2408268-16","tit
+How_To_PDP.c(13):     le":"HP PCs - Using Microsoft Edge browser (Windows 10)","contentTypeHeader":"Product Supp
+How_To_PDP.c(13):     ort","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/rend
+How_To_PDP.c(13):     er/000autr0BTG27RT01WHPJBjOdj19/ish_2851707-2408268-16?entitlement=none&isFullHTMLRequired
+How_To_PDP.c(13):     =true","matchScore":12.13678,"description":"Microsoft Edge is the default internet browser
+How_To_PDP.c(13):      for Windows 10 computers and mobile devices. With this browser, you can use integrated Mi
+How_To_PDP.c(13):     crosoft services, such as the Cortana personal digital assistant and OneDrive, and offers 
+How_To_PDP.c(13):     annotation tools and a reading mode.","contentUpdateDate":"2020-11-03 22:24:04","language"
+How_To_PDP.c(13):     :"EN","disclosureLevel":"6965318646795320349199
+How_To_PDP.c(13): t=4316ms: 12287-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&topiccat=467249423806096122761263497662159&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=7)
+How_To_PDP.c(13):     79251200881","contentType":"How To","store":"Product Documents","docSource":"UDP","topics"
+How_To_PDP.c(13):     :[{"id":"467249423806096122761263497662159|587229508428649463154506408374329|4906116047717
+How_To_PDP.c(13):     06385563096042340766","name":"How to|Wireless, Networking & Internet|Internet & Email"}],"
+How_To_PDP.c(13):     topIssue":"NO","cve":[]},{"documentID":"ish_3102863-2949936-16","title":"HP PCs - Installi
+How_To_PDP.c(13):     ng the latest version of Windows 10","contentTypeHeader":"Product Support","renderLink":"h
+How_To_PDP.c(13):     ttps://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01
+How_To_PDP.c(13):     WHPJBjOdj19/ish_3102863-2949936-16?entitlement=none&isFullHTMLRequired=true","matchScore":
+How_To_PDP.c(13):     12.13678,"description":"New Windows 10 versions are delivered to your computer through Win
+How_To_PDP.c(13):     dows Update. Learn what happens if Windows installs the update automatically, and find inf
+How_To_PDP.c(13):     ormation for manually installing the update.","contentUpdateDate":"2021-01-12 17:08:02","l
+How_To_PDP.c(13):     anguage":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"How To"
+How_To_PDP.c(13):     ,"store":"Product Documents","docSource":"UDP","topics":[{"id":"46724942380609612276126349
+How_To_PDP.c(13):     7662159|694170007116883042170917580564015","name":"How to|Install, Update or Upgrade Opera
+How_To_PDP.c(13):     ting System"}],"topIssue":"NO","cve":[]},{"documentID":"ish_3155639-2906263-16","title":"H
+How_To_PDP.c(13):     P PCs - Using two or more monitors with one computer (Windows 10)","contentTypeHeader":"Pr
+How_To_PDP.c(13):     oduct Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-I
+How_To_PDP.c(13):     TG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3155639-2906263-16?entitlement=none&isFullHT
+How_To_PDP.c(13):     MLRequired=true","matchScore":12.015332,"description":"Learn how to duplicate or extend yo
+How_To_PDP.c(13):     ur desktop display. Connect and set up a television (TV) or an additional monitor to your 
+How_To_PDP.c(13):     computer.","contentUpdateDate":"2021-01-22 22:17:21","language":"EN","disclosureLevel":"69
+How_To_PDP.c(13):     6531864679532034919979251200881","contentType":"How To","store":"Product Documents","docSo
+How_To_PDP.c(13):     urce":"UDP","topics":[{"id":"467249423806096122761263497662159|721188286002908739422292290
+How_To_PDP.c(13):     225445","name":"How to|Windows 10 Common Solutions"}],"topIssue":"NO","cve":[]},{"document
+How_To_PDP.c(13):     ID":"ish_2851117-2408065-16","title":"HP PCs - Installing drivers manually in Windows","co
+How_To_PDP.c(13):     ntentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.
+How_To_PDP.c(13):     amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_2851117-2408065-16?entit
+How_To_PDP.c(13):     lement=none&isFullHTMLRequired=true","matchScore":11.945699,"description":"If you have att
+How_To_PDP.c(13):     empted to download and install a driver from the HP Support site and were unable to run th
+How_To_PDP.c(13):     e .exe file, this document offers instructions for installing the driver manually.","conte
+How_To_PDP.c(13):     ntUpdateDate":"2020-11-03 19:44:39","language":"EN","disclosureLevel":"6965318646795320349
+How_To_PDP.c(13):     19979251200881","contentType":"How To","store":"Product Documents","docSource":"UDP","topi
+How_To_PDP.c(13):     cs":[{"id":"467249423806096122761263497662159|148701969364540650170413288728085|8087102553
+How_To_PDP.c(13):     73009716854085764679800","name":"How to|Printer Setup, Installation & Updates|Setup, Insta
+How_To_PDP.c(13):     ll & Connect Printer"}],"topIssue":"NO","cve":[]},{"documentID":"ish_2040493-1382278-16","
+How_To_PDP.c(13):     title":"HP Notebook PCs - Purchasing a replacement AC power adapter","contentTypeHeader":"
+How_To_PDP.c(13):     Product Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS
+How_To_PDP.c(13):     -ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_2040493-1382278-16?entitlement=none&isFull
+How_To_PDP.c(13):     HTMLRequired=true","matchScore":11.833331,"description":"Purchase a replacement AC power a
+How_To_PDP.c(13):     dapter that is designed for your notebook if the original one fails. You might also want t
+How_To_PDP.c(13):     o purchase an additional power supply for travel or use in an alternate location.","conten
+How_To_PDP.c(13):     tUpdateDate":"2020-07-09 13:34:20","language":"EN","disclosureLevel":"69653186467953203491
+How_To_PDP.c(13):     9979251200881","contentType":"How To","store":"Product Documents","docSource":"UDP","topic
+How_To_PDP.c(13):     s":[{"id":"467249423806096122761263497662159|132326364980966730054802593439170","name":"Ho
+How_To_PDP.c(13):     w to|Power"}],"topIssue":"NO","cve":[]},{"documentID":"c00370524","title":"HP Notebook PCs
+How_To_PDP.c(13):      - Determining the Processor Speed in Windows XP","contentTypeHeader":"Product Support","r
+How_To_PDP.c(13):     enderLink":"https://uat.support.hp.com/","matchScore":11.768444,"description":"Provides di
+How_To_PDP.c(13):     rections for finding the processor speed in Windows XP using HP Help and Support as well a
+How_To_PDP.c(13):     s Windows utilities.","contentUpdateDate":"2012-12-06 16:58:16","language":"EN","disclosur
+How_To_PDP.c(13):     eLevel":"696531864679532034919979251200881","contentType":"How To","store":"Product Docume
+How_To_PDP.c(13):     nts","docSource":"Concentra","topics":[{"id":"467249423806096122761263497662159|8639621752
+How_To_PDP.c(13):     89797506364563971583192","name":"How to|Improve PC Performance"}],"topIssue":"NO"},{"docum
+How_To_PDP.c(13):     entID":"ish_3096146-2917121-16","title":"HP Notebook PCs - Using the TouchPad or ClickPad 
+How_To_PDP.c(13):     (Windows 10)","contentTypeHeader":"Product Support","renderLink":"https://hx9ekpvvbi.execu
+How_To_PDP.c(13):     te-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3096146
+How_To_PDP.c(13):     -2917121-16?entitlement=none&isFullHTMLRequired=true","matchScore":11.745052,"description"
+How_To_PDP.c(13):     :"A TouchPad or ClickPad is a pointing device with a touch-sensitive surface located on th
+How_To_PDP.c(13):     e palm rest of the notebook. You can adjust the sensitivity of the TouchPad or ClickPad, e
+How_To_PDP.c(13):     nable or disable the features and gestures, and change the functionality of the buttons.",
+How_To_PDP.c(13):     "contentUpdateDate":"2021-01-21 18:30:20","language":"EN","disclosureLevel":"6965318646795
+How_To_PDP.c(13):     32034919979251200881","contentType":"How To","store":"Product Documents","docSource":"UDP"
+How_To_PDP.c(13):     ,"topics":[{"id":"467249423806096122761263497662159|476419299929749907654184404213318|8848
+How_To_PDP.c(13):     46285166369114049148512257914","name":"How to|Keyboard, Mouse or Touchpad|Mouse or Touchpa
+How_To_PDP.c(13):     d"}],"topIssue":"NO","cve":[]},{"documentID":"c01183500","title":"HP Notebook PCs - Genera
+How_To_PDP.c(13):     l Information About Memory Cards","contentTypeHeader":"Product Support","renderLink":"http
+How_To_PDP.c(13):     s://uat.support.hp.com/","matchScore":11.73487,"description":"Information about the differ
+How_To_PDP.c(13):     ent types of memory cards (sometimes called camera cards).","contentUpdateDate":"2012-11-2
+How_To_PDP.c(13):     9 15:48:16","language":"EN","disclosureLevel":"696531864679532034919979251200881","content
+How_To_PDP.c(13):     Type":"How To","store":"Product Documents","docSource":"Concentra","topics":[{"id":"467249
+How_To_PDP.c(13):     423806096122761263497662159|663410095250075345959443239300215","name":"How to|Memory Card 
+How_To_PDP.c(13):     & Reader"}],"topIssue":"NO"},{"documentID":"c01867196","title":"HP Notebook PCs - About HP
+How_To_PDP.c(13):      Power Assistant","contentTypeHeader":"Product Support","renderLink":"https://uat.support.
+How_To_PDP.c(13):     hp.com/","matchScore":11.73487,"description":"Information about how to use HP Power Assist
+How_To_PDP.c(13):     ant.","contentUpdateDate":"2009-09-11 21:52:38","language":"EN","disclosureLevel":"6965318
+How_To_PDP.c(13):     64679532034919979251200881","contentType":"How To","store":"Product Documents","docSource"
+How_To_PDP.c(13):     :"Concentra","topics":[{"id":"467249423806096122761263497662159|13232636498096673005480259
+How_To_PDP.c(13):     3439170","name":"How to|Power"}],"topIssue":"NO"},{"documentID":"c00364979","title":"HP PC
+How_To_PDP.c(13):     s - Configuring the Boot Order in the System BIOS","contentTypeHeader":"Product Support","
+How_To_PDP.c(13):     renderLink":"https://uat.support.hp.com/","matchScore":11.70902,"description":"This docume
+How_To_PDP.c(13):     nt explains how to configure the boot order in the system BIOS.","contentUpdateDate":"2018
+How_To_PDP.c(13):     -10-31 17:02:27","language":"EN","disclosureLevel":"696531864679532034919979251200881","co
+How_To_PDP.c(13):     ntentType":"How To","store":"Product Documents","docSource":"Concentra","topics":[{"id":"4
+How_To_PDP.c(13):     67249423806096122761263497662159|366494934921795644755561049374276","name":"How to|Memory 
+How_To_PDP.c(13):     (RAM) or BIOS"}],"topIssue":"NO"},{"documentID":"c02034609","title":"HP Notebook PCs - HP 
+How_To_PDP.c(13):     DisplayPort","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.co
+How_To_PDP.c(13):     m/","matchScore":11.655989,"description":"","contentUpdateDate":"2010-03-05 19:27:45","lan
+How_To_PDP.c(13):     guage":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"How To","
+How_To_PDP.c(13):     store":"Product Documents","docSource":"Concentra","topics":[{"id":"4672494238060961227612
+How_To_PDP.c(13):     63497662159|442005112613357408564885721831700","name":"How to|Monitor, Display or Graphics
+How_To_PDP.c(13):     "}],"topIssue":"NO"},{"documentID":"c01632893","title":"HP EliteBook Notebook PCs - How to
+How_To_PDP.c(13):      Customize the Logo Displayed During the Boot","contentTypeHeader":"Product Support","rend
+How_To_PDP.c(13):     erLink":"https://uat.support.hp.com/","matchScore":11.655989,"description":"","contentUpda
+How_To_PDP.c(13):     teDate":"2008-12-17 12:25:41","language":"EN","disclosureLevel":"6965318646795320349199792
+How_To_PDP.c(13):     51200881","contentType":"How To","store":"Product Documents","docSource":"Concentra","topi
+How_To_PDP.c(13):     cs":[{"id":"467249423806096122761263497662159|242966076277272621312097778610963","name":"H
+How_To_PDP.c(13):     ow to|Computer Settings"}],"topIssue":"NO"},{"documentID":"c01865889","title":"HP Notebook
+How_To_PDP.c(13):      PCs - About Hard Drive Encryption","contentTypeHeader":"Product Support","renderLink":"ht
+How_To_PDP.c(13):     tps://uat.support.hp.com/","matchScore":11.655989,"description":"Instructions on how to se
+How_To_PDP.c(13):     t up Hard Drive Encryption for HP ProtectTools","contentUpdateDate":"2009-09-09 15:58:45",
+How_To_PDP.c(13):     "language":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"How T
+How_To_PDP.c(13):     o","store":"Product Documents","docSource":"Concentra","topics":[{"id":"467249423806096122
+How_To_PDP.c(13):     761263497662159|142932612016193180330587457069072","name":"How to|Hard Drive"}],"topIssue"
+How_To_PDP.c(13):     :"NO"},{"documentID":"c05622868","title":"HP PCs - Connecting to a Mobile Network Using an
+How_To_PDP.c(13):      eSIM (Windows 10)","contentTypeHeader":"Product Support","renderLink":"https://uat.suppor
+How_To_PDP.c(13):     t.hp.com/","matchScore":11.649746,"description":"Learn what eSIM is, how to manage eSIM pr
+How_To_PDP.c(13):     ofiles, and how to add eSIM profiles.","contentUpdateDate":"2020-06-29 18:38:24","language
+How_To_PDP.c(13):     ":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"How To","store
+How_To_PDP.c(13):     ":"Product Documents","docSource":"Concentra","topics":[{"id":"467249423806096122761263497
+How_To_PDP.c(13):     662159|663410095250075345959443239300215","name":"How to|Memory Card & Reader"}],"topIssue
+How_To_PDP.c(13):     ":"NO"},{"documentID":"c00901059","title":"HP Notebook PCs - Using Touch Screen to Control
+How_To_PDP.c(13):      Programs and Input Text","contentTypeHeader":"Product Support","renderLink":"https://uat.
+How_To_PDP.c(13):     support.hp.com/","matchScore":11.649746,"description":"Tips on how to control the PC and i
+How_To_PDP.c(13):     nput text by writing on the touch screen with a fingertip or a stylus","contentUpdateDate"
+How_To_PDP.c(13):     :"2012-11-20 16:44:30","language":"EN","disclosureLevel":"69653186467953203491997925120088
+How_To_PDP.c(13):     1","contentType":"How To","store":"Product Documents","docSource":"Concentra","topics":[{"
+How_To_PDP.c(13):     id":"467249423806096122761263497662159|442005112613357408564885721831700","name":"How to|M
+How_To_PDP.c(13):     onitor, Display or Graphics"}],"topIssue":"NO"},{"documentID":"ish_3096094-2900804-16","ti
+How_To_PDP.c(13):     tle":"HP PCs - Troubleshooting wired home networks in Windows 10","contentTypeHeader":"Pro
+How_To_PDP.c(13):     duct Support","renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-IT
+How_To_PDP.c(13):     G/v2/render/000autr0BTG27RT01WHPJBjOdj19/ish_3096094-2900804-16?entitlement=none&isFullHTM
+How_To_PDP.c(13):     LRequired=true","matchScore":11.608538,"description":"When you are troubleshooting wired h
+How_To_PDP.c(13):     ome network issues in Windows 10, test the network connection after performing each troubl
+How_To_PDP.c(13):     eshooting step. ","contentUpdateDate":"2021-01-21 20:26:23","language":"EN","disclosureLev
+How_To_PDP.c(13):     el":"696531864679532034919979251200881","contentType":"How To","store":"Product Documents"
+How_To_PDP.c(13):     ,"docSource":"UDP","topics":[{"id":"467249423806096122761263497662159|58722950842864946315
+How_To_PDP.c(13):     4506408374329|818106340703785171178768141977232","name":"How to|Wireless, Networking & Int
+How_To_PDP.c(13):     ernet|Wired Connections & Networking"}],"topIssue":"NO","cve":[]},{"documentID":"ish_20260
+How_To_PDP.c(13):     06-1490761-16","title":"HP PCs - Reset the computer","contentTypeHeader":"Product Support"
+How_To_PDP.c(13):     ,"renderLink":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/0
+How_To_PDP.c(13):     00autr0BTG27RT01WHPJBjOdj19/ish_2026006-1490761-16?entitlement=none&isFullHTMLRequired=tru
+How_To_PDP.c(13):     e","matchScore":11.581762,"description":"The Windows 10 reset feature reinstalls the opera
+How_To_PDP.c(13):     ting system without losing any of your personal data and customizations.","contentUpdateDa
+How_To_PDP.c(13):     te":"2020-09-21 21:52:41","language":"EN","disclosureLevel":"69653186467953203491997925120
+How_To_PDP.c(13):     0881","contentType":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id"
+How_To_PDP.c(13):     :"467249423806096122761263497662159|271013352446201877248613206539137","name":"How to|Syst
+How_To_PDP.c(13):     em Recovery, Backup & Restore"}],"topIssue":"NO","cve":[]},{"documentID":"ish_3046044-2749
+How_To_PDP.c(13):     139-16","title":"HP PCs - How to reset your computer to factory settings in Windows 10","c
+How_To_PDP.c(13):     ontentTypeHeader":"Product Support","renderLink
+How_To_PDP.c(13): t=4324ms: 3396-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&product=37506818&contentTypes=How To,Setup and Install,Compatibility,Recycle,FAQ,Repair or Replace&topiccat=467249423806096122761263497662159&printFields=topics,topIssue,filesize,cve" (RelFrameId=1, Internal ID=7)
+How_To_PDP.c(13):     ":"https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000autr0BTG27
+How_To_PDP.c(13):     RT01WHPJBjOdj19/ish_3046044-2749139-16?entitlement=none&isFullHTMLRequired=true","matchSco
+How_To_PDP.c(13):     re":11.581762,"description":"Resetting your computer to factory settings might be necessar
+How_To_PDP.c(13):     y if the operating system is damaged, the hard drive is corrupted, the computer is infecte
+How_To_PDP.c(13):     d by a virus, or you are transferring ownership of the computer. HP System Recovery remove
+How_To_PDP.c(13):     s all hard drive data and reinstalls the original operating system.","contentUpdateDate":"
+How_To_PDP.c(13):     2021-01-21 20:05:19","language":"EN","disclosureLevel":"696531864679532034919979251200881"
+How_To_PDP.c(13):     ,"contentType":"How To","store":"Product Documents","docSource":"UDP","topics":[{"id":"467
+How_To_PDP.c(13):     249423806096122761263497662159|271013352446201877248613206539137","name":"How to|System Re
+How_To_PDP.c(13):     covery, Backup & Restore"}],"topIssue":"NO","cve":[]},{"documentID":"c04723006","title":"H
+How_To_PDP.c(13):     P PCs, Tablets and Accessories - Using USB Type-C to Transfer Power and Data","contentType
+How_To_PDP.c(13):     Header":"Product Support","renderLink":"https://uat.support.hp.com/","matchScore":11.30288
+How_To_PDP.c(13):     2,"description":"This document provides a definition of USB Type-C, with information on cu
+How_To_PDP.c(13):     rrent USB Type-C accessories.","contentUpdateDate":"2020-07-23 05:07:47","language":"EN","
+How_To_PDP.c(13):     disclosureLevel":"696531864679532034919979251200881","contentType":"How To","store":"Produ
+How_To_PDP.c(13):     ct Documents","docSource":"Concentra","topics":[{"id":"467249423806096122761263497662159|8
+How_To_PDP.c(13):     17764149474494605081876763073067|348099819432015884304885651400385","name":"How to|Ports o
+How_To_PDP.c(13):     r USB|USB"}],"topIssue":"YES"},{"documentID":"c06716758","title":"Statement of memory vola
+How_To_PDP.c(13):     tility","contentTypeHeader":"Product Support","renderLink":"https://uat.support.hp.com/","
+How_To_PDP.c(13):     matchScore":10.496522,"description":"","contentUpdateDate":"2020-08-08 10:15:59","language
+How_To_PDP.c(13):     ":"EN","disclosureLevel":"696531864679532034919979251200881","contentType":"How To","store
+How_To_PDP.c(13):     ":"Product Documents","docSource":"Concentra","topics":[{"id":"467249423806096122761263497
+How_To_PDP.c(13):     662159|303826265115107578299484751918360","name":"How to|Add or Remove Hardware & Customer
+How_To_PDP.c(13):      Self Repair"}],"topIssue":"NO"},{"documentID":"c06719330","title":"Components","contentTy
+How_To_PDP.c(13):     peHeader":"Product Support","renderLink":"https://uat.support.hp.com/","matchScore":10.496
+How_To_PDP.c(13):     522,"description":"","contentUpdateDate":"2020-08-08 11:17:35","language":"EN","disclosure
+How_To_PDP.c(13):     Level":"696531864679532034919979251200881","contentType":"How To","store":"Product Documen
+How_To_PDP.c(13):     ts","docSource":"Concentra","topics":[{"id":"467249423806096122761263497662159|30382626511
+How_To_PDP.c(13):     5107578299484751918360","name":"How to|Add or Remove Hardware & Customer Self Repair"}],"t
+How_To_PDP.c(13):     opIssue":"NO"},{"documentID":"c06719329","title":"Illustrated parts catalog","contentTypeH
+How_To_PDP.c(13):     eader":"Product Support","renderLink":"https://uat.support.hp.com/","matchScore":10.496522
+How_To_PDP.c(13):     ,"description":"","contentUpdateDate":"2020-08-08 11:10:54","language":"EN","disclosureLev
+How_To_PDP.c(13):     el":"696531864679532034919979251200881","contentType":"How To","store":"Product Documents"
+How_To_PDP.c(13):     ,"docSource":"Concentra","topics":[{"id":"467249423806096122761263497662159|30382626511510
+How_To_PDP.c(13):     7578299484751918360","name":"How to|Add or Remove Hardware & Customer Self Repair"}],"topI
+How_To_PDP.c(13):     ssue":"NO"}],"range":{"start":"0","end":"1000"},"totalCount":39,"showingResultsFor":null,"
+How_To_PDP.c(13):     searchInsteadFor":null,"aggregationsBucket":null,"highlight":null,"didYouMean":null,"total
+How_To_PDP.c(13):     CssCount":null,"cssContext":null,"esstores":null,"esmanuals":null}
+How_To_PDP.c(13): Registered web_reg_find successful for "Text="matches":[" (count=1)  	[MsgId: MMSG-26364]
+How_To_PDP.c(13): Notify: Saving Parameter "Text_count = 1".
+How_To_PDP.c(13): web_custom_request("web_custom_request") was successful, 31543 body bytes, 524 header bytes  	[MsgId: MMSG-26386]
+How_To_PDP.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+How_To_PDP.c(30): Notify: Transaction "KAAS_T024_HowTo_PDP" ended with a "Pass" status (Duration: 0.7500 Wasted Time: 0.0057).
+Ending action How_To_PDP.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

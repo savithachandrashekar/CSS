@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\PERFORMANCE\GCC\Kaas\FY20_Release\Script\V1\KAAS_Binary_Content_Rendering
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ee:\performance\gcc\kaas\fy20_release\script\v1\kaas_binary_content_rendering\\logfile.log
+e:\performance\gcc\kaas\fy20_release\script\v1\kaas_binary_content_rendering\\combined_KAAS_Binary_Content_Rendering.c
+e:\performance\gcc\kaas\fy20_release\script\v1\kaas_binary_content_rendering\\pre_cci.c

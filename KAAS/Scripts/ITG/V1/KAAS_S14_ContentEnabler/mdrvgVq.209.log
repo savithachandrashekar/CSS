@@ -1,0 +1,2 @@
+ContentEnabler.c(14): Continuing after Error -26612: HTTP Status-Code=500 (Internal Server Error) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/contentenabler/expandToModelsAndSeries"  	[MsgId: MERR-26612]
+Warning: Iteration pacing cannot be reached (pace time = 5.30, actual time = 9.27).	[MsgId: MWAR-15995]

@@ -1,0 +1,2 @@
+Warning: Iteration pacing cannot be reached (pace time = 4.10, actual time = 9.38).	[MsgId: MWAR-15995]
+kaas_DocSearchHPES_FindMyProduct.c(10): Error -27760: Request "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Compaq Evo Desktop&resultLimit=20&resultStart=0&languageCode=en&countryCode=us&store=tmsstore&filters=(class:(pm_series_value%5E1.5%20OR%20pm_name_value%20OR%20pm_number_value)%20AND%20contenttype:Product%20AND%20historicalwebsupportflag:(no))&clientId=WCC" failed  	[MsgId: MERR-27760]

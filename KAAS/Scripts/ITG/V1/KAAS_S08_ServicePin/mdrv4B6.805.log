@@ -1,0 +1,7 @@
+ServicePin.c(8): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000a5idCeamapCSoNzX5tlw5Icjp/2CF57A"  	[MsgId: MERR-26627]
+ServicePin.c(8): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000a5idCeamapCSoNzX5tlw5Icjp/CZ251V"  	[MsgId: MERR-26627]
+ServicePin.c(8): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000a5idCeamapCSoNzX5tlw5Icjp/2CF56A"  	[MsgId: MERR-26627]
+ServicePin.c(8): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000a5idCeamapCSoNzX5tlw5Icjp/5ZN97A"  	[MsgId: MERR-26627]
+ServicePin.c(8): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000a5idCeamapCSoNzX5tlw5Icjp/2GP16A"  	[MsgId: MERR-26627]
+ServicePin.c(8): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000a5idCeamapCSoNzX5tlw5Icjp/2GP08A"  	[MsgId: MERR-26627]
+ServicePin.c(8): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000a5idCeamapCSoNzX5tlw5Icjp/2GP07A"  	[MsgId: MERR-26627]

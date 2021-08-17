@@ -1,0 +1,2 @@
+ServicePin.c(8): Error -26612: HTTP Status-Code=500 (Internal Server Error) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aURIzCCpQzIz9xxyBVjZS8vXt/1PS54A"  	[MsgId: MERR-26612]
+ServicePin.c(8): Error -26612: HTTP Status-Code=500 (Internal Server Error) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/servicepin/000aURIzCCpQzIz9xxyBVjZS8vXt/1PV49A"  	[MsgId: MERR-26612]

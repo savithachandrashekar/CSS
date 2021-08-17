@@ -1,0 +1,2 @@
+kaas_DocSearchUDPES_PDP_Topics_10.c(13): Error -27792: Failed to connect to server "hx9ekpvvbi.execute-api.us-east-1.amazonaws.com:443": [10060] Connection timed out  	[MsgId: MERR-27792]
+Warning: Iteration pacing cannot be reached (pace time = 20.80, actual time = 21.00).	[MsgId: MWAR-15995]

@@ -1,0 +1,283 @@
+Virtual User Script started at: 6/25/2021 6:43:59 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\GCC\Kaas\FY20_Release\Script\V1\Kaas_ESUDP_Factes\\default.cfg"  	[MsgId: MMSG-27141]
+Starting to download the proxy automatic configuration script, URL="http://autocache.hpicorp.net/"  	[MsgId: MMSG-27097]
+Proxy automatic configuration script (URL="http://autocache.hpicorp.net/") downloaded and evaluated successfully  	[MsgId: MMSG-27096]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(6): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(6): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(8): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(8): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(9): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(9): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(11): Notify: Saving Parameter "c_WCCAccessToken = 000aEnAoUBAEIDa2XHoyH2ctc3pt".
+vuser_init.c(11): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials"  	[MsgId: MMSG-26548]
+vuser_init.c(11): web_custom_request("web_custom_request") was successful, 87 body bytes, 517 header bytes  	[MsgId: MMSG-26386]
+vuser_init.c(21): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(21): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(21): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(22): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(22): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(22): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(23): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(23): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(23): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(24): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(24): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(26): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(26): Notify: Saving Parameter "c_WISEAccessToken = 000a5QPb8XHtfrxVyDDBagyxwccB".
+vuser_init.c(26): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials"  	[MsgId: MMSG-26548]
+vuser_init.c(26): web_custom_request("web_custom_request") was successful, 87 body bytes, 517 header bytes  	[MsgId: MMSG-26386]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action kaas_DocSearchUDPES_Facets.
+kaas_DocSearchUDPES_Facets.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_Facets.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000a5QPb8XHtfrxVyDDBagyxwccB"
+kaas_DocSearchUDPES_Facets.c(6): Notify: Saving Parameter "WISEAccessToken = 000a5QPb8XHtfrxVyDDBagyxwccB".
+kaas_DocSearchUDPES_Facets.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000a5QPb8XHtfrxVyDDBagyxwccB"
+kaas_DocSearchUDPES_Facets.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_Facets.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_Facets.c(12): Notify: Transaction "kaas_DocSearchUDPES_Facets" started.
+kaas_DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(14): Notify: Parameter Substitution: parameter "p_facetSearch" =  "Ink/toner cartridge "
+kaas_DocSearchUDPES_Facets.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Ink/toner cartridge &resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257,600096605536507071488362545356335&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,manualagentstore,manualstore,videostore,processagentstore,udp-content-default&aggregations=producttopics,documenttype,disclosurelevel,countrycode,topissue&spellCheck=3&compoundSearch=true"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_Facets.c(14): Registered web_reg_find successful for "Text="matches":[{"documentID"" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_Facets.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") was successful, 23551 body bytes, 318 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_Facets.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_Facets.c(30): Notify: Transaction "kaas_DocSearchUDPES_Facets" ended with a "Pass" status (Duration: 1.2317 Wasted Time: 0.0111).
+Ending action kaas_DocSearchUDPES_Facets.
+Ending iteration 1.
+Starting iteration 2.
+Notify: Next row for parameter p_facetSearch = 42 [table  = p_facetSearch].
+Notify: Getting new value for parameter 'p_facetSearch': table = 'p_facetSearch.dat' column = '0' row = '42'.
+Notify: Next row for parameter QuickRef_productnumbers = 2 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '2'.
+Notify: Next row for parameter Todate = 1 [table  = Todate].
+Notify: Getting new value for parameter 'Todate': table = 'Todate.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_docWithProdNumber = 2 [table  = p_docWithProdNumber].
+Notify: Getting new value for parameter 'p_docWithProdNumber': table = 'p_docWithProdNumber.dat' column = '0' row = '2'.
+Notify: Next row for parameter p_pdp10_Product = 2 [table  = p_pdp10_Product].
+Notify: Getting new value for parameter 'p_pdp10_Product': table = 'p_pdp_Product.dat' column = '0' row = '2'.
+Notify: Next row for parameter p_DocWithoutProd = 2 [table  = p_DocWithoutProd].
+Notify: Getting new value for parameter 'p_DocWithoutProd': table = 'p_DocWithoutProd.dat' column = '0' row = '2'.
+Notify: Next row for parameter p_DocSortSearch = 2 [table  = p_DocSortSearch].
+Notify: Getting new value for parameter 'p_DocSortSearch': table = 'p_DocSortSearch.dat' column = '0' row = '2'.
+Notify: Next row for parameter FromDate = 1 [table  = FromDate].
+Notify: Getting new value for parameter 'FromDate': table = 'FromDate.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_DocwithProduct = 2 [table  = p_DocwithProduct].
+Notify: Getting new value for parameter 'p_DocwithProduct': table = 'p_DocwithProduct.dat' column = '0' row = '2'.
+Notify: Next row for parameter Pdp1000_productNum = 2 [table  = Pdp1000_productNum].
+Notify: Getting new value for parameter 'Pdp1000_productNum': table = 'Pdp1000_productNum.dat' column = '0' row = '2'.
+Notify: Next row for parameter Pdp_TopicCat = 1 [table  = Pdp_TopicCat].
+Notify: Getting new value for parameter 'Pdp_TopicCat': table = 'Pdp_TopicCat.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_DocRangeSearch = 2 [table  = p_DocRangeSearch].
+Notify: Getting new value for parameter 'p_DocRangeSearch': table = 'p_DocRangeSearch.dat' column = '0' row = '2'.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_doctypesSearch = 2 [table  = p_doctypesSearch].
+Notify: Getting new value for parameter 'p_doctypesSearch': table = 'p_doctypesSearch.dat' column = '0' row = '2'.
+Starting action kaas_DocSearchUDPES_Facets.
+kaas_DocSearchUDPES_Facets.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_Facets.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000a5QPb8XHtfrxVyDDBagyxwccB"
+kaas_DocSearchUDPES_Facets.c(6): Notify: Saving Parameter "WISEAccessToken = 000a5QPb8XHtfrxVyDDBagyxwccB".
+kaas_DocSearchUDPES_Facets.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000a5QPb8XHtfrxVyDDBagyxwccB"
+kaas_DocSearchUDPES_Facets.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_Facets.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_Facets.c(12): Notify: Transaction "kaas_DocSearchUDPES_Facets" started.
+kaas_DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(14): Notify: Parameter Substitution: parameter "p_facetSearch" =  "HP 7 Tablets "
+kaas_DocSearchUDPES_Facets.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=HP 7 Tablets &resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257,600096605536507071488362545356335&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,manualagentstore,manualstore,videostore,processagentstore,udp-content-default&aggregations=producttopics,documenttype,disclosurelevel,countrycode,topissue&spellCheck=3&compoundSearch=true"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_Facets.c(14): Registered web_reg_find successful for "Text="matches":[{"documentID"" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_Facets.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") was successful, 21922 body bytes, 318 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_Facets.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_Facets.c(30): Notify: Transaction "kaas_DocSearchUDPES_Facets" ended with a "Pass" status (Duration: 0.3761 Wasted Time: 0.0130).
+Ending action kaas_DocSearchUDPES_Facets.
+Ending iteration 2.
+Starting iteration 3.
+Notify: Next row for parameter p_facetSearch = 74 [table  = p_facetSearch].
+Notify: Getting new value for parameter 'p_facetSearch': table = 'p_facetSearch.dat' column = '0' row = '74'.
+Notify: Next row for parameter QuickRef_productnumbers = 3 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '3'.
+Notify: Next row for parameter Todate = 1 [table  = Todate].
+Notify: Getting new value for parameter 'Todate': table = 'Todate.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_docWithProdNumber = 3 [table  = p_docWithProdNumber].
+Notify: Getting new value for parameter 'p_docWithProdNumber': table = 'p_docWithProdNumber.dat' column = '0' row = '3'.
+Notify: Next row for parameter p_pdp10_Product = 3 [table  = p_pdp10_Product].
+Notify: Getting new value for parameter 'p_pdp10_Product': table = 'p_pdp_Product.dat' column = '0' row = '3'.
+Notify: Next row for parameter p_DocWithoutProd = 3 [table  = p_DocWithoutProd].
+Notify: Getting new value for parameter 'p_DocWithoutProd': table = 'p_DocWithoutProd.dat' column = '0' row = '3'.
+Notify: Next row for parameter p_DocSortSearch = 3 [table  = p_DocSortSearch].
+Notify: Getting new value for parameter 'p_DocSortSearch': table = 'p_DocSortSearch.dat' column = '0' row = '3'.
+Notify: Next row for parameter FromDate = 1 [table  = FromDate].
+Notify: Getting new value for parameter 'FromDate': table = 'FromDate.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_DocwithProduct = 3 [table  = p_DocwithProduct].
+Notify: Getting new value for parameter 'p_DocwithProduct': table = 'p_DocwithProduct.dat' column = '0' row = '3'.
+Notify: Next row for parameter Pdp1000_productNum = 3 [table  = Pdp1000_productNum].
+Notify: Getting new value for parameter 'Pdp1000_productNum': table = 'Pdp1000_productNum.dat' column = '0' row = '3'.
+Notify: Next row for parameter Pdp_TopicCat = 1 [table  = Pdp_TopicCat].
+Notify: Getting new value for parameter 'Pdp_TopicCat': table = 'Pdp_TopicCat.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_DocRangeSearch = 3 [table  = p_DocRangeSearch].
+Notify: Getting new value for parameter 'p_DocRangeSearch': table = 'p_DocRangeSearch.dat' column = '0' row = '3'.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_doctypesSearch = 3 [table  = p_doctypesSearch].
+Notify: Getting new value for parameter 'p_doctypesSearch': table = 'p_doctypesSearch.dat' column = '0' row = '3'.
+Starting action kaas_DocSearchUDPES_Facets.
+kaas_DocSearchUDPES_Facets.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_Facets.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000a5QPb8XHtfrxVyDDBagyxwccB"
+kaas_DocSearchUDPES_Facets.c(6): Notify: Saving Parameter "WISEAccessToken = 000a5QPb8XHtfrxVyDDBagyxwccB".
+kaas_DocSearchUDPES_Facets.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000a5QPb8XHtfrxVyDDBagyxwccB"
+kaas_DocSearchUDPES_Facets.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_Facets.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_Facets.c(12): Notify: Transaction "kaas_DocSearchUDPES_Facets" started.
+kaas_DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(14): Notify: Parameter Substitution: parameter "p_facetSearch" =  "CD/DVD drive "
+kaas_DocSearchUDPES_Facets.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=CD/DVD drive &resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257,600096605536507071488362545356335&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,manualagentstore,manualstore,videostore,processagentstore,udp-content-default&aggregations=producttopics,documenttype,disclosurelevel,countrycode,topissue&spellCheck=3&compoundSearch=true"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_Facets.c(14): Registered web_reg_find successful for "Text="matches":[{"documentID"" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_Facets.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") was successful, 22344 body bytes, 318 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_Facets.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_Facets.c(30): Notify: Transaction "kaas_DocSearchUDPES_Facets" ended with a "Pass" status (Duration: 0.3480 Wasted Time: 0.0234).
+Ending action kaas_DocSearchUDPES_Facets.
+Ending iteration 3.
+Starting iteration 4.
+Notify: Next row for parameter p_facetSearch = 27 [table  = p_facetSearch].
+Notify: Getting new value for parameter 'p_facetSearch': table = 'p_facetSearch.dat' column = '0' row = '27'.
+Notify: Next row for parameter QuickRef_productnumbers = 4 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '4'.
+Notify: Next row for parameter Todate = 1 [table  = Todate].
+Notify: Getting new value for parameter 'Todate': table = 'Todate.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_docWithProdNumber = 4 [table  = p_docWithProdNumber].
+Notify: Getting new value for parameter 'p_docWithProdNumber': table = 'p_docWithProdNumber.dat' column = '0' row = '4'.
+Notify: Next row for parameter p_pdp10_Product = 4 [table  = p_pdp10_Product].
+Notify: Getting new value for parameter 'p_pdp10_Product': table = 'p_pdp_Product.dat' column = '0' row = '4'.
+Notify: Next row for parameter p_DocWithoutProd = 4 [table  = p_DocWithoutProd].
+Notify: Getting new value for parameter 'p_DocWithoutProd': table = 'p_DocWithoutProd.dat' column = '0' row = '4'.
+Notify: Next row for parameter p_DocSortSearch = 4 [table  = p_DocSortSearch].
+Notify: Getting new value for parameter 'p_DocSortSearch': table = 'p_DocSortSearch.dat' column = '0' row = '4'.
+Notify: Next row for parameter FromDate = 1 [table  = FromDate].
+Notify: Getting new value for parameter 'FromDate': table = 'FromDate.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_DocwithProduct = 4 [table  = p_DocwithProduct].
+Notify: Getting new value for parameter 'p_DocwithProduct': table = 'p_DocwithProduct.dat' column = '0' row = '4'.
+Notify: Next row for parameter Pdp1000_productNum = 4 [table  = Pdp1000_productNum].
+Notify: Getting new value for parameter 'Pdp1000_productNum': table = 'Pdp1000_productNum.dat' column = '0' row = '4'.
+Notify: Next row for parameter Pdp_TopicCat = 1 [table  = Pdp_TopicCat].
+Notify: Getting new value for parameter 'Pdp_TopicCat': table = 'Pdp_TopicCat.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_DocRangeSearch = 4 [table  = p_DocRangeSearch].
+Notify: Getting new value for parameter 'p_DocRangeSearch': table = 'p_DocRangeSearch.dat' column = '0' row = '4'.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_doctypesSearch = 4 [table  = p_doctypesSearch].
+Notify: Getting new value for parameter 'p_doctypesSearch': table = 'p_doctypesSearch.dat' column = '0' row = '4'.
+Starting action kaas_DocSearchUDPES_Facets.
+kaas_DocSearchUDPES_Facets.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_Facets.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000a5QPb8XHtfrxVyDDBagyxwccB"
+kaas_DocSearchUDPES_Facets.c(6): Notify: Saving Parameter "WISEAccessToken = 000a5QPb8XHtfrxVyDDBagyxwccB".
+kaas_DocSearchUDPES_Facets.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000a5QPb8XHtfrxVyDDBagyxwccB"
+kaas_DocSearchUDPES_Facets.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_Facets.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_Facets.c(12): Notify: Transaction "kaas_DocSearchUDPES_Facets" started.
+kaas_DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(14): Notify: Parameter Substitution: parameter "p_facetSearch" =  "Compaq Gaming Desktops "
+kaas_DocSearchUDPES_Facets.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=Compaq Gaming Desktops &resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257,600096605536507071488362545356335&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,manualagentstore,manualstore,videostore,processagentstore,udp-content-default&aggregations=producttopics,documenttype,disclosurelevel,countrycode,topissue&spellCheck=3&compoundSearch=true"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_Facets.c(14): Registered web_reg_find successful for "Text="matches":[{"documentID"" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_Facets.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") was successful, 20694 body bytes, 318 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_Facets.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_Facets.c(30): Notify: Transaction "kaas_DocSearchUDPES_Facets" ended with a "Pass" status (Duration: 0.4587 Wasted Time: 0.0199).
+Ending action kaas_DocSearchUDPES_Facets.
+Ending iteration 4.
+Starting iteration 5.
+Notify: Next row for parameter p_facetSearch = 97 [table  = p_facetSearch].
+Notify: Getting new value for parameter 'p_facetSearch': table = 'p_facetSearch.dat' column = '0' row = '97'.
+Notify: Next row for parameter QuickRef_productnumbers = 5 [table  = QuickRef_productnumbers].
+Notify: Getting new value for parameter 'QuickRef_productnumbers': table = 'QuickRef_productnumbers.dat' column = '0' row = '5'.
+Notify: Next row for parameter Todate = 1 [table  = Todate].
+Notify: Getting new value for parameter 'Todate': table = 'Todate.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_docWithProdNumber = 5 [table  = p_docWithProdNumber].
+Notify: Getting new value for parameter 'p_docWithProdNumber': table = 'p_docWithProdNumber.dat' column = '0' row = '5'.
+Notify: Next row for parameter p_pdp10_Product = 5 [table  = p_pdp10_Product].
+Notify: Getting new value for parameter 'p_pdp10_Product': table = 'p_pdp_Product.dat' column = '0' row = '5'.
+Notify: Next row for parameter p_DocWithoutProd = 5 [table  = p_DocWithoutProd].
+Notify: Getting new value for parameter 'p_DocWithoutProd': table = 'p_DocWithoutProd.dat' column = '0' row = '5'.
+Notify: Next row for parameter p_DocSortSearch = 5 [table  = p_DocSortSearch].
+Notify: Getting new value for parameter 'p_DocSortSearch': table = 'p_DocSortSearch.dat' column = '0' row = '5'.
+Notify: Next row for parameter FromDate = 1 [table  = FromDate].
+Notify: Getting new value for parameter 'FromDate': table = 'FromDate.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_DocwithProduct = 5 [table  = p_DocwithProduct].
+Notify: Getting new value for parameter 'p_DocwithProduct': table = 'p_DocwithProduct.dat' column = '0' row = '5'.
+Notify: Next row for parameter Pdp1000_productNum = 5 [table  = Pdp1000_productNum].
+Notify: Getting new value for parameter 'Pdp1000_productNum': table = 'Pdp1000_productNum.dat' column = '0' row = '5'.
+Notify: Next row for parameter Pdp_TopicCat = 1 [table  = Pdp_TopicCat].
+Notify: Getting new value for parameter 'Pdp_TopicCat': table = 'Pdp_TopicCat.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_DocRangeSearch = 5 [table  = p_DocRangeSearch].
+Notify: Getting new value for parameter 'p_DocRangeSearch': table = 'p_DocRangeSearch.dat' column = '0' row = '5'.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_doctypesSearch = 5 [table  = p_doctypesSearch].
+Notify: Getting new value for parameter 'p_doctypesSearch': table = 'p_doctypesSearch.dat' column = '0' row = '5'.
+Starting action kaas_DocSearchUDPES_Facets.
+kaas_DocSearchUDPES_Facets.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchUDPES_Facets.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchUDPES_Facets.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000a5QPb8XHtfrxVyDDBagyxwccB"
+kaas_DocSearchUDPES_Facets.c(6): Notify: Saving Parameter "WISEAccessToken = 000a5QPb8XHtfrxVyDDBagyxwccB".
+kaas_DocSearchUDPES_Facets.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000a5QPb8XHtfrxVyDDBagyxwccB"
+kaas_DocSearchUDPES_Facets.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchUDPES_Facets.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchUDPES_Facets.c(12): Notify: Transaction "kaas_DocSearchUDPES_Facets" started.
+kaas_DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchUDPES_Facets.c(14): Notify: Parameter Substitution: parameter "p_facetSearch" =  "System recovery/backup/restore "
+kaas_DocSearchUDPES_Facets.c(14): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=System recovery/backup/restore &resultLimit=10&resultStart=0&countryCode=us&languageCode=en&disclosureLevel=696531864679532034919979251200881,47406819852170807613486806879990,218620138892645155286800249901443,287477763180518087286275037723076,887243771386204747508092376253257,600096605536507071488362545356335&printFields=documentID,title,documenttype,renderlink,matchscore,description,contentupdatedate,language,disclosurelevel,store,docsource,documenttypedetails,topics,categorizations&store=docstore,supportagentstore,manualagentstore,manualstore,videostore,processagentstore,udp-content-default&aggregations=producttopics,documenttype,disclosurelevel,countrycode,topissue&spellCheck=3&compoundSearch=true"  	[MsgId: MMSG-26548]
+kaas_DocSearchUDPES_Facets.c(14): Registered web_reg_find successful for "Text="matches":[{"documentID"" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchUDPES_Facets.c(14): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchUDPES_Facets.c(14): web_custom_request("web_custom_request") was successful, 18280 body bytes, 318 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchUDPES_Facets.c(23): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchUDPES_Facets.c(30): Notify: Transaction "kaas_DocSearchUDPES_Facets" ended with a "Pass" status (Duration: 0.3467 Wasted Time: 0.0219).
+Ending action kaas_DocSearchUDPES_Facets.
+Ending iteration 5.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

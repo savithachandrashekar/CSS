@@ -1,0 +1,642 @@
+Virtual User Script started at: 6/25/2021 6:33:25 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\GCC\Kaas\FY20_Release\Script\V1\Kaas_ESHPI_PromotionQuery\\default.cfg"  	[MsgId: MMSG-27141]
+Starting to download the proxy automatic configuration script, URL="http://autocache.hpicorp.net/"  	[MsgId: MMSG-27097]
+t=569ms: 147-byte response headers for "http://autocache.hpicorp.net/" (RelFrameId=1, Internal ID=1)
+    HTTP/1.0 200 OK\r\n
+    Content-Type: application/x-ns-proxy-autoconfig\r\n
+    pragma: no-cache\r\n
+    Server: BigIP\r\n
+    Connection: Keep-Alive\r\n
+    Content-Length: 2557\r\n
+    \r\n
+t=583ms: 2557-byte response body for "http://autocache.hpicorp.net/" (RelFrameId=1, Internal ID=1)
+    //////////////////////////////////////////////////////////////////////\n
+    // DO NOT MODIFY THIS PAC - CHANGES MUST BE MADE THRU THE ADMIN SITE\n
+    //////////////////////////////////////////////////////////////////////\n
+    // AUTOCACHE HP (c) 2014 ver.2.01 Web Publish\n
+    // Debug URL: http://autocache.hpicorp.net/?debug=1\n
+    // This PAC was web generated: 2020-06-19 08:54:11 AM\n
+    //////////////////////////////////////////////////////////////////////\n
+    \n
+    var pacname = "sitedirect-hpi.pac";\n
+    var pacdate = "2020-06-19 08:54:11 AM";\n
+    \n
+    function FindProxyForURL(url, host)\n
+    \n
+    {\n
+    \n
+    HPQNETPROXY = "PROXY web-proxy.austin.hpicorp.net:8080; PROXY proxy-txn.austin.hpicorp.net
+    :8080";\n
+    \r\n
+        hostIP = dnsResolve(host);\r\n
+        if (hostIP == false)\r\n
+            var hostIP = "1.1.1.1";\r\n
+    \r\n
+        // make everything lowercase\r\n
+        // WARNING: all shExpMatch rules following MUST be lowercase!\r\n
+        url = url.toLowerCase();\r\n
+        host = host.toLowerCase();\r\n
+    \r\n
+      // work-around for destinations expecting Net 15\n
+       if (dnsDomainIs(host, "npd.com")\n
+            || dnsDomainIs(host, "id.hp.com")\n
+            || dnsDomainIs(host, "instantink.com")\n
+            || dnsDomainIs(host, "hp-instantink.com")\n
+            || dnsDomainIs(host, "hp10.us")\n
+            || dnsDomainIs(host, "hp-dataservices.com")\n
+            || dnsDomainIs(host, "cso-hp.com")\n
+            || dnsDomainIs(host, "credit-suisse.com")\n
+            || dnsDomainIs(host, "npddecisionkey.com"))\n
+            return HPQNETPROXY ;\n
+    \r\n
+        // HPI CRM, Satish Babu, 01/31/2018\r\n
+        // HPI Net15 exception, Randall Courtney, 07/28/2018\n
+        if (dnsDomainIs(host, "crm.dynamics.com")\r\n
+         || dnsDomainIs(host, "us.storedvalue.com"))\n
+            return "PROXY web-proxy.austin.hpicorp.net:8080; proxy-txn.austin.hpicorp.net:8080
+    ";\r\n
+    \r\n
+        // Extranets that need to go via a pmHP proxy\r\n
+        if (isInNet(hostIP,"192.170.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.6.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.25.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.30.92.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.32.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.52.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.53.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"128.88.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"155.208.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"156.153.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"156.152.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"209.228.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"209.228.0.0", "255.255.0.0"))\r\n
+            return HPQNETPROXY;\r\n
+    \r\n
+        return "DIRECT";\n
+    }\n
+Proxy automatic configuration script (URL="http://autocache.hpicorp.net/") downloaded and evaluated successfully  	[MsgId: MMSG-27096]
+vuser_init.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+vuser_init.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+vuser_init.c(6): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(6): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(6): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(7): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(7): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(7): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(8): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(8): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(9): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(9): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(11): The request to server https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" is done with headers:
+vuser_init.c(11):     :method = POST
+vuser_init.c(11):     :scheme = https
+vuser_init.c(11):     :path = /as/token.oauth2?grant_type=client_credentials
+vuser_init.c(11):     :authority = login-itg.external.hp.com
+vuser_init.c(11):     Authorization =  Basic V0NDOnRvME1pN0VHR3pyRnV2VnlnR3dvbW95aWZRTU1nQlJrNUVianNHeWZHWnZkZFh
+vuser_init.c(11):     MOU5SaWE2VlVON2hzRDdicWk=
+vuser_init.c(11):     Content-Type =  application/x-www-form-urlencoded
+vuser_init.c(11):     Host =  login-itg.external.hp.com
+vuser_init.c(11):     Cache-Control =  no-cache
+vuser_init.c(11):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+vuser_init.c(11):     Accept-Encoding =  gzip, deflate
+vuser_init.c(11):     Accept =  */*
+vuser_init.c(11):     content-length = 0
+vuser_init.c(11): t=764ms: 517-byte response headers for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=2)
+vuser_init.c(11):     HTTP/2.0 200\r\n
+vuser_init.c(11):     Status: 200\r\n
+vuser_init.c(11):     server: nginx/1.16.1\r\n
+vuser_init.c(11):     date: Fri, 25 Jun 2021 06:33:25 GMT\r\n
+vuser_init.c(11):     content-type: application/json;charset=utf-8\r\n
+vuser_init.c(11):     referrer-policy: origin\r\n
+vuser_init.c(11):     cache-control: no-cache, no-store\r\n
+vuser_init.c(11):     pragma: no-cache\r\n
+vuser_init.c(11):     expires: Thu, 01 Jan 1970 00:00:00 GMT\r\n
+vuser_init.c(11):     set-cookie: HPIUID=M1T5Ma6Nw209fTWeJvXBnI;Path=/;Domain=.hp.com;Secure;HttpOnly;SameSite=N
+vuser_init.c(11):     one\r\n
+vuser_init.c(11):     strict-transport-security: max-age=15768000; preload;\r\n
+vuser_init.c(11):     x-content-type-options: nosniff\r\n
+vuser_init.c(11):     x-frame-options: SAMEORIGIN\r\n
+vuser_init.c(11):     x-xss-protection: 1; mode=block\r\n
+vuser_init.c(11):     x-robots-tag: none\r\n
+vuser_init.c(11):     \r\n
+vuser_init.c(11): t=771ms: 87-byte response body for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=2)
+vuser_init.c(11):     {"access_token":"000a3tx4SGVP4wmF1KCBfU0VHhWU","token_type":"Bearer","expires_in":7199}
+vuser_init.c(11): Notify: Saving Parameter "c_WCCAccessToken = 000a3tx4SGVP4wmF1KCBfU0VHhWU".
+vuser_init.c(11): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials"  	[MsgId: MMSG-26548]
+vuser_init.c(11): web_custom_request("web_custom_request") was successful, 87 body bytes, 517 header bytes  	[MsgId: MMSG-26386]
+vuser_init.c(21): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
+vuser_init.c(21): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(21): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(22): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+vuser_init.c(22): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(22): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(23): web_add_header("Host") started  	[MsgId: MMSG-26355]
+vuser_init.c(23): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+vuser_init.c(23): web_add_header("Host") highest severity level was "warning"  	[MsgId: MMSG-26391]
+vuser_init.c(24): web_reg_save_param started  	[MsgId: MMSG-26355]
+vuser_init.c(24): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+vuser_init.c(26): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+vuser_init.c(26): The request to server https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" is done with headers:
+vuser_init.c(26):     :method = POST
+vuser_init.c(26):     :scheme = https
+vuser_init.c(26):     :path = /as/token.oauth2?grant_type=client_credentials
+vuser_init.c(26):     :authority = login-itg.external.hp.com
+vuser_init.c(26):     Authorization =  Basic V0lTRTpHZTRFSDllN1VoMVpkZzRnbjhCSmtXOHVtUVhNblBmSnJCNHFZeTJLV3oyVFJ
+vuser_init.c(26):     BTWw1eFlVVVRSaU5kNW9zbERq
+vuser_init.c(26):     Content-Type =  application/x-www-form-urlencoded
+vuser_init.c(26):     Host =  login-itg.external.hp.com
+vuser_init.c(26):     Cache-Control =  no-cache
+vuser_init.c(26):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+vuser_init.c(26):     Accept-Encoding =  gzip, deflate
+vuser_init.c(26):     Accept =  */*
+vuser_init.c(26):     content-length = 0
+vuser_init.c(26):     cookie = HPIUID=M1T5Ma6Nw209fTWeJvXBnI
+vuser_init.c(26): t=950ms: 517-byte response headers for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=3)
+vuser_init.c(26):     HTTP/2.0 200\r\n
+vuser_init.c(26):     Status: 200\r\n
+vuser_init.c(26):     server: nginx/1.16.1\r\n
+vuser_init.c(26):     date: Fri, 25 Jun 2021 06:33:25 GMT\r\n
+vuser_init.c(26):     content-type: application/json;charset=utf-8\r\n
+vuser_init.c(26):     referrer-policy: origin\r\n
+vuser_init.c(26):     cache-control: no-cache, no-store\r\n
+vuser_init.c(26):     pragma: no-cache\r\n
+vuser_init.c(26):     expires: Thu, 01 Jan 1970 00:00:00 GMT\r\n
+vuser_init.c(26):     set-cookie: HPIUID=M1T5Ma6Nw209fTWeJvXBnI;Path=/;Domain=.hp.com;Secure;HttpOnly;SameSite=N
+vuser_init.c(26):     one\r\n
+vuser_init.c(26):     strict-transport-security: max-age=15768000; preload;\r\n
+vuser_init.c(26):     x-content-type-options: nosniff\r\n
+vuser_init.c(26):     x-frame-options: SAMEORIGIN\r\n
+vuser_init.c(26):     x-xss-protection: 1; mode=block\r\n
+vuser_init.c(26):     x-robots-tag: none\r\n
+vuser_init.c(26):     \r\n
+vuser_init.c(26): t=957ms: 87-byte response body for "https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials" (RelFrameId=1, Internal ID=3)
+vuser_init.c(26):     {"access_token":"000aFpw1NWjx5rPijwfOhKRPBBJJ","token_type":"Bearer","expires_in":7199}
+vuser_init.c(26): Notify: Saving Parameter "c_WISEAccessToken = 000aFpw1NWjx5rPijwfOhKRPBBJJ".
+vuser_init.c(26): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://login-itg.external.hp.com/as/token.oauth2?grant_type=client_credentials"  	[MsgId: MMSG-26548]
+vuser_init.c(26): web_custom_request("web_custom_request") was successful, 87 body bytes, 517 header bytes  	[MsgId: MMSG-26386]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action kaas_DocSearchHPES_Promotion_query.
+kaas_DocSearchHPES_Promotion_query.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchHPES_Promotion_query.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000aFpw1NWjx5rPijwfOhKRPBBJJ"
+kaas_DocSearchHPES_Promotion_query.c(6): Notify: Saving Parameter "WISEAccessToken = 000aFpw1NWjx5rPijwfOhKRPBBJJ".
+kaas_DocSearchHPES_Promotion_query.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aFpw1NWjx5rPijwfOhKRPBBJJ"
+kaas_DocSearchHPES_Promotion_query.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchHPES_Promotion_query.c(8): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchHPES_Promotion_query.c(8): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchHPES_Promotion_query.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchHPES_Promotion_query.c(12): Notify: Transaction "KAAS_HPES_Promotion" started.
+kaas_DocSearchHPES_Promotion_query.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(13): Notify: Parameter Substitution: parameter "p_PromotionQuery" =  "kbrf57711"
+kaas_DocSearchHPES_Promotion_query.c(13): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=kbrf57711&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" is done with headers:
+kaas_DocSearchHPES_Promotion_query.c(13):     :method = GET
+kaas_DocSearchHPES_Promotion_query.c(13):     :scheme = https
+kaas_DocSearchHPES_Promotion_query.c(13):     :path = /KaaS-ITG/v2/search?q=kbrf57711&resultLimit=15&resultStart=0&languageCode=en&count
+kaas_DocSearchHPES_Promotion_query.c(13):     ryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicati
+kaas_DocSearchHPES_Promotion_query.c(13):     ondestination:(FindMyProduct)
+kaas_DocSearchHPES_Promotion_query.c(13):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchHPES_Promotion_query.c(13):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchHPES_Promotion_query.c(13):     accessToken =  000aFpw1NWjx5rPijwfOhKRPBBJJ
+kaas_DocSearchHPES_Promotion_query.c(13):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchHPES_Promotion_query.c(13):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchHPES_Promotion_query.c(13):     Accept =  */*
+kaas_DocSearchHPES_Promotion_query.c(13): t=1674ms: 316-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=kbrf57711&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" (RelFrameId=1, Internal ID=4)
+kaas_DocSearchHPES_Promotion_query.c(13):     HTTP/2.0 200\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     Status: 200\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     date: Fri, 25 Jun 2021 06:33:26 GMT\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     content-length: 930\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-requestid: 48c21fac-9274-4667-90e3-bf4541aaf900\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amz-apigw-id: Bd_MdHoQoAMF7tQ=\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:33:26 GMT\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     \r\n
+kaas_DocSearchHPES_Promotion_query.c(13): t=1681ms: 930-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=kbrf57711&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" (RelFrameId=1, Internal ID=4)
+kaas_DocSearchHPES_Promotion_query.c(13):     {"took":103,"timed_out":false,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0},
+kaas_DocSearchHPES_Promotion_query.c(13):     "hits":{"total":1,"max_score":28.906204,"hits":[{"_index":"docs2_en","_type":"_doc","_id":
+kaas_DocSearchHPES_Promotion_query.c(13):     "1554490037018","_score":28.906204,"_source":{"countrycode":["ALL"],"description":"Get HP 
+kaas_DocSearchHPES_Promotion_query.c(13):     online customer support for your <b>HP Keyboards</b>","pid":"1554490037018","store":"promo
+kaas_DocSearchHPES_Promotion_query.c(13):     tions","title":"<b>HP Customer Support for HP Keyboards</b>","mastername":"keyboards","url
+kaas_DocSearchHPES_Promotion_query.c(13):     ":"/{cc}-en/products/accessories-parts/keyboard-mouse/keyboards","promotionid":"keyboards"
+kaas_DocSearchHPES_Promotion_query.c(13):     ,"products":["NONE"],"tags":"PROMOTION, IDOL","multilanguage":"NO","languagecode":"EN","is
+kaas_DocSearchHPES_Promotion_query.c(13):     Master":"NO","rank":"100","displayfmp":"NO","comment":"","exclude_keywords_text":"","publi
+kaas_DocSearchHPES_Promotion_query.c(13):     cationdestination":"SearchResult","include_keywords_text":"kbrf57711,rk713a,gk100,sk-2063,
+kaas_DocSearchHPES_Promotion_query.c(13):     3vn40aa,4ce99aa,pr1101u,qb35aa,keyboard,kus0133,kuso133,kbrf7171,sk-2061","contentinsertda
+kaas_DocSearchHPES_Promotion_query.c(13):     te":"2020-08-18 04:54:04"}}]}}
+kaas_DocSearchHPES_Promotion_query.c(13): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=kbrf57711&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)"  	[MsgId: MMSG-26548]
+kaas_DocSearchHPES_Promotion_query.c(13): Registered web_reg_find successful for "Text=took" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchHPES_Promotion_query.c(13): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchHPES_Promotion_query.c(13): web_custom_request("web_custom_request") was successful, 930 body bytes, 316 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchHPES_Promotion_query.c(22): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchHPES_Promotion_query.c(29): Notify: Transaction "KAAS_HPES_Promotion" ended with a "Pass" status (Duration: 0.6894 Wasted Time: 0.0075).
+Ending action kaas_DocSearchHPES_Promotion_query.
+Ending iteration 1.
+Starting iteration 2.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_PromotionQuery = 3 [table  = p_PromotionQuery].
+Notify: Getting new value for parameter 'p_PromotionQuery': table = 'p_PromotionQuery.dat' column = '0' row = '3'.
+Starting action kaas_DocSearchHPES_Promotion_query.
+kaas_DocSearchHPES_Promotion_query.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchHPES_Promotion_query.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000aFpw1NWjx5rPijwfOhKRPBBJJ"
+kaas_DocSearchHPES_Promotion_query.c(6): Notify: Saving Parameter "WISEAccessToken = 000aFpw1NWjx5rPijwfOhKRPBBJJ".
+kaas_DocSearchHPES_Promotion_query.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aFpw1NWjx5rPijwfOhKRPBBJJ"
+kaas_DocSearchHPES_Promotion_query.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchHPES_Promotion_query.c(8): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchHPES_Promotion_query.c(8): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchHPES_Promotion_query.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchHPES_Promotion_query.c(12): Notify: Transaction "KAAS_HPES_Promotion" started.
+kaas_DocSearchHPES_Promotion_query.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(13): Notify: Parameter Substitution: parameter "p_PromotionQuery" =  "driveguard"
+kaas_DocSearchHPES_Promotion_query.c(13): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=driveguard&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" is done with headers:
+kaas_DocSearchHPES_Promotion_query.c(13):     :method = GET
+kaas_DocSearchHPES_Promotion_query.c(13):     :scheme = https
+kaas_DocSearchHPES_Promotion_query.c(13):     :path = /KaaS-ITG/v2/search?q=driveguard&resultLimit=15&resultStart=0&languageCode=en&coun
+kaas_DocSearchHPES_Promotion_query.c(13):     tryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicat
+kaas_DocSearchHPES_Promotion_query.c(13):     iondestination:(FindMyProduct)
+kaas_DocSearchHPES_Promotion_query.c(13):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchHPES_Promotion_query.c(13):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchHPES_Promotion_query.c(13):     accessToken =  000aFpw1NWjx5rPijwfOhKRPBBJJ
+kaas_DocSearchHPES_Promotion_query.c(13):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchHPES_Promotion_query.c(13):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchHPES_Promotion_query.c(13):     Accept =  */*
+kaas_DocSearchHPES_Promotion_query.c(13): t=2087ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=driveguard&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" (RelFrameId=1, Internal ID=5)
+kaas_DocSearchHPES_Promotion_query.c(13):     HTTP/2.0 200\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     Status: 200\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     date: Fri, 25 Jun 2021 06:33:26 GMT\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     content-length: 3826\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-requestid: 710c41a0-c0f3-453f-998b-799bc811f424\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amz-apigw-id: Bd_MiEISoAMF7Xw=\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:33:26 GMT\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     \r\n
+kaas_DocSearchHPES_Promotion_query.c(13): t=2094ms: 3826-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=driveguard&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" (RelFrameId=1, Internal ID=5)
+kaas_DocSearchHPES_Promotion_query.c(13):     {"took":270,"timed_out":false,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0},
+kaas_DocSearchHPES_Promotion_query.c(13):     "hits":{"total":4,"max_score":29.721706,"hits":[{"_index":"docs2_en","_type":"_doc","_id":
+kaas_DocSearchHPES_Promotion_query.c(13):     "1554490038461","_score":29.721706,"_source":{"countrycode":["ALL"],"description":"Find a 
+kaas_DocSearchHPES_Promotion_query.c(13):     solution for your <a href=\\"https://h30434.www3.hp.com/t5/forums/searchpage/tab/message?a
+kaas_DocSearchHPES_Promotion_query.c(13):     dvanced=false&allow_punctuation=false&q={query}\\">search</a> on HP Community or ask for a
+kaas_DocSearchHPES_Promotion_query.c(13):      solution to the community","pid":"1554490038461","store":"promotions","title":"<b>HP Comm
+kaas_DocSearchHPES_Promotion_query.c(13):     unity: Search for - {query} - on HP Forums</b>","mastername":"Community Accelerometer 4","
+kaas_DocSearchHPES_Promotion_query.c(13):     url":"https://h30434.www3.hp.com/t5/forums/searchpage/tab/message?advanced=false&allow_pun
+kaas_DocSearchHPES_Promotion_query.c(13):     ctuation=false&q={query}","promotionid":"Accelerometer4","products":["NONE"],"tags":"PROMO
+kaas_DocSearchHPES_Promotion_query.c(13):     TION, IDOL","multilanguage":"NO","languagecode":"EN","isMaster":"NO","rank":"100","display
+kaas_DocSearchHPES_Promotion_query.c(13):     fmp":"NO","comment":"","exclude_keywords_text":"","publicationdestination":"SearchResult",
+kaas_DocSearchHPES_Promotion_query.c(13):     "include_keywords_text":"accelerometer.dll,accelerometerst,driveguard,accelerometer,accelo
+kaas_DocSearchHPES_Promotion_query.c(13):     meter,accelerometerdll","contentinsertdate":"2020-08-31 09:43:00"}},{"_index":"docs2_en","
+kaas_DocSearchHPES_Promotion_query.c(13):     _type":"_doc","_id":"1554490037348","_score":29.347343,"_source":{"countrycode":["ALL"],"d
+kaas_DocSearchHPES_Promotion_query.c(13):     escription":"<b>HP Accelerometer App</b> stops working after Windows 10 update? Compatibil
+kaas_DocSearchHPES_Promotion_query.c(13):     ity Assistant pops up. Read how to resolve this.","pid":"1554490037348","store":"promotion
+kaas_DocSearchHPES_Promotion_query.c(13):     s","title":"<b> Advisory: HP ENVY, Pavilion and OMEN Consumer Notebook PCs - HP Accelerome
+kaas_DocSearchHPES_Promotion_query.c(13):     ter/HP 3D DriveGuard Software Stops and Displays a Compatibility Assistant Message </b>","
+kaas_DocSearchHPES_Promotion_query.c(13):     mastername":"","url":"/{cc}-{lc}/document/c05841987","promotionid":"Accelerometer3","produ
+kaas_DocSearchHPES_Promotion_query.c(13):     cts":["NONE"],"tags":"PROMOTION, IDOL","multilanguage":"NO","languagecode":"EN","isMaster"
+kaas_DocSearchHPES_Promotion_query.c(13):     :"NO","rank":"100","displayfmp":"NO","comment":"","exclude_keywords_text":"","publicationd
+kaas_DocSearchHPES_Promotion_query.c(13):     estination":"SearchResult","include_keywords_text":"accelerometer,driveguard,accelerometer
+kaas_DocSearchHPES_Promotion_query.c(13):     dll,accelometer,accelerometerst,accelerometer.dll","contentinsertdate":"2019-04-18 05:05:5
+kaas_DocSearchHPES_Promotion_query.c(13):     6"}},{"_index":"docs2_en","_type":"_doc","_id":"1554490037326","_score":28.906204,"_source
+kaas_DocSearchHPES_Promotion_query.c(13):     ":{"countrycode":["ALL"],"description":"Please update your <b>HP 3D DriveGuard Software</b
+kaas_DocSearchHPES_Promotion_query.c(13):     > under the <b> Software Solutions </b> category at <a href=\\"https://support.hp.com/driv
+kaas_DocSearchHPES_Promotion_query.c(13):     ers\\">HP Software and Driver Downloads</a>.","pid":"1554490037326","store":"promotions","
+kaas_DocSearchHPES_Promotion_query.c(13):     title":"<font color=\\"000000\\"></a></a><b>Having an issue with an HP Accelerometer Drive
+kaas_DocSearchHPES_Promotion_query.c(13):     r?</b>","mastername":"","url":"","promotionid":"Accelerometer1","products":["NONE"],"tags"
+kaas_DocSearchHPES_Promotion_query.c(13):     :"PROMOTION, IDOL","multilanguage":"NO","languagecode":"EN","isMaster":"NO","rank":"100","
+kaas_DocSearchHPES_Promotion_query.c(13):     displayfmp":"NO","comment":"","exclude_keywords_text":"","publicationdestination":"SearchR
+kaas_DocSearchHPES_Promotion_query.c(13):     esult","include_keywords_text":"accelerometer.dll,accelerometerdll,accelerometerst,acceler
+kaas_DocSearchHPES_Promotion_query.c(13):     ometer,driveguard","contentinsertdate":"2019-04-18 05:03:15"}},{"_index":"docs2_en","_type
+kaas_DocSearchHPES_Promotion_query.c(13):     ":"_doc","_id":"1554490037337","_score":28.906204,"_source":{"countrycode":["ALL"],"descri
+kaas_DocSearchHPES_Promotion_query.c(13):     ption":"Learn how to fix an error message related to <b> accelerometerST.exe or HP 3D Driv
+kaas_DocSearchHPES_Promotion_query.c(13):     e Guard </b> after you updated to Win 10 Creators Update","pid":"1554490037337","store":"p
+kaas_DocSearchHPES_Promotion_query.c(13):     romotions","title":"<b> Advisory: HP Consumer PCs - HP 3D DriveGuard/AccelerometerSt Error
+kaas_DocSearchHPES_Promotion_query.c(13):      Message After Update to Windows 10 Creators Update </b>","mastername":"","url":"/{cc}-en/
+kaas_DocSearchHPES_Promotion_query.c(13):     document/c05641942","promotionid":"Accelerometer2","products":["NONE"],"tags":"PROMOTION, 
+kaas_DocSearchHPES_Promotion_query.c(13):     IDOL","multilanguage":"NO","languagecode":"EN","isMaster":"NO","rank":"100","displayfmp":"
+kaas_DocSearchHPES_Promotion_query.c(13):     NO","comment":"","exclude_keywords_text":"","publicationdestination":"SearchResult","inclu
+kaas_DocSearchHPES_Promotion_query.c(13):     de_keywords_text":"accelerometer.dll,driveguard,accelerometer,accelerometerdll,acceleromet
+kaas_DocSearchHPES_Promotion_query.c(13):     erst","contentinsertdate":"2019-04-18 05:04:32"}}]}}
+kaas_DocSearchHPES_Promotion_query.c(13): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=driveguard&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)"  	[MsgId: MMSG-26548]
+kaas_DocSearchHPES_Promotion_query.c(13): Registered web_reg_find successful for "Text=took" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchHPES_Promotion_query.c(13): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchHPES_Promotion_query.c(13): web_custom_request("web_custom_request") was successful, 3826 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchHPES_Promotion_query.c(22): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchHPES_Promotion_query.c(29): Notify: Transaction "KAAS_HPES_Promotion" ended with a "Pass" status (Duration: 0.3903 Wasted Time: 0.0108).
+Ending action kaas_DocSearchHPES_Promotion_query.
+Ending iteration 2.
+Starting iteration 3.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_PromotionQuery = 21 [table  = p_PromotionQuery].
+Notify: Getting new value for parameter 'p_PromotionQuery': table = 'p_PromotionQuery.dat' column = '0' row = '21'.
+Starting action kaas_DocSearchHPES_Promotion_query.
+kaas_DocSearchHPES_Promotion_query.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchHPES_Promotion_query.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000aFpw1NWjx5rPijwfOhKRPBBJJ"
+kaas_DocSearchHPES_Promotion_query.c(6): Notify: Saving Parameter "WISEAccessToken = 000aFpw1NWjx5rPijwfOhKRPBBJJ".
+kaas_DocSearchHPES_Promotion_query.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aFpw1NWjx5rPijwfOhKRPBBJJ"
+kaas_DocSearchHPES_Promotion_query.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchHPES_Promotion_query.c(8): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchHPES_Promotion_query.c(8): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchHPES_Promotion_query.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchHPES_Promotion_query.c(12): Notify: Transaction "KAAS_HPES_Promotion" started.
+kaas_DocSearchHPES_Promotion_query.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(13): Notify: Parameter Substitution: parameter "p_PromotionQuery" =  "REPLACED MY TRI COLOR AND BLACK INK CARTRIDGE AND I STILL CAN'T PRINT FROM MY CO PUTER MY COMPUTER NO LONGER GIVES ME THE PRINT OPTION"
+kaas_DocSearchHPES_Promotion_query.c(13): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=REPLACED MY TRI COLOR AND BLACK INK CARTRIDGE AND I STILL CAN'T PRINT FROM MY CO PUTER MY COMPUTER NO LONGER GIVES ME THE PRINT OPTION&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" is done with headers:
+kaas_DocSearchHPES_Promotion_query.c(13):     :method = GET
+kaas_DocSearchHPES_Promotion_query.c(13):     :scheme = https
+kaas_DocSearchHPES_Promotion_query.c(13):     :path = /KaaS-ITG/v2/search?q=REPLACED%20MY%20TRI%20COLOR%20AND%20BLACK%20INK%20CARTRIDGE%
+kaas_DocSearchHPES_Promotion_query.c(13):     20AND%20I%20STILL%20CAN'T%20PRINT%20FROM%20MY%20CO%20PUTER%20MY%20COMPUTER%20NO%20LONGER%2
+kaas_DocSearchHPES_Promotion_query.c(13):     0GIVES%20ME%20THE%20PRINT%20OPTION&resultLimit=15&resultStart=0&languageCode=en&countryCod
+kaas_DocSearchHPES_Promotion_query.c(13):     e=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdes
+kaas_DocSearchHPES_Promotion_query.c(13):     tination:(FindMyProduct)
+kaas_DocSearchHPES_Promotion_query.c(13):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchHPES_Promotion_query.c(13):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchHPES_Promotion_query.c(13):     accessToken =  000aFpw1NWjx5rPijwfOhKRPBBJJ
+kaas_DocSearchHPES_Promotion_query.c(13):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchHPES_Promotion_query.c(13):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchHPES_Promotion_query.c(13):     Accept =  */*
+kaas_DocSearchHPES_Promotion_query.c(13): t=2890ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=REPLACED MY TRI COLOR AND BLACK INK CARTRIDGE AND I STILL CAN'T PRINT FROM MY CO PUTER MY COMPUTER NO LONGER GIVES ME THE PRINT OPTION&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" (RelFrameId=1, Internal ID=6)
+kaas_DocSearchHPES_Promotion_query.c(13):     HTTP/2.0 200\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     Status: 200\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     date: Fri, 25 Jun 2021 06:33:27 GMT\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     content-length: 4574\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-requestid: 304c70fd-cb39-41b9-9800-435f489c4589\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amz-apigw-id: Bd_MnHiFoAMF8sQ=\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:33:27 GMT\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     \r\n
+kaas_DocSearchHPES_Promotion_query.c(13): t=2898ms: 4574-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=REPLACED MY TRI COLOR AND BLACK INK CARTRIDGE AND I STILL CAN'T PRINT FROM MY CO PUTER MY COMPUTER NO LONGER GIVES ME THE PRINT OPTION&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" (RelFrameId=1, Internal ID=6)
+kaas_DocSearchHPES_Promotion_query.c(13):     {"took":654,"timed_out":false,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0},
+kaas_DocSearchHPES_Promotion_query.c(13):     "hits":{"total":4,"max_score":29.292831,"hits":[{"_index":"docs2_en","_type":"_doc","_id":
+kaas_DocSearchHPES_Promotion_query.c(13):     "1566885649816","_score":29.292831,"_source":{"countrycode":["ALL"],"description":"<font>U
+kaas_DocSearchHPES_Promotion_query.c(13):     se our Virtual Agent to solve issues</font></div></div></div>","pid":"1566885649816","stor
+kaas_DocSearchHPES_Promotion_query.c(13):     e":"promotions","title":"</a><a href=\\"javascript:void(0)\\" onclick=\\"window.open('http
+kaas_DocSearchHPES_Promotion_query.c(13):     s://virtualagent.hpcloud.hp.com/?BotClient=Web&BotSubClient=WebSearch&query=printingblackc
+kaas_DocSearchHPES_Promotion_query.c(13):     olor&LC=en&CC=us', 'virtual agent','rel=noopener ,height=700px,width=500px,scrollbars=1,to
+kaas_DocSearchHPES_Promotion_query.c(13):     olbar=yes, menubar=no, location=no, directories=no, status=yes')\\"><div style=\\"padding-
+kaas_DocSearchHPES_Promotion_query.c(13):     left:10px\\"><div style=\\"padding-top:10px\\"><div style=\\"padding-bottom:5px\\"><font c
+kaas_DocSearchHPES_Promotion_query.c(13):     olor=\\"white\\" style=\\"float:left\\"><img src=\\"https://support.hp.com/wps/wcm/connect
+kaas_DocSearchHPES_Promotion_query.c(13):     /pps/3a0c36ee-c4fd-4b49-8348-fd6f3342c832/vaDiagType.png?MOD=AJPERES\\" width=\\"50\\" hei
+kaas_DocSearchHPES_Promotion_query.c(13):     ght=\\"50\\" style=\\"margin-right: 15px\\"></font><b><font color=\\"#0096D6\\">Black ink 
+kaas_DocSearchHPES_Promotion_query.c(13):     not printing?</a><a></font></b>","mastername":"VA black Ink","url":"","promotionid":"VAblc
+kaas_DocSearchHPES_Promotion_query.c(13):     kink","products":["NONE","ANY"],"tags":"VA black ink","multilanguage":"NO","languagecode":
+kaas_DocSearchHPES_Promotion_query.c(13):     "EN","isMaster":"NO","rank":"100","displayfmp":"NO","comment":"","exclude_keywords_text":"
+kaas_DocSearchHPES_Promotion_query.c(13):     ","publicationdestination":"SearchResult","include_keywords_text":"clean,cleaning,clean ca
+kaas_DocSearchHPES_Promotion_query.c(13):     rtridges,color ink,ink,ink issue,not printing,not print,print in color,wont print,won't pr
+kaas_DocSearchHPES_Promotion_query.c(13):     int","contentinsertdate":"2020-07-02 06:10:26"}},{"_index":"docs2_en","_type":"_doc","_id"
+kaas_DocSearchHPES_Promotion_query.c(13):     :"1593671226833","_score":29.292831,"_source":{"countrycode":["ALL"],"description":"Find a
+kaas_DocSearchHPES_Promotion_query.c(13):     nd purchase the correct toner or ink cartridge replacement for your HP printer.","pid":"15
+kaas_DocSearchHPES_Promotion_query.c(13):     93671226833","store":"promotions","title":"<b>HP Printers - Which Cartridges Work with My 
+kaas_DocSearchHPES_Promotion_query.c(13):     HP Printer? </b>","mastername":"ish_2405837-1980674-16 HP Printers - Which Cartridges Work
+kaas_DocSearchHPES_Promotion_query.c(13):      with My HP Printer? ","url":"/{cc}-{lc}/document/ish_2405837-1980674-16","promotionid":""
+kaas_DocSearchHPES_Promotion_query.c(13):     ,"products":["NONE","ANY"],"tags":"","multilanguage":"NO","languagecode":"EN","isMaster":"
+kaas_DocSearchHPES_Promotion_query.c(13):     NO","rank":"100","displayfmp":"NO","comment":"2nd Jul'20\\r\\nReplace with smartcontent 4.
+kaas_DocSearchHPES_Promotion_query.c(13):     20.2021 wpj","exclude_keywords_text":"","publicationdestination":"SearchResult","include_k
+kaas_DocSearchHPES_Promotion_query.c(13):     eywords_text":"cartridge,cartridges\\r\\n","contentinsertdate":"2021-04-20 08:46:52"}},{"_
+kaas_DocSearchHPES_Promotion_query.c(13):     index":"docs2_en","_type":"_doc","_id":"1616638251579","_score":29.284182,"_source":{"coun
+kaas_DocSearchHPES_Promotion_query.c(13):     trycode":["ALL"],"description":"This page will help you troubleshoot to find and fix whate
+kaas_DocSearchHPES_Promotion_query.c(13):     ver is keeping you from printing via Wi-Fi.","pid":1616638251579,"store":"promotions","tit
+kaas_DocSearchHPES_Promotion_query.c(13):     le":"<b>wireless printing support </b>","mastername":"wireless printing support","url":"/{
+kaas_DocSearchHPES_Promotion_query.c(13):     cc}-{lc}/topic/wireless-printing","promotionid":"wirelessprinting","products":["NONE","ANY
+kaas_DocSearchHPES_Promotion_query.c(13):     "],"tags":"","multilanguage":"NO","languagecode":"EN","isMaster":"NO","rank":"100","displa
+kaas_DocSearchHPES_Promotion_query.c(13):     yfmp":"NO","comment":"25th Mar'21","exclude_keywords_text":"","publicationdestination":"Se
+kaas_DocSearchHPES_Promotion_query.c(13):     archResult","include_keywords_text":"cannot print,cant print,can\xE2\x80\x99t print,connec
+kaas_DocSearchHPES_Promotion_query.c(13):     t,connection,disconnect,ews,internet,isp,network,password,printer not working,reconnect,ro
+kaas_DocSearchHPES_Promotion_query.c(13):     uter,unable print,wep,wifi,wi-fi,wireless,wireless direct,wpa,wpa2,wps","contentinsertdate
+kaas_DocSearchHPES_Promotion_query.c(13):     ":"2021-03-25 02:10:51"}},{"_index":"docs2_en","_type":"_doc","_id":"1602807490324","_scor
+kaas_DocSearchHPES_Promotion_query.c(13):     e":19.987593,"_source":{"countrycode":["US"],"description":"Visit our Printer Support expe
+kaas_DocSearchHPES_Promotion_query.c(13):     rience to help determine the best next steps","pid":"1602807490324","store":"promotions","
+kaas_DocSearchHPES_Promotion_query.c(13):     title":"<b>Are you having print quality issues or getting an incompatible cartridge messag
+kaas_DocSearchHPES_Promotion_query.c(13):     e?</b>\\r\\n  ","mastername":"PrintQuality TIj4.x","url":"/{cc}-{lc}/eas/PrintQuality?orig
+kaas_DocSearchHPES_Promotion_query.c(13):     in=portal ","promotionid":"PrintQualityTIj4x","products":["24208631","24208742","24208622"
+kaas_DocSearchHPES_Promotion_query.c(13):     ,"24208734","9666193","9514772","9514854","8289579","8289585","5390300","7169963","5390307
+kaas_DocSearchHPES_Promotion_query.c(13):     ","5390318","NONE"],"tags":"","multilanguage":"NO","languagecode":"EN","isMaster":"NO","ra
+kaas_DocSearchHPES_Promotion_query.c(13):     nk":"1","displayfmp":"NO","comment":"16th Oct'20 : creation ( Seung A )\\r\\n16th Oct'20 :
+kaas_DocSearchHPES_Promotion_query.c(13):      update country and products ( Philippe )\\r\\n21st Oct'20: country code: All temporary(Se
+kaas_DocSearchHPES_Promotion_query.c(13):     ungA)\\r\\n26th Oct'20 : check \\"none\\" product ( Philippe )\\r\\n","exclude_keywords_te
+kaas_DocSearchHPES_Promotion_query.c(13):     xt":"","publicationdestination":"SearchResult","include_keywords_text":"print quality, ink
+kaas_DocSearchHPES_Promotion_query.c(13):      cartridge, incompatible cartridge, yellow cartridge is not working, yellow cartridge is d
+kaas_DocSearchHPES_Promotion_query.c(13):     amaged, cyan cartridge is not working, cyan cartridge is damaged, officejet","contentinser
+kaas_DocSearchHPES_Promotion_query.c(13):     tdate":"2020-10-26 18:55:18"}}]}}
+kaas_DocSearchHPES_Promotion_query.c(13): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=REPLACED MY TRI COLOR AND BLACK INK CARTRIDGE AND I STILL CAN'T PRINT FROM MY CO PUTER MY COMPUTER NO LONGER GIVES ME THE PRINT OPTION&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)"  	[MsgId: MMSG-26548]
+kaas_DocSearchHPES_Promotion_query.c(13): Registered web_reg_find successful for "Text=took" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchHPES_Promotion_query.c(13): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchHPES_Promotion_query.c(13): web_custom_request("web_custom_request") was successful, 4574 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchHPES_Promotion_query.c(22): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchHPES_Promotion_query.c(29): Notify: Transaction "KAAS_HPES_Promotion" ended with a "Pass" status (Duration: 0.7704 Wasted Time: 0.0135).
+Ending action kaas_DocSearchHPES_Promotion_query.
+Ending iteration 3.
+Starting iteration 4.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_PromotionQuery = 10 [table  = p_PromotionQuery].
+Notify: Getting new value for parameter 'p_PromotionQuery': table = 'p_PromotionQuery.dat' column = '0' row = '10'.
+Starting action kaas_DocSearchHPES_Promotion_query.
+kaas_DocSearchHPES_Promotion_query.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchHPES_Promotion_query.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000aFpw1NWjx5rPijwfOhKRPBBJJ"
+kaas_DocSearchHPES_Promotion_query.c(6): Notify: Saving Parameter "WISEAccessToken = 000aFpw1NWjx5rPijwfOhKRPBBJJ".
+kaas_DocSearchHPES_Promotion_query.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aFpw1NWjx5rPijwfOhKRPBBJJ"
+kaas_DocSearchHPES_Promotion_query.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchHPES_Promotion_query.c(8): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchHPES_Promotion_query.c(8): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchHPES_Promotion_query.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchHPES_Promotion_query.c(12): Notify: Transaction "KAAS_HPES_Promotion" started.
+kaas_DocSearchHPES_Promotion_query.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(13): Notify: Parameter Substitution: parameter "p_PromotionQuery" =  "touchscreen"
+kaas_DocSearchHPES_Promotion_query.c(13): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=touchscreen&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" is done with headers:
+kaas_DocSearchHPES_Promotion_query.c(13):     :method = GET
+kaas_DocSearchHPES_Promotion_query.c(13):     :scheme = https
+kaas_DocSearchHPES_Promotion_query.c(13):     :path = /KaaS-ITG/v2/search?q=touchscreen&resultLimit=15&resultStart=0&languageCode=en&cou
+kaas_DocSearchHPES_Promotion_query.c(13):     ntryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publica
+kaas_DocSearchHPES_Promotion_query.c(13):     tiondestination:(FindMyProduct)
+kaas_DocSearchHPES_Promotion_query.c(13):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchHPES_Promotion_query.c(13):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchHPES_Promotion_query.c(13):     accessToken =  000aFpw1NWjx5rPijwfOhKRPBBJJ
+kaas_DocSearchHPES_Promotion_query.c(13):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchHPES_Promotion_query.c(13):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchHPES_Promotion_query.c(13):     Accept =  */*
+kaas_DocSearchHPES_Promotion_query.c(13): t=3157ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=touchscreen&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" (RelFrameId=1, Internal ID=7)
+kaas_DocSearchHPES_Promotion_query.c(13):     HTTP/2.0 200\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     Status: 200\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     date: Fri, 25 Jun 2021 06:33:27 GMT\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     content-length: 4431\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-requestid: b1dd12cf-a8cb-401c-aaf2-cce0bb792cec\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amz-apigw-id: Bd_MvFPCoAMF8TA=\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:33:27 GMT\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     \r\n
+kaas_DocSearchHPES_Promotion_query.c(13): t=3163ms: 4431-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=touchscreen&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" (RelFrameId=1, Internal ID=7)
+kaas_DocSearchHPES_Promotion_query.c(13):     {"took":103,"timed_out":false,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0},
+kaas_DocSearchHPES_Promotion_query.c(13):     "hits":{"total":2,"max_score":29.347343,"hits":[{"_index":"docs2_en","_type":"_doc","_id":
+kaas_DocSearchHPES_Promotion_query.c(13):     "1554490038033","_score":29.347343,"_source":{"countrycode":["ALL"],"description":"Find a 
+kaas_DocSearchHPES_Promotion_query.c(13):     solution for your <a href=\\"https://h30434.www3.hp.com/t5/forums/searchpage/tab/message?a
+kaas_DocSearchHPES_Promotion_query.c(13):     dvanced=false&allow_punctuation=false&q={query}\\">search</a> on HP Community or ask for a
+kaas_DocSearchHPES_Promotion_query.c(13):      solution to the community","pid":"1554490038033","store":"promotions","title":"<b>HP Comm
+kaas_DocSearchHPES_Promotion_query.c(13):     unity : Search for - {query} - on HP Community</b>","mastername":"HP Community query","url
+kaas_DocSearchHPES_Promotion_query.c(13):     ":"https://h30434.www3.hp.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctu
+kaas_DocSearchHPES_Promotion_query.c(13):     ation=false&q={query}","promotionid":"HPforums","products":["NONE"],"tags":"PROMOTION, IDO
+kaas_DocSearchHPES_Promotion_query.c(13):     L","multilanguage":"NO","languagecode":"EN","isMaster":"NO","rank":"100","displayfmp":"NO"
+kaas_DocSearchHPES_Promotion_query.c(13):     ,"comment":"","exclude_keywords_text":"jam","publicationdestination":"SearchResult","inclu
+kaas_DocSearchHPES_Promotion_query.c(13):     de_keywords_text":"00325-80000-00000-aaoem,00829c98,0x610004a,0x61011bed,0x80040003,0xc19a
+kaas_DocSearchHPES_Promotion_query.c(13):     0003,0xc19a0027,3f0,3f1,59f0,59.f0,59.fO,59.fo,71.02.4a,79 error,79 service error,acpi\\\\
+kaas_DocSearchHPES_Promotion_query.c(13):     ven_hpq&dev_0004,access the app,b305dff9,bcm43142a0,big sur,bios password,blank pages,blin
+kaas_DocSearchHPES_Promotion_query.c(13):     king light,blinking lights,boot device,c4eb9024,c8190032,calibrate,calibration,cancel acco
+kaas_DocSearchHPES_Promotion_query.c(13):     unt,cancel subscription,cardstock,care pack,case,cashback,change language,claim number,cod
+kaas_DocSearchHPES_Promotion_query.c(13):     e,command center,configuration problem,configuration problem 0x8007007e,cpu,credentials,de
+kaas_DocSearchHPES_Promotion_query.c(13):     fective cartridge,defective ink,delete account,device status,e1,e2,e3 error,encryption,enl
+kaas_DocSearchHPES_Promotion_query.c(13):     arge,error 0x800703e3,error 79,error code 79,error messages,error printing,error state,fil
+kaas_DocSearchHPES_Promotion_query.c(13):     ter failed,flashing power button,hardware,hidclass,hpdevicemonitoring.framework,free trial
+kaas_DocSearchHPES_Promotion_query.c(13):     ,hpdm.framework,hp smart not working,ink error,internal processing error, jam, kbrf7171,ne
+kaas_DocSearchHPES_Promotion_query.c(13):     twork adapter,\\r\\npgnetworkfolderaccounts-503,hsa-b005ds,kmode exception not handled,lab
+kaas_DocSearchHPES_Promotion_query.c(13):     els,no hard drive installed,ocr,out of ink,overheating,paper,pcdiags,power button blinking
+kaas_DocSearchHPES_Promotion_query.c(13):     ,power button flashing,\\r\\n,power light blinking,power off,preparing automatic repair,pr
+kaas_DocSearchHPES_Promotion_query.c(13):     ice,print history,printer blocked,printer busy,printer in error state,printer status unkno
+kaas_DocSearchHPES_Promotion_query.c(13):     wn,printer wont print,printhead,printheads,printing blank,printing labels,print spooler,re
+kaas_DocSearchHPES_Promotion_query.c(13):     altek,reboot,recycle,refund,register printer,register product,remove printer,replace hard 
+kaas_DocSearchHPES_Promotion_query.c(13):     drive,replacement screen,return policy, rtl8821ce,scan to pdf,setup cartridges,shipping,sm
+kaas_DocSearchHPES_Promotion_query.c(13):     c.bin,spooling,startup,start up,touchscreen,tray open,update billing,twain,usb\\\\vid_138a
+kaas_DocSearchHPES_Promotion_query.c(13):     &pid_003c&rev_0086,turn off,waiting for printer to become available,webscan,web service\\r
+kaas_DocSearchHPES_Promotion_query.c(13):     \\n","contentinsertdate":"2021-06-03 01:07:19"}},{"_index":"docs2_en","_type":"_doc","_id"
+kaas_DocSearchHPES_Promotion_query.c(13):     :"1554490038437","_score":28.906204,"_source":{"countrycode":["ALL"],"description":"The Wi
+kaas_DocSearchHPES_Promotion_query.c(13):     ndows 10 Support Center is a one stop collection of solutions and tips for various issues 
+kaas_DocSearchHPES_Promotion_query.c(13):     that commonly affect your PC. Learn <b> how to install </b>, use, <b> activate </b>, <b> r
+kaas_DocSearchHPES_Promotion_query.c(13):     oll back </b> the Windows 10 operating system, improve the <b> performance </b>, <b> BIOS 
+kaas_DocSearchHPES_Promotion_query.c(13):     update </b>, <b> recovery </b> process and <b> troubleshoot </b> issues like <b> audio </b
+kaas_DocSearchHPES_Promotion_query.c(13):     >, <b> wireless </b>, <b> touchscreen </b> and <b> password </b> related topics by vising 
+kaas_DocSearchHPES_Promotion_query.c(13):     the  <a href=\\"/{cc}-en/topic/windows-10-support-center-computing\\"> Windows 10 Support 
+kaas_DocSearchHPES_Promotion_query.c(13):     Center </a>  ","pid":"1554490038437","store":"promotions","title":"<a href=\\"/{cc}-{lc}/t
+kaas_DocSearchHPES_Promotion_query.c(13):     opic/windows-10-support-center-computing\\"><b> HP Windows 10 Support Center for your HP P
+kaas_DocSearchHPES_Promotion_query.c(13):     Cs </b></a> ","mastername":"Win10SupportCenterComputing","url":"","promotionid":"Win10Supp
+kaas_DocSearchHPES_Promotion_query.c(13):     ortCenterComputing","products":["NONE"],"tags":"06Microsites, IDOL","multilanguage":"YES",
+kaas_DocSearchHPES_Promotion_query.c(13):     "languagecode":"EN","isMaster":"YES","rank":"100","displayfmp":"NO","comment":"","exclude_
+kaas_DocSearchHPES_Promotion_query.c(13):     keywords_text":"ink,printer","publicationdestination":"SearchResult","include_keywords_tex
+kaas_DocSearchHPES_Promotion_query.c(13):     t":"0x61000074,0x8007007e,0x800706cc,0x80240fff,0xbb8000574,0xc000000e,0xc19a0003,0xc19a00
+kaas_DocSearchHPES_Promotion_query.c(13):     13,0xc19a0015,0xc19a0020,0xc19a0022,0xc6f0024,0xc8,activate,BSOD,BIOS,cleanup,como instala
+kaas_DocSearchHPES_Promotion_query.c(13):     r,control panel,error codes,error message,firewall,hdmi,install,language,ox6100004a,oxc19a
+kaas_DocSearchHPES_Promotion_query.c(13):     0023,performance,procesor up date,roll back,rollback,setup,shut down,touchscreen,update,up
+kaas_DocSearchHPES_Promotion_query.c(13):     dates,webcam,win10,windows 10,win 10,windows10,0x0000098,ox,0x00829c98,fwpkclnt","contenti
+kaas_DocSearchHPES_Promotion_query.c(13):     nsertdate":"2021-04-15 01:10:15"}}]}}
+kaas_DocSearchHPES_Promotion_query.c(13): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=touchscreen&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)"  	[MsgId: MMSG-26548]
+kaas_DocSearchHPES_Promotion_query.c(13): Registered web_reg_find successful for "Text=took" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchHPES_Promotion_query.c(13): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchHPES_Promotion_query.c(13): web_custom_request("web_custom_request") was successful, 4431 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchHPES_Promotion_query.c(22): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchHPES_Promotion_query.c(29): Notify: Transaction "KAAS_HPES_Promotion" ended with a "Pass" status (Duration: 0.2537 Wasted Time: 0.0310).
+Ending action kaas_DocSearchHPES_Promotion_query.
+Ending iteration 4.
+Starting iteration 5.
+Notify: Next row for parameter WISEAccessToken = 1 [table  = WISEAccessToken].
+Notify: Getting new value for parameter 'WISEAccessToken': table = 'WISE_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_PromotionQuery = 14 [table  = p_PromotionQuery].
+Notify: Getting new value for parameter 'p_PromotionQuery': table = 'p_PromotionQuery.dat' column = '0' row = '14'.
+Starting action kaas_DocSearchHPES_Promotion_query.
+kaas_DocSearchHPES_Promotion_query.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchHPES_Promotion_query.c(6): Notify: Parameter Substitution: parameter "c_WISEAccessToken" =  "000aFpw1NWjx5rPijwfOhKRPBBJJ"
+kaas_DocSearchHPES_Promotion_query.c(6): Notify: Saving Parameter "WISEAccessToken = 000aFpw1NWjx5rPijwfOhKRPBBJJ".
+kaas_DocSearchHPES_Promotion_query.c(7): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(7): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aFpw1NWjx5rPijwfOhKRPBBJJ"
+kaas_DocSearchHPES_Promotion_query.c(7): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+kaas_DocSearchHPES_Promotion_query.c(8): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+kaas_DocSearchHPES_Promotion_query.c(8): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+kaas_DocSearchHPES_Promotion_query.c(10): web_reg_find started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(10): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+kaas_DocSearchHPES_Promotion_query.c(12): Notify: Transaction "KAAS_HPES_Promotion" started.
+kaas_DocSearchHPES_Promotion_query.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+kaas_DocSearchHPES_Promotion_query.c(13): Notify: Parameter Substitution: parameter "p_PromotionQuery" =  "audio"
+kaas_DocSearchHPES_Promotion_query.c(13): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=audio&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" is done with headers:
+kaas_DocSearchHPES_Promotion_query.c(13):     :method = GET
+kaas_DocSearchHPES_Promotion_query.c(13):     :scheme = https
+kaas_DocSearchHPES_Promotion_query.c(13):     :path = /KaaS-ITG/v2/search?q=audio&resultLimit=15&resultStart=0&languageCode=en&countryCo
+kaas_DocSearchHPES_Promotion_query.c(13):     de=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationde
+kaas_DocSearchHPES_Promotion_query.c(13):     stination:(FindMyProduct)
+kaas_DocSearchHPES_Promotion_query.c(13):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+kaas_DocSearchHPES_Promotion_query.c(13):     Content-Type =  application/x-www-form-urlencoded
+kaas_DocSearchHPES_Promotion_query.c(13):     accessToken =  000aFpw1NWjx5rPijwfOhKRPBBJJ
+kaas_DocSearchHPES_Promotion_query.c(13):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+kaas_DocSearchHPES_Promotion_query.c(13):     Accept-Encoding =  gzip, deflate
+kaas_DocSearchHPES_Promotion_query.c(13):     Accept =  */*
+kaas_DocSearchHPES_Promotion_query.c(13): t=3456ms: 317-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=audio&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" (RelFrameId=1, Internal ID=8)
+kaas_DocSearchHPES_Promotion_query.c(13):     HTTP/2.0 200\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     Status: 200\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     date: Fri, 25 Jun 2021 06:33:28 GMT\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     content-type: application/json;charset=UTF-8\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     content-length: 2997\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-requestid: d455a99f-a154-43af-8de3-db7d7c2c9138\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-remapped-connection: keep-alive\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amz-apigw-id: Bd_MxHI_oAMF6Tw=\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     x-amzn-remapped-date: Fri, 25 Jun 2021 06:33:28 GMT\r\n
+kaas_DocSearchHPES_Promotion_query.c(13):     \r\n
+kaas_DocSearchHPES_Promotion_query.c(13): t=3459ms: 2997-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=audio&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)" (RelFrameId=1, Internal ID=8)
+kaas_DocSearchHPES_Promotion_query.c(13):     {"took":136,"timed_out":false,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0},
+kaas_DocSearchHPES_Promotion_query.c(13):     "hits":{"total":3,"max_score":30.112074,"hits":[{"_index":"docs2_en","_type":"_doc","_id":
+kaas_DocSearchHPES_Promotion_query.c(13):     "1597107223470","_score":30.112074,"_source":{"countrycode":["ALL"],"description":"This do
+kaas_DocSearchHPES_Promotion_query.c(13):     cument is for HP computers with Windows 10 or Windows 8.","pid":"1597107223470","store":"p
+kaas_DocSearchHPES_Promotion_query.c(13):     romotions","title":"<b>HP PCs - No Sound from Speakers (Windows 10, 8) </b>","mastername":
+kaas_DocSearchHPES_Promotion_query.c(13):     "c04973149 HP PCs - No Sound from Speakers (Windows 10, 8)","url":"/{cc}-{lc}/document/c04
+kaas_DocSearchHPES_Promotion_query.c(13):     973149","promotionid":"c04973149","products":["NONE","ANY"],"tags":"","multilanguage":"NO"
+kaas_DocSearchHPES_Promotion_query.c(13):     ,"languagecode":"EN","isMaster":"NO","rank":"100","displayfmp":"NO","comment":"11th Aug'20
+kaas_DocSearchHPES_Promotion_query.c(13):     ","exclude_keywords_text":"","publicationdestination":"SearchResult","include_keywords_tex
+kaas_DocSearchHPES_Promotion_query.c(13):     t":"audio,hear,sound","contentinsertdate":"2021-04-08 04:07:59"}},{"_index":"docs2_en","_t
+kaas_DocSearchHPES_Promotion_query.c(13):     ype":"_doc","_id":"1554490038426","_score":30.112074,"_source":{"countrycode":["ALL"],"des
+kaas_DocSearchHPES_Promotion_query.c(13):     cription":"<font>Use our Virtual Agent to solve issues</font></div></div></div>","pid":"15
+kaas_DocSearchHPES_Promotion_query.c(13):     54490038426","store":"promotions","title":"</a><a href=\\"javascript:void(0)\\" onclick=\\
+kaas_DocSearchHPES_Promotion_query.c(13):     "window.open('https://virtualagent.hpcloud.hp.com/?BotClient=Web&BotSubClient=WebSearch&qu
+kaas_DocSearchHPES_Promotion_query.c(13):     ery=dz_soundissue&LC=en&CC=us', 'virtual agent','rel=noopener ,height=700px,width=500px,sc
+kaas_DocSearchHPES_Promotion_query.c(13):     rollbars=1,toolbar=yes, menubar=no, location=no, directories=no, status=yes')\\"><div styl
+kaas_DocSearchHPES_Promotion_query.c(13):     e=\\"padding-left:10px\\"><div style=\\"padding-top:10px\\"><div style=\\"padding-bottom:5
+kaas_DocSearchHPES_Promotion_query.c(13):     px\\"><font color=\\"white\\" style=\\"float:left\\"><img src=\\"https://support.hp.com/wp
+kaas_DocSearchHPES_Promotion_query.c(13):     s/wcm/connect/pps/3a0c36ee-c4fd-4b49-8348-fd6f3342c832/vaDiagType.png?MOD=AJPERES\\" width
+kaas_DocSearchHPES_Promotion_query.c(13):     =\\"50\\" height=\\"50\\" style=\\"margin-right: 15px\\"></font><b><font color=\\"#0096D6\\
+kaas_DocSearchHPES_Promotion_query.c(13):     ">No Sound? </a><a></font></b>","mastername":"VAsoundissue","url":"","promotionid":"","pro
+kaas_DocSearchHPES_Promotion_query.c(13):     ducts":["NONE","ANY"],"tags":"PROMOTION, IDOL","multilanguage":"NO","languagecode":"EN","i
+kaas_DocSearchHPES_Promotion_query.c(13):     sMaster":"NO","rank":"100","displayfmp":"NO","comment":"","exclude_keywords_text":"beats,b
+kaas_DocSearchHPES_Promotion_query.c(13):     eatsaudio","publicationdestination":"SearchResult","include_keywords_text":"audio,sound,vo
+kaas_DocSearchHPES_Promotion_query.c(13):     lume","contentinsertdate":"2019-10-08 06:02:40"}},{"_index":"docs2_en","_type":"_doc","_id
+kaas_DocSearchHPES_Promotion_query.c(13):     ":"1616638758427","_score":29.347343,"_source":{"countrycode":["ALL"],"description":"This 
+kaas_DocSearchHPES_Promotion_query.c(13):     page will help you troubleshoot and find and fix whatever is causing your audio problems."
+kaas_DocSearchHPES_Promotion_query.c(13):     ,"pid":1616638758427,"store":"promotions","title":"<b>HP audio support </b>","mastername":
+kaas_DocSearchHPES_Promotion_query.c(13):     "Topic Audio","url":"/{cc}-{lc}/topic/audio","promotionid":"topicaudio","products":["NONE"
+kaas_DocSearchHPES_Promotion_query.c(13):     ,"ANY"],"tags":"","multilanguage":"NO","languagecode":"EN","isMaster":"NO","rank":"100","d
+kaas_DocSearchHPES_Promotion_query.c(13):     isplayfmp":"NO","comment":"25th Mar'21","exclude_keywords_text":"","publicationdestination
+kaas_DocSearchHPES_Promotion_query.c(13):     ":"SearchResult","include_keywords_text":"airpods,audible,audio,beats,headphones,headset,h
+kaas_DocSearchHPES_Promotion_query.c(13):     ear,mic,microphone,mute,noise,olufsen,realtek,silent,sound,soundbar,soundless,speakers,qui
+kaas_DocSearchHPES_Promotion_query.c(13):     et","contentinsertdate":"2021-03-25 02:19:18"}}]}}
+kaas_DocSearchHPES_Promotion_query.c(13): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=audio&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)"  	[MsgId: MMSG-26548]
+kaas_DocSearchHPES_Promotion_query.c(13): Registered web_reg_find successful for "Text=took" (count=1)  	[MsgId: MMSG-26364]
+kaas_DocSearchHPES_Promotion_query.c(13): Notify: Saving Parameter "Text_count = 1".
+kaas_DocSearchHPES_Promotion_query.c(13): web_custom_request("web_custom_request") was successful, 2997 body bytes, 317 header bytes  	[MsgId: MMSG-26386]
+kaas_DocSearchHPES_Promotion_query.c(22): Notify: Parameter Substitution: parameter "Text_count" =  "1"
+kaas_DocSearchHPES_Promotion_query.c(29): Notify: Transaction "KAAS_HPES_Promotion" ended with a "Pass" status (Duration: 0.2511 Wasted Time: 0.0184).
+Ending action kaas_DocSearchHPES_Promotion_query.
+Ending iteration 5.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+Vuser 0 (thread 17796), ended OK."

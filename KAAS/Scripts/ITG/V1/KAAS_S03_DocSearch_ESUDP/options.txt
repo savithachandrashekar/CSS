@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\PERFORMANCE\GCC\Kaas\FY20_Release\Script\V1\kaas_ESUDP_DocSearch
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ee:\performance\gcc\kaas\fy20_release\script\v1\kaas_esudp_docsearch\\logfile.log
+e:\performance\gcc\kaas\fy20_release\script\v1\kaas_esudp_docsearch\\combined_kaas_ESUDP_DocSearch.c
+e:\performance\gcc\kaas\fy20_release\script\v1\kaas_esudp_docsearch\\pre_cci.c

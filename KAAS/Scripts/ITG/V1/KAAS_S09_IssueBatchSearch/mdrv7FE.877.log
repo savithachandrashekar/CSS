@@ -1,0 +1,2 @@
+BatchSearch_MultipleRequest.c(10): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/issueBatch/search"  	[MsgId: MERR-26608]
+Warning: Iteration pacing cannot be reached (pace time = 4.00, actual time = 29.05).	[MsgId: MWAR-15995]

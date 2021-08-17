@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VugenScriptMetadata>
+  <ScriptName>KAAS_S10_UDPPlatformQueries</ScriptName>
+  <Protocol>Web - HTTP/HTML</Protocol>
+  <ActionFiles>
+    <FileEntry Name="vuser_init.c" Filter="2" />
+    <FileEntry Name="UDP_PlatformProductQuery.c" Filter="2" />
+    <FileEntry Name="UDP_PlatformContentQueries.c" Filter="2" />
+    <FileEntry Name="vuser_end.c" Filter="2" />
+  </ActionFiles>
+  <GeneralFiles>
+    <FileEntry Name="KAAS_S10_UDPPlatformQueries.usr" Filter="4" />
+    <FileEntry Name="default.cfg" Filter="4" />
+    <FileEntry Name="default.usp" Filter="4" />
+    <FileEntry Name="KAAS_S10_UDPPlatformQueries.prm" Filter="2" />
+    <FileEntry Name="globals.h" Filter="2" />
+    <FileEntry Name="combined_KAAS_S10_UDPPlatformQueries.c" Filter="2" />
+    <FileEntry Name="pre_cci.c" Filter="2" />
+    <FileEntry Name="Bookmarks.xml" Filter="1" />
+    <FileEntry Name="Breakpoints.xml" Filter="1" />
+    <FileEntry Name="CompilerLogMetadata.xml" Filter="1" />
+    <FileEntry Name="custom_body_variables.txt" Filter="1" />
+    <FileEntry Name="KAAS_S10_UDPPlatformQueries.c.pickle" Filter="1" />
+    <FileEntry Name="KAAS_S10_UDPPlatformQueries.ci" Filter="1" />
+    <FileEntry Name="KAAS_S10_UDPPlatformQueries.sdf" Filter="1" />
+    <FileEntry Name="logfile.log" Filter="1" />
+    <FileEntry Name="lrw_custom_body.h" Filter="1" />
+    <FileEntry Name="mdrv.log" Filter="1" />
+    <FileEntry Name="mdrv1av.677.log" Filter="1" />
+    <FileEntry Name="mdrv1SJ.825.log" Filter="1" />
+    <FileEntry Name="mdrv8mB.117.log" Filter="1" />
+    <FileEntry Name="mdrvALK.527.log" Filter="1" />
+    <FileEntry Name="mdrvDDP.457.log" Filter="1" />
+    <FileEntry Name="mdrvfux.73.log" Filter="1" />
+    <FileEntry Name="mdrvGi7.531.log" Filter="1" />
+    <FileEntry Name="mdrvhT2.589.log" Filter="1" />
+    <FileEntry Name="mdrvi8c.439.log" Filter="1" />
+    <FileEntry Name="mdrvjjQ.619.log" Filter="1" />
+    <FileEntry Name="mdrvJOi.35.log" Filter="1" />
+    <FileEntry Name="mdrvKj1.937.log" Filter="1" />
+    <FileEntry Name="mdrvLcu.305.log" Filter="1" />
+    <FileEntry Name="mdrvlF7.319.log" Filter="1" />
+    <FileEntry Name="mdrvlis.893.log" Filter="1" />
+    <FileEntry Name="mdrvmqD.73.log" Filter="1" />
+    <FileEntry Name="mdrvnuX.447.log" Filter="1" />
+    <FileEntry Name="mdrvOqv.765.log" Filter="1" />
+    <FileEntry Name="mdrvoUU.203.log" Filter="1" />
+    <FileEntry Name="mdrvp7m.7.log" Filter="1" />
+    <FileEntry Name="mdrvpFN.963.log" Filter="1" />
+    <FileEntry Name="mdrvPMn.89.log" Filter="1" />
+    <FileEntry Name="mdrvPSK.563.log" Filter="1" />
+    <FileEntry Name="mdrvqAA.231.log" Filter="1" />
+    <FileEntry Name="mdrvqAN.581.log" Filter="1" />
+    <FileEntry Name="mdrvQze.605.log" Filter="1" />
+    <FileEntry Name="mdrvrFP.801.log" Filter="1" />
+    <FileEntry Name="mdrvSaN.679.log" Filter="1" />
+    <FileEntry Name="mdrvT3v.535.log" Filter="1" />
+    <FileEntry Name="mdrvTTX.249.log" Filter="1" />
+    <FileEntry Name="mdrvut4.593.log" Filter="1" />
+    <FileEntry Name="mdrvuwI.873.log" Filter="1" />
+    <FileEntry Name="mdrvw39.7.log" Filter="1" />
+    <FileEntry Name="mdrvW45.661.log" Filter="1" />
+    <FileEntry Name="mdrvwWK.481.log" Filter="1" />
+    <FileEntry Name="mdrvy6m.897.log" Filter="1" />
+    <FileEntry Name="mdrvye6.563.log" Filter="1" />
+    <FileEntry Name="mdrvYUU.501.log" Filter="1" />
+    <FileEntry Name="mdrvZq7.449.log" Filter="1" />
+    <FileEntry Name="mdrv_cmd.txt" Filter="1" />
+    <FileEntry Name="options.txt" Filter="1" />
+    <FileEntry Name="output.bak" Filter="1" />
+    <FileEntry Name="output.txt" Filter="1" />
+    <FileEntry Name="OutputColoringDatabase.json" Filter="1" />
+    <FileEntry Name="ReplaySummaryReport.xml" Filter="1" />
+    <FileEntry Name="ScriptUploadMetadata.xml" Filter="1" />
+    <FileEntry Name="TransactionsData.db" Filter="1" />
+    <FileEntry Name="UDP_PlatformQueries.prm.bak" Filter="1" />
+    <FileEntry Name="UserTasks.xml" Filter="1" />
+    <FileEntry Name="result1\" Filter="1" />
+  </GeneralFiles>
+</VugenScriptMetadata>

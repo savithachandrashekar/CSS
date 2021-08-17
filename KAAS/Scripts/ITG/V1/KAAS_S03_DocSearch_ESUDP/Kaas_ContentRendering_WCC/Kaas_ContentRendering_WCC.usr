@@ -1,0 +1,73 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=Kaas_ContentRendering_WCC.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=61
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.61.0.971
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=
+DisableRegenerate=0
+Encoding=
+Description=
+ScriptLocale=en-US
+[Actions]
+vuser_init=vuser_init.c
+Action=Action.c
+Kaas_Contextual_Filtering=Kaas_Contextual_Filtering.c
+KaaS_Content_Rendering_MetaData=KaaS_Content_Rendering_MetaData.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=0
+Action=1
+Kaas_Contextual_Filtering=1
+KaaS_Content_Rendering_MetaData=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+Action=0
+Kaas_Contextual_Filtering=0
+KaaS_Content_Rendering_MetaData=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+Action=1
+Kaas_Contextual_Filtering=1
+KaaS_Content_Rendering_MetaData=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+Action=cci
+Kaas_Contextual_Filtering=cci
+KaaS_Content_Rendering_MetaData=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="KAAS_Content_Rendering_WCC__*delimiter*__KAAS_Contextual_Filtering__*delimiter*__KAAS_MetaData_Content_Rendering"
+[StateManagement]
+LastReplayStatus=1
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+KAAS_Content_Rendering_WCC=
+KAAS_Contextual_Filtering=
+KAAS_MetaData_Content_Rendering=

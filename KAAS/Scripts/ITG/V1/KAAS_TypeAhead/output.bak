@@ -1,0 +1,604 @@
+Virtual User Script started at: 4/22/2021 8:25:57 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\GCC\Kaas\FY20_Release\Script\V1\Kaas_TypeAhead\\default.cfg"  	[MsgId: MMSG-27141]
+Starting to download the proxy automatic configuration script, URL="http://autocache.hpicorp.net/"  	[MsgId: MMSG-27097]
+t=321ms: 147-byte response headers for "http://autocache.hpicorp.net/" (RelFrameId=1, Internal ID=1)
+    HTTP/1.0 200 OK\r\n
+    Content-Type: application/x-ns-proxy-autoconfig\r\n
+    pragma: no-cache\r\n
+    Server: BigIP\r\n
+    Connection: Keep-Alive\r\n
+    Content-Length: 2557\r\n
+    \r\n
+t=329ms: 2557-byte response body for "http://autocache.hpicorp.net/" (RelFrameId=1, Internal ID=1)
+    //////////////////////////////////////////////////////////////////////\n
+    // DO NOT MODIFY THIS PAC - CHANGES MUST BE MADE THRU THE ADMIN SITE\n
+    //////////////////////////////////////////////////////////////////////\n
+    // AUTOCACHE HP (c) 2014 ver.2.01 Web Publish\n
+    // Debug URL: http://autocache.hpicorp.net/?debug=1\n
+    // This PAC was web generated: 2020-06-19 08:54:11 AM\n
+    //////////////////////////////////////////////////////////////////////\n
+    \n
+    var pacname = "sitedirect-hpi.pac";\n
+    var pacdate = "2020-06-19 08:54:11 AM";\n
+    \n
+    function FindProxyForURL(url, host)\n
+    \n
+    {\n
+    \n
+    HPQNETPROXY = "PROXY web-proxy.austin.hpicorp.net:8080; PROXY proxy-txn.austin.hpicorp.net
+    :8080";\n
+    \r\n
+        hostIP = dnsResolve(host);\r\n
+        if (hostIP == false)\r\n
+            var hostIP = "1.1.1.1";\r\n
+    \r\n
+        // make everything lowercase\r\n
+        // WARNING: all shExpMatch rules following MUST be lowercase!\r\n
+        url = url.toLowerCase();\r\n
+        host = host.toLowerCase();\r\n
+    \r\n
+      // work-around for destinations expecting Net 15\n
+       if (dnsDomainIs(host, "npd.com")\n
+            || dnsDomainIs(host, "id.hp.com")\n
+            || dnsDomainIs(host, "instantink.com")\n
+            || dnsDomainIs(host, "hp-instantink.com")\n
+            || dnsDomainIs(host, "hp10.us")\n
+            || dnsDomainIs(host, "hp-dataservices.com")\n
+            || dnsDomainIs(host, "cso-hp.com")\n
+            || dnsDomainIs(host, "credit-suisse.com")\n
+            || dnsDomainIs(host, "npddecisionkey.com"))\n
+            return HPQNETPROXY ;\n
+    \r\n
+        // HPI CRM, Satish Babu, 01/31/2018\r\n
+        // HPI Net15 exception, Randall Courtney, 07/28/2018\n
+        if (dnsDomainIs(host, "crm.dynamics.com")\r\n
+         || dnsDomainIs(host, "us.storedvalue.com"))\n
+            return "PROXY web-proxy.austin.hpicorp.net:8080; proxy-txn.austin.hpicorp.net:8080
+    ";\r\n
+    \r\n
+        // Extranets that need to go via a pmHP proxy\r\n
+        if (isInNet(hostIP,"192.170.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.6.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.25.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"192.30.92.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.32.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.52.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"192.151.53.0", "255.255.255.0")\r\n
+             || isInNet(hostIP,"128.88.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"155.208.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"156.153.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"156.152.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"209.228.0.0", "255.255.0.0")\r\n
+             || isInNet(hostIP,"209.228.0.0", "255.255.0.0"))\r\n
+            return HPQNETPROXY;\r\n
+    \r\n
+        return "DIRECT";\n
+    }\n
+Proxy automatic configuration script (URL="http://autocache.hpicorp.net/") downloaded and evaluated successfully  	[MsgId: MMSG-27096]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Kaas_TypeAhead.
+Kaas_TypeAhead.c(3): web_set_user started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead.c(3): Notify: Parameter Substitution: parameter "p_hostname" =  "kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com"
+Kaas_TypeAhead.c(3): web_set_user was successful  	[MsgId: MMSG-26392]
+Kaas_TypeAhead.c(4): Notify: Transaction "TA_001_Kaas_TypeAhead" started.
+Kaas_TypeAhead.c(6): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead.c(6): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Kaas_TypeAhead.c(8): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Kaas_TypeAhead.c(8): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Kaas_TypeAhead.c(10): web_add_header("accessToken") started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead.c(10): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000aEgn9Fsm4i4o7iekAgx72IOvU"
+Kaas_TypeAhead.c(10): web_add_header("accessToken") was successful  	[MsgId: MMSG-26392]
+Kaas_TypeAhead.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead.c(11): Notify: Parameter Substitution: parameter "p_hostname" =  "kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com"
+Kaas_TypeAhead.c(11): Notify: Parameter Substitution: parameter "p_TypeAhead" =  "Compaq Evo Desktop"
+Kaas_TypeAhead.c(11): The request to server https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=Compaq Evo Desktop&resultLimit=20&resultStart=0&store=tmsstore&language=en" is done with headers:
+Kaas_TypeAhead.c(11):     :method = GET
+Kaas_TypeAhead.c(11):     :scheme = https
+Kaas_TypeAhead.c(11):     :path = /suggestions/search/?q=Compaq%20Evo%20Desktop&resultLimit=20&resultStart=0&store=t
+Kaas_TypeAhead.c(11):     msstore&language=en
+Kaas_TypeAhead.c(11):     :authority = kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com
+Kaas_TypeAhead.c(11):     Content-Type =  application/x-www-form-urlencoded
+Kaas_TypeAhead.c(11):     accessToken =  000aEgn9Fsm4i4o7iekAgx72IOvU
+Kaas_TypeAhead.c(11):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Kaas_TypeAhead.c(11):     Accept-Encoding =  gzip, deflate
+Kaas_TypeAhead.c(11):     Accept =  */*
+Kaas_TypeAhead.c(11): t=708ms: 112-byte response headers for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=Compaq Evo Desktop&resultLimit=20&resultStart=0&store=tmsstore&language=en" (RelFrameId=1, Internal ID=2)
+Kaas_TypeAhead.c(11):     HTTP/2.0 200\r\n
+Kaas_TypeAhead.c(11):     Status: 200\r\n
+Kaas_TypeAhead.c(11):     date: Thu, 22 Apr 2021 08:25:57 GMT\r\n
+Kaas_TypeAhead.c(11):     content-type: application/json;charset=UTF-8\r\n
+Kaas_TypeAhead.c(11):     \r\n
+Kaas_TypeAhead.c(11): t=713ms: 1868-byte response body for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=Compaq Evo Desktop&resultLimit=20&resultStart=0&store=tmsstore&language=en" (RelFrameId=1, Internal ID=2)
+Kaas_TypeAhead.c(11):     {"matches":[{"matchScore":53.482944,"productname":"Compaq Evo Notebook n620c","productId":
+Kaas_TypeAhead.c(11):     316682},{"matchScore":53.35399,"productname":"Compaq Evo n620c Base Model Notebook PC","pr
+Kaas_TypeAhead.c(11):     oductId":471983},{"matchScore":52.424828,"productname":"Compaq Evo n620c Notebook PC","pro
+Kaas_TypeAhead.c(11):     ductId":316684},{"matchScore":52.424828,"productname":"Compaq Evo n1050v Notebook PC","pro
+Kaas_TypeAhead.c(11):     ductId":321891},{"matchScore":50.677017,"productname":"Compaq Evo n1050v Notebook PC","pro
+Kaas_TypeAhead.c(11):     ductId":329982},{"matchScore":23.406134,"productname":"Compaq SG3-220DE Desktop PC","produ
+Kaas_TypeAhead.c(11):     ctId":5035937},{"matchScore":23.406134,"productname":"Compaq SG3-210UK Desktop PC","produc
+Kaas_TypeAhead.c(11):     tId":4337786},{"matchScore":23.406134,"productname":"Compaq SG3-230DE Desktop PC","product
+Kaas_TypeAhead.c(11):     Id":4330213},{"matchScore":23.406134,"productname":"Compaq SG3-210SC Desktop PC","productI
+Kaas_TypeAhead.c(11):     d":4320386},{"matchScore":23.406134,"productname":"Compaq Presario CQ5621F Desktop PC","pr
+Kaas_TypeAhead.c(11):     oductId":4313859},{"matchScore":23.406134,"productname":"Compaq Presario CQ5600 Desktop PC
+Kaas_TypeAhead.c(11):      series","productId":4269863},{"matchScore":23.406134,"productname":"Compaq SG3-230SC Desk
+Kaas_TypeAhead.c(11):     top PC","productId":4320323},{"matchScore":23.406134,"productname":"Compaq SG3-230NL Deskt
+Kaas_TypeAhead.c(11):     op PC","productId":4325595},{"matchScore":23.406134,"productname":"Compaq Presario CQ5625F
+Kaas_TypeAhead.c(11):      Desktop PC","productId":4351697},{"matchScore":23.406134,"productname":"Compaq SG3-250RU 
+Kaas_TypeAhead.c(11):     Desktop PC","productId":4354268},{"matchScore":23.406134,"productname":"Compaq Presario CQ
+Kaas_TypeAhead.c(11):     3320AN Desktop PC","productId":4212229},{"matchScore":23.406134,"productname":"Compaq Pres
+Kaas_TypeAhead.c(11):     ario CQ3368HK Desktop PC","productId":4273717},{"matchScore":23.406134,"productname":"Comp
+Kaas_TypeAhead.c(11):     aq Presario CQ5316LA Desktop PC","productId":4113147},{"matchScore":23.406134,"productname
+Kaas_TypeAhead.c(11):     ":"Compaq Presario CQ3360D Desktop PC","productId":4213219},{"matchScore":23.406134,"produ
+Kaas_TypeAhead.c(11):     ctname":"Compaq Presario CQ5307UK Desktop PC","productId":4104201}]}
+Kaas_TypeAhead.c(11): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=Compaq Evo Desktop&resultLimit=20&resultStart=0&store=tmsstore&language=en"  	[MsgId: MMSG-26548]
+Kaas_TypeAhead.c(11): web_custom_request("web_custom_request") was successful, 1868 body bytes, 112 header bytes  	[MsgId: MMSG-26386]
+Kaas_TypeAhead.c(20): Notify: Transaction "TA_001_Kaas_TypeAhead" ended with a "Pass" status (Duration: 0.3533 Wasted Time: 0.0556).
+Ending action Kaas_TypeAhead.
+Starting action Kaas_TypeAhed_PrintFields.
+Kaas_TypeAhed_PrintFields.c(3): web_set_user started  	[MsgId: MMSG-26355]
+Kaas_TypeAhed_PrintFields.c(3): Notify: Parameter Substitution: parameter "p_hostname" =  "kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com"
+Kaas_TypeAhed_PrintFields.c(3): web_set_user was successful  	[MsgId: MMSG-26392]
+Kaas_TypeAhed_PrintFields.c(4): Notify: Transaction "TA_002_TypeAhead_PrintFields" started.
+Kaas_TypeAhed_PrintFields.c(8): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Kaas_TypeAhed_PrintFields.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Kaas_TypeAhed_PrintFields.c(8): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Kaas_TypeAhed_PrintFields.c(12): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Kaas_TypeAhed_PrintFields.c(12): Notify: Parameter Substitution: parameter "p_hostname" =  "kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com"
+Kaas_TypeAhed_PrintFields.c(12): Notify: Parameter Substitution: parameter "p_TypeAheadPrintFields" =  "envy printer"
+Kaas_TypeAhed_PrintFields.c(12): The request to server https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search?q=envy printer&resultLimit=20&resultStart=0&store=tmsstore&language=en&printFields=title,body,childnodes,productid,class,tmspmnumbervalue,tmspmnamevalue,tmspmseriesvalue,seofriendlyname" is done with headers:
+Kaas_TypeAhed_PrintFields.c(12):     :method = GET
+Kaas_TypeAhed_PrintFields.c(12):     :scheme = https
+Kaas_TypeAhed_PrintFields.c(12):     :path = /suggestions/search?q=envy%20printer&resultLimit=20&resultStart=0&store=tmsstore&l
+Kaas_TypeAhed_PrintFields.c(12):     anguage=en&printFields=title,body,childnodes,productid,class,tmspmnumbervalue,tmspmnameval
+Kaas_TypeAhed_PrintFields.c(12):     ue,tmspmseriesvalue,seofriendlyname
+Kaas_TypeAhed_PrintFields.c(12):     :authority = kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com
+Kaas_TypeAhed_PrintFields.c(12):     Content-Type =  application/x-www-form-urlencoded
+Kaas_TypeAhed_PrintFields.c(12):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Kaas_TypeAhed_PrintFields.c(12):     Accept-Encoding =  gzip, deflate
+Kaas_TypeAhed_PrintFields.c(12):     Accept =  */*
+Kaas_TypeAhed_PrintFields.c(12): t=849ms: 112-byte response headers for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search?q=envy printer&resultLimit=20&resultStart=0&store=tmsstore&language=en&printFields=title,body,childnodes,productid,class,tmspmnumbervalue,tmspmnamevalue,tmspmseriesvalue,seofriendlyname" (RelFrameId=1, Internal ID=3)
+Kaas_TypeAhed_PrintFields.c(12):     HTTP/2.0 200\r\n
+Kaas_TypeAhed_PrintFields.c(12):     Status: 200\r\n
+Kaas_TypeAhed_PrintFields.c(12):     date: Thu, 22 Apr 2021 08:25:57 GMT\r\n
+Kaas_TypeAhed_PrintFields.c(12):     content-type: application/json;charset=UTF-8\r\n
+Kaas_TypeAhed_PrintFields.c(12):     \r\n
+Kaas_TypeAhed_PrintFields.c(12): t=854ms: 8192-byte response body for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search?q=envy printer&resultLimit=20&resultStart=0&store=tmsstore&language=en&printFields=title,body,childnodes,productid,class,tmspmnumbervalue,tmspmnamevalue,tmspmseriesvalue,seofriendlyname" (RelFrameId=1, Internal ID=3)
+Kaas_TypeAhed_PrintFields.c(12):     {"matches":[{"terms":"HP ENVY Photo 7864 All-in-One Printer,7864aio,aio allinone,envi7864 
+Kaas_TypeAhed_PrintFields.c(12):     hpenvi7864 hpenvi,envoy envey envu env envie envi enve,envy7864,envy7864 hpenvy7864,envy78
+Kaas_TypeAhed_PrintFields.c(12):     64 hpenvy7864 hpenvy7864printer envy7864printer 7864printer printer7864,envy7864aio 7864ai
+Kaas_TypeAhed_PrintFields.c(12):     o hpenvy7864aio hp7864aio,envyphoto7864,envyphoto7864 photo7864 hpenvyphoto7864 hpphoto786
+Kaas_TypeAhed_PrintFields.c(12):     4,hp7864,hpbrand,hpenvy,hpenvyphoto7864allinoneprinter,photo7864,pri","name":"HP ENVY Phot
+Kaas_TypeAhed_PrintFields.c(12):     o 7864 All-in-One Printer","pmClass":"pm_name_value","pmSeriesOid":9073159,"pmNameOid":164
+Kaas_TypeAhed_PrintFields.c(12):     83157,"childnodes":"16483125|","seoFriendlyName":"hp-envy-photo-7800-all-in-one-printer-se
+Kaas_TypeAhed_PrintFields.c(12):     ries","matchScore":23.240051,"productId":16483157},{"terms":"HP ENVY 4500 e-All-in-One Pri
+Kaas_TypeAhed_PrintFields.c(12):     nter series,4500aio,4500e,4500eaio,4500envy,4500serie,4500series,450o 450x,45oo 45xx 45x,a
+Kaas_TypeAhed_PrintFields.c(12):     io allinone,aio4500,aioenvi4500,aioenvy4500,eallinone eaio,envi4500,envi4500 hpenvi4500 hp
+Kaas_TypeAhed_PrintFields.c(12):     envi,envie4500,envoy envey envu env envie envi enve,envy4500,envy4500 hpenvy4500,envy4500 
+Kaas_TypeAhed_PrintFields.c(12):     hpenvy4500 hpenvy4500printer envy4500printer 4500printer printer4500,envy4500aio,envy4500a
+Kaas_TypeAhed_PrintFields.c(12):     io 4500aio hpenvy4500aio hp4500aio,envy4500e,envy4500eaio,envy4500eaio 4500eaio hpenvy4500
+Kaas_TypeAhed_PrintFields.c(12):     eaio hp4500eaio,envy4500printer,envyhp4500,hp4500,hp4500eaio,hp4500envy,hp4500serie,hpbran
+Kaas_TypeAhed_PrintFields.c(12):     d,hpenvy,hpenvy45 00,hpenvy4500,hpenvy4500aio,hpenvy4500e,hpenvy4500eaio,hpenvy4500eallino
+Kaas_TypeAhed_PrintFields.c(12):     neprinterseries,hpenvy4500printer,pri,stampanteenvy4500","name":"HP ENVY 4500 e-All-in-One
+Kaas_TypeAhed_PrintFields.c(12):      Printer series","pmClass":"pm_series_value","pmSeriesOid":5304875,"childnodes":"210012657
+Kaas_TypeAhed_PrintFields.c(12):     6|5304876|5368518|5368521|5368526|5368530|5368533|5368536|6412175|7297912|7297914|7297916|
+Kaas_TypeAhed_PrintFields.c(12):     7439488|8585893|","seoFriendlyName":"hp-envy-4500-e-all-in-one-printer-series","matchScore
+Kaas_TypeAhed_PrintFields.c(12):     ":23.240051,"productId":5304875},{"terms":"HP ENVY 4500 e-All-in-One Printer,4500aio,4500e
+Kaas_TypeAhed_PrintFields.c(12):     ,4500eaio,4500envy,4500serie,450o 450x,45oo 45xx 45x,aio allinone,aio4500,aioenvi4500,aioe
+Kaas_TypeAhed_PrintFields.c(12):     nvy4500,eallinone eaio,envi4500,envi4500 hpenvi4500 hpenvi,envie4500,envoy envey envu env 
+Kaas_TypeAhed_PrintFields.c(12):     envie envi enve,envy4500,envy4500 hpenvy4500,envy4500 hpenvy4500 hpenvy4500printer envy450
+Kaas_TypeAhed_PrintFields.c(12):     0printer 4500printer printer4500,envy4500aio,envy4500aio 4500aio hpenvy4500aio hp4500aio,e
+Kaas_TypeAhed_PrintFields.c(12):     nvy4500all,envy4500e,envy4500eaio,envy4500eaio 4500eaio hpenvy4500eaio hp4500eaio,envy4500
+Kaas_TypeAhed_PrintFields.c(12):     printer,envyhp4500,hp4500,hp4500eaio,hp4500envy,hpbrand,hpenvy,hpenvy45 00,hpenvy4500,hpen
+Kaas_TypeAhed_PrintFields.c(12):     vy4500aio,hpenvy4500e,hpenvy4500eaio,hpenvy4500eallinoneprinter,hpenvy4500printer,pri,stam
+Kaas_TypeAhed_PrintFields.c(12):     panteenvy4500","name":"HP ENVY 4500 e-All-in-One Printer","pmClass":"pm_name_value","pmSer
+Kaas_TypeAhed_PrintFields.c(12):     iesOid":5304875,"pmNameOid":5304876,"childnodes":"5304879|5368515|5368517|","seoFriendlyNa
+Kaas_TypeAhed_PrintFields.c(12):     me":"hp-envy-4500-e-all-in-one-printer-series","matchScore":23.240051,"productId":5304876}
+Kaas_TypeAhed_PrintFields.c(12):     ,{"terms":"HP ENVY 5530 e-All-in-One Printer,5530aio,5530allinone,5530e,5530eaio,5530ealli
+Kaas_TypeAhed_PrintFields.c(12):     none,5530envy,553o 553x,aio allinone,aio5530,eallinone eaio,envi5530 hpenvi5530 hpenvi,env
+Kaas_TypeAhed_PrintFields.c(12):     ieaio5530,envoy envey envu env envie envi enve,envy55 30,envy5530,envy5530 hpenvy5530,envy
+Kaas_TypeAhed_PrintFields.c(12):     5530 hpenvy5530 hpenvy5530printer envy5530printer 5530printer printer5530,envy5530aio,envy
+Kaas_TypeAhed_PrintFields.c(12):     5530aio 5530aio hpenvy5530aio hp5530aio,envy5530allinone,envy5530e,envy5530eaio,envy5530ea
+Kaas_TypeAhed_PrintFields.c(12):     io 5530eaio hpenvy5530eaio hp5530eaio,envyaio5530,hp5530,hp5530aio,hp5530eaio,hpbrand,hpen
+Kaas_TypeAhed_PrintFields.c(12):     vie5530,hpenvy,hpenvy5530,hpenvy5530aio,hpenvy5530e,hpenvy5530eallinoneprinter,hpenvy5530s
+Kaas_TypeAhed_PrintFields.c(12):     eries,pri","name":"HP ENVY 5530 e-All-in-One Printer","pmClass":"pm_name_value","pmSeriesO
+Kaas_TypeAhed_PrintFields.c(12):     id":5304881,"pmNameOid":5304882,"childnodes":"5304885|5373104|","seoFriendlyName":"hp-envy
+Kaas_TypeAhed_PrintFields.c(12):     -5530-e-all-in-one-printer-series","matchScore":23.240051,"productId":5304882},{"terms":"H
+Kaas_TypeAhed_PrintFields.c(12):     P ENVY Photo 7155 All-in-One Printer,7155aio,7155aioenvy,7155photoprinter,aio allinone,aio
+Kaas_TypeAhed_PrintFields.c(12):     7100envy,aio7155envyphoto,env715,envi7155 hpenvi7155 hpenvi,envoy envey envu env envie env
+Kaas_TypeAhed_PrintFields.c(12):     i enve,envpho7155aio,envphoto7155,envphoto7155aio,envy7100,envy7100all,envy7155,envy7155 h
+Kaas_TypeAhed_PrintFields.c(12):     penvy7155,envy7155 hpenvy7155 hpenvy7155printer envy7155printer 7155printer printer7155,en
+Kaas_TypeAhed_PrintFields.c(12):     vy7155aio 7155aio hpenvy7155aio hp7155aio,envyphoto7100aio,envyphoto7155,envyphoto7155 pho
+Kaas_TypeAhed_PrintFields.c(12):     to7155 hpenvyphoto7155 hpphoto7155,hp7100,hp7155,hpbrand,hpenvy,hpenvyphoto7155,hpenvyphot
+Kaas_TypeAhed_PrintFields.c(12):     o7155allinoneprinter,hpephoto7100,photo7100,photo7155,pri","name":"HP ENVY Photo 7155 All-
+Kaas_TypeAhed_PrintFields.c(12):     in-One Printer","pmClass":"pm_name_value","pmSeriesOid":9073119,"pmNameOid":9073120,"child
+Kaas_TypeAhed_PrintFields.c(12):     nodes":"16449790|9073125|","seoFriendlyName":"hp-envy-photo-7100-all-in-one-printer-series
+Kaas_TypeAhed_PrintFields.c(12):     ","matchScore":23.240051,"productId":9073120},{"terms":"HP ENVY 5643 e-All-in-One Printer,
+Kaas_TypeAhed_PrintFields.c(12):     5640aio,5640aioserie,5640eaio,5640envy,aio allinone,aio5640,eallinone eaio,envi5643 hpenvi
+Kaas_TypeAhed_PrintFields.c(12):     5643 hpenvi,envie5640,envoy envey envu env envie envi enve,envy5640,envy5640aio,envy5640al
+Kaas_TypeAhed_PrintFields.c(12):     l,envy5640eaio,envy5640eoia,envy5643,envy5643 hpenvy5643,envy5643 hpenvy5643 hpenvy5643pri
+Kaas_TypeAhed_PrintFields.c(12):     nter envy5643printer 5643printer printer5643,envy5643aio 5643aio hpenvy5643aio hp5643aio,e
+Kaas_TypeAhed_PrintFields.c(12):     nvy5643eaio 5643eaio hpenvy5643eaio hp5643eaio,envy564o,hp5640,hp5640eaio,hp5643,hpbrand,h
+Kaas_TypeAhed_PrintFields.c(12):     penvy,hpenvy5640,hpenvy5643,hpenvy5643eallinoneprinter,hpprinter5640,imprimante5640,pri","
+Kaas_TypeAhed_PrintFields.c(12):     name":"HP ENVY 5643 e-All-in-One Printer","pmClass":"pm_name_value","pmSeriesOid":6583033,
+Kaas_TypeAhed_PrintFields.c(12):     "pmNameOid":7271224,"childnodes":"7177301|","seoFriendlyName":"hp-envy-5640-e-all-in-one-p
+Kaas_TypeAhed_PrintFields.c(12):     rinter-series","matchScore":23.240051,"productId":7271224},{"terms":"HP ENVY 8 Note 2-in-1
+Kaas_TypeAhed_PrintFields.c(12):      Productivity Pack (with DataPass) - 5000na,5000 na hp5000 hp5000na,envi8 hpenvi8 hpenvi,e
+Kaas_TypeAhed_PrintFields.c(12):     nvoy envey envu env envie envi enve,envy5000 envy5000na hpenvy5000 hpenvy5000na hpenvy5000
+Kaas_TypeAhed_PrintFields.c(12):     naprinter envy5000naprinter,envy8 hpenvy8,envy8 hpenvy8 hpenvy8printer envy8printer 8print
+Kaas_TypeAhed_PrintFields.c(12):     er printer8,envy85000na hpenvy85000na,hp8,hpbrand,hpenvy,hpenvy8note2in1productivitypackwi
+Kaas_TypeAhed_PrintFields.c(12):     thdatapass5000na,pro5000 pro5000na hppro5000 hppro5000na,tablets,two one","name":"HP ENVY 
+Kaas_TypeAhed_PrintFields.c(12):     8 Note 2-in-1 Productivity Pack (with DataPass) - 5000na","pmClass":"pm_name_value","pmSer
+Kaas_TypeAhed_PrintFields.c(12):     iesOid":9019107,"pmNameOid":8961453,"childnodes":"8934303|","seoFriendlyName":"hp-envy-8-n
+Kaas_TypeAhed_PrintFields.c(12):     ote-2-in-1-productivity-pack-with-datapass","matchScore":23.240051,"productId":8961453},{"
+Kaas_TypeAhed_PrintFields.c(12):     terms":"HP ENVY 5014 All-in-One Printer,5000envyaio,aio allinone,aio5000envy,env5000,envai
+Kaas_TypeAhed_PrintFields.c(12):     o5000,envi5014 hpenvi5014 hpenvi,envoy envey envu env envie envi enve,envy5000,envy5014 hp
+Kaas_TypeAhed_PrintFields.c(12):     envy5014,envy5014 hpenvy5014 hpenvy5014printer envy5014printer 5014printer printer5014,env
+Kaas_TypeAhed_PrintFields.c(12):     y5014aio 5014aio hpenvy5014aio hp5014aio,envyaio5000,hp5014,hpbrand,hpe5000,hpenvy,hpenvy5
+Kaas_TypeAhed_PrintFields.c(12):     000,hpenvy5014allinoneprinter,pri","name":"HP ENVY 5014 All-in-One Printer","pmClass":"pm_
+Kaas_TypeAhed_PrintFields.c(12):     name_value","pmSeriesOid":14095644,"pmNameOid":30206161,"childnodes":"30206163|","seoFrien
+Kaas_TypeAhed_PrintFields.c(12):     dlyName":"hp-envy-5000-all-in-one-printer-series","matchScore":23.240051,"productId":30206
+Kaas_TypeAhed_PrintFields.c(12):     161},{"terms":"HP ENVY 8 Note Tablet - 5010,501o 501x,envi8 hpenvi8 hpenvi,envoy envey env
+Kaas_TypeAhed_PrintFields.c(12):     u env envie envi enve,envy5010 hpenvy5010,envy5010 hpenvy5010 hpenvy5010printer envy5010pr
+Kaas_TypeAhed_PrintFields.c(12):     inter 5010printer printer5010,envy85010 hpenvy85010,hp5010,hpbrand,hpenvy,hpenvy8notetable
+Kaas_TypeAhed_PrintFields.c(12):     t5010,tablets","name":"HP ENVY 8 Note Tablet - 5010","pmClass":"pm_name_value","pmSeriesOi
+Kaas_TypeAhed_PrintFields.c(12):     d":8744686,"pmNameOid":9836028,"childnodes":"9836030|9836031|","seoFriendlyName":"hp-envy-
+Kaas_TypeAhed_PrintFields.c(12):     8-note-tablet","matchScore":23.240051,"productId":9836028},{"terms":"HP ENVY 4512 All-in-O
+Kaas_TypeAhed_PrintFields.c(12):     ne Printer,4510aio,4512envy,4512envyaio,aio allinone,aio4512envy,envi4512 hpenvi4512 hpenv
+Kaas_TypeAhed_PrintFields.c(12):     i,envoy envey envu env envie envi enve,envy4510,envy4512,envy4512 hpenvy4512,envy4512 hpen
+Kaas_TypeAhed_PrintFields.c(12):     vy4512 hpenvy4512printer envy4512printer 4512printer printer4512,envy4512aio 4512aio hpenv
+Kaas_TypeAhed_PrintFields.c(12):     y4512aio hp4512aio,hp4510,hp4510aio,hp4512,hpbrand,hpenvy,hpenvy4510,hpenvy4510aio,hpenvy4
+Kaas_TypeAhed_PrintFields.c(12):     512,hpenvy4512allinoneprinter,pri","name":"HP ENVY 4512 All-in-One Printer","pmClass":"pm_
+Kaas_TypeAhed_PrintFields.c(12):     name_value","pmSeriesOid":7588794,"pmNameOid":7588795,"childnodes":"7588798|","seoFriendly
+Kaas_TypeAhed_PrintFields.c(12):     Name":"hp-envy-4510-all-in-one-printer-series","matchScore":23.240051,"productId":7588795}
+Kaas_TypeAhed_PrintFields.c(12):     ,{"terms":"HP ENVY 5052 All-in-One Printer,5000envyaio,5052aio,aio allinone,aio5000envy,en
+Kaas_TypeAhed_PrintFields.c(12):     5052,en5052printer,enprinter5052,env5000,envaio5000,envi5052 hpenvi5052 hpenvi,envoy envey
+Kaas_TypeAhed_PrintFields.c(12):      envu env envie envi enve,envy5000,envy5052,envy5052 hpenvy5052,envy5052 hpenvy5052 hpenvy
+Kaas_TypeAhed_PrintFields.c(12):     5052printer envy5052printer 5052printer printer5052,envy5052aio,envy5052aio 5052aio hpenvy
+Kaas_TypeAhed_PrintFields.c(12):     50
+Kaas_TypeAhed_PrintFields.c(12): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search?q=envy printer&resultLimit=20&resultStart=0&store=tmsstore&language=en&printFields=title,body,childnodes,productid,class,tmspmnumbervalue,tmspmnamevalue,tmspmseriesvalue,seofriendlyname"  	[MsgId: MMSG-26548]
+Kaas_TypeAhed_PrintFields.c(12): t=863ms: 5650-byte response body for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search?q=envy printer&resultLimit=20&resultStart=0&store=tmsstore&language=en&printFields=title,body,childnodes,productid,class,tmspmnumbervalue,tmspmnamevalue,tmspmseriesvalue,seofriendlyname" (RelFrameId=1, Internal ID=3)
+Kaas_TypeAhed_PrintFields.c(12):     52aio hp5052aio,envyaio5000,hp5052,hpbrand,hpe5000,hpenvy,hpenvy5000,hpenvy5052,hpenvy5052
+Kaas_TypeAhed_PrintFields.c(12):     allinoneprinter,pri","name":"HP ENVY 5052 All-in-One Printer","pmClass":"pm_name_value","p
+Kaas_TypeAhed_PrintFields.c(12):     mSeriesOid":14095644,"pmNameOid":14095765,"childnodes":"14095767|","seoFriendlyName":"hp-e
+Kaas_TypeAhed_PrintFields.c(12):     nvy-5000-all-in-one-printer-series","matchScore":23.240051,"productId":14095765},{"terms":
+Kaas_TypeAhed_PrintFields.c(12):     "HP ENVY Photo 6258 All-in-One Printer,aio allinone,aio6200envy,envi6258 hpenvi6258 hpenvi
+Kaas_TypeAhed_PrintFields.c(12):     ,envoy envey envu env envie envi enve,envy6200,envy6200all,envy6258 hpenvy6258,envy6258 hp
+Kaas_TypeAhed_PrintFields.c(12):     envy6258 hpenvy6258printer envy6258printer 6258printer printer6258,envy6258aio 6258aio hpe
+Kaas_TypeAhed_PrintFields.c(12):     nvy6258aio hp6258aio,envyphoto6200,envyphoto6200aio,envyphoto6258 photo6258 hpenvyphoto625
+Kaas_TypeAhed_PrintFields.c(12):     8 hpphoto6258,hp6200,hp6258,hpbrand,hpenvy,hpenvyphoto6200,hpenvyphoto6258allinoneprinter,
+Kaas_TypeAhed_PrintFields.c(12):     photo6200,pri","name":"HP ENVY Photo 6258 All-in-One Printer","pmClass":"pm_name_value","p
+Kaas_TypeAhed_PrintFields.c(12):     mSeriesOid":9073045,"pmNameOid":16483138,"childnodes":"16483141|16494350|","seoFriendlyNam
+Kaas_TypeAhed_PrintFields.c(12):     e":"hp-envy-photo-6200-all-in-one-printer-series","matchScore":23.240051,"productId":16483
+Kaas_TypeAhed_PrintFields.c(12):     138},{"terms":"HP ENVY 4503 e-All-in-One Printer,4500aio,4500e,4500eaio,4500envy,4500serie
+Kaas_TypeAhed_PrintFields.c(12):     ,aio allinone,aio4500,aio4503,aioenvi4500,aioenvy4500,eallinone eaio,envi4500,envi4503 hpe
+Kaas_TypeAhed_PrintFields.c(12):     nvi4503 hpenvi,envie4500,envie4503,envoy envey envu env envie envi enve,envy4500,envy4500a
+Kaas_TypeAhed_PrintFields.c(12):     io,envy4500e,envy4500eaio,envy4500printer,envy4503,envy4503 hpenvy4503,envy4503 hpenvy4503
+Kaas_TypeAhed_PrintFields.c(12):      hpenvy4503printer envy4503printer 4503printer printer4503,envy4503aio 4503aio hpenvy4503a
+Kaas_TypeAhed_PrintFields.c(12):     io hp4503aio,envy4503eaio 4503eaio hpenvy4503eaio hp4503eaio,envyhp4500,hp4500eaio,hp4500e
+Kaas_TypeAhed_PrintFields.c(12):     nvy,hp4503,hpbrand,hpenvy,hpenvy45 00,hpenvy4500,hpenvy4500aio,hpenvy4500e,hpenvy4500eaio,
+Kaas_TypeAhed_PrintFields.c(12):     hpenvy4500printer,hpenvy4503eallinoneprinter,imprimante4503,pri,stampanteenvy4500","name":
+Kaas_TypeAhed_PrintFields.c(12):     "HP ENVY 4503 e-All-in-One Printer","pmClass":"pm_name_value","pmSeriesOid":5304875,"pmNam
+Kaas_TypeAhed_PrintFields.c(12):     eOid":7297916,"childnodes":"7259647|","seoFriendlyName":"hp-envy-4500-e-all-in-one-printer
+Kaas_TypeAhed_PrintFields.c(12):     -series","matchScore":23.240051,"productId":7297916},{"terms":"HP ENVY 5535 e-All-in-One P
+Kaas_TypeAhed_PrintFields.c(12):     rinter,5530aio,5530allinone,5530e,5530eaio,5530eallinone,5530envy,aio allinone,aio5530,eal
+Kaas_TypeAhed_PrintFields.c(12):     linone eaio,envi5535 hpenvi5535 hpenvi,envieaio5530,envoy envey envu env envie envi enve,e
+Kaas_TypeAhed_PrintFields.c(12):     nvy55 30,envy5530,envy5530aio,envy5530allinone,envy5530e,envy5535,envy5535 hpenvy5535,envy
+Kaas_TypeAhed_PrintFields.c(12):     5535 hpenvy5535 hpenvy5535printer envy5535printer 5535printer printer5535,envy5535aio 5535
+Kaas_TypeAhed_PrintFields.c(12):     aio hpenvy5535aio hp5535aio,envy5535eaio 5535eaio hpenvy5535eaio hp5535eaio,envyaio5530,hp
+Kaas_TypeAhed_PrintFields.c(12):     5530,hp5530aio,hp5530eaio,hp5535,hpbrand,hpenvie5530,hpenvy,hpenvy5530,hpenvy5530aio,hpenv
+Kaas_TypeAhed_PrintFields.c(12):     y5530e,hpenvy5530series,hpenvy5535,hpenvy5535eallinoneprinter,pri","name":"HP ENVY 5535 e-
+Kaas_TypeAhed_PrintFields.c(12):     All-in-One Printer","pmClass":"pm_name_value","pmSeriesOid":5304881,"pmNameOid":5373119,"c
+Kaas_TypeAhed_PrintFields.c(12):     hildnodes":"5373123|","seoFriendlyName":"hp-envy-5530-e-all-in-one-printer-series","matchS
+Kaas_TypeAhed_PrintFields.c(12):     core":23.240051,"productId":5373119},{"terms":"HP ENVY 110 e-All-in-One Printer series - D
+Kaas_TypeAhed_PrintFields.c(12):     411,110aio,110d411,110e,110eaiod411,110series,11o 11x,aio allinone,aio110d411,d 411,d 411 
+Kaas_TypeAhed_PrintFields.c(12):     hpd411 hp411,eallinone eaio,envi110 hpenvi110 hpenvi,envoy envey envu env envie envi enve,
+Kaas_TypeAhed_PrintFields.c(12):     envy110,envy110 hpenvy110,envy110 hpenvy110 hpenvy110printer envy110printer 110printer pri
+Kaas_TypeAhed_PrintFields.c(12):     nter110,envy110aio,envy110aio 110aio hpenvy110aio hp110aio,envy110d411,envy110d411 hpenvy1
+Kaas_TypeAhed_PrintFields.c(12):     10d411,envy110e,envy110eaio 110eaio hpenvy110eaio hp110eaio,envyd411 hpenvyd411 envy411 hp
+Kaas_TypeAhed_PrintFields.c(12):     envy411 hpenvy411printer envy411printer,hp110,hp110aio,hp110d411,hp110e,hp110serie,hpbrand
+Kaas_TypeAhed_PrintFields.c(12):     ,hpenvy,hpenvy110e,hpenvy110eallinoneprinterseriesd411,pri","name":"HP ENVY 110 e-All-in-O
+Kaas_TypeAhed_PrintFields.c(12):     ne Printer series - D411","pmClass":"pm_series_value","pmSeriesOid":5070119,"childnodes":"
+Kaas_TypeAhed_PrintFields.c(12):     5070124|5096414|5096417|5145352|5179180|5233663|5316104|","seoFriendlyName":"hp-envy-110-e
+Kaas_TypeAhed_PrintFields.c(12):     -all-in-one-printer-series-d411","matchScore":23.240051,"productId":5070119},{"terms":"HP 
+Kaas_TypeAhed_PrintFields.c(12):     ENVY 5661 e-All-in-One Printer,5600eaioenvy,5660aio,5660aioenvy,5660e,aio allinone,aio5660
+Kaas_TypeAhed_PrintFields.c(12):     ,eallinone eaio,envi5661 hpenvi5661 hpenvi,envoy envey envu env envie envi enve,envy5660,e
+Kaas_TypeAhed_PrintFields.c(12):     nvy5660aioprinter,envy5660e,envy5660eaioprinter,envy5661,envy5661 hpenvy5661,envy5661 hpen
+Kaas_TypeAhed_PrintFields.c(12):     vy5661 hpenvy5661printer envy5661printer 5661printer printer5661,envy5661aio 5661aio hpenv
+Kaas_TypeAhed_PrintFields.c(12):     y5661aio hp5661aio,envy5661eaio 5661eaio hpenvy5661eaio hp5661eaio,envy566o,hp5660,hp5661,
+Kaas_TypeAhed_PrintFields.c(12):     hpbrand,hpenvy,hpenvy5660,hpenvy5660e,hpenvy5660printer,hpenvy5661eallinoneprinter,pri","n
+Kaas_TypeAhed_PrintFields.c(12):     ame":"HP ENVY 5661 e-All-in-One Printer","pmClass":"pm_name_value","pmSeriesOid":6809225,"
+Kaas_TypeAhed_PrintFields.c(12):     pmNameOid":8605132,"childnodes":"8605134|","seoFriendlyName":"hp-envy-5660-e-all-in-one-pr
+Kaas_TypeAhed_PrintFields.c(12):     inter-series","matchScore":23.240051,"productId":8605132},{"terms":"HP ENVY 4527 All-in-On
+Kaas_TypeAhed_PrintFields.c(12):     e Printer,4520aio,4520aioenvy,4520allinone,4520envy,4520printerenvy,4527envyaio,aio allino
+Kaas_TypeAhed_PrintFields.c(12):     ne,aio4520,aio4527,aio4527envy,aioenvy4520,envi4520,envi4527,envi4527 hpenvi4527 hpenvi,en
+Kaas_TypeAhed_PrintFields.c(12):     vie4527,envoy envey envu env envie envi enve,envy4520,envy4520aio,envy4520aioprinter,envy4
+Kaas_TypeAhed_PrintFields.c(12):     520all,envy4520allinone,envy4520eaio,envy4520series,envy4527,envy4527 hpenvy4527,envy4527 
+Kaas_TypeAhed_PrintFields.c(12):     hpenvy4527 hpenvy4527printer envy4527printer 4527printer printer4527,envy4527aio 4527aio h
+Kaas_TypeAhed_PrintFields.c(12):     penvy4527aio hp4527aio,hp4520,hp4520aio,hp4527,hpallinone4520,hpbrand,hpe4520,hpenvi4520,h
+Kaas_TypeAhed_PrintFields.c(12):     penvie4520,hpenvie4527,hpenvy,hpenvy4520,hpenvy4520aio,hpenvy4520all,hpenvy4527,hpenvy4527
+Kaas_TypeAhed_PrintFields.c(12):     allinoneprinter,pri,serie4520","name":"HP ENVY 4527 All-in-One Printer","pmClass":"pm_name
+Kaas_TypeAhed_PrintFields.c(12):     _value","pmSeriesOid":5447920,"pmNameOid":11534751,"childnodes":"11534753|12319761|","seoF
+Kaas_TypeAhed_PrintFields.c(12):     riendlyName":"hp-envy-4520-all-in-one-printer-series","matchScore":23.240051,"productId":1
+Kaas_TypeAhed_PrintFields.c(12):     1534751},{"terms":"HP ENVY Rechargeable Mouse 500,50o 50x,5oo 5xx 5x,e
+Kaas_TypeAhed_PrintFields.c(12): t=884ms: 2136-byte response body for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search?q=envy printer&resultLimit=20&resultStart=0&store=tmsstore&language=en&printFields=title,body,childnodes,productid,class,tmspmnumbervalue,tmspmnamevalue,tmspmseriesvalue,seofriendlyname" (RelFrameId=1, Internal ID=3)
+Kaas_TypeAhed_PrintFields.c(12):     nvi500 hpenvi500 hpenvi,envoy envey envu env envie envi enve,envy500 hpenvy500,envy500 hpe
+Kaas_TypeAhed_PrintFields.c(12):     nvy500 hpenvy500printer envy500printer 500printer printer500,hp500,hpbrand,hpenvy,hpenvyre
+Kaas_TypeAhed_PrintFields.c(12):     chargeablemouse500","name":"HP ENVY Rechargeable Mouse 500","pmClass":"pm_name_value","pmS
+Kaas_TypeAhed_PrintFields.c(12):     eriesOid":19133889,"pmNameOid":19133798,"childnodes":"19133800|19503883|","seoFriendlyName
+Kaas_TypeAhed_PrintFields.c(12):     ":"hp-envy-mouse","matchScore":23.240051,"productId":19133798},{"terms":"HP ENVY 5539 e-Al
+Kaas_TypeAhed_PrintFields.c(12):     l-in-One Printer,5530aio,5530allinone,5530e,5530eaio,5530eallinone,5530envy,aio allinone,a
+Kaas_TypeAhed_PrintFields.c(12):     io5530,eallinone eaio,envi5539 hpenvi5539 hpenvi,envieaio5530,envoy envey envu env envie e
+Kaas_TypeAhed_PrintFields.c(12):     nvi enve,envy55 30,envy5530,envy5530aio,envy5530allinone,envy5530e,envy5539 hpenvy5539,env
+Kaas_TypeAhed_PrintFields.c(12):     y5539 hpenvy5539 hpenvy5539printer envy5539printer 5539printer printer5539,envy5539aio 553
+Kaas_TypeAhed_PrintFields.c(12):     9aio hpenvy5539aio hp5539aio,envy5539eaio 5539eaio hpenvy5539eaio hp5539eaio,envyaio5530,h
+Kaas_TypeAhed_PrintFields.c(12):     p5530,hp5530aio,hp5530eaio,hp5539,hpbrand,hpenvie5530,hpenvy,hpenvy5530,hpenvy5530aio,hpen
+Kaas_TypeAhed_PrintFields.c(12):     vy5530e,hpenvy5530series,hpenvy5539eallinoneprinter,pri","name":"HP ENVY 5539 e-All-in-One
+Kaas_TypeAhed_PrintFields.c(12):      Printer","pmClass":"pm_name_value","pmSeriesOid":5304881,"pmNameOid":5373141,"childnodes"
+Kaas_TypeAhed_PrintFields.c(12):     :"5373143|","seoFriendlyName":"hp-envy-5530-e-all-in-one-printer-series","matchScore":23.2
+Kaas_TypeAhed_PrintFields.c(12):     40051,"productId":5373141},{"terms":"HP ENVY Photo 7130 All-in-One Printer,7130aio,713o 71
+Kaas_TypeAhed_PrintFields.c(12):     3x,aio allinone,aio7100envy,en7130,enp7130,enph7130,envi7130 hpenvi7130 hpenvi,envoy envey
+Kaas_TypeAhed_PrintFields.c(12):      envu env envie envi enve,envy7100,envy7100all,envy7130,envy7130 hpenvy7130,envy7130 hpenv
+Kaas_TypeAhed_PrintFields.c(12):     y7130 hpenvy7130printer envy7130printer 7130printer printer7130,envy7130aio,envy7130aio 71
+Kaas_TypeAhed_PrintFields.c(12):     30aio hpenvy7130aio hp7130aio,envy7130all,envyphoto7100aio,envyphoto7130,envyphoto7130 pho
+Kaas_TypeAhed_PrintFields.c(12):     to7130 hpenvyphoto7130 hpphoto7130,hp7100,hp7130,hpbrand,hpenvy,hpenvy7130,hpenvyphoto7130
+Kaas_TypeAhed_PrintFields.c(12):     ,hpenvyphoto7130allinoneprinter,hpephoto7100,hpprinter7130,photo7100,photo7130,pri","name"
+Kaas_TypeAhed_PrintFields.c(12):     :"HP ENVY Photo 7130 All-in-One Printer","pmClass":"pm_name_value","pmSeriesOid":9073119,"
+Kaas_TypeAhed_PrintFields.c(12):     pmNameOid":16471609,"childnodes":"16471611|","seoFriendlyName":"hp-envy-photo-7100-all-in-
+Kaas_TypeAhed_PrintFields.c(12):     one-printer-series","matchScore":23.240051,"productId":16471609}]}
+Kaas_TypeAhed_PrintFields.c(12): web_custom_request("web_custom_request") was successful, 15978 body bytes, 112 header bytes  	[MsgId: MMSG-26386]
+Kaas_TypeAhed_PrintFields.c(21): Notify: Transaction "TA_002_TypeAhead_PrintFields" ended with a "Pass" status (Duration: 0.1161 Wasted Time: 0.0090).
+Ending action Kaas_TypeAhed_PrintFields.
+Starting action Kaas_TypeAhead_Categories.
+Kaas_TypeAhead_Categories.c(4): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead_Categories.c(4): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Kaas_TypeAhead_Categories.c(4): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Kaas_TypeAhead_Categories.c(7): Notify: Transaction "TA_003_Kaas_TypeAhead_Categories" started.
+Kaas_TypeAhead_Categories.c(8): web_set_user started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead_Categories.c(8): Notify: Parameter Substitution: parameter "p_hostname" =  "kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com"
+Kaas_TypeAhead_Categories.c(8): web_set_user was successful  	[MsgId: MMSG-26392]
+Kaas_TypeAhead_Categories.c(10): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead_Categories.c(10): Notify: Parameter Substitution: parameter "p_hostname" =  "kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com"
+Kaas_TypeAhead_Categories.c(10): Notify: Parameter Substitution: parameter "p_TypeAhead_Categories" =  "envy printer"
+Kaas_TypeAhead_Categories.c(10): Notify: Parameter Substitution: parameter "p_TypeAhead_Cat_Param2" =  "268161584258236861743175748903686"
+Kaas_TypeAhead_Categories.c(10): The request to server https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search?q=envy printer&resultLimit=20&resultStart=0&store=tmsstore&language=en&filters=navigationpath:(268161584258236861743175748903686)" is done with headers:
+Kaas_TypeAhead_Categories.c(10):     :method = GET
+Kaas_TypeAhead_Categories.c(10):     :scheme = https
+Kaas_TypeAhead_Categories.c(10):     :path = /suggestions/search?q=envy%20printer&resultLimit=20&resultStart=0&store=tmsstore&l
+Kaas_TypeAhead_Categories.c(10):     anguage=en&filters=navigationpath:(268161584258236861743175748903686)
+Kaas_TypeAhead_Categories.c(10):     :authority = kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com
+Kaas_TypeAhead_Categories.c(10):     Content-Type =  application/x-www-form-urlencoded
+Kaas_TypeAhead_Categories.c(10):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Kaas_TypeAhead_Categories.c(10):     Accept-Encoding =  gzip, deflate
+Kaas_TypeAhead_Categories.c(10):     Accept =  */*
+Kaas_TypeAhead_Categories.c(10): t=976ms: 112-byte response headers for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search?q=envy printer&resultLimit=20&resultStart=0&store=tmsstore&language=en&filters=navigationpath:(268161584258236861743175748903686)" (RelFrameId=1, Internal ID=4)
+Kaas_TypeAhead_Categories.c(10):     HTTP/2.0 200\r\n
+Kaas_TypeAhead_Categories.c(10):     Status: 200\r\n
+Kaas_TypeAhead_Categories.c(10):     date: Thu, 22 Apr 2021 08:25:57 GMT\r\n
+Kaas_TypeAhead_Categories.c(10):     content-type: application/json;charset=UTF-8\r\n
+Kaas_TypeAhead_Categories.c(10):     \r\n
+Kaas_TypeAhead_Categories.c(10): t=981ms: 2024-byte response body for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search?q=envy printer&resultLimit=20&resultStart=0&store=tmsstore&language=en&filters=navigationpath:(268161584258236861743175748903686)" (RelFrameId=1, Internal ID=4)
+Kaas_TypeAhead_Categories.c(10):     {"matches":[{"matchScore":28.624353,"productname":"HP ENVY Printers","productId":0},{"matc
+Kaas_TypeAhead_Categories.c(10):     hScore":28.45389,"productname":"HP ENVY 4500 e-All-in-One Printer series","productId":5304
+Kaas_TypeAhead_Categories.c(10):     875},{"matchScore":28.45389,"productname":"HP ENVY 110 e-All-in-One Printer series - D411"
+Kaas_TypeAhead_Categories.c(10):     ,"productId":5070119},{"matchScore":28.45389,"productname":"HP ENVY 5540 All-in-One Printe
+Kaas_TypeAhead_Categories.c(10):     r series","productId":5447939},{"matchScore":28.337282,"productname":"HP ENVY Pro 6400 All
+Kaas_TypeAhead_Categories.c(10):     -in-One Printer series","productId":29256678},{"matchScore":28.311161,"productname":"HP EN
+Kaas_TypeAhead_Categories.c(10):     VY 120 e-All-in-One Printer series","productId":5203208},{"matchScore":28.311161,"productn
+Kaas_TypeAhead_Categories.c(10):     ame":"HP ENVY 4520 All-in-One Printer series","productId":5447920},{"matchScore":28.29851,
+Kaas_TypeAhead_Categories.c(10):     "productname":"HP ENVY 5530 e-All-in-One Printer series","productId":5304881},{"matchScore
+Kaas_TypeAhead_Categories.c(10):     ":28.29851,"productname":"HP ENVY Photo 7800 All-in-One Printer series","productId":907315
+Kaas_TypeAhead_Categories.c(10):     9},{"matchScore":28.29851,"productname":"HP ENVY 4510 All-in-One Printer series","productI
+Kaas_TypeAhead_Categories.c(10):     d":7588794},{"matchScore":28.29851,"productname":"HP ENVY Photo 6200 All-in-One Printer se
+Kaas_TypeAhead_Categories.c(10):     ries","productId":9073045},{"matchScore":28.29851,"productname":"HP ENVY 5000 All-in-One P
+Kaas_TypeAhead_Categories.c(10):     rinter series","productId":14095644},{"matchScore":28.205942,"productname":"HP ENVY Photo 
+Kaas_TypeAhead_Categories.c(10):     7100 All-in-One Printer series","productId":9073119},{"matchScore":28.205942,"productname"
+Kaas_TypeAhead_Categories.c(10):     :"HP ENVY 5640 e-All-in-One Printer series","productId":6583033},{"matchScore":28.205942,"
+Kaas_TypeAhead_Categories.c(10):     productname":"HP ENVY 7640 e-All-in-One Printer series","productId":6617267},{"matchScore"
+Kaas_TypeAhead_Categories.c(10):     :28.205942,"productname":"HP ENVY 5660 e-All-in-One Printer series","productId":6809225},{
+Kaas_TypeAhead_Categories.c(10):     "matchScore":28.205942,"productname":"HP ENVY 100 e-All-in-One Printer series - D410","pro
+Kaas_TypeAhead_Categories.c(10):     ductId":4073853},{"matchScore":28.205942,"productname":"HP ENVY 6000 All-in-One Printer se
+Kaas_TypeAhead_Categories.c(10):     ries","productId":29256672},{"matchScore":28.173021,"productname":"HP ENVY Photo 7864 All-
+Kaas_TypeAhead_Categories.c(10):     in-One Printer","productId":16483157},{"matchScore":28.173021,"productname":"HP ENVY 4500 
+Kaas_TypeAhead_Categories.c(10):     e-All-in-One Printer","productId":5304876}]}
+Kaas_TypeAhead_Categories.c(10): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search?q=envy printer&resultLimit=20&resultStart=0&store=tmsstore&language=en&filters=navigationpath:(268161584258236861743175748903686)"  	[MsgId: MMSG-26548]
+Kaas_TypeAhead_Categories.c(10): web_custom_request("web_custom_request") was successful, 2024 body bytes, 112 header bytes  	[MsgId: MMSG-26386]
+Kaas_TypeAhead_Categories.c(19): Notify: Transaction "TA_003_Kaas_TypeAhead_Categories" ended with a "Pass" status (Duration: 0.0830 Wasted Time: 0.0080).
+Ending action Kaas_TypeAhead_Categories.
+Starting action Kaas_TypeAhead_Printers.
+Kaas_TypeAhead_Printers.c(4): web_set_user started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead_Printers.c(4): Notify: Parameter Substitution: parameter "p_hostname" =  "kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com"
+Kaas_TypeAhead_Printers.c(4): web_set_user was successful  	[MsgId: MMSG-26392]
+Kaas_TypeAhead_Printers.c(5): Notify: Transaction "TA_004_Kaas_TypeAhead_Printers" started.
+Kaas_TypeAhead_Printers.c(7): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead_Printers.c(7): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Kaas_TypeAhead_Printers.c(8): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead_Printers.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Kaas_TypeAhead_Printers.c(8): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Kaas_TypeAhead_Printers.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Kaas_TypeAhead_Printers.c(11): Notify: Parameter Substitution: parameter "p_hostname" =  "kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com"
+Kaas_TypeAhead_Printers.c(11): Notify: Parameter Substitution: parameter "p_TypeAheadPrintFields" =  "envy printer"
+Kaas_TypeAhead_Printers.c(11): The request to server https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=envy printer&resultLimit=10&store=tmsstore&languageCode=en&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value) AND navigationpath:268161584258236861743175748903686 &printFields=tmspmnamevalue,title,body,childnodes,class,productid,seofriendlyname,shortestnavigationpath" is done with headers:
+Kaas_TypeAhead_Printers.c(11):     :method = GET
+Kaas_TypeAhead_Printers.c(11):     :scheme = https
+Kaas_TypeAhead_Printers.c(11):     :path = /suggestions/search/?q=envy%20printer&resultLimit=10&store=tmsstore&languageCode=e
+Kaas_TypeAhead_Printers.c(11):     n&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value)%20AND%
+Kaas_TypeAhead_Printers.c(11):     20navigationpath:268161584258236861743175748903686%20&printFields=tmspmnamevalue,title,bod
+Kaas_TypeAhead_Printers.c(11):     y,childnodes,class,productid,seofriendlyname,shortestnavigationpath
+Kaas_TypeAhead_Printers.c(11):     :authority = kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com
+Kaas_TypeAhead_Printers.c(11):     Content-Type =  application/x-www-form-urlencoded
+Kaas_TypeAhead_Printers.c(11):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Kaas_TypeAhead_Printers.c(11):     Accept-Encoding =  gzip, deflate
+Kaas_TypeAhead_Printers.c(11):     Accept =  */*
+Kaas_TypeAhead_Printers.c(11): t=1072ms: 112-byte response headers for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=envy printer&resultLimit=10&store=tmsstore&languageCode=en&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value) AND navigationpath:268161584258236861743175748903686 &printFields=tmspmnamevalue,title,body,childnodes,class,productid,seofriendlyname,shortestnavigationpath" (RelFrameId=1, Internal ID=5)
+Kaas_TypeAhead_Printers.c(11):     HTTP/2.0 200\r\n
+Kaas_TypeAhead_Printers.c(11):     Status: 200\r\n
+Kaas_TypeAhead_Printers.c(11):     date: Thu, 22 Apr 2021 08:25:58 GMT\r\n
+Kaas_TypeAhead_Printers.c(11):     content-type: application/json;charset=UTF-8\r\n
+Kaas_TypeAhead_Printers.c(11):     \r\n
+Kaas_TypeAhead_Printers.c(11): t=1077ms: 8192-byte response body for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=envy printer&resultLimit=10&store=tmsstore&languageCode=en&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value) AND navigationpath:268161584258236861743175748903686 &printFields=tmspmnamevalue,title,body,childnodes,class,productid,seofriendlyname,shortestnavigationpath" (RelFrameId=1, Internal ID=5)
+Kaas_TypeAhead_Printers.c(11):     {"matches":[{"terms":"HP ENVY 4500 e-All-in-One Printer series,4500aio,4500e,4500eaio,4500
+Kaas_TypeAhead_Printers.c(11):     envy,4500serie,4500series,450o 450x,45oo 45xx 45x,aio allinone,aio4500,aioenvi4500,aioenvy
+Kaas_TypeAhead_Printers.c(11):     4500,eallinone eaio,envi4500,envi4500 hpenvi4500 hpenvi,envie4500,envoy envey envu env env
+Kaas_TypeAhead_Printers.c(11):     ie envi enve,envy4500,envy4500 hpenvy4500,envy4500 hpenvy4500 hpenvy4500printer envy4500pr
+Kaas_TypeAhead_Printers.c(11):     inter 4500printer printer4500,envy4500aio,envy4500aio 4500aio hpenvy4500aio hp4500aio,envy
+Kaas_TypeAhead_Printers.c(11):     4500e,envy4500eaio,envy4500eaio 4500eaio hpenvy4500eaio hp4500eaio,envy4500printer,envyhp4
+Kaas_TypeAhead_Printers.c(11):     500,hp4500,hp4500eaio,hp4500envy,hp4500serie,hpbrand,hpenvy,hpenvy45 00,hpenvy4500,hpenvy4
+Kaas_TypeAhead_Printers.c(11):     500aio,hpenvy4500e,hpenvy4500eaio,hpenvy4500eallinoneprinterseries,hpenvy4500printer,pri,s
+Kaas_TypeAhead_Printers.c(11):     tampanteenvy4500","name":"HP ENVY 4500 e-All-in-One Printer series","pmClass":"pm_series_v
+Kaas_TypeAhead_Printers.c(11):     alue","childnodes":"2100126576|5304876|5368518|5368521|5368526|5368530|5368533|5368536|641
+Kaas_TypeAhead_Printers.c(11):     2175|7297912|7297914|7297916|7439488|8585893|","seoFriendlyName":"hp-envy-4500-e-all-in-on
+Kaas_TypeAhead_Printers.c(11):     e-printer-series","shortestNavigationPath":"361645196193472854978928808138960|268161584258
+Kaas_TypeAhead_Printers.c(11):     236861743175748903686|332235522390572286178743805365061|5304875|","matchScore":34.026318,"
+Kaas_TypeAhead_Printers.c(11):     productId":5304875},{"terms":"HP ENVY 110 e-All-in-One Printer series - D411,110aio,110d41
+Kaas_TypeAhead_Printers.c(11):     1,110e,110eaiod411,110series,11o 11x,aio allinone,aio110d411,d 411,d 411 hpd411 hp411,eall
+Kaas_TypeAhead_Printers.c(11):     inone eaio,envi110 hpenvi110 hpenvi,envoy envey envu env envie envi enve,envy110,envy110 h
+Kaas_TypeAhead_Printers.c(11):     penvy110,envy110 hpenvy110 hpenvy110printer envy110printer 110printer printer110,envy110ai
+Kaas_TypeAhead_Printers.c(11):     o,envy110aio 110aio hpenvy110aio hp110aio,envy110d411,envy110d411 hpenvy110d411,envy110e,e
+Kaas_TypeAhead_Printers.c(11):     nvy110eaio 110eaio hpenvy110eaio hp110eaio,envyd411 hpenvyd411 envy411 hpenvy411 hpenvy411
+Kaas_TypeAhead_Printers.c(11):     printer envy411printer,hp110,hp110aio,hp110d411,hp110e,hp110serie,hpbrand,hpenvy,hpenvy110
+Kaas_TypeAhead_Printers.c(11):     e,hpenvy110eallinoneprinterseriesd411,pri","name":"HP ENVY 110 e-All-in-One Printer series
+Kaas_TypeAhead_Printers.c(11):      - D411","pmClass":"pm_series_value","childnodes":"5070124|5096414|5096417|5145352|5179180
+Kaas_TypeAhead_Printers.c(11):     |5233663|5316104|","seoFriendlyName":"hp-envy-110-e-all-in-one-printer-series-d411","short
+Kaas_TypeAhead_Printers.c(11):     estNavigationPath":"361645196193472854978928808138960|268161584258236861743175748903686|33
+Kaas_TypeAhead_Printers.c(11):     2235522390572286178743805365061|5070119|","matchScore":34.026318,"productId":5070119},{"te
+Kaas_TypeAhead_Printers.c(11):     rms":"HP ENVY 5540 All-in-One Printer series,5540aio,5540aios,5540all,5540envy,5540serie,5
+Kaas_TypeAhead_Printers.c(11):     540series,554o 554x,aio allinone,aio5540,envi5540 hpenvi5540 hpenvi,envoy envey envu env e
+Kaas_TypeAhead_Printers.c(11):     nvie envi enve,envy55 40,envy5540,envy5540 hpenvy5540,envy5540 hpenvy5540 hpenvy5540printe
+Kaas_TypeAhead_Printers.c(11):     r envy5540printer 5540printer printer5540,envy5540aio,envy5540aio 5540aio hpenvy5540aio hp
+Kaas_TypeAhead_Printers.c(11):     5540aio,envy5540all,envy5540eoia,hp5540,hp5540serie,hpbrand,hpe5540,hpenvie5540,hpenvy,hpe
+Kaas_TypeAhead_Printers.c(11):     nvy5540,hpenvy5540allinoneprinterseries,hpprinter5540,imprimante5540,pri,printers5540","na
+Kaas_TypeAhead_Printers.c(11):     me":"HP ENVY 5540 All-in-One Printer series","pmClass":"pm_series_value","childnodes":"101
+Kaas_TypeAhead_Printers.c(11):     03489|11503719|11534744|12780128|5447940|7519785|7519788|7770151|7770153|8900989|","seoFri
+Kaas_TypeAhead_Printers.c(11):     endlyName":"hp-envy-5540-all-in-one-printer-series","shortestNavigationPath":"361645196193
+Kaas_TypeAhead_Printers.c(11):     472854978928808138960|268161584258236861743175748903686|332235522390572286178743805365061|
+Kaas_TypeAhead_Printers.c(11):     5447939|","matchScore":34.026318,"productId":5447939},{"terms":"HP ENVY 120 e-All-in-One P
+Kaas_TypeAhead_Printers.c(11):     rinter series,120e,120eaio,120series,12o 12x,aio allinone,eallinone eaio,en vy120,envi120 
+Kaas_TypeAhead_Printers.c(11):     hpenvi120 hpenvi,envie120,envoy envey envu env envie envi enve,envy120,envy120 hpenvy120,e
+Kaas_TypeAhead_Printers.c(11):     nvy120 hpenvy120 hpenvy120printer envy120printer 120printer printer120,envy120aio,envy120a
+Kaas_TypeAhead_Printers.c(11):     io 120aio hpenvy120aio hp120aio,envy120eaio,envy120eaio 120eaio hpenvy120eaio hp120eaio,hp
+Kaas_TypeAhead_Printers.c(11):     120,hp120aio,hp120e\xEF\xBC\x8C hp120eaio\xEF\xBC\x8Chpenvy120e,hp120serie,hpbrand,hpenvy,
+Kaas_TypeAhead_Printers.c(11):     hpenvy120,hpenvy120aio,hpenvy120eallinoneprinterseries,pri","name":"HP ENVY 120 e-All-in-O
+Kaas_TypeAhead_Printers.c(11):     ne Printer series","pmClass":"pm_series_value","childnodes":"5203209|5286098|","seoFriendl
+Kaas_TypeAhead_Printers.c(11):     yName":"hp-envy-120-e-all-in-one-printer-series","shortestNavigationPath":"361645196193472
+Kaas_TypeAhead_Printers.c(11):     854978928808138960|268161584258236861743175748903686|332235522390572286178743805365061|520
+Kaas_TypeAhead_Printers.c(11):     3208|","matchScore":33.944763,"productId":5203208},{"terms":"HP ENVY 4520 All-in-One Print
+Kaas_TypeAhead_Printers.c(11):     er series,4520aio,4520aioenvy,4520allinone,4520envy,4520printerenvy,4520series,452o 452x,a
+Kaas_TypeAhead_Printers.c(11):     io allinone,aio4520,aioenvy4520,envi4520,envi4520 hpenvi4520 hpenvi,envoy envey envu env e
+Kaas_TypeAhead_Printers.c(11):     nvie envi enve,envy4520,envy4520 hpenvy4520,envy4520 hpenvy4520 hpenvy4520printer envy4520
+Kaas_TypeAhead_Printers.c(11):     printer 4520printer printer4520,envy4520aio,envy4520aio 4520aio hpenvy4520aio hp4520aio,en
+Kaas_TypeAhead_Printers.c(11):     vy4520aioprinter,envy4520all,envy4520allinone,envy4520eaio,envy4520series,hp4520,hp4520aio
+Kaas_TypeAhead_Printers.c(11):     ,hp4520serie,hpallinone4520,hpbrand,hpe4520,hpenvi4520,hpenvie4520,hpenvy,hpenvy4520,hpenv
+Kaas_TypeAhead_Printers.c(11):     y4520aio,hpenvy4520all,hpenvy4520allinoneprinterseries,pri,serie4520","name":"HP ENVY 4520
+Kaas_TypeAhead_Printers.c(11):      All-in-One Printer series","pmClass":"pm_series_value","childnodes":"11534748|11534751|11
+Kaas_TypeAhead_Printers.c(11):     534754|12319758|2100123495|5447921|7685384|8900983|8900985|9788711|","seoFriendlyName":"hp
+Kaas_TypeAhead_Printers.c(11):     -envy-4520-all-in-one-printer-series","shortestNavigationPath":"36164519619347285497892880
+Kaas_TypeAhead_Printers.c(11):     8138960|268161584258236861743175748903686|332235522390572286178743805365061|5447920|","mat
+Kaas_TypeAhead_Printers.c(11):     chScore":33.944763,"productId":5447920},{"terms":"HP ENVY Pro 6400 All-in-One Printer seri
+Kaas_TypeAhead_Printers.c(11):     es,6400series,640o 640x,64oo 64xx 64x,aio allinone,envi6400 hpenvi6400 hpenvi,envoy envey 
+Kaas_TypeAhead_Printers.c(11):     envu env envie envi enve,envy6400 hpenvy6400,envy6400 hpenvy6400 hpenvy6400printer envy640
+Kaas_TypeAhead_Printers.c(11):     0printer 6400printer printer6400,envy6400aio 6400aio hpenvy6400aio hp6400aio,envypro,envyp
+Kaas_TypeAhead_Printers.c(11):     ro6400 hpenvypro6400 pro6400 hppro6400,envypro6400aio pro6400aio hpenvypro6400aio hppro640
+Kaas_TypeAhead_Printers.c(11):     0aio,hp6400,hp6400serie,hpbrand,hpenvy,hpenvypro6400allinoneprinterseries,pri,pro6400,pro6
+Kaas_TypeAhead_Printers.c(11):     400 hppro6400,professional profesional","name":"HP ENVY Pro 6400 All-in-One Printer series
+Kaas_TypeAhead_Printers.c(11):     ","pmClass":"pm_series_value","childnodes":"29256679|30168472|30168474|33518717|33518722|3
+Kaas_TypeAhead_Printers.c(11):     3518734|33518737|33518741|33518746|","seoFriendlyName":"hp-envy-pro-6400-all-in-one-printe
+Kaas_TypeAhead_Printers.c(11):     r-series","shortestNavigationPath":"361645196193472854978928808138960|26816158425823686174
+Kaas_TypeAhead_Printers.c(11):     3175748903686|332235522390572286178743805365061|29256678|","matchScore":33.940475,"product
+Kaas_TypeAhead_Printers.c(11):     Id":29256678},{"terms":"HP ENVY 5530 e-All-in-One Printer series,5530aio,5530allinone,5530
+Kaas_TypeAhead_Printers.c(11):     e,5530eaio,5530eallinone,5530envy,5530series,553o 553x,aio allinone,aio5530,eallinone eaio
+Kaas_TypeAhead_Printers.c(11):     ,envi5530 hpenvi5530 hpenvi,envieaio5530,envoy envey envu env envie envi enve,envy55 30,en
+Kaas_TypeAhead_Printers.c(11):     vy5530,envy5530 hpenvy5530,envy5530 hpenvy5530 hpenvy5530printer envy5530printer 5530print
+Kaas_TypeAhead_Printers.c(11):     er printer5530,envy5530aio,envy5530aio 5530aio hpenvy5530aio hp5530aio,envy5530allinone,en
+Kaas_TypeAhead_Printers.c(11):     vy5530e,envy5530eaio 5530eaio hpenvy5530eaio hp5530eaio,envyaio5530,hp5530,hp5530aio,hp553
+Kaas_TypeAhead_Printers.c(11):     0eaio,hp5530serie,hpbrand,hpenvie5530,hpenvy,hpenvy5530,hpenvy5530aio,hpenvy5530e,hpenvy55
+Kaas_TypeAhead_Printers.c(11):     30eallinoneprinterseries,hpenvy5530series,pri","name":"HP ENVY 5530 e-All-in-One Printer s
+Kaas_TypeAhead_Printers.c(11):     eries","pmClass":"pm_series_value","childnodes":"5304882|5373119|5373124|5373130|5373134|5
+Kaas_TypeAhead_Printers.c(11):     373141|5450360|7398096|7439493|8900991|","seoFriendlyName":"hp-envy-5530-e-all-in-one-prin
+Kaas_TypeAhead_Printers.c(11):     ter-series","shortestNavigationPath":"361645196193472854978928808138960|268161584258236861
+Kaas_TypeAhead_Printers.c(11):     743175748903686|332235522390572286178743805365061|5304881|","matchScore":33.86807,"product
+Kaas_TypeAhead_Printers.c(11):     Id":5304881},{"terms":"HP ENVY Photo 7800 All-in-One Printer series,7800series,780o 780x,7
+Kaas_TypeAhead_Printers.c(11):     8oo 78xx 78x,aio allinone,envi7800 hpenvi7800 hpenvi,envoy envey envu env envie envi enve,
+Kaas_TypeAhead_Printers.c(11):     envy7800 hpenvy7800,envy7800 hpenvy7800 hpenvy7800printer envy7800printer 7800printer prin
+Kaas_TypeAhead_Printers.c(11):     ter7800,envy7800aio 7800aio hpenvy7800aio hp7800aio,envyphoto7800 photo7800 hpenvyphoto780
+Kaas_TypeAhead_Printers.c(11):     0 hpphoto7800,hp7800,hp7800serie,hpbrand,hpenvy,hpenvyphoto7800allinoneprinterseries,pri",
+Kaas_TypeAhead_Printers.c(11):     "name":"HP ENVY Photo 7800 All-in-One Printer series","pmClass":"pm_series_value","childno
+Kaas_TypeAhead_Printers.c(11):     des":"16483130|16483157|16483166|16493624|16494345|17638288|9073160|","seoFriendlyName":"h
+Kaas_TypeAhead_Printers.c(11):     p-envy-photo-7800-all-in-one-printer-series","shortestNavigationPath":"3616451961934728549
+Kaas_TypeAhead_Printers.c(11):     78928808138960|268161584258236861743175748903686|332235522390572286178743805365061|9073159
+Kaas_TypeAhead_Printers.c(11):     |","matchScore":33.86807,"productId":9073159},{"terms":"HP ENVY 4510 All-in-One Printer se
+Kaas_TypeAhead_Printers.c(11):     ries,4510aio,4510series,451o 451x,aio allinone,envi4510 hpenvi4510 hpenvi,envoy envey envu
+Kaas_TypeAhead_Printers.c(11):      env envie envi enve
+Kaas_TypeAhead_Printers.c(11): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=envy printer&resultLimit=10&store=tmsstore&languageCode=en&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value) AND navigationpath:268161584258236861743175748903686 &printFields=tmspmnamevalue,title,body,childnodes,class,productid,seofriendlyname,shortestnavigationpath"  	[MsgId: MMSG-26548]
+Kaas_TypeAhead_Printers.c(11): t=1085ms: 1592-byte response body for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=envy printer&resultLimit=10&store=tmsstore&languageCode=en&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value) AND navigationpath:268161584258236861743175748903686 &printFields=tmspmnamevalue,title,body,childnodes,class,productid,seofriendlyname,shortestnavigationpath" (RelFrameId=1, Internal ID=5)
+Kaas_TypeAhead_Printers.c(11):     ,envy4510,envy4510 hpenvy4510,envy4510 hpenvy4510 hpenvy4510printer envy4510printer 4510pr
+Kaas_TypeAhead_Printers.c(11):     inter printer4510,envy4510aio 4510aio hpenvy4510aio hp4510aio,hp4510,hp4510aio,hp4510serie
+Kaas_TypeAhead_Printers.c(11):     ,hpbrand,hpenvy,hpenvy4510,hpenvy4510aio,hpenvy4510allinoneprinterseries,pri","name":"HP E
+Kaas_TypeAhead_Printers.c(11):     NVY 4510 All-in-One Printer series","pmClass":"pm_series_value","childnodes":"2100123493|7
+Kaas_TypeAhead_Printers.c(11):     588795|7709640|7709715|7815374|7815377|7815379|","seoFriendlyName":"hp-envy-4510-all-in-on
+Kaas_TypeAhead_Printers.c(11):     e-printer-series","shortestNavigationPath":"361645196193472854978928808138960|268161584258
+Kaas_TypeAhead_Printers.c(11):     236861743175748903686|332235522390572286178743805365061|7588794|","matchScore":33.86807,"p
+Kaas_TypeAhead_Printers.c(11):     roductId":7588794},{"terms":"HP ENVY Photo 6200 All-in-One Printer series,6200series,620o 
+Kaas_TypeAhead_Printers.c(11):     620x,62oo 62xx 62x,aio allinone,aio6200envy,envi6200 hpenvi6200 hpenvi,envoy envey envu en
+Kaas_TypeAhead_Printers.c(11):     v envie envi enve,envy6200,envy6200 hpenvy6200,envy6200 hpenvy6200 hpenvy6200printer envy6
+Kaas_TypeAhead_Printers.c(11):     200printer 6200printer printer6200,envy6200aio 6200aio hpenvy6200aio hp6200aio,envy6200all
+Kaas_TypeAhead_Printers.c(11):     ,envyphoto6200,envyphoto6200 photo6200 hpenvyphoto6200 hpphoto6200,envyphoto6200aio,hp6200
+Kaas_TypeAhead_Printers.c(11):     ,hp6200serie,hpbrand,hpenvy,hpenvyphoto6200,hpenvyphoto6200allinoneprinterseries,photo6200
+Kaas_TypeAhead_Printers.c(11):     ,pri","name":"HP ENVY Photo 6200 All-in-One Printer series","pmClass":"pm_series_value","c
+Kaas_TypeAhead_Printers.c(11):     hildnodes":"16483137|16483138|16483170|16494347|16494351|17319425|17638283|9073046|","seoF
+Kaas_TypeAhead_Printers.c(11):     riendlyName":"hp-envy-photo-6200-all-in-one-printer-series","shortestNavigationPath":"3616
+Kaas_TypeAhead_Printers.c(11):     45196193472854978928808138960|268161584258236861743175748903686|33223552239057228617874380
+Kaas_TypeAhead_Printers.c(11):     5365061|9073045|","matchScore":33.86807,"productId":9073045}]}
+Kaas_TypeAhead_Printers.c(11): web_custom_request("web_custom_request") was successful, 9784 body bytes, 112 header bytes  	[MsgId: MMSG-26386]
+Kaas_TypeAhead_Printers.c(20): Notify: Transaction "TA_004_Kaas_TypeAhead_Printers" ended with a "Pass" status (Duration: 0.0849 Wasted Time: 0.0033).
+Ending action Kaas_TypeAhead_Printers.
+Starting action Kaas_RypeAhead_Printers_Multiple.
+Kaas_RypeAhead_Printers_Multiple.c(4): web_set_user started  	[MsgId: MMSG-26355]
+Kaas_RypeAhead_Printers_Multiple.c(4): Notify: Parameter Substitution: parameter "p_hostname" =  "kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com"
+Kaas_RypeAhead_Printers_Multiple.c(4): web_set_user was successful  	[MsgId: MMSG-26392]
+Kaas_RypeAhead_Printers_Multiple.c(5): Notify: Transaction "TA_005_Kaas_TypeAhead_Printers_Multiple" started.
+Kaas_RypeAhead_Printers_Multiple.c(7): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Kaas_RypeAhead_Printers_Multiple.c(7): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Kaas_RypeAhead_Printers_Multiple.c(8): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Kaas_RypeAhead_Printers_Multiple.c(8): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Kaas_RypeAhead_Printers_Multiple.c(8): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Kaas_RypeAhead_Printers_Multiple.c(11): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Kaas_RypeAhead_Printers_Multiple.c(11): Notify: Parameter Substitution: parameter "p_hostname" =  "kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com"
+Kaas_RypeAhead_Printers_Multiple.c(11): Notify: Parameter Substitution: parameter "p_TypeAheadPrintFields" =  "envy printer"
+Kaas_RypeAhead_Printers_Multiple.c(11): The request to server https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=envy printer&resultLimit=10&store=tmsstore&languageCode=en&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value) AND navigationpath:532723735079137131874157716088638 OR 254133427475504699376875279529023 OR 332235522390572286178743805365061 &printFields=tmspmnamevalue,title,body,childnodes,class,productid,seofriendlyname,shortestnavigationpath" is done with headers:
+Kaas_RypeAhead_Printers_Multiple.c(11):     :method = GET
+Kaas_RypeAhead_Printers_Multiple.c(11):     :scheme = https
+Kaas_RypeAhead_Printers_Multiple.c(11):     :path = /suggestions/search/?q=envy%20printer&resultLimit=10&store=tmsstore&languageCode=e
+Kaas_RypeAhead_Printers_Multiple.c(11):     n&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value)%20AND%
+Kaas_RypeAhead_Printers_Multiple.c(11):     20navigationpath:532723735079137131874157716088638%20OR%2025413342747550469937687527952902
+Kaas_RypeAhead_Printers_Multiple.c(11):     3%20OR%20332235522390572286178743805365061%20&printFields=tmspmnamevalue,title,body,childn
+Kaas_RypeAhead_Printers_Multiple.c(11):     odes,class,productid,seofriendlyname,shortestnavigationpath
+Kaas_RypeAhead_Printers_Multiple.c(11):     :authority = kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com
+Kaas_RypeAhead_Printers_Multiple.c(11):     Content-Type =  application/x-www-form-urlencoded
+Kaas_RypeAhead_Printers_Multiple.c(11):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Kaas_RypeAhead_Printers_Multiple.c(11):     Accept-Encoding =  gzip, deflate
+Kaas_RypeAhead_Printers_Multiple.c(11):     Accept =  */*
+Kaas_RypeAhead_Printers_Multiple.c(11): t=1163ms: 112-byte response headers for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=envy printer&resultLimit=10&store=tmsstore&languageCode=en&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value) AND navigationpath:532723735079137131874157716088638 OR 254133427475504699376875279529023 OR 332235522390572286178743805365061 &printFields=tmspmnamevalue,title,body,childnodes,class,productid,seofriendlyname,shortestnavigationpath" (RelFrameId=1, Internal ID=6)
+Kaas_RypeAhead_Printers_Multiple.c(11):     HTTP/2.0 200\r\n
+Kaas_RypeAhead_Printers_Multiple.c(11):     Status: 200\r\n
+Kaas_RypeAhead_Printers_Multiple.c(11):     date: Thu, 22 Apr 2021 08:25:58 GMT\r\n
+Kaas_RypeAhead_Printers_Multiple.c(11):     content-type: application/json;charset=UTF-8\r\n
+Kaas_RypeAhead_Printers_Multiple.c(11):     \r\n
+Kaas_RypeAhead_Printers_Multiple.c(11): t=1168ms: 14-byte response body for "https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=envy printer&resultLimit=10&store=tmsstore&languageCode=en&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value) AND navigationpath:532723735079137131874157716088638 OR 254133427475504699376875279529023 OR 332235522390572286178743805365061 &printFields=tmspmnamevalue,title,body,childnodes,class,productid,seofriendlyname,shortestnavigationpath" (RelFrameId=1, Internal ID=6)
+Kaas_RypeAhead_Printers_Multiple.c(11):     {"matches":[]}
+Kaas_RypeAhead_Printers_Multiple.c(11): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://kaas-typeahead-itg-loadbalancer-1146563117.us-east-1.elb.amazonaws.com/suggestions/search/?q=envy printer&resultLimit=10&store=tmsstore&languageCode=en&filters=class:(pm_series_value%5E1.1%20OR%20pm_name_value%20OR%20pm_number_value) AND navigationpath:532723735079137131874157716088638 OR 254133427475504699376875279529023 OR 332235522390572286178743805365061 &printFields=tmspmnamevalue,title,body,childnodes,class,productid,seofriendlyname,shortestnavigationpath"  	[MsgId: MMSG-26548]
+Kaas_RypeAhead_Printers_Multiple.c(11): web_custom_request("web_custom_request") was successful, 14 body bytes, 112 header bytes  	[MsgId: MMSG-26386]
+Kaas_RypeAhead_Printers_Multiple.c(20): Notify: Transaction "TA_005_Kaas_TypeAhead_Printers_Multiple" ended with a "Pass" status (Duration: 0.0730 Wasted Time: 0.0061).
+Ending action Kaas_RypeAhead_Printers_Multiple.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

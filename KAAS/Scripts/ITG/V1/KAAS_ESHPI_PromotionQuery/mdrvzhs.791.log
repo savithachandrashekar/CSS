@@ -1,0 +1,2 @@
+kaas_DocSearchHPES_Promotion_query.c(9): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=purchase battery&resultLimit=15&resultStart=0&languageCode=en&countryCode=us&promotions=true&store=promotions&filters=products:(NONE)%20AND%20NOT%20publicationdestination:(FindMyProduct)"  	[MsgId: MERR-26627]
+Warning: Iteration pacing cannot be reached (pace time = 5.08, actual time = 7.40).	[MsgId: MWAR-15995]

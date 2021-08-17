@@ -1,0 +1,4 @@
+Action.c(10): Error -26610: HTTP Status-Code=502 (Bad Gateway) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/pz8AloI8QBW1VgRQ3Ccs671BT5XB/ish_850966-768565-16"  	[MsgId: MERR-26610]
+Action.c(10): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/pz8AloI8QBW1VgRQ3Ccs671BT5XB/ish_850964-710559-16"  	[MsgId: MERR-26608]
+Action.c(10): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/pz8AloI8QBW1VgRQ3Ccs671BT5XB/ish_850964-464958-16"  	[MsgId: MERR-26608]
+Action.c(10): Error -26608: HTTP Status-Code=504 (Gateway Timeout) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/pz8AloI8QBW1VgRQ3Ccs671BT5XB/ish_850964-475857-16"  	[MsgId: MERR-26608]

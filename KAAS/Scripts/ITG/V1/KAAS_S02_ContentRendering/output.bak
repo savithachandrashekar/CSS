@@ -1,0 +1,10 @@
+Start auto log messages stack - Iteration 11.
+WISE_KaasContentRendering.c(9): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+WISE_KaasContentRendering.c(12): Notify: Transaction "KAAS_Content_Rendering" started.
+WISE_KaasContentRendering.c(13): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+WISE_KaasContentRendering.c(13): Notify: Parameter Substitution: parameter "WISEAccessToken" =  "000agj8ezFdLEYALLtx25nQ1wxxO"
+WISE_KaasContentRendering.c(13): Notify: Parameter Substitution: parameter "p_ContentRendering" =  "ish_1942082-1888842-16"
+WISE_KaasContentRendering.c(13): Detected non-resource "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000agj8ezFdLEYALLtx25nQ1wxxO/CID0000001511" in "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000agj8ezFdLEYALLtx25nQ1wxxO/ish_1942082-1888842-16"  	[MsgId: MMSG-26574]
+WISE_KaasContentRendering.c(13): Continuing after Error -26631: HTTP Status-Code=400 (Bad Request) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000agj8ezFdLEYALLtx25nQ1wxxO/CID0000001511"  	[MsgId: MERR-26631]
+End auto log messages stack.
+

@@ -1,0 +1,3 @@
+Warning: Iteration pacing cannot be reached (pace time = 9.50, actual time = 28.67).	[MsgId: MWAR-15995]
+SecurityBulletinArchive_PDP.c(9): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&contentTypes=Security Bulletin"  	[MsgId: MERR-26627]
+SecurityBulletinArchive_PDP.c(9): Error -26627: HTTP Status-Code=404 (Not Found) for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/search?q=*&resultLimit=1000&resultStart=0&languageCode=en&countryCode=162089707212699946554652&store=udp-content-default,docstore&contentTypes=Security Bulletin"  	[MsgId: MERR-26627]

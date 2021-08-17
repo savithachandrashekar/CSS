@@ -1,0 +1,8 @@
+#include "lrun.h"
+#include "SharedParameter.h"
+#include "globals.h"
+#include "vuser_init.c"
+#include "ContentEnabler.c"
+#include "Render_FormatAdaptiveCard.c"
+#include "GoogleBot_RenderCall.c"
+#include "vuser_end.c"

@@ -1,0 +1,2019 @@
+Virtual User Script started at: 1/12/2021 11:11:19 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\GCC\Kaas\FY20_Release\Script\V1\Kaas_ContentRendering_WCC\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Action.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Action.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(9): Notify: Transaction "KAAS_Content_Rendering" started.
+Action.c(10): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(10): Notify: Parameter Substitution: parameter "p_ContentRendering" =  "ish_1633788-67174-16"
+Action.c(10): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1633788-67174-16?entitlement=none&audience=customer&isFullHTMLRequired=true" is done with headers:
+Action.c(10):     :method = GET
+Action.c(10):     :scheme = https
+Action.c(10):     :path = /KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1633788-67174-16?entitlement=
+Action.c(10):     none&audience=customer&isFullHTMLRequired=true
+Action.c(10):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+Action.c(10):     Content-Type =  application/x-www-form-urlencoded
+Action.c(10):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Action.c(10):     Accept-Encoding =  gzip, deflate
+Action.c(10):     Accept =  */*
+Action.c(10): t=12062ms: 777-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1633788-67174-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=1)
+Action.c(10):     HTTP/2.0 200\r\n
+Action.c(10):     Status: 200\r\n
+Action.c(10):     date: Tue, 12 Jan 2021 11:11:26 GMT\r\n
+Action.c(10):     content-type: text/html;charset=UTF-8\r\n
+Action.c(10):     content-length: 29671\r\n
+Action.c(10):     x-amzn-requestid: 8f2947ad-a044-4262-84b9-5bce6ce88e41\r\n
+Action.c(10):     x-oneagent-js-injection: true\r\n
+Action.c(10):     x-amzn-remapped-connection: keep-alive\r\n
+Action.c(10):     set-cookie: dtCookie=v_4_srv_1_sn_D57F82423ACC5F66C33316A665620F9C_perc_100000_ol_0_mul_1;
+Action.c(10):      Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+Action.c(10):     set-cookie: JSESSIONID=07BA9433556F83558951AC3D6EF2CBDC; Path=/; HttpOnly\r\n
+Action.c(10):     set-cookie: mySessionCookie=tridion_c7c9b09e-64e0-4b3b-9acb-20980795afbf; path=/; HttpOnly
+Action.c(10):     \r\n
+Action.c(10):     set-cookie: myTrackingCookie=tridion_1a783e8c-7239-4a37-ae12-96f6f0c90e39; Expires=Fri, 01
+Action.c(10):     -Jan-2100 00:00:00 GMT; path=/; HttpOnly\r\n
+Action.c(10):     x-amz-apigw-id: ZCGJwF16oAMF1ag=\r\n
+Action.c(10):     x-amzn-remapped-date: Tue, 12 Jan 2021 11:11:26 GMT\r\n
+Action.c(10):     \r\n
+Action.c(10): t=12075ms: 8192-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1633788-67174-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=1)
+Action.c(10):     <html><head><meta name="viewport" content="width=device-width, initial-scale=1"><script ty
+Action.c(10):     pe="text/javascript" src="/ruxitagentjs_ICA2SVfqru_10205201218101503.js" data-dtconfig="ap
+Action.c(10):     p=ea7c4b59f27d43eb|cuc=x9ysi6wz|featureHash=ICA2SVfqru|dpvc=1|lastModification=16083429717
+Action.c(10):     90|dtVersion=10205201218101503|tp=500,50,0,1|rdnt=1|uxrgce=1|uxdcw=1500|vs=2|bp=2|agentUri
+Action.c(10):     =/ruxitagentjs_ICA2SVfqru_10205201218101503.js|reportUrl=/rb_d90a734d-165f-4364-86ae-b185f
+Action.c(10):     a78c115|rid=RID_1067904610|rpid=547965729|domain=elb.us-east-1.amazonaws.com"></script><li
+Action.c(10):     nk rel="stylesheet" href="https://kaas-udp.s3.amazonaws.com/CSS/commonltr.css"> </head><bo
+Action.c(10):     dy><script  type="text/javascript" async="" src="https://api-sds-javascript-prod.sds.hp8.u
+Action.c(10):     s/v1/KaasJavascriptLoader?script=partsRecommendation"></script> <div>\n
+Action.c(10):     <div aria-labelledby="GUID-E9057523-44BD-4789-BAA6-8BED279A7D7C__GUID-945BCE4E-730B-4FAD-8
+Action.c(10):     D30-62EF166F6205" class="topic concept nested0 sequence" id="GUID-E9057523-44BD-4789-BAA6-
+Action.c(10):     8BED279A7D7C" lang="en-US" xml:lang="en-US">\n
+Action.c(10):           \n
+Action.c(10):     <h1 class="title topictitle1" id="GUID-E9057523-44BD-4789-BAA6-8BED279A7D7C__GUID-945BCE4E
+Action.c(10):     -730B-4FAD-8D30-62EF166F6205">HP LaserJet MFP M630 - Removal and replacement: Fuser</h1>\n
+Action.c(10):           \n
+Action.c(10):     <p class="shortdesc"> This document provides the procedures to remove and replace the fuse
+Action.c(10):     r.</p>\n
+Action.c(10):           \n
+Action.c(10):     <div class="body conbody">\n
+Action.c(10):             \n
+Action.c(10):     <div class="content" itemprop="video" itemscope="" itemtype="https://schema.org/VideoObjec
+Action.c(10):     t">\n
+Action.c(10):               \n
+Action.c(10):             \n
+Action.c(10):     <meta content="608" itemprop="width">\n
+Action.c(10):     <meta content="342" itemprop="height">\n
+Action.c(10):     <div class="bcSingleVideoContainer" id="https://players.brightcove.net/1160438706001/SyKVJ
+Action.c(10):     eRXx_default/index.html?videoId=ref:REFIDWDNbdac4a97-5e26-4959-8218-67b8c535d9a2">\n
+Action.c(10):     <img class="videoLoadingSpinner" src="/static/hp-portal-theme-static/themes/Portal8.0/hp/i
+Action.c(10):     mages/loadingHp.gif"/></div>\n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     <p class="p">Mean time to repair: <span class="ph meantime_to_repair">5 minutes</span>\n
+Action.c(10):     </p>\n
+Action.c(10):             \n
+Action.c(10):     <p class="p">Service level: <span class="ph service_level">Basic</span>\n
+Action.c(10):     </p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="section before_service" id="GUID-E9057523-44BD-4789-BAA6-8BED279A7D7C__GUID-D4
+Action.c(10):     CD586E-ED0F-4AD1-80A4-D220711C74F0">\n
+Action.c(10):               \n
+Action.c(10):     <h2 class="title sectiontitle">Before performing service</h2>\n
+Action.c(10):               \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                 \n
+Action.c(10):     <strong class="ph b">Turn the printer power off</strong>\n
+Action.c(10):               \n
+Action.c(10):     </p>\n
+Action.c(10):               \n
+Action.c(10):     <div class="ul">\n
+Action.c(10):                 \n
+Action.c(10):     <ul class="ul bullettype=disc" id="GUID-E9057523-44BD-4789-BAA6-8BED279A7D7C__GUID-55DA17E
+Action.c(10):     6-563D-4731-B926-8C69C87AB253">\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="p">Disconnect the power cable.</p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note warning" id="GUID-E9057523-44BD-4789-BAA6-8BED279A7D7C__GUID-39501748-463
+Action.c(10):     9-4C07-BBA2-71FAD8AFF448">\n
+Action.c(10):                       \n
+Action.c(10):     <span class="warningtitle">Warning:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">To avoid damage to the printer, turn the printer off, wait 30 seconds, and th
+Action.c(10):     en remove the power cord before attempting to\n
+Action.c(10):                                   service the printer.\n
+Action.c(10):                                </p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     </ul>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     <p class="p">Use the table below to identify the correct part number for your printer. To 
+Action.c(10):     order the part, go to <a class="xref" href="http://h20141.www2.hp.com/hpparts/" target="_b
+Action.c(10):     lank">www.hp.com/buy/parts</a>.\n
+Action.c(10):                    </p>\n
+Action.c(10):               \n
+Action.c(10):     <div class="tablenoborder">\n
+Action.c(10):                 \n
+Action.c(10):     <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all"
+Action.c(10):      summary="">\n
+Action.c(10):                   \n
+Action.c(10):     <caption>\n
+Action.c(10):                     \n
+Action.c(10):     <span class="tablecap">Part information</span>\n
+Action.c(10):                   \n
+Action.c(10):     </caption>\n
+Action.c(10):                   \n
+Action.c(10):     <colgroup/>\n
+Action.c(10):                     \n
+Action.c(10):     <col style="width:37%"/>\n
+Action.c(10):                     \n
+Action.c(10):     <col style="width:63%"/>\n
+Action.c(10):                   \n
+Action.c(10):     </colgroup>\n
+Action.c(10):                   \n
+Action.c(10):     <thead class="thead" style="text-align:left;">\n
+Action.c(10):                     \n
+Action.c(10):     <tr class="row">\n
+Action.c(10):                       \n
+Action.c(10):     <th class="entry cell-norowborder" colspan="2" id="d35e87" style="vertical-align:top;">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">Fuser kit part numbers</p>\n
+Action.c(10):                       \n
+Action.c(10):     </th>\n
+Action.c(10):                     \n
+Action.c(10):     </tr>\n
+Action.c(10):                   \n
+Action.c(10):     </thead>\n
+Action.c(10):                   \n
+Action.c(10):     <tbody class="tbody">\n
+Action.c(10):                     \n
+Action.c(10):     <tr class="row part_grouping">\n
+Action.c(10):                       \n
+Action.c(10):     <td class="entry nocellnorowborder" headers="d35e87 " style="vertical-align:top;">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                           \n
+Action.c(10):     <strong class="ph b">\n
+Action.c(10):                             <span class="ph part_number">B3M77-67903</span>\n
+Action.c(10):                           </strong>\n
+Action.c(10):                         \n
+Action.c(10):     </p>\n
+Action.c(10):                       \n
+Action.c(10):     </td>\n
+Action.c(10):                       <td class="entry cell-norowborder part_description" headers="d35e87 " st
+Action.c(10):     yle="vertical-align:top;">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">Fuser (110V) kit with instruction guide</p>\n
+Action.c(10):                       \n
+Action.c(10):     </td>\n
+Action.c(10):                     \n
+Action.c(10):     </tr>\n
+Action.c(10):                     \n
+Action.c(10):     <tr class="row part_grouping">\n
+Action.c(10):                       \n
+Action.c(10):     <td class="entry row-nocellborder" headers="d35e87 " style="vertical-align:top;">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                           \n
+Action.c(10):     <strong class="ph b">\n
+Action.c(10):                             <span class="ph part_number">B3M78-67903</span>\n
+Action.c(10):                           </strong>\n
+Action.c(10):                         \n
+Action.c(10):     </p>\n
+Action.c(10):                       \n
+Action.c(10):     </td>\n
+Action.c(10):                       <td class="entry cellrowborder part_description" headers="d35e87 " style
+Action.c(10):     ="vertical-align:top;">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">Fuser (220V) kit with instruction guide</p>\n
+Action.c(10):                       \n
+Action.c(10):     </td>\n
+Action.c(10):                     \n
+Action.c(10):     </tr>\n
+Action.c(10):                   \n
+Action.c(10):     </tbody>\n
+Action.c(10):                 \n
+Action.c(10):     </table>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     <div class="section required_tools" id="GUID-E9057523-44BD-4789-BAA6-8BED279A7D7C__GUID-93
+Action.c(10):     9581FA-F923-4209-8909-171097F62E09">\n
+Action.c(10):               \n
+Action.c(10):     <h2 class="title sectiontitle">Required tools</h2>\n
+Action.c(10):               \n
+Action.c(10):     <p class="p">No special tools are required to install this part.</p>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     <div class="section after_service" id="GUID-E9057523-44BD-4789-BAA6-8BED279A7D7C__GUID-FF3
+Action.c(10):     B479B-9056-4682-8EB0-3550D775176A">\n
+Action.c(10):               \n
+Action.c(10):     <h2 class="title sectiontitle">After performing service</h2>\n
+Action.c(10):               \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                 \n
+Action.c(10):     <strong class="ph b">Turn the printer power on</strong>\n
+Action.c(10):               \n
+Action.c(10):     </p>\n
+Action.c(10):               \n
+Action.c(10):     <div class="ul">\n
+Action.c(10):                 \n
+Action.c(10):     <ul class="ul bullettype=disc" id="GUID-E9057523-44BD-4789-BAA6-8BED279A7D7C__GUID-FAA9279
+Action.c(10):     A-6522-4779-86F3-855A86F7FB61">\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="p">Connect the power cable.</p>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="p">Use the power switch to turn the power on.</p>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     </ul>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     <div class="section post_service_test" id="GUID-E9057523-44BD-4789-BAA6-8BED279A7D7C__GUID
+Action.c(10):     -C2055CB1-8C16-4C89-8B1D-385F4DFEDE25">\n
+Action.c(10):               \n
+Action.c(10):     <h2 class="title sectiontitle">Post service test</h2>\n
+Action.c(10):               \n
+Action.c(10):     <p class="p">Print a configuration page to make sure that the printer is functioning corre
+Action.c(10):     ctly.</p>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-A66F007A-DA78-47EC-8192-DAE973768143__GUID-7ADD2B36-393B-4E0E-8
+Action.c(10):     99D-3CC7C83B209A" class="topic task nested1" id="GUID-A66F007A-DA78-47EC-8192-DAE973768143
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-A66F007A-DA78-47EC-8192-DAE973768143__GUID-7ADD2B36
+Action.c(10):     -393B-4E0E-899D-3CC7C83B209A">Remove the output bin and bin base assembly or stapling mail
+Action.c(10):     box</h2>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Follow these steps to remove the output bin and bin base assembly or 
+Action.c(10):     stapling mailbox.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):               \n
+Action.c(10):     <div class="section context" id="GUID-A66F007A-DA78-47EC-8192-DAE973768143__GUID-C424417D-
+Action.c(10):     B682-458E-B69C-1BE0ED54E08B">\n
+Action.c(10):                 \n
+Action.c(10):     <p class="p">Use the appropriate step for your printer model.</p>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     <ol class="ol steps" id="GUID-A66F007A-DA78-47EC-8192-DAE973768143__GUID-97098E48-A056-4FA
+Action.c(10):     4-B58D-5705A0F07068">\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">\n
+Action.c(10):                     \n
+Action.c(10):     <strong class="ph b">M630dn and M630f</strong>: Slide the bin base away from the product (
+Action.c(10):     callout&nbsp;1) until it stops, slightly lift up on the assembly to disengage the slide\n
+Action.c(10):                             rails (callout&nbsp;2), and then remove the assembly (callout&nbsp
+Action.c(10):     ;3).\n
+Action.c(10):                
+Action.c(10): t=12092ms: 7632-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1633788-67174-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=1)
+Action.c(10):               </p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="figcap">Remove the output bin</p>\n
+Action.c(10):                       \n
+Action.c(10):     <img alt="Remove the output bin" class="image" src="https://hx9ekpvvbi.execute-api.us-east
+Action.c(10):     -1.amazonaws.com/KaaS-ITG/v2/renderbinary/1633788/39518/p-maple-web-rr-fuser/maple-mb-ob-r
+Action.c(10):     emove-cru"/>\n
+Action.c(10):                     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">\n
+Action.c(10):                     \n
+Action.c(10):     <strong class="ph b">M630z</strong>: Press the latch (callout&nbsp;1), pull the stapling m
+Action.c(10):     ailbox away from the product (callout&nbsp;2), disconnect the interface cable\n
+Action.c(10):                             (callout&nbsp;3), and then remove the stapling mailbox (callout&nb
+Action.c(10):     sp;4).\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="figcap">Remove the stapling mailbox</p>\n
+Action.c(10):                       \n
+Action.c(10):     <img alt="Remove the output bin" class="image" src="https://hx9ekpvvbi.execute-api.us-east
+Action.c(10):     -1.amazonaws.com/KaaS-ITG/v2/renderbinary/1633788/39588/p-maple-web-rr-fuser/maple-rrp-ob-
+Action.c(10):     ssbm-remove-cru"/>\n
+Action.c(10):                     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):               \n
+Action.c(10):     </ol>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-E11037C0-F6D7-4D4C-B8C6-54CDC70D130D__GUID-8D097E51-15E2-429D-A
+Action.c(10):     A67-836CAC00E26A" class="topic task nested1" id="GUID-E11037C0-F6D7-4D4C-B8C6-54CDC70D130D
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-E11037C0-F6D7-4D4C-B8C6-54CDC70D130D__GUID-8D097E51
+Action.c(10):     -15E2-429D-AA67-836CAC00E26A">Remove the duplex accessory</h2>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Follow these steps to remove the duplex accessory.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):               \n
+Action.c(10):     <ol class="ol steps" id="GUID-E11037C0-F6D7-4D4C-B8C6-54CDC70D130D__GUID-8D783F7B-E0AA-4F1
+Action.c(10):     B-8FA7-C8EEDF6A7D1C">\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Slide the duplex assembly away from the product, slightly lift up on the
+Action.c(10):      assembly to disengage the slide rails, and then remove\n
+Action.c(10):                             it.\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note note" id="GUID-E11037C0-F6D7-4D4C-B8C6-54CDC70D130D__GUID-E81A346C-6CFE-4
+Action.c(10):     903-AD4E-E31C2A07D59E">\n
+Action.c(10):                       \n
+Action.c(10):     <span class="notetitle">Note:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">Locate the duplexer at the left-hand side of the product.</p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="figcap">Remove the duplex accessory</p>\n
+Action.c(10):                       \n
+Action.c(10):     <img alt="Remove the duplex accessory" class="image" src="https://hx9ekpvvbi.execute-api.u
+Action.c(10):     s-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1633788/39554/p-maple-web-rr-fuser/maple-r
+Action.c(10):     rp-duplexer-remove-fe-cru"/>\n
+Action.c(10):                     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):               \n
+Action.c(10):     </ol>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-5C7D95FF-A33E-4CE8-95CD-5AF2F55CBB54__GUID-46D6841B-3AD0-43CA-8
+Action.c(10):     658-3835CCF3BFAE" class="topic task nested1" id="GUID-5C7D95FF-A33E-4CE8-95CD-5AF2F55CBB54
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-5C7D95FF-A33E-4CE8-95CD-5AF2F55CBB54__GUID-46D6841B
+Action.c(10):     -3AD0-43CA-8658-3835CCF3BFAE">Remove the fuser-entrance guide</h2>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Follow these steps to remove the fuser-entrance guide.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):               \n
+Action.c(10):     <ol class="ol steps" id="GUID-5C7D95FF-A33E-4CE8-95CD-5AF2F55CBB54__GUID-03E99D69-12EC-4B4
+Action.c(10):     0-AB2C-E5D000332AC5">\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Flex the rear hinge-pin of the fuser-entrance guide until it clears the 
+Action.c(10):     mounting hole in the product chassis.</p>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Rotate the rear of the guide away of the product and slide the guide to 
+Action.c(10):     the left to release the front hinge-pin. Remove the\n
+Action.c(10):                             fuser-entrance guide.\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="figcap">Remove the fuser-entrance guide</p>\n
+Action.c(10):                       \n
+Action.c(10):     <img alt="Remove the fuser-entrance guide" class="image" src="https://hx9ekpvvbi.execute-a
+Action.c(10):     pi.us-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1633788/39512/p-maple-web-rr-fuser/map
+Action.c(10):     le-duplex-paper-guide-remove"/>\n
+Action.c(10):                     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):               \n
+Action.c(10):     </ol>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-00D40AF4-518C-4C54-9041-6BEE4007B356__GUID-0D11FFC9-0F17-44E7-9
+Action.c(10):     054-4E847C308DA3" class="topic task nested1" id="GUID-00D40AF4-518C-4C54-9041-6BEE4007B356
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-00D40AF4-518C-4C54-9041-6BEE4007B356__GUID-0D11FFC9
+Action.c(10):     -0F17-44E7-9054-4E847C308DA3">Remove the fuser</h2>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Follow these steps to remove the fuser.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):               \n
+Action.c(10):     <ol class="ol steps" id="GUID-00D40AF4-518C-4C54-9041-6BEE4007B356__GUID-E31171B3-8902-4D1
+Action.c(10):     3-8F50-6EC034A7F512">\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Squeeze the two blue tabs on the fuser to release it, and then slide it 
+Action.c(10):     out of the product.</p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note caution" id="GUID-00D40AF4-518C-4C54-9041-6BEE4007B356__GUID-A024288A-E18
+Action.c(10):     1-48BF-8D35-66BF9213CD58">\n
+Action.c(10):                       \n
+Action.c(10):     <span class="cautiontitle">CAUTION:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">The fuser is very hot. After turning the product power off, allow the fuser t
+Action.c(10):     o cool for at least 30&nbsp;minutes before removing\n
+Action.c(10):                                   it.\n
+Action.c(10):                                </p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="figcap">Remove the fuser</p>\n
+Action.c(10):                       \n
+Action.c(10):     <img alt="Remove the fuser" class="image" src="https://hx9ekpvvbi.execute-api.us-east-1.am
+Action.c(10):     azonaws.com/KaaS-ITG/v2/renderbinary/1633788/39516/p-maple-web-rr-fuser/maple-fuser-remove
+Action.c(10):     "/>\n
+Action.c(10):                     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):               \n
+Action.c(10):     </ol>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-4C5E5728-C3F5-4FBA-A
+Action.c(10):     2D4-2A7B8CD56C58" class="topic task nested1" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-4C5E5728
+Action.c(10):     -C3F5-4FBA-A2D4-2A7B8CD56C58">Unpack the replacement assembly</h2>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Follow these steps to unpack the replacement assembly.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):               \n
+Action.c(10):     <ol class="ol steps" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-F4FDAC1F-D6FB-4B8
+Action.c(10):     A-B75C-C5231E4E3166">\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Dispose of the defective part.</p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note note" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-219214C8-F398-4
+Action.c(10):     EBB-A6C1-3B4B45990248">\n
+Action.c(10):                       \n
+Action.c(10):     <span class="notetitle">Note:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">HP recommends responsible disposal of the defective part.</p>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                         \n
+Action.c(10):     <a class="xref" href="http://www8.hp.com/us/en/hp-i
+Action.c(10): t=12678ms: 560-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1633788-67174-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=1)
+Action.c(10):     nformation/environment/product-recycling.html" target="_blank">http://www8.hp.com/us/en/hp
+Action.c(10):     -information/environment/product-recycling.html</a>\n
+Action.c(10):                       \n
+Action.c(10):     </p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Unpack the replacement part from the packaging.</p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note caution" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-ED0AF4A0-2AE
+Action.c(10):     3-4D76-8E15-30C62FD8D107">\n
+Action.c(10):                       \n
+Action.c(10):     <s
+Action.c(10): t=12681ms: 8192-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1633788-67174-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=1)
+Action.c(10):     pan class="cautiontitle">CAUTION:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                         \n
+Action.c(10):     <img class="image" src="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2
+Action.c(10):     /renderbinary/1633788/816300/p-maple-web-rr-fuser/ico-shared-srm-web-esd-small"/> Some par
+Action.c(10):     ts are sensitive to electrostatic discharge (ESD). Always perform service work at an ESD-p
+Action.c(10):     rotected workstation or\n
+Action.c(10):                                   mat. If an ESD workstation or mat is not available, touch th
+Action.c(10):     e sheet-metal chassis to provide a static ground before touching\n
+Action.c(10):                                   an ESD-sensitive assembly. Protect the ESD-sensitive assembl
+Action.c(10):     ies by placing them in ESD pouches when they are out of the printer.\n
+Action.c(10):                                </p>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">If the replacement part is a roller or pad, avoid touching the spongy part of
+Action.c(10):      it. Skin oils on the roller or pad can cause\n
+Action.c(10):                                   paper pickup and/or print-quality problems. HP recommends us
+Action.c(10):     ing disposable gloves when handling rollers or pads or washing\n
+Action.c(10):                                   your hands before touching rollers or pads.\n
+Action.c(10):                                </p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note important" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-FEF7B580-B
+Action.c(10):     4BA-4204-9545-0F66BB11CFE9">\n
+Action.c(10):                       \n
+Action.c(10):     <span class="importanttitle">Important:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">Make sure that all of the shipping materials (for example shipping tape) are 
+Action.c(10):     removed from the replacement part prior to installation.</p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">To install an assembly, reverse the removal steps.</p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note note" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-33A6069A-FB81-4
+Action.c(10):     1D3-8B78-C58071C3179B">\n
+Action.c(10):                       \n
+Action.c(10):     <span class="notetitle">Note:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">When applicable, special installation instructions are provided for an assemb
+Action.c(10):     ly at the end of the removal procedure. Always\n
+Action.c(10):                                   completely read the removal instructions and follow all spec
+Action.c(10):     ial installation instructions.\n
+Action.c(10):                                </p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):               \n
+Action.c(10):     </ol>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-C6837065-32F0-4A85-882C-7DA0F2B026A6__GUID-BE2A9057-5D68-4D60-9
+Action.c(10):     D00-0ADAC543E02E" class="topic task nested1" id="GUID-C6837065-32F0-4A85-882C-7DA0F2B026A6
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-C6837065-32F0-4A85-882C-7DA0F2B026A6__GUID-BE2A9057
+Action.c(10):     -5D68-4D60-9D00-0ADAC543E02E">Install the fuser</h2>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Follow these steps to install the fuser.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):               \n
+Action.c(10):     <ol class="ol steps" id="GUID-C6837065-32F0-4A85-882C-7DA0F2B026A6__GUID-C3BFD181-45B4-4C8
+Action.c(10):     B-BD9F-710221078E3C">\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Position the fuser in the product, push in to install it, and then make 
+Action.c(10):     sure that it is fully seated.</p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note tip" id="GUID-C6837065-32F0-4A85-882C-7DA0F2B026A6__GUID-2F7C80B1-4DB3-49
+Action.c(10):     DA-A1C8-1B08BABDA81F">\n
+Action.c(10):                       \n
+Action.c(10):     <span class="tiptitle">Tip:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">When the fuser is fully seated, the two blue locking levers make an audible c
+Action.c(10):     lick.</p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="figcap">Install the fuser</p>\n
+Action.c(10):                       \n
+Action.c(10):     <img alt="Install the fuser" class="image" src="https://hx9ekpvvbi.execute-api.us-east-1.a
+Action.c(10):     mazonaws.com/KaaS-ITG/v2/renderbinary/1633788/39514/p-maple-web-rr-fuser/maple-fuser-insta
+Action.c(10):     ll"/>\n
+Action.c(10):                     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):               \n
+Action.c(10):     </ol>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-F42F0804-ADE9-4734-912A-899182533264__GUID-DE40361E-5F6A-49AF-8
+Action.c(10):     B00-5C0C1770EC14" class="topic task nested1" id="GUID-F42F0804-ADE9-4734-912A-899182533264
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-F42F0804-ADE9-4734-912A-899182533264__GUID-DE40361E
+Action.c(10):     -5F6A-49AF-8B00-5C0C1770EC14">Install the fuser-entrance guide</h2>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Follow these steps to install the fuser-entrance guide.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):               \n
+Action.c(10):     <ol class="ol steps" id="GUID-F42F0804-ADE9-4734-912A-899182533264__GUID-21159E08-9660-48D
+Action.c(10):     4-B175-D7C77314A50B">\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Position the front hinge-pin of the fuser-entrance guide in the mounting
+Action.c(10):      hole in the product chassis (callout&nbsp;1).</p>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Slightly flex the rear hinge pin (callout&nbsp;2), rotate the guide into
+Action.c(10):      the product (callout&nbsp;3) to install it.</p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="figcap">Install the fuser-entrance guide</p>\n
+Action.c(10):                       \n
+Action.c(10):     <img alt="Install the fuser-entrance guide" class="image" src="https://hx9ekpvvbi.execute-
+Action.c(10):     api.us-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1633788/39550/p-maple-web-rr-fuser/ma
+Action.c(10):     ple-rrp-duplex-paper-guide-install"/>\n
+Action.c(10):                     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):               \n
+Action.c(10):     </ol>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-42BF379F-A960-4C7D-8040-01E87E097B64__GUID-322F88CD-20A9-49C6-A
+Action.c(10):     87F-1E5A8F1352FD" class="topic task nested1" id="GUID-42BF379F-A960-4C7D-8040-01E87E097B64
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-42BF379F-A960-4C7D-8040-01E87E097B64__GUID-322F88CD
+Action.c(10):     -20A9-49C6-A87F-1E5A8F1352FD">Install the duplex accessory</h2>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Follow these steps to install the duplex accessory.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):               \n
+Action.c(10):     <ol class="ol steps" id="GUID-42BF379F-A960-4C7D-8040-01E87E097B64__GUID-89D8B469-0EC4-418
+Action.c(10):     4-8E9E-4F8E586FA3E2">\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Position the duplex assembly on the product at a slight angle, engage th
+Action.c(10):     e slide rails, and then slide the duplex assembly\n
+Action.c(10):                             all of the way into the product to install it.\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note important" id="GUID-42BF379F-A960-4C7D-8040-01E87E097B64__GUID-D7FCD780-9
+Action.c(10):     234-4C01-BB65-DDA46AA9DCFA">\n
+Action.c(10):                       \n
+Action.c(10):     <span class="importanttitle">Important:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">Make sure that the duplex accessory is full installed.</p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note note" id="GUID-42BF379F-A960-4C7D-8040-01E87E097B64__GUID-D95A05F0-B855-4
+Action.c(10):     E27-BCDA-622221E02587">\n
+Action.c(10):                       \n
+Action.c(10):     <span class="notetitle">Note:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">After servicing, turn the power off, and then on again so that the product de
+Action.c(10):     tects the installed duplex accessory.</p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="figcap">Install the duplex accessory</p>\n
+Action.c(10):                       \n
+Action.c(10):     <img alt="Install the duplex accessory" class="image" src="https://hx9ekpvvbi.execute-api.
+Action.c(10):     us-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1633788/39552/p-maple-web-rr-fuser/maple-
+Action.c(10):     rrp-duplexer-install-fe-cru"/>\n
+Action.c(10):                     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):               \n
+Action.c(10):     </ol>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-C4F60E6A-F2A9-45CE-B17C-5856CE662FFE__GUID-CA3F7582-B882-4B7B-8
+Action.c(10):     B80-1DA146B15544" class="topic task nested1" id="GUID-C4F60E6A-F2A9-45CE-B17C-5856CE662FFE
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-C4F60E6A
+Action.c(10): t=12696ms: 5095-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1633788-67174-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=1)
+Action.c(10):     -F2A9-45CE-B17C-5856CE662FFE__GUID-CA3F7582-B882-4B7B-8B80-1DA146B15544">Install the outpu
+Action.c(10):     t bin and bin base assembly or stapling mailbox</h2>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Follow these steps to install the output bin and bin base assembly or
+Action.c(10):      stapling mailbox.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):               \n
+Action.c(10):     <div class="section context" id="GUID-C4F60E6A-F2A9-45CE-B17C-5856CE662FFE__GUID-DACC3B66-
+Action.c(10):     6408-4FD6-B180-2DE6C05D3EB2">\n
+Action.c(10):                 \n
+Action.c(10):     <p class="p">Use the appropriate step for your printer model.</p>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     <ol class="ol steps" id="GUID-C4F60E6A-F2A9-45CE-B17C-5856CE662FFE__GUID-49FC0074-CA81-48D
+Action.c(10):     9-A84C-6F2B8EA8057F">\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">\n
+Action.c(10):                     \n
+Action.c(10):     <strong class="ph b">M630dn and M630f</strong>: Position the assembly at an angle to the p
+Action.c(10):     roduct (callout&nbsp;1), lower the assembly into place (callout&nbsp;2) while engaging the
+Action.c(10):     \n
+Action.c(10):                             slide rails (callout&nbsp;3), and then slide the bin base into the
+Action.c(10):      product.\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="figcap">Install the output bin</p>\n
+Action.c(10):                       \n
+Action.c(10):     <img alt="Install the output bin" class="image" src="https://hx9ekpvvbi.execute-api.us-eas
+Action.c(10):     t-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1633788/39584/p-maple-web-rr-fuser/maple-rrp-mb
+Action.c(10):     -ob-replace-cru"/>\n
+Action.c(10):                     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">\n
+Action.c(10):                     \n
+Action.c(10):     <strong class="ph b">M630z</strong>: Position the assembly at an angle to the product (cal
+Action.c(10):     lout&nbsp;1), lower the assembly into place (callout&nbsp;2) while engaging the\n
+Action.c(10):                             slide rails (callout&nbsp;3), connect the interface cable (callout
+Action.c(10):     &nbsp;4). and then slide the stapling mailbox (callout&nbsp;5) into the\n
+Action.c(10):                             product.\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="note tip" id="GUID-C4F60E6A-F2A9-45CE-B17C-5856CE662FFE__GUID-C8A428CE-8672-4E
+Action.c(10):     4B-952C-200EA5FFCD70">\n
+Action.c(10):                       \n
+Action.c(10):     <span class="tiptitle">Tip:</span>\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">After servicing, turn the power off, and then on again so that the product de
+Action.c(10):     tects the installed stapling mailbox.</p>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="figcap">Install the stapling mailbox</p>\n
+Action.c(10):                       \n
+Action.c(10):     <img alt="Install the stapling mailbox" class="image" src="https://hx9ekpvvbi.execute-api.
+Action.c(10):     us-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1633788/39586/p-maple-web-rr-fuser/maple-
+Action.c(10):     rrp-ob-ssbm-install-ssbm"/>\n
+Action.c(10):                     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):               \n
+Action.c(10):     </ol>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-AFE0D81E-FA96-4F8F-9BEA-B971A7E9BD09__GUID-1B438CB4-02D2-4D84-A
+Action.c(10):     EF3-7422AEB7F461" class="topic task nested1" id="GUID-AFE0D81E-FA96-4F8F-9BEA-B971A7E9BD09
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-AFE0D81E-FA96-4F8F-9BEA-B971A7E9BD09__GUID-1B438CB4
+Action.c(10):     -02D2-4D84-AEF3-7422AEB7F461">Reset the supplies counter</h2>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Follow these steps to reset the supplies counter.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):               \n
+Action.c(10):     <ol class="ol steps" id="GUID-AFE0D81E-FA96-4F8F-9BEA-B971A7E9BD09__GUID-0DEC78FB-9A95-4DC
+Action.c(10):     8-B175-892062D7176E">\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">From the Home screen on the control panel, scroll to and touch the <span
+Action.c(10):      class="ph controlpanel">Administration</span> button.\n
+Action.c(10):                          </p>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Open the following menus:</p>\n
+Action.c(10):                   \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="ul">\n
+Action.c(10):                       \n
+Action.c(10):     <ul class="ul" id="GUID-AFE0D81E-FA96-4F8F-9BEA-B971A7E9BD09__GUID-5A952560-2E65-4C9D-B72C
+Action.c(10):     -68BBE0C68F54">\n
+Action.c(10):                         \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <span class="ph controlpanel">Manage Supplies</span>\n
+Action.c(10):                           \n
+Action.c(10):     </p>\n
+Action.c(10):                         \n
+Action.c(10):     </li>\n
+Action.c(10):                         \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <span class="ph controlpanel">Reset Supplies</span>\n
+Action.c(10):                           \n
+Action.c(10):     </p>\n
+Action.c(10):                         \n
+Action.c(10):     </li>\n
+Action.c(10):                         \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <span class="ph controlpanel">New Maintenance Kit</span>\n
+Action.c(10):                           \n
+Action.c(10):     </p>\n
+Action.c(10):                         \n
+Action.c(10):     </li>\n
+Action.c(10):                       \n
+Action.c(10):     </ul>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                   \n
+Action.c(10):     <p class="ph cmd">Select the <span class="ph controlpanel">Reset</span> item to reset the 
+Action.c(10):     supplies counter.\n
+Action.c(10):                          </p>\n
+Action.c(10):                 \n
+Action.c(10):     </li>\n
+Action.c(10):               \n
+Action.c(10):     </ol>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):         \n
+Action.c(10):     </div>\n
+Action.c(10):     </div>\n
+Action.c(10):     </body></html>
+Action.c(10): web_custom_request("web_custom_request") was successful, 29671 body bytes, 777 header bytes  	[MsgId: MMSG-26386]
+Action.c(18): Notify: Transaction "KAAS_Content_Rendering" ended with a "Pass" status (Duration: 8.7433 Wasted Time: 0.0986).
+Ending action Action.
+Ending iteration 1.
+Starting iteration 2.
+Notify: Next row for parameter p_DocID = 1 [table  = p_DocID].
+Notify: Getting new value for parameter 'p_DocID': table = 'p_DocID.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_productID = 1 [table  = p_productID].
+Notify: Getting new value for parameter 'p_productID': table = 'p_productID.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_AccessToken = 1 [table  = p_AccessToken].
+Notify: Getting new value for parameter 'p_AccessToken': table = 'p_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_ContentRendering = 2 [table  = p_ContentRendering].
+Notify: Getting new value for parameter 'p_ContentRendering': table = 'p_ContentRendering.dat' column = '0' row = '2'.
+Notify: Next row for parameter p_CR_MetaData = 7 [table  = p_CR_MetaData].
+Notify: Getting new value for parameter 'p_CR_MetaData': table = 'p_CR_MetaData.dat' column = '0' row = '7'.
+Starting action Action.
+Action.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Action.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Action.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(9): Notify: Transaction "KAAS_Content_Rendering" started.
+Action.c(10): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(10): Notify: Parameter Substitution: parameter "p_ContentRendering" =  "ish_1864000-1798926-16"
+Action.c(10): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1864000-1798926-16?entitlement=none&audience=customer&isFullHTMLRequired=true" is done with headers:
+Action.c(10):     :method = GET
+Action.c(10):     :scheme = https
+Action.c(10):     :path = /KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1864000-1798926-16?entitlemen
+Action.c(10):     t=none&audience=customer&isFullHTMLRequired=true
+Action.c(10):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+Action.c(10):     Content-Type =  application/x-www-form-urlencoded
+Action.c(10):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Action.c(10):     Accept-Encoding =  gzip, deflate
+Action.c(10):     Accept =  */*
+Action.c(10): t=16176ms: 777-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1864000-1798926-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=2)
+Action.c(10):     HTTP/2.0 200\r\n
+Action.c(10):     Status: 200\r\n
+Action.c(10):     date: Tue, 12 Jan 2021 11:11:29 GMT\r\n
+Action.c(10):     content-type: text/html;charset=UTF-8\r\n
+Action.c(10):     content-length: 12304\r\n
+Action.c(10):     x-amzn-requestid: 0564893b-59e1-47bb-b780-3ec41ff8e480\r\n
+Action.c(10):     x-oneagent-js-injection: true\r\n
+Action.c(10):     x-amzn-remapped-connection: keep-alive\r\n
+Action.c(10):     set-cookie: dtCookie=v_4_srv_1_sn_50FCD9EFF9CA6E01214F01AF181E4E62_perc_100000_ol_0_mul_1;
+Action.c(10):      Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+Action.c(10):     set-cookie: JSESSIONID=603239FD487B0505138E744BE61BC5AB; Path=/; HttpOnly\r\n
+Action.c(10):     set-cookie: mySessionCookie=tridion_ced22269-a764-4ffc-ab53-fbabf5d4dff2; path=/; HttpOnly
+Action.c(10):     \r\n
+Action.c(10):     set-cookie: myTrackingCookie=tridion_6cfb07d4-fb97-4741-bec6-f0d387ca293b; Expires=Fri, 01
+Action.c(10):     -Jan-2100 00:00:00 GMT; path=/; HttpOnly\r\n
+Action.c(10):     x-amz-apigw-id: ZCGLIGIvoAMF6yA=\r\n
+Action.c(10):     x-amzn-remapped-date: Tue, 12 Jan 2021 11:11:29 GMT\r\n
+Action.c(10):     \r\n
+Action.c(10): t=16182ms: 8192-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1864000-1798926-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=2)
+Action.c(10):     <html><head><meta name="viewport" content="width=device-width, initial-scale=1"><script ty
+Action.c(10):     pe="text/javascript" src="/ruxitagentjs_ICA2SVfqru_10205201218101503.js" data-dtconfig="ap
+Action.c(10):     p=ea7c4b59f27d43eb|cuc=x9ysi6wz|featureHash=ICA2SVfqru|dpvc=1|lastModification=16083429717
+Action.c(10):     90|dtVersion=10205201218101503|tp=500,50,0,1|rdnt=1|uxrgce=1|uxdcw=1500|vs=2|bp=2|agentUri
+Action.c(10):     =/ruxitagentjs_ICA2SVfqru_10205201218101503.js|reportUrl=/rb_d90a734d-165f-4364-86ae-b185f
+Action.c(10):     a78c115|rid=RID_1038391014|rpid=-1900952910|domain=elb.us-east-1.amazonaws.com"></script><
+Action.c(10):     link rel="stylesheet" href="https://kaas-udp.s3.amazonaws.com/CSS/commonltr.css"> </head><
+Action.c(10):     body><script  type="text/javascript" async="" src="https://api-sds-javascript-prod.sds.hp8
+Action.c(10):     .us/v1/KaasJavascriptLoader?script=partsRecommendation"></script> <div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-AFE17481-FC66-4926-998F-77E77417BE5C__GUID-A431CE92-F0B5-478F-8
+Action.c(10):     0C7-BE0D3157E015" class="topic concept nested0 context" id="GUID-AFE17481-FC66-4926-998F-7
+Action.c(10):     7E77417BE5C" lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h1 class="title topictitle1" id="GUID-AFE17481-FC66-4926-998F-77E77417BE5C__GUID-A431CE92
+Action.c(10):     -F0B5-478F-80C7-BE0D3157E015">HP Printers - No AirPrint Printers Found error (iOS, iPadOS)
+Action.c(10):     </h1>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">After selecting a print job, a <samp class="ph msgph uimessage">No Ai
+Action.c(10):     rPrint Printers Found</samp> message displays on your iPhone or iPad. Check your wireless 
+Action.c(10):     network connection and make sure AirPrint is enabled.\n
+Action.c(10):              </p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body conbody">\n
+Action.c(10):               \n
+Action.c(10):     <p class="p">Perform the following tasks in the order given. Use the printer after each ta
+Action.c(10):     sk to see if the issue is resolved.</p>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):               \n
+Action.c(10):     <div aria-labelledby="GUID-6E37FD40-0E55-4983-92DA-A1ECE7D48F88__GUID-AB4EB762-4BFA-4EC9-9
+Action.c(10):     287-E2E77B926C73" class="topic reference nested1 referenceinformation" id="GUID-6E37FD40-0
+Action.c(10):     E55-4983-92DA-A1ECE7D48F88" lang="en-US" xml:lang="en-US">\n
+Action.c(10):                 \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-6E37FD40-0E55-4983-92DA-A1ECE7D48F88__GUID-AB4EB762
+Action.c(10):     -4BFA-4EC9-9287-E2E77B926C73">\n
+Action.c(10):                   \n
+Action.c(10):     <span class="ph">Troubleshoot the wireless printer connection</span>\n
+Action.c(10):                 \n
+Action.c(10):     </h2>\n
+Action.c(10):                 \n
+Action.c(10):     <p class="shortdesc">Check network issues and setup requirements if the printer is not fou
+Action.c(10):     nd during software installs or when wireless print jobs\n
+Action.c(10):                    fail.\n
+Action.c(10):                 </p>\n
+Action.c(10):                 \n
+Action.c(10):     <div class="body refbody">\n
+Action.c(10):                   \n
+Action.c(10):     <div class="section" id="GUID-6E37FD40-0E55-4983-92DA-A1ECE7D48F88__GUID-9DB5C2BA-CAB2-442
+Action.c(10):     A-8D03-D5B597740F80">\n
+Action.c(10):                     \n
+Action.c(10):     <div class="ul">\n
+Action.c(10):                       \n
+Action.c(10):     <ul class="ul" id="GUID-6E37FD40-0E55-4983-92DA-A1ECE7D48F88__GUID-D0848902-44EA-44EC-B191
+Action.c(10):     -838222C96764">\n
+Action.c(10):                         \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <strong class="ph b">Poor network connection</strong>: Move the printer and computer or mo
+Action.c(10):     bile device closer to the wireless router, and then check if the signal quality improved.\n
+Action.c(10):                                   Try opening a website to see if the internet connection is w
+Action.c(10):     orking properly. If Wi-Fi is slow or intermittent, restart the\n
+Action.c(10):                                   router by disconnecting the power cord, waiting 15 seconds, 
+Action.c(10):     and then reconnecting the cord.\n
+Action.c(10):                                </p>\n
+Action.c(10):                         \n
+Action.c(10):     </li>\n
+Action.c(10):                         \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <strong class="ph b">Printer is off or in sleep mode</strong>: Touch the control panel men
+Action.c(10):     u or press the <span class="ph controlpanel">Power</span> button to wake the printer and p
+Action.c(10):     ut it in a ready state. Sometimes the printer status might display Offline when it is actu
+Action.c(10):     ally\n
+Action.c(10):                                   ready.\n
+Action.c(10):                                </p>\n
+Action.c(10):                         \n
+Action.c(10):     </li>\n
+Action.c(10):                         \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <strong class="ph b">Check the printer connection status</strong>: Make sure the wireless 
+Action.c(10):     signal is on, and the printer is connected to the same network as your computer or mobile 
+Action.c(10):     device.\n
+Action.c(10):                                   If your printer has a light next to a <span class="ph contro
+Action.c(10):     lpanel">Wireless</span> icon or button <img class="image" src="https://hx9ekpvvbi.execute-
+Action.c(10):     api.us-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1864000/1364019/con-ios-genprint-p-no
+Action.c(10):     -airprint-printers-found-message/wireless-icon-inline"/>, make sure the light is on. If it
+Action.c(10):      is off or blinks the printer is disconnected from the network.\n
+Action.c(10):                                </p>\n
+Action.c(10):                         \n
+Action.c(10):     </li>\n
+Action.c(10):                         \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <strong class="ph b">Reconnect the printer to the network</strong>:\n
+Action.c(10):                                </p>\n
+Action.c(10):                           \n
+Action.c(10):     <div class="ul">\n
+Action.c(10):                             \n
+Action.c(10):     <ul class="ul" id="GUID-6E37FD40-0E55-4983-92DA-A1ECE7D48F88__GUID-057C1F96-94EE-405C-BAB7
+Action.c(10):     -0FC827978A73">\n
+Action.c(10):                               \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                                 \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                                   \n
+Action.c(10):     <strong class="ph b">Printers with touchscreens</strong>: Open the <span class="ph uicontr
+Action.c(10):     ol">Wireless Setup Wizard</span> from the <span class="ph uicontrol">Wireless</span>, <spa
+Action.c(10):     n class="ph uicontrol">Settings</span><img class="image" src="https://hx9ekpvvbi.execute-a
+Action.c(10):     pi.us-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1864000/1364044/con-ios-genprint-p-no-
+Action.c(10):     airprint-printers-found-message/settings-gear-control-panel-inline"/>, or <span class="ph 
+Action.c(10):     uicontrol">Network Setup</span> menu. Select your network name, and then enter the passwor
+Action.c(10):     d to complete the connection.\n
+Action.c(10):                                         </p>\n
+Action.c(10):                               \n
+Action.c(10):     </li>\n
+Action.c(10):                               \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                                 \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                                   \n
+Action.c(10):     <strong class="ph b">Printers without touchscreens</strong>: Press and hold the <span clas
+Action.c(10):     s="ph controlpanel">Wireless</span> button on the printer until the light starts blinking.
+Action.c(10):      Within two minutes press and hold the <span class="ph controlpanel">WPS</span> button on 
+Action.c(10):     the router. The light on the printer stops flashing when the connection completes.\n
+Action.c(10):                                         </p>\n
+Action.c(10):                               \n
+Action.c(10):     </li>\n
+Action.c(10):                             \n
+Action.c(10):     </ul>\n
+Action.c(10):                           \n
+Action.c(10):     </div>\n
+Action.c(10):                         \n
+Action.c(10):     </li>\n
+Action.c(10):                         \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <strong class="ph b">Restart devices</strong>: Restart the printer and the computer or mob
+Action.c(10):     ile device to clear possible error conditions.\n
+Action.c(10):                                </p>\n
+Action.c(10):                         \n
+Action.c(10):     </li>\n
+Action.c(10):                         \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <strong class="ph b">Print a Wireless Test Report</strong>: Search the HP Customer Support
+Action.c(10):      website for your printer model, and then search for <kbd class="ph userinput">self test p
+Action.c(10):     age</kbd> to find the document on how to print and evaluate the report.\n
+Action.c(10):                                </p>\n
+Action.c(10):                         \n
+Action.c(10):     </li>\n
+Action.c(10):                         \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <strong class="ph b">Enable Bluetooth during printer setup (Android, iOS only)</strong>: T
+Action.c(10):     he HP Smart app uses Bluetooth to help locate the printer and set up the wireless connecti
+Action.c(10):     on to the network.\n
+Action.c(10):                                </p>\n
+Action.c(10):                         \n
+Action.c(10):     </li>\n
+Action.c(10):                       \n
+Action.c(10):     </ul>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):             \n
+Action.c(10):     <div aria-labelledby="GUID-5788EA84-D3CC-4137-B254-52C57ACECC6F__GUID-F6E92E79-B190-41EA-8
+Action.c(10):     97A-22DC02584EFC" class="topic task nested1 procedure" id="GUID-5788EA84-D3CC-4137-B254-52
+Action.c(10):     C57ACECC6F" lang="en-US" xml:lang="en-US">\n
+Action.c(10):               \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-5788EA84-D3CC-4137-B254-52C57ACECC6F__GUID-F6E92E79
+Action.c(10):     -B190-41EA-897A-22DC02584EFC">Enable AirPrint from the HP Smart app</h2>\n
+Action.c(10):               \n
+Action.c(10):     <p class="shortdesc">On your computer or mobile device, use the HP Smart app to check for 
+Action.c(10):     and enable AirPrint on your printer.</p>\n
+Action.c(10):               \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):                 \n
+Action.c(10):     <ol class="ol steps" id="GUID-5788EA84-D3CC-4137-B254-52C57ACECC6F__GUID-D36BD79D-DC98-4A5
+Action.c(10):     2-A117-B0B9CD7F18C2
+Action.c(10): t=16195ms: 4112-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1864000-1798926-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=2)
+Action.c(10):     ">\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Download the HP Smart app from <span class="ph"><a class="xref" href="ht
+Action.c(10):     tp://123.hp.com" target="_blank">123.hp.com</a></span> (iOS, iPadOS) or <span class="ph"><
+Action.c(10):     a class="xref" href="https://apps.apple.com/us/app/hp-smart/id1474276998" target="_blank">
+Action.c(10):     HP Smart - Mac App Store</a></span> (macOS), and then follow the instructions to set up th
+Action.c(10):     e printer.\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">On the app home screen, select your printer name or image.</p>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Under <strong class="ph b">Advanced</strong>, select <span class="ph uic
+Action.c(10):     ontrol">Advanced Settings</span> or <span class="ph uicontrol">Printer Home Page (EWS)</sp
+Action.c(10):     an>.\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Select <span class="ph uicontrol">Network</span>, and then look for AirP
+Action.c(10):     rint.\n
+Action.c(10):                          </p>\n
+Action.c(10):                     \n
+Action.c(10):     <ul class="ul choices" id="GUID-5788EA84-D3CC-4137-B254-52C57ACECC6F__GUID-8B636A48-CD2A-4
+Action.c(10):     21E-ADC2-4361A574E96B">\n
+Action.c(10):                       \n
+Action.c(10):     <li class="li choice">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                           \n
+Action.c(10):     <strong class="ph b">If AirPrint displays</strong>, select it, and then select <span class
+Action.c(10):     ="ph uicontrol">Status</span>.\n
+Action.c(10):                                </p>\n
+Action.c(10):                       \n
+Action.c(10):     </li>\n
+Action.c(10):                       \n
+Action.c(10):     <li class="li choice">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                           \n
+Action.c(10):     <strong class="ph b">If AirPrint does not display</strong>, your printer does not support 
+Action.c(10):     it. Use an alternate method to print, such as Wi-Fi Direct.\n
+Action.c(10):                                </p>\n
+Action.c(10):                       \n
+Action.c(10):     </li>\n
+Action.c(10):                     \n
+Action.c(10):     </ul>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">If you are prompted to go to a secure HTTPS-enabled webpage, select <spa
+Action.c(10):     n class="ph uicontrol">OK</span> or <span class="ph uicontrol">Redirect to HTTPS</span>.\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">If a <samp class="ph systemoutput">connection is not private</samp> mess
+Action.c(10):     age displays, select <span class="ph uicontrol">Advanced</span> or <span class="ph uicontr
+Action.c(10):     ol">Show Details</span>, and then select <span class="ph uicontrol">Proceed to 192.168.x.x
+Action.c(10):     x</span> or <span class="ph uicontrol">visit this website</span>.\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Under <strong class="ph b">AirPrint Status</strong>, select <span class=
+Action.c(10):     "ph uicontrol">Turn on AirPrint</span>.\n
+Action.c(10):                          </p>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     </ol>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     <div aria-labelledby="GUID-6087618B-83C7-4CF2-9BA4-30527ADE9121__GUID-584C5866-179C-46DA-8
+Action.c(10):     BB2-22DD8ECF72BE" class="topic concept nested1 explanation" id="GUID-6087618B-83C7-4CF2-9B
+Action.c(10):     A4-30527ADE9121" lang="en-US" xml:lang="en-US">\n
+Action.c(10):               \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-6087618B-83C7-4CF2-9BA4-30527ADE9121__GUID-584C5866
+Action.c(10):     -179C-46DA-8BB2-22DD8ECF72BE">Use a different method to print</h2>\n
+Action.c(10):               \n
+Action.c(10):     <p class="shortdesc">In some cases, the configuration of your mobile device is not compati
+Action.c(10):     ble with an HP printing method.</p>\n
+Action.c(10):               \n
+Action.c(10):     <div class="body conbody">\n
+Action.c(10):                 \n
+Action.c(10):     <p class="p">If you cannot print, install the <a class="xref cid25zNnh" href="https://hx9e
+Action.c(10):     kpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR
+Action.c(10):     /ish_2073929-1413451-16?entitlement=none&amp;isFullHTMLRequired=true">HP Smart app</a> for
+Action.c(10):      a guided printer setup, or use <a class="xref cid25sg6Y" href="https://hx9ekpvvbi.execute
+Action.c(10):     -api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1841315-1
+Action.c(10):     637332-16?entitlement=none&amp;isFullHTMLRequired=true">Wi-Fi Direct</a> if connecting thr
+Action.c(10):     ough a local network is unsuccessful.\n
+Action.c(10):                    </p>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):         \n
+Action.c(10):     </div>\n
+Action.c(10):     </body></html>
+Action.c(10): web_custom_request("web_custom_request") was successful, 12304 body bytes, 777 header bytes  	[MsgId: MMSG-26386]
+Action.c(18): Notify: Transaction "KAAS_Content_Rendering" ended with a "Pass" status (Duration: 3.3206 Wasted Time: 0.0094).
+Ending action Action.
+Ending iteration 2.
+Starting iteration 3.
+Notify: Next row for parameter p_DocID = 1 [table  = p_DocID].
+Notify: Getting new value for parameter 'p_DocID': table = 'p_DocID.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_productID = 4 [table  = p_productID].
+Notify: Getting new value for parameter 'p_productID': table = 'p_productID.dat' column = '0' row = '4'.
+Notify: Next row for parameter p_AccessToken = 1 [table  = p_AccessToken].
+Notify: Getting new value for parameter 'p_AccessToken': table = 'p_AccessToken.dat' column = '0' row = '1'.
+Notify: Next row for parameter p_ContentRendering = 3 [table  = p_ContentRendering].
+Notify: Getting new value for parameter 'p_ContentRendering': table = 'p_ContentRendering.dat' column = '0' row = '3'.
+Notify: Next row for parameter p_CR_MetaData = 9 [table  = p_CR_MetaData].
+Notify: Getting new value for parameter 'p_CR_MetaData': table = 'p_CR_MetaData.dat' column = '0' row = '9'.
+Starting action Action.
+Action.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(5): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
+Action.c(5): Warning -26594: The header being added may cause unpredictable results if applied to ALL the URLs generated on behalf of the next script function. It will apply to the primary URL only.  	[MsgId: MWAR-26594]
+Action.c(5): web_add_header("Content-Type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(9): Notify: Transaction "KAAS_Content_Rendering" started.
+Action.c(10): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(10): Notify: Parameter Substitution: parameter "p_ContentRendering" =  "ish_1590249-1084463-16"
+Action.c(10): The request to server https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1590249-1084463-16?entitlement=none&audience=customer&isFullHTMLRequired=true" is done with headers:
+Action.c(10):     :method = GET
+Action.c(10):     :scheme = https
+Action.c(10):     :path = /KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1590249-1084463-16?entitlemen
+Action.c(10):     t=none&audience=customer&isFullHTMLRequired=true
+Action.c(10):     :authority = hx9ekpvvbi.execute-api.us-east-1.amazonaws.com
+Action.c(10):     Content-Type =  application/x-www-form-urlencoded
+Action.c(10):     User-Agent =  Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Action.c(10):     Accept-Encoding =  gzip, deflate
+Action.c(10):     Accept =  */*
+Action.c(10): t=19695ms: 777-byte response headers for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1590249-1084463-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=3)
+Action.c(10):     HTTP/2.0 200\r\n
+Action.c(10):     Status: 200\r\n
+Action.c(10):     date: Tue, 12 Jan 2021 11:11:32 GMT\r\n
+Action.c(10):     content-type: text/html;charset=UTF-8\r\n
+Action.c(10):     content-length: 18937\r\n
+Action.c(10):     x-amzn-requestid: aec5b89d-b832-4396-a2bc-745970316b43\r\n
+Action.c(10):     x-oneagent-js-injection: true\r\n
+Action.c(10):     x-amzn-remapped-connection: keep-alive\r\n
+Action.c(10):     set-cookie: dtCookie=v_4_srv_1_sn_277E25B346CE20888689E6E588C25038_perc_100000_ol_0_mul_1;
+Action.c(10):      Path=/; Domain=.elb.us-east-1.amazonaws.com\r\n
+Action.c(10):     set-cookie: JSESSIONID=435406B4ECDB14DE2911BB09C086E501; Path=/; HttpOnly\r\n
+Action.c(10):     set-cookie: mySessionCookie=tridion_e72e224d-a3db-40be-92f9-c0d7390d9879; path=/; HttpOnly
+Action.c(10):     \r\n
+Action.c(10):     set-cookie: myTrackingCookie=tridion_4e4278f3-bfaa-4bd1-af71-2a47e04f12c9; Expires=Fri, 01
+Action.c(10):     -Jan-2100 00:00:00 GMT; path=/; HttpOnly\r\n
+Action.c(10):     x-amz-apigw-id: ZCGLqHR4oAMFwfA=\r\n
+Action.c(10):     x-amzn-remapped-date: Tue, 12 Jan 2021 11:11:32 GMT\r\n
+Action.c(10):     \r\n
+Action.c(10): t=19702ms: 8192-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1590249-1084463-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=3)
+Action.c(10):     <html><head><meta name="viewport" content="width=device-width, initial-scale=1"><script ty
+Action.c(10):     pe="text/javascript" src="/ruxitagentjs_ICA2SVfqru_10205201218101503.js" data-dtconfig="ap
+Action.c(10):     p=ea7c4b59f27d43eb|cuc=x9ysi6wz|featureHash=ICA2SVfqru|dpvc=1|lastModification=16083429717
+Action.c(10):     90|dtVersion=10205201218101503|tp=500,50,0,1|rdnt=1|uxrgce=1|uxdcw=1500|vs=2|bp=2|agentUri
+Action.c(10):     =/ruxitagentjs_ICA2SVfqru_10205201218101503.js|reportUrl=/rb_d90a734d-165f-4364-86ae-b185f
+Action.c(10):     a78c115|rid=RID_369951221|rpid=1122355407|domain=elb.us-east-1.amazonaws.com"></script><li
+Action.c(10):     nk rel="stylesheet" href="https://kaas-udp.s3.amazonaws.com/CSS/commonltr.css"> </head><bo
+Action.c(10):     dy><script  type="text/javascript" async="" src="https://api-sds-javascript-prod.sds.hp8.u
+Action.c(10):     s/v1/KaasJavascriptLoader?script=partsRecommendation"></script> <div>\n
+Action.c(10):           \n
+Action.c(10):     <div aria-labelledby="GUID-65497640-BA2A-4A62-91FB-CC4AEAE46618__GUID-BCDDF029-F9DE-4937-A
+Action.c(10):     8A2-2EB69AE9B73A" class="topic concept nested0 sequence" id="GUID-65497640-BA2A-4A62-91FB-
+Action.c(10):     CC4AEAE46618" lang="en-US" xml:lang="en-US">\n
+Action.c(10):             \n
+Action.c(10):     <h1 class="title topictitle1" id="GUID-65497640-BA2A-4A62-91FB-CC4AEAE46618__GUID-BCDDF029
+Action.c(10):     -F9DE-4937-A8A2-2EB69AE9B73A">\n
+Action.c(10):               \n
+Action.c(10):     <span class="ph">HP Color LaserJet Enterprise M751, M856, Managed E75245, E85055, MFP M776
+Action.c(10):      - Install accessory: Internal USB ports (M751/E75245/M856/E85055/M776)</span>\n
+Action.c(10):             \n
+Action.c(10):     </h1>\n
+Action.c(10):             \n
+Action.c(10):     <p class="shortdesc">Learn how to install the internal USB ports accessory.</p>\n
+Action.c(10):             \n
+Action.c(10):     <div class="body conbody">\n
+Action.c(10):               \n
+Action.c(10):     <div class="content" itemprop="video" itemscope="" itemtype="https://schema.org/VideoObjec
+Action.c(10):     t">\n
+Action.c(10):                 \n
+Action.c(10):               \n
+Action.c(10):     <meta content="608" itemprop="width">\n
+Action.c(10):     <meta content="342" itemprop="height">\n
+Action.c(10):     <div class="bcSingleVideoContainer" id="CID0000001052">\n
+Action.c(10):     <img class="videoLoadingSpinner" src="/static/hp-portal-theme-static/themes/Portal8.0/hp/i
+Action.c(10):     mages/loadingHp.gif"/></div>\n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     <p class="p">Mean time to repair: <span class="ph meantime_to_repair">10 minutes</span>\n
+Action.c(10):     </p>\n
+Action.c(10):               \n
+Action.c(10):     <p class="p">Service level: <span class="ph service_level">CSR A</span>\n
+Action.c(10):     </p>\n
+Action.c(10):               \n
+Action.c(10):     <div class="section before_service" id="GUID-65497640-BA2A-4A62-91FB-CC4AEAE46618__GUID-EC
+Action.c(10):     8E6598-05F5-47D7-A013-C53171DC46D0">\n
+Action.c(10):                 \n
+Action.c(10):     <h2 class="title sectiontitle">Before performing service</h2>\n
+Action.c(10):                 \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                   \n
+Action.c(10):     <strong class="ph b">Turn the printer power off</strong>\n
+Action.c(10):                 \n
+Action.c(10):     </p>\n
+Action.c(10):                 \n
+Action.c(10):     <div class="ul">\n
+Action.c(10):                   \n
+Action.c(10):     <ul class="ul bullettype=disc" id="GUID-65497640-BA2A-4A62-91FB-CC4AEAE46618__GUID-353E787
+Action.c(10):     5-41DC-48E4-A35D-AB6D69FB435B">\n
+Action.c(10):                     \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">Disconnect the power cable.</p>\n
+Action.c(10):                       \n
+Action.c(10):     <div class="note warning" id="GUID-65497640-BA2A-4A62-91FB-CC4AEAE46618__GUID-FE241B92-155
+Action.c(10):     F-4575-9DA1-51CAE9C198F3">\n
+Action.c(10):                         \n
+Action.c(10):     <span class="warningtitle">Warning:</span>\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">To avoid damage to the printer, turn the printer off, wait 30 seconds, and th
+Action.c(10):     en remove the power cord before attempting to\n
+Action.c(10):                                   service the printer.\n
+Action.c(10):                                </p>\n
+Action.c(10):                       \n
+Action.c(10):     </div>\n
+Action.c(10):                     \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     </ul>\n
+Action.c(10):                 \n
+Action.c(10):     </div>\n
+Action.c(10):                 \n
+Action.c(10):     <p class="p">Use the table below to identify the correct part number for your printer. To 
+Action.c(10):     order the part, go to <a class="xref" href="http://h20141.www2.hp.com/hpparts/" target="_b
+Action.c(10):     lank">www.hp.com/buy/parts</a>.\n
+Action.c(10):                    </p>\n
+Action.c(10):                 \n
+Action.c(10):     <div class="tablenoborder">\n
+Action.c(10):                   \n
+Action.c(10):     <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all"
+Action.c(10):      summary="">\n
+Action.c(10):                     \n
+Action.c(10):     <caption>\n
+Action.c(10):                       \n
+Action.c(10):     <span class="tablecap">Part information</span>\n
+Action.c(10):                     \n
+Action.c(10):     </caption>\n
+Action.c(10):                     \n
+Action.c(10):     <colgroup/>\n
+Action.c(10):                       \n
+Action.c(10):     <col style="width:37%"/>\n
+Action.c(10):                       \n
+Action.c(10):     <col style="width:63%"/>\n
+Action.c(10):                     \n
+Action.c(10):     </colgroup>\n
+Action.c(10):                     \n
+Action.c(10):     <thead class="thead" style="text-align:left;">\n
+Action.c(10):                       \n
+Action.c(10):     <tr class="row">\n
+Action.c(10):                         \n
+Action.c(10):     <th class="entry nocellnorowborder" id="d35e130" style="vertical-align:top;">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">Part number</p>\n
+Action.c(10):                         \n
+Action.c(10):     </th>\n
+Action.c(10):                         <th class="entry cell-norowborder" id="d35e136" style="vertical-align:
+Action.c(10):     top;">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">Part description</p>\n
+Action.c(10):                         \n
+Action.c(10):     </th>\n
+Action.c(10):                       \n
+Action.c(10):     </tr>\n
+Action.c(10):                     \n
+Action.c(10):     </thead>\n
+Action.c(10):                     \n
+Action.c(10):     <tbody class="tbody">\n
+Action.c(10):                       \n
+Action.c(10):     <tr class="row part_grouping">\n
+Action.c(10):                         \n
+Action.c(10):     <td class="entry row-nocellborder" headers="d35e130 " style="vertical-align:top;">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                             \n
+Action.c(10):     <strong class="ph b">\n
+Action.c(10):                               <span class="ph part_number">B5L28-67902</span>\n
+Action.c(10):                             </strong>\n
+Action.c(10):                           \n
+Action.c(10):     </p>\n
+Action.c(10):                         \n
+Action.c(10):     </td>\n
+Action.c(10):                         <td class="entry cellrowborder part_description" headers="d35e136 " st
+Action.c(10):     yle="vertical-align:top;">\n
+Action.c(10):                           \n
+Action.c(10):     <p class="p">Internal USB ports</p>\n
+Action.c(10):                         \n
+Action.c(10):     </td>\n
+Action.c(10):                       \n
+Action.c(10):     </tr>\n
+Action.c(10):                     \n
+Action.c(10):     </tbody>\n
+Action.c(10):                   \n
+Action.c(10):     </table>\n
+Action.c(10):                 \n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     <div class="section required_tools" id="GUID-65497640-BA2A-4A62-91FB-CC4AEAE46618__GUID-70
+Action.c(10):     C6CF6F-9D06-4D3E-85E6-677F0DCEFD22">\n
+Action.c(10):                 \n
+Action.c(10):     <h2 class="title sectiontitle">Required tools</h2>\n
+Action.c(10):                 \n
+Action.c(10):     <div class="ul">\n
+Action.c(10):                   \n
+Action.c(10):     <ul class="ul" id="GUID-65497640-BA2A-4A62-91FB-CC4AEAE46618__GUID-351AB0D1-C1A2-4C6F-BD22
+Action.c(10):     -9D077A51EE71">\n
+Action.c(10):                     \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                         \n
+Action.c(10):     <span class="ph required_tool">No special tools are required to remove or install this ass
+Action.c(10):     embly.</span>\n
+Action.c(10):                       \n
+Action.c(10):     </p>\n
+Action.c(10):                     \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     </ul>\n
+Action.c(10):                 \n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     <div class="section after_service" id="GUID-65497640-BA2A-4A62-91FB-CC4AEAE46618__GUID-B84
+Action.c(10):     A5C84-13EE-4465-A0C0-9969D6AE53FD">\n
+Action.c(10):                 \n
+Action.c(10):     <h2 class="title sectiontitle">After performing service</h2>\n
+Action.c(10):                 \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                   \n
+Action.c(10):     <strong class="ph b">Turn the printer power on</strong>\n
+Action.c(10):                 \n
+Action.c(10):     </p>\n
+Action.c(10):                 \n
+Action.c(10):     <div class="ul">\n
+Action.c(10):                   \n
+Action.c(10):     <ul class="ul bullettype=disc" id="GUID-65497640-BA2A-4A62-91FB-CC4AEAE46618__GUID-B9B72A1
+Action.c(10):     3-BCAE-4E03-8527-0DAF7CFED9C6">\n
+Action.c(10):                     \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">Connect the power cable.</p>\n
+Action.c(10):                     \n
+Action.c(10):     </li>\n
+Action.c(10):                     \n
+Action.c(10):     <li class="li">\n
+Action.c(10):                       \n
+Action.c(10):     <p class="p">Use the power switch to turn the power on.</p>\n
+Action.c(10):                     \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     </ul>\n
+Action.c(10):                 \n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):               \n
+Action.c(10):     <div class="section post_service_test" id="GUID-65497640-BA2A-4A62-91FB-CC4AEAE46618__GUID
+Action.c(10):     -CCEA4923-473F-4A56-98FE-0467C43A89C2">\n
+Action.c(10):                 \n
+Action.c(10):     <h2 class="title sectiontitle">Post service test</h2>\n
+Action.c(10):                 \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                   \n
+Action.c(10):     <span class="ph">Make sure that the printer initializes to a <samp class="ph msgph control
+Action.c(10):     panelmessage">Ready</samp> state. </span>\n
+Action.c(10):                 \n
+Action.c(10):     </p>\n
+Action.c(10):                 \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                   \n
+Action.c(10):     <span class="ph">Print a page to make sure that the printer is functioning correctly.</spa
+Action.c(10):     n>\n
+Action.c(10):                 \n
+Action.c(10):     </p>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     <div aria-labelledby="GUID-63014353-5EC9-44A0-957B-D7E9F2C67EC1__GUID-3B95D8BB-E232-4E08-9
+Action.c(10):     F89-ACED7D355606" class="topic task nested1" id="GUID-63014353-5EC9-44A0-957B-D7E9F2C67EC1
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):               \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-63014353-5EC9-44A0-957B-D7E9F2C67EC1__GUID-3B95D8BB
+Action.c(10):     -E232-4E08-9F89-ACED7D355606">Remove the formatter cover</h2>\n
+Action.c(10):               \n
+Action.c(10):     <p class="shortdesc">Follow these steps to remove the formatter cover.</p>\n
+Action.c(10):               \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):                 \n
+Action.c(10):     <ol class="ol steps" id="GUID-63014353-5EC9-44A0-957B-D7E9F2C67EC1__GUID-D447FAB0-887A-491
+Action.c(10):     D-ADF6-403D3174421C">\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Loosen one thumbscrew (callout 1), and then slide the formatter cover (c
+Action.c(10):     allout 2) away from the printer to remove it.</p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="figcap">Remove the formatter cover</p>\n
+Action.c(10):                         \n
+Action.c(10):     <img alt="Rem
+Action.c(10): t=19714ms: 7632-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1590249-1084463-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=3)
+Action.c(10):     ove the formatter cover" class="image" src="https://hx9ekpvvbi.execute-api.us-east-1.amazo
+Action.c(10):     naws.com/KaaS-ITG/v2/renderbinary/1590249/1139322/p-ban-nag-key-web-rr-internal-usb-ports/
+Action.c(10):     img-banff-keystone-nagano-srm-rrp-frmttr-cvr-rmv-0452"/>\n
+Action.c(10):                       </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     </ol>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     <div aria-labelledby="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-4C5E5728-C3F5-4FBA-A
+Action.c(10):     2D4-2A7B8CD56C58" class="topic task nested1" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):               \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-4C5E5728
+Action.c(10):     -C3F5-4FBA-A2D4-2A7B8CD56C58">Unpack the replacement assembly</h2>\n
+Action.c(10):               \n
+Action.c(10):     <p class="shortdesc">Follow these steps to unpack the replacement assembly.</p>\n
+Action.c(10):               \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):                 \n
+Action.c(10):     <ol class="ol steps" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-F4FDAC1F-D6FB-4B8
+Action.c(10):     A-B75C-C5231E4E3166">\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Dispose of the defective part.</p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="note note" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-219214C8-F398-4
+Action.c(10):     EBB-A6C1-3B4B45990248">\n
+Action.c(10):                         \n
+Action.c(10):     <span class="notetitle">Note:</span>\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">HP recommends responsible disposal of the defective part.</p>\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                           \n
+Action.c(10):     <a class="xref" href="http://www8.hp.com/us/en/hp-information/environment/product-recyclin
+Action.c(10):     g.html" target="_blank">http://www8.hp.com/us/en/hp-information/environment/product-recycl
+Action.c(10):     ing.html</a>\n
+Action.c(10):                         \n
+Action.c(10):     </p>\n
+Action.c(10):                       \n
+Action.c(10):     </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Unpack the replacement part from the packaging.</p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="note caution" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-ED0AF4A0-2AE
+Action.c(10):     3-4D76-8E15-30C62FD8D107">\n
+Action.c(10):                         \n
+Action.c(10):     <span class="cautiontitle">CAUTION:</span>\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">\n
+Action.c(10):                           \n
+Action.c(10):     <img class="image" src="https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2
+Action.c(10):     /renderbinary/1590249/816300/p-ban-nag-key-web-rr-internal-usb-ports/ico-shared-srm-web-es
+Action.c(10):     d-small"/> Some parts are sensitive to electrostatic discharge (ESD). Always perform servi
+Action.c(10):     ce work at an ESD-protected workstation or\n
+Action.c(10):                                   mat. If an ESD workstation or mat is not available, touch th
+Action.c(10):     e sheet-metal chassis to provide a static ground before touching\n
+Action.c(10):                                   an ESD-sensitive assembly. Protect the ESD-sensitive assembl
+Action.c(10):     ies by placing them in ESD pouches when they are out of the printer.\n
+Action.c(10):                                </p>\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">If the replacement part is a roller or pad, avoid touching the spongy part of
+Action.c(10):      it. Skin oils on the roller or pad can cause\n
+Action.c(10):                                   paper pickup and/or print-quality problems. HP recommends us
+Action.c(10):     ing disposable gloves when handling rollers or pads or washing\n
+Action.c(10):                                   your hands before touching rollers or pads.\n
+Action.c(10):                                </p>\n
+Action.c(10):                       \n
+Action.c(10):     </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="note important" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-FEF7B580-B
+Action.c(10):     4BA-4204-9545-0F66BB11CFE9">\n
+Action.c(10):                         \n
+Action.c(10):     <span class="importanttitle">Important:</span>\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">Make sure that all of the shipping materials (for example shipping tape) are 
+Action.c(10):     removed from the replacement part prior to installation.</p>\n
+Action.c(10):                       \n
+Action.c(10):     </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">To install an assembly, reverse the removal steps.</p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="note note" id="GUID-6BDF616F-2D00-4054-9899-33CB4AB93D00__GUID-33A6069A-FB81-4
+Action.c(10):     1D3-8B78-C58071C3179B">\n
+Action.c(10):                         \n
+Action.c(10):     <span class="notetitle">Note:</span>\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">When applicable, special installation instructions are provided for an assemb
+Action.c(10):     ly at the end of the removal procedure. Always\n
+Action.c(10):                                   completely read the removal instructions and follow all spec
+Action.c(10):     ial installation instructions.\n
+Action.c(10):                                </p>\n
+Action.c(10):                       \n
+Action.c(10):     </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     </ol>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     <div aria-labelledby="GUID-CAB4119F-BDD3-4B56-97ED-1A32B34CD704__GUID-FDC270A1-DF05-4123-B
+Action.c(10):     396-C5783049F43A" class="topic task nested1" id="GUID-CAB4119F-BDD3-4B56-97ED-1A32B34CD704
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):               \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-CAB4119F-BDD3-4B56-97ED-1A32B34CD704__GUID-FDC270A1
+Action.c(10):     -DF05-4123-B396-C5783049F43A">Install the internal USB ports accessory</h2>\n
+Action.c(10):               \n
+Action.c(10):     <p class="shortdesc">Follow these steps to install the internal USB ports accessory.</p>\n
+Action.c(10):               \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):                 \n
+Action.c(10):     <ol class="ol steps" id="GUID-CAB4119F-BDD3-4B56-97ED-1A32B34CD704__GUID-F6604E89-272D-4E6
+Action.c(10):     6-9A0D-C7A391045BD2">\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Position the notches on the internal USB ports PCA over the clips on the
+Action.c(10):      PCA holder, and then press down to attach the PCA\n
+Action.c(10):                             to the holder. Make sure that the clips snap into place.\n
+Action.c(10):                          </p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="figcap">Attach the PCA to the cradle</p>\n
+Action.c(10):                         \n
+Action.c(10):     <img alt="Attach the PCA to the cradle" class="image" src="https://hx9ekpvvbi.execute-api.
+Action.c(10):     us-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1590249/717201/p-ban-nag-key-web-rr-inter
+Action.c(10):     nal-usb-ports/banff-attach-aa-to-cradle"/>\n
+Action.c(10):                       </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Connect the cable to the connector (callout 1) on the small PCA.</p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup info">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="note note" id="GUID-CAB4119F-BDD3-4B56-97ED-1A32B34CD704__GUID-DD864CDD-3697-4
+Action.c(10):     232-ACF9-7620E27F5E69">\n
+Action.c(10):                         \n
+Action.c(10):     <span class="notetitle">Note:</span>\n
+Action.c(10):                         \n
+Action.c(10):     <p class="p">The connector on the cable is keyed. Make sure it is correctly installed.</p>
+Action.c(10):     \n
+Action.c(10):                       \n
+Action.c(10):     </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="figcap">Connect the cable to the PCA</p>\n
+Action.c(10):                         \n
+Action.c(10):     <img alt="Connect the cable to the PCA" class="image" src="https://hx9ekpvvbi.execute-api.
+Action.c(10):     us-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1590249/723344/p-ban-nag-key-web-rr-inter
+Action.c(10):     nal-usb-ports/banff-rr-aamod-cnctr-5166"/>\n
+Action.c(10):                       </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Position the slot (callout 1) on the end of the PCA bracket over the met
+Action.c(10):     al tab (callout 2) on the formatter case.</p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="figcap">Position the slot over the tab</p>\n
+Action.c(10):                         \n
+Action.c(10):     <img alt="Position the slot over the tab" class="image" src="https://hx9ekpvvbi.execute-
+Action.c(10): t=19770ms: 560-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1590249-1084463-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=3)
+Action.c(10):     api.us-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1590249/723352/p-ban-nag-key-web-rr-i
+Action.c(10):     nternal-usb-ports/banff-rr-aamod-lwr-tab-instl-5167"/>\n
+Action.c(10):                       </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Position the upper tabs on the PCA bracket into the slots in the formatt
+Action.c(10):     er case. Press until the tabs snap into place.</p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="figcap">Install
+Action.c(10): t=19772ms: 2553-byte response body for "https://hx9ekpvvbi.execute-api.us-east-1.amazonaws.com/KaaS-ITG/v2/render/000asg0XCpVjXDJRsVo6B8JY5NYR/ish_1590249-1084463-16?entitlement=none&audience=customer&isFullHTMLRequired=true" (RelFrameId=1, Internal ID=3)
+Action.c(10):      the upper tabs</p>\n
+Action.c(10):                         \n
+Action.c(10):     <img alt="Install the upper tabs" class="image" src="https://hx9ekpvvbi.execute-api.us-eas
+Action.c(10):     t-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1590249/723348/p-ban-nag-key-web-rr-internal-us
+Action.c(10):     b-ports/banff-rr-aamod-upr-tabs-5168"/>\n
+Action.c(10):                       </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Connect the cable to the connector (callout 1) on the formatter board.</
+Action.c(10):     p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="figcap">Connect the cable to the formatter</p>\n
+Action.c(10):                         \n
+Action.c(10):     <img alt="Connect the cable to the formatter" class="image" src="https://hx9ekpvvbi.execut
+Action.c(10):     e-api.us-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1590249/723340/p-ban-nag-key-web-rr
+Action.c(10):     -internal-usb-ports/banff-rr-aamod-fmtr-cnct-5169"/>\n
+Action.c(10):                       </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     </ol>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     <div aria-labelledby="GUID-5C43672D-4583-43CB-BD72-A9BC31A90309__GUID-3F07DB62-6D1F-41D6-9
+Action.c(10):     515-3767EE115930" class="topic task nested1" id="GUID-5C43672D-4583-43CB-BD72-A9BC31A90309
+Action.c(10):     " lang="en-US" xml:lang="en-US">\n
+Action.c(10):               \n
+Action.c(10):     <h2 class="title topictitle2" id="GUID-5C43672D-4583-43CB-BD72-A9BC31A90309__GUID-3F07DB62
+Action.c(10):     -6D1F-41D6-9515-3767EE115930">Install the formatter cover</h2>\n
+Action.c(10):               \n
+Action.c(10):     <p class="shortdesc">Follow these steps to install the formatter cover.</p>\n
+Action.c(10):               \n
+Action.c(10):     <div class="body taskbody">\n
+Action.c(10):                 \n
+Action.c(10):     <ol class="ol steps" id="GUID-5C43672D-4583-43CB-BD72-A9BC31A90309__GUID-4EF74159-53F2-41F
+Action.c(10):     1-8314-D118413DEE78">\n
+Action.c(10):                   \n
+Action.c(10):     <li class="li step stepexpand">\n
+Action.c(10):                     \n
+Action.c(10):     <p class="ph cmd">Position the formatter cover (callout 1) on the printer, slide it toward
+Action.c(10):      the printer to install it, and then tighten one thumbscrew\n
+Action.c(10):                             (callout 2).\n
+Action.c(10):                          </p>\n
+Action.c(10):                     \n
+Action.c(10):     <div class="itemgroup stepxmp">\n
+Action.c(10):                       \n
+Action.c(10):     <div class="fig fignone">\n
+Action.c(10):                         \n
+Action.c(10):     <p class="figcap">Install the formatter cover</p>\n
+Action.c(10):                         \n
+Action.c(10):     <img alt="Install the formatter cover" class="image" src="https://hx9ekpvvbi.execute-api.u
+Action.c(10):     s-east-1.amazonaws.com/KaaS-ITG/v2/renderbinary/1590249/1234639/p-ban-nag-key-web-rr-inter
+Action.c(10):     nal-usb-ports/img-banff-keystone-nagano-srm-rrp-frmttr-cvr-instl-0452"/>\n
+Action.c(10):                       </div>\n
+Action.c(10):                     \n
+Action.c(10):     </div>\n
+Action.c(10):                   \n
+Action.c(10):     </li>\n
+Action.c(10):                 \n
+Action.c(10):     </ol>\n
+Action.c(10):               \n
+Action.c(10):     </div>\n
+Action.c(10):             \n
+Action.c(10):     </div>\n
+Action.c(10):           \n
+Action.c(10):     </div>\n
+Action.c(10):         \n
+Action.c(10):     </div>\n
+Action.c(10):     </body></html>
+Action.c(10): web_custom_request("web_custom_request") was successful, 18937 body bytes, 777 header bytes  	[MsgId: MMSG-26386]
+Action.c(18): Notify: Transaction "KAAS_Content_Rendering" ended with a "Pass" status (Duration: 3.5266 Wasted Time: 0.0129).
+Ending action Action.
+Ending iteration 3.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
